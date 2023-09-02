@@ -48,22 +48,22 @@ public class player : MonoBehaviour
 		if(Input.GetKey(KeyCode.D)){
 			playerTrans.Rotate(0, ro_speed * Time.deltaTime, 0);
 		}
-		if(walking == true){				
-			if(Input.GetKeyDown(KeyCode.LeftShift)){
-				//steps1.SetActive(false);
-				//steps2.SetActive(true);
-				w_speed = w_speed + rn_speed;
-				// playerAnim.SetTrigger("run");
-				// playerAnim.ResetTrigger("walk");
-			}
-			if(Input.GetKeyUp(KeyCode.LeftShift)){
-				//steps1.SetActive(true);
-				//steps2.SetActive(false);
-				w_speed = olw_speed;
-				// playerAnim.ResetTrigger("run");
-				// playerAnim.SetTrigger("walk");
-			}
-		}
+		// if(walking == true){				
+		// 	if(Input.GetKeyDown(KeyCode.LeftShift)){
+		// 		//steps1.SetActive(false);
+		// 		//steps2.SetActive(true);
+		// 		w_speed = w_speed + rn_speed;
+		// 		// playerAnim.SetTrigger("run");
+		// 		// playerAnim.ResetTrigger("walk");
+		// 	}
+		// 	if(Input.GetKeyUp(KeyCode.LeftShift)){
+		// 		//steps1.SetActive(true);
+		// 		//steps2.SetActive(false);
+		// 		w_speed = olw_speed;
+		// 		// playerAnim.ResetTrigger("run");
+		// 		// playerAnim.SetTrigger("walk");
+		// 	}
+		// }
 	}
 }
 
