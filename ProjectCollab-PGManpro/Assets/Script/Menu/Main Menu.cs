@@ -14,7 +14,9 @@ public class MainMenu : MonoBehaviour
     }
 
     public void Play(){
+        GameObject.Find("Player").SetActive(false);
         SceneManager.LoadScene("Game");
+        
     }
 
     public void Quit(){
