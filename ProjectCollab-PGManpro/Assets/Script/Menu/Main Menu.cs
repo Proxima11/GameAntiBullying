@@ -9,8 +9,8 @@ public class MainMenu : MonoBehaviour
     public Toggle boy;
     public Toggle girl;
     public void Start(){
-        boy = GetComponent<Toggle>();
-        girl = GetComponent<Toggle>();
+        // boy = GetComponent<Toggle>();
+        // girl = GetComponent<Toggle>();
     }
 
     public void Play(){
@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void changeGender(){
-        boy.isOn=!boy.isOn;
-        girl.isOn=!girl.isOn;
+        boy.GetComponent<Toggle>().isOn=!boy.GetComponent<Toggle>().isOn;
+        girl.GetComponent<Toggle>().isOn=!girl.GetComponent<Toggle>().isOn;
     }
 }
