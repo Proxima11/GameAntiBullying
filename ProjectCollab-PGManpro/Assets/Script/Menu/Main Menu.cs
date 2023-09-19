@@ -14,7 +14,12 @@ public class MainMenu : MonoBehaviour
     }
 
     public void Play(){
-        GameObject.Find("Player").SetActive(false);
+        if (boy.isOn){
+            superScript.boy = true;
+        } else {
+            superScript.boy = false;
+        }
+        // GameObject.Find("Player").SetActive(false);
         SceneManager.LoadScene("Game");
         
     }

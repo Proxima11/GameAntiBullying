@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4cdc735c08b40b248bb45797bc88e536, type: 3}
       propertyPath: m_Name
-      value: Girl_FBX2020
+      value: Girl
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4cdc735c08b40b248bb45797bc88e536, type: 3}
       propertyPath: m_IsActive
@@ -281,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
       propertyPath: m_Name
-      value: main char@Breathing Idle
+      value: Boy
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
       propertyPath: m_IsActive
@@ -557,6 +557,7 @@ GameObject:
   - component: {fileID: 1489049452}
   - component: {fileID: 1489049456}
   - component: {fileID: 1489049457}
+  - component: {fileID: 1489049458}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -701,6 +702,18 @@ MonoBehaviour:
   rigid: {fileID: 1489049456}
   t: {fileID: 1489049455}
   anim: {fileID: 1305354973}
+--- !u!114 &1489049458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489049451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f009363d8c197b949a69ba63e557e0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1912523570
 PrefabInstance:
   m_ObjectHideFlags: 0
