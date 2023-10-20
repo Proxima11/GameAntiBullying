@@ -54,7 +54,8 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
   - serializedVersion: 3
     name: Low
     pixelLightCount: 0
@@ -103,7 +104,8 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
   - serializedVersion: 3
     name: Medium
     pixelLightCount: 1
@@ -152,7 +154,8 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
   - serializedVersion: 3
     name: High
     pixelLightCount: 2
@@ -201,7 +204,8 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
   - serializedVersion: 3
     name: Very High
     pixelLightCount: 3
@@ -250,7 +254,8 @@ QualitySettings:
     terrainBillboardStart: 50
     terrainFadeLength: 5
     terrainMaxTrees: 50
-    excludedTargetPlatforms: []
+    excludedTargetPlatforms:
+    - Standalone
   - serializedVersion: 3
     name: Ultra
     pixelLightCount: 4
@@ -276,7 +281,7 @@ QualitySettings:
     vSyncCount: 1
     realtimeGICPUUsage: 100
     lodBias: 2
-    maximumLODLevel: 0
+    maximumLODLevel: 7
     enableLODCrossFade: 1
     streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1
@@ -308,6 +313,7 @@ QualitySettings:
     Nintendo Switch: 5
     PS4: 5
     PSP2: 2
+    Server: 0
     Stadia: 5
     Standalone: 5
     WebGL: 3
