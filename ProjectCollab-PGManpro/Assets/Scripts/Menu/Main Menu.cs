@@ -10,16 +10,20 @@ public class MainMenu : MonoBehaviour
     public Toggle boy;
     public Toggle girl;
     public TMP_InputField input_field;
-    public Texture2D cursor;
+    public GameObject objectGender;
 
     public void Start(){
-        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     public void Play(){
         // GameObject.Find("Player").SetActive(false);
         SceneManager.LoadScene("Game");
         
+    }
+
+    public void spawnDummy(){
+        GameObject g = Instantiate(objectGender);
+        // g.AddComponent(typeof(dummyLook));
     }
 
     public void chooseGender(){
