@@ -7,7 +7,7 @@ public class PlayerInteract : MonoBehaviour
 
     // Update is called once per frame
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.F)) {
             InterfaceInteractable interactable = GetInteractableObject();
             if (interactable != null) {
                 interactable.Interact(transform);

@@ -315,9 +315,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 45579226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c43d861686722164cb5dec28f2344831, type: 3}
+  m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneName: LorongAtas
 --- !u!1001 &50644351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2507,7 +2508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832661582}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1424138, y: -0.0019071918, z: 0.00027440788, w: 0.98980534}
+  m_LocalRotation: {x: 0.14241382, y: -0.001754905, z: 0.00025249677, w: 0.98980564}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3853,7 +3854,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234488904}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.24498579, y: -0.000000008341023, z: 0.0000000021076598, w: 0.9695267}
+  m_LocalRotation: {x: 0.24498579, y: 0.000000008341023, z: -0.0000000021076598, w: 0.9695267}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6739,7 +6740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134866053}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14241381, y: -0.0019071919, z: 0.00027440794, w: 0.9898054}
+  m_LocalRotation: {x: 0.14241384, y: -0.0017549051, z: 0.00025249683, w: 0.9898056}
   m_LocalPosition: {x: 69.48536, y: 8.790249, z: -26.069763}
   m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.010000001}
   m_ConstrainProportionsScale: 0
