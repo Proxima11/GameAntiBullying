@@ -11,7 +11,17 @@ public class TeleportCollision : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-           SceneManager.LoadScene(SceneName);
+            System.Console.WriteLine(GetInteractText());
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                SceneManager.LoadScene(SceneName);
+            }
         }
+    }
+
+    public string GetInteractText()
+    {
+        string text_output = "Go to " + SceneName;
+    return text_output;
     }
 }

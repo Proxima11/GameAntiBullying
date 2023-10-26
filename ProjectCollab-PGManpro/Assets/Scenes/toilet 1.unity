@@ -1870,7 +1870,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100020, guid: 3d58d5cb75277704fbee090d5dc98394, type: 3}
+  - {fileID: 2100000, guid: 821120c384bc8b347b1e3ba4eb78443f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1909,7 +1909,7 @@ Transform:
   m_GameObject: {fileID: 720469328}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.379, y: 1.576, z: -0.668}
+  m_LocalPosition: {x: 40.379, y: 1.576, z: -0.661}
   m_LocalScale: {x: 4.1189528, y: 1, z: 0.027485}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2653,6 +2653,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4a6e2efd483c5734c817fbe0c0b40bd4, type: 3}
   m_PrefabInstance: {fileID: 1010236492}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1016060092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1016060094}
+  - component: {fileID: 1016060093}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &1016060093
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016060092}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 1
+  m_TimeSlicingMode: 2
+  m_Resolution: 64
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 6.8836327, y: 2, z: 5}
+  m_BoxOffset: {x: 0.79061127, y: 0, z: 2.5}
+  m_NearClip: 0.3
+  m_FarClip: 20
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 1
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 2
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &1016060094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016060092}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40.36, y: 1.546, z: -0.764999}
+  m_LocalScale: {x: 0.5062916, y: 0.5062916, z: 0.5062916}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1021915270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3143,7 +3208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155269670}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34865606, y: 0.00000001612669, z: -0.000000005999108, w: 0.93725073}
+  m_LocalRotation: {x: 0.3486559, y: 0.000000016126696, z: -0.0000000059991065, w: 0.9372508}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4493,7 +4558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532630869}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20199534, y: -0.0018871129, z: 0.00038921175, w: 0.9793846}
+  m_LocalRotation: {x: 0.20199539, y: -0.0017364294, z: 0.0003581337, w: 0.9793849}
   m_LocalPosition: {x: 69.48536, y: 8.885783, z: -25.093922}
   m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.010000001}
   m_ConstrainProportionsScale: 0
@@ -4725,7 +4790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545349613}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.17579147, y: 1e-45, z: -0, w: 0.98442745}
+  m_LocalRotation: {x: 0.17579146, y: 8.328536e-16, z: 4.1597057e-17, w: 0.98442745}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4983,7 +5048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617008917}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20199534, y: -0.0018871126, z: 0.00038921172, w: 0.9793846}
+  m_LocalRotation: {x: 0.20199539, y: -0.0017364293, z: 0.0003581336, w: 0.9793849}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6328,3 +6393,4 @@ SceneRoots:
   - {fileID: 396696931}
   - {fileID: 1870153995}
   - {fileID: 720469332}
+  - {fileID: 1016060094}
