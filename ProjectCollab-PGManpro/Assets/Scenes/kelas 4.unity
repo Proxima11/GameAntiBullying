@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Lorong Atas
+  SceneName: Lorong lt 2
 --- !u!1001 &50644351
 PrefabInstance:
   m_ObjectHideFlags: 0

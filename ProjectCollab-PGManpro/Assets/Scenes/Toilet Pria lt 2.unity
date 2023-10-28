@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Lorong Atas
+  SceneName: Lorong lt 2
 --- !u!65 &300645283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5683,7 +5683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Lorong Atas
+  SceneName: Lorong lt 2
 --- !u!65 &1766907572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5822,7 +5822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801217064}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.097003594, y: -0.000000017652296, z: -0.0000000017204496, w: 0.995284}
+  m_LocalRotation: {x: -0.09700359, y: 0.000000017652285, z: 0.0000000017204485, w: 0.995284}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
