@@ -4446,7 +4446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: lorongSekolah
+  SceneName: Lorong lt 1
 --- !u!65 &686902263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7628,7 +7628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112768856}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10648207, y: -0.0000000042771395, z: 4.5804283e-10, w: 0.9943147}
+  m_LocalRotation: {x: 0.10648207, y: 0.000000004277139, z: -4.580428e-10, w: 0.9943147}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9540,7 +9540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281087591}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1424138, y: -0.0019312295, z: 0.00027786646, w: 0.98980534}
+  m_LocalRotation: {x: 0.1424138, y: -0.0019339697, z: 0.00027826073, w: 0.98980534}
   m_LocalPosition: {x: 69.48536, y: 8.163343, z: -22.066568}
   m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.010000001}
   m_ConstrainProportionsScale: 0
@@ -11991,7 +11991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538718977}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14241378, y: -0.0019312291, z: 0.0002778664, w: 0.98980534}
+  m_LocalRotation: {x: 0.14241378, y: -0.0019339696, z: 0.00027826073, w: 0.9898053}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

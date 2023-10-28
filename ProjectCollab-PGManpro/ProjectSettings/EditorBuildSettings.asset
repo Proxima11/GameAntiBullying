@@ -18,15 +18,27 @@ EditorBuildSettings:
     path: Assets/Scenes/kelas 4.unity
     guid: 360dad13abeed3944aadfed6e8756dd0
   - enabled: 1
-    path: Assets/Scenes/lorongSekolah.unity
+    path: Assets/Scenes/Lorong lt 1.unity
     guid: 0f9f54a9850fa7b4a99c8a29f50c51f5
   - enabled: 1
     path: Assets/Scenes/kelas 3.unity
     guid: 2149f85e66f671249a32349e6dea78f9
   - enabled: 1
+    path: Assets/Scenes/kelas 2.unity
+    guid: 1c014b9a2265629408aa8606f5c2ef22
+  - enabled: 1
+    path: Assets/Scenes/kelas 1.unity
+    guid: ad311bbb8974d4d4ab726341e3004cbc
+  - enabled: 1
     path: Assets/Scenes/Toilet Pria lt 2.unity
     guid: 23c39cbbf602cdb45950a92da434ab34
   - enabled: 1
+    path: Assets/Scenes/Toilet Pria lt 1.unity
+    guid: 3c74cacfb214cf540809778268f4cbf1
+  - enabled: 1
     path: Assets/Scenes/Toilet Wanita lt 2.unity
     guid: 8d865f0f60412274984b4392fbc0a772
+  - enabled: 1
+    path: Assets/Scenes/Toilet Wanita lt 1.unity
+    guid: 53eaee68aecb87744b5168f04abd54f9
   m_configObjects: {}
