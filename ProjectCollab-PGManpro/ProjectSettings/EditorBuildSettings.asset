@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: 24cd49614bfe4534aa6fb25e86b3d9b6
   - enabled: 1
-    path: Assets/Scenes/lorongAtas.unity
+    path: Assets/Scenes/Lorong lt 2.unity
     guid: 581a997500402fd4fbbe6eec57bcfa98
   - enabled: 1
     path: Assets/Scenes/kelas 4.unity
@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lorongSekolah.unity
     guid: 0f9f54a9850fa7b4a99c8a29f50c51f5
+  - enabled: 1
+    path: Assets/Scenes/kelas 3.unity
+    guid: 2149f85e66f671249a32349e6dea78f9
+  - enabled: 1
+    path: Assets/Scenes/Toilet Pria lt 2.unity
+    guid: 23c39cbbf602cdb45950a92da434ab34
+  - enabled: 1
+    path: Assets/Scenes/Toilet Wanita lt 2.unity
+    guid: 8d865f0f60412274984b4392fbc0a772
   m_configObjects: {}
