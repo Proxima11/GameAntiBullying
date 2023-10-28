@@ -5,33 +5,44 @@ using UnityEngine;
 public class PlayerInteract : MonoBehaviour
 {
 
-    // Update is called once per frame
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.F)) {
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
             InterfaceInteractable interactable = GetInteractableObject();
-            if (interactable != null) {
+            if (interactable != null)
+            {
                 interactable.Interact(transform);
             }
         }
     }
 
-    public InterfaceInteractable GetInteractableObject() {
+    public InterfaceInteractable GetInteractableObject()
+    {
         List<InterfaceInteractable> interactableList = new List<InterfaceInteractable>();
-        float interactRange = 3f;
+        float interactRange = 1f;
         Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
-        foreach (Collider collider in colliderArray) {
-            if (collider.TryGetComponent(out InterfaceInteractable interactable)) {
+        foreach (Collider collider in colliderArray)
+        {
+            if (collider.TryGetComponent(out InterfaceInteractable interactable))
+            {
                 interactableList.Add(interactable);
             }
         }
 
         InterfaceInteractable closestInteractable = null;
-        foreach (InterfaceInteractable interactable in interactableList) {
-            if (closestInteractable == null) {
+        foreach (InterfaceInteractable interactable in interactableList)
+        {
+            if (closestInteractable == null)
+            {
                 closestInteractable = interactable;
-            } else {
-                if (Vector3.Distance(transform.position, interactable.GetTransform().position) < 
-                    Vector3.Distance(transform.position, closestInteractable.GetTransform().position)) {
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, interactable.GetTransform().position) <
+                    Vector3.Distance(transform.position, closestInteractable.GetTransform().position))
+                {
                     // Closer
                     closestInteractable = interactable;
                 }
@@ -40,4 +51,5 @@ public class PlayerInteract : MonoBehaviour
 
         return closestInteractable;
     }
+
 }
