@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 45579227}
   - component: {fileID: 45579231}
   m_Layer: 0
-  m_Name: LorongAtas
+  m_Name: LorongAtas teleport
   m_TagString: Teleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: lorongAtas
+  SceneName: Lorong Atas
 --- !u!1001 &50644351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -919,7 +919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232161458}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.100882, y: 0.6986457, z: -0.10052157, w: 0.7011508}
+  m_LocalRotation: {x: 0.10089823, y: 0.69853246, z: -0.10050527, w: 0.70126367}
   m_LocalPosition: {x: -22.066578, y: 8.163342, z: -69.48537}
   m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.010000001}
   m_ConstrainProportionsScale: 0
@@ -7132,7 +7132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943298392}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10088199, y: 0.6986457, z: -0.10052156, w: 0.7011508}
+  m_LocalRotation: {x: 0.100898236, y: 0.69853246, z: -0.10050528, w: 0.70126367}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
