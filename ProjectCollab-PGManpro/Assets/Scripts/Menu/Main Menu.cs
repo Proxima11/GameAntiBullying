@@ -19,8 +19,8 @@ public class MainMenu : MonoBehaviour
 
     public void Play(){
         // GameObject.Find("Player").SetActive(false);
-        
-        SceneManager.LoadScene("Game");
+
+        SceneManager.LoadScene("lorongSekolah");
     }
 
     public void chooseGender(){
