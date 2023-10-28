@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.024mat
-    second: {fileID: 2100000, guid: 4802ed345aead0c458e3869c125e755b, type: 2}
+    second: {fileID: 2100000, guid: cbc38adce5822e4419a73ea694219d02, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.025mat
-    second: {fileID: 2100000, guid: f7bfa9a1671b8364f9a8cce189fcfc7f, type: 2}
+    second: {fileID: 2100000, guid: 284efc854e167c1429f872c1d534572f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -53,52 +53,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.033mat
-    second: {fileID: 2100000, guid: 7d3ea59071ee0e4478d17df7d79b5631, type: 2}
+    second: {fileID: 2100000, guid: cbc38adce5822e4419a73ea694219d02, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.034mat
-    second: {fileID: 2100000, guid: 70bdba6e12870ce44a928e6d89c9c592, type: 2}
+    second: {fileID: 2100000, guid: cbc38adce5822e4419a73ea694219d02, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.035mat
-    second: {fileID: 2100000, guid: 4ca1b3a8dffaff24ea70048cc5f35676, type: 2}
+    second: {fileID: 2100000, guid: 284efc854e167c1429f872c1d534572f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert3mat
-    second: {fileID: 2100000, guid: cbc38adce5822e4419a73ea694219d02, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: cloth_color
-    second: {fileID: 2800000, guid: 87070d809d2db6941bad7d9be9d18835, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: eye_color
-    second: {fileID: 2800000, guid: c50a09d8fd7c9a34a9698a320f62c29f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: face_color
-    second: {fileID: 2800000, guid: b51f57f8a2dc382499b879b03807fa43, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: hair_color
-    second: {fileID: 2800000, guid: 05a7fa5081be5f5429f128af9958abff, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: hair_normal
-    second: {fileID: 2800000, guid: fb6d2ff575ed0ed4ca5fe5de310898cd, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: shoe_color
-    second: {fileID: 2800000, guid: 04a3db17fac00da4c81b57fd43c0463a, type: 3}
+    second: {fileID: 2100000, guid: a6de0933edbbb754b97185af12e14d62, type: 2}
   materials:
     materialImportMode: 1
     materialName: 3
