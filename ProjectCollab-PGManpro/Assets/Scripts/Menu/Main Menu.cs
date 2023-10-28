@@ -10,7 +10,9 @@ public class MainMenu : MonoBehaviour
     public Toggle boy;
     public Toggle girl;
     public TMP_InputField input_field;
-    public GameObject objectGender;
+    public GameObject objectGirl;
+    public GameObject objectBoy;
+    private GameObject g;
 
     public void Start(){
     }
@@ -21,17 +23,22 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void spawnDummy(){
-        GameObject g = Instantiate(objectGender);
-        // g.AddComponent(typeof(dummyLook));
-    }
-
     public void chooseGender(){
         if (boy.isOn){
-            superScript.boy = true;
+            superScript.boy = true;         
+            g = Instantiate(objectBoy, new Vector3(785.7f, 75.2f, -813.2f), Quaternion.LookRotation(new Vector3(0f, 0f, -180f)));
+            // Animator a = g.AddComponent<Animator>();
+            // a.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Assets/Player/Animations/idle.controller");
         } else {
             superScript.boy = false;
+            g = Instantiate(objectGirl, new Vector3(785.7f, 60.2f, -813.2f), Quaternion.LookRotation(new Vector3(0f, 0f, -180f)));
+            // Animator a = g.AddComponent<Animator>();
+            // a.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Assets/Player/Animations/idle.controller");
         }
+    }
+
+    public void destroyGender(){
+        Destroy(g);
     }
 
     public void Quit(){
