@@ -253,7 +253,7 @@ MonoBehaviour:
   groundDrag: 5
   walkSpeed: 0
   playerHeight: 2
-  orientation: {fileID: 1254387272}
+  orientation: {fileID: 0}
 --- !u!1001 &86914411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -597,7 +597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304447068}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.124887325, y: -0.0013411287, z: 0.00016881178, w: 0.99217004}
+  m_LocalRotation: {x: 0.12488735, y: -0.0012082366, z: 0.00015208428, w: 0.9921702}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1236,7 +1236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843784453}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.26315853, y: -1e-45, z: -0, w: 0.9647526}
+  m_LocalRotation: {x: 0.26315853, y: 3e-45, z: -1e-45, w: 0.9647526}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1365,7 +1365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969875628}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12488733, y: -0.0013411285, z: 0.00016881176, w: 0.99217004}
+  m_LocalRotation: {x: 0.124887355, y: -0.0012082367, z: 0.00015208426, w: 0.9921702}
   m_LocalPosition: {x: 8.475364, y: 3.9893434, z: -3.946569}
   m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.010000001}
   m_ConstrainProportionsScale: 0
