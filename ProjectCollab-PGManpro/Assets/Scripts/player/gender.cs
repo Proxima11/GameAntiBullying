@@ -2,15 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class gender : MonoBehaviour
 {
+    public GameObject objectGirl;
+    public GameObject objectBoy;
+    public Transform parent;
+    private GameObject g;
     // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-        if (superScript.boy){
-            GameObject.Find("Player/Girl").SetActive(false);
+    }
+    
+    public void Start()
+    {   
+        float posx = parent.transform.position.x;
+        float posy = parent.transform.position.y;
+        float posz = parent.transform.position.z;
+        if (!superScript.boy){ 
+            g = Instantiate(objectBoy, new Vector3(posx, posy-0.1f, posz), Quaternion.LookRotation(new Vector3(0f, 0f, -180f)), parent);
         } else {
-            GameObject.Find("Player/Boy").SetActive(false);
+            g = Instantiate(objectGirl, new Vector3(posx, posy+0.4f, posz), Quaternion.LookRotation(new Vector3(0f, 0f, -180f)), parent);
         }
     }
 
