@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    [SerializeField] GameObject player;
 
+    void Start() {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            GameManager.PlayerPos = player.transform.position;
             InterfaceInteractable interactable = GetInteractableObject();
             if (interactable != null)
             {
