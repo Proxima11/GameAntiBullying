@@ -816,7 +816,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 532518204}
-  - component: {fileID: 532518206}
   - component: {fileID: 532518205}
   m_Layer: 0
   m_Name: PlayerInteractUI
@@ -858,20 +857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containerGameObject: {fileID: 1148517438}
-  playerInteract: {fileID: 6982812147159283506}
+  playerInteract: {fileID: 6982812147159283507}
   interactTextMeshProUGUI: {fileID: 839721962}
---- !u!114 &532518206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 532518203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdd85cef18845d8449bf5a9ea5038bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &541457173 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4cdc735c08b40b248bb45797bc88e536, type: 3}
@@ -1885,8 +1872,8 @@ GameObject:
   - component: {fileID: 5885216828229180673}
   - component: {fileID: 135756642316544909}
   - component: {fileID: 4416926081978447869}
-  - component: {fileID: 6982812147159283506}
   - component: {fileID: 6982812147159283507}
+  - component: {fileID: 6982812147159283508}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -2099,7 +2086,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6982812147159283506
+--- !u!114 &6982812147159283507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2111,7 +2098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947be1c5ada7a864caf52622bf70abe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6982812147159283507
+--- !u!114 &6982812147159283508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -868,7 +868,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 256620342}
-  - component: {fileID: 256620344}
   - component: {fileID: 256620343}
   m_Layer: 0
   m_Name: PlayerInteractUI
@@ -912,18 +911,6 @@ MonoBehaviour:
   containerGameObject: {fileID: 610095996}
   playerInteract: {fileID: 704028416}
   interactTextMeshProUGUI: {fileID: 647079329}
---- !u!114 &256620344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 256620341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdd85cef18845d8449bf5a9ea5038bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &258952005
 PrefabInstance:
   m_ObjectHideFlags: 0
