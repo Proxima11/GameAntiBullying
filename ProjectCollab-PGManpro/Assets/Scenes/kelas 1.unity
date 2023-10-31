@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containerGameObject: {fileID: 946521898}
-  playerInteract: {fileID: 0}
+  playerInteract: {fileID: 1397382318}
   interactTextMeshProUGUI: {fileID: 1290702622}
 --- !u!114 &4467031
 MonoBehaviour:
@@ -4307,6 +4307,7 @@ GameObject:
   - component: {fileID: 1397382313}
   - component: {fileID: 1397382312}
   - component: {fileID: 1397382311}
+  - component: {fileID: 1397382318}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -4478,9 +4479,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 1.2
   Gravity: -15
-  JumpTimeout: 0.3
   FallTimeout: 0.15
   Grounded: 1
   GroundedOffset: -0.14
@@ -4557,6 +4556,18 @@ Transform:
   - {fileID: 1404221155}
   m_Father: {fileID: 1851460577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1397382318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397382310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947be1c5ada7a864caf52622bf70abe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404221154
 GameObject:
   m_ObjectHideFlags: 0
