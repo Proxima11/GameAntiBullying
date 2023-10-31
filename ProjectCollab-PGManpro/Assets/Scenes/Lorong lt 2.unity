@@ -4189,6 +4189,7 @@ GameObject:
   - component: {fileID: 682061291}
   - component: {fileID: 682061290}
   - component: {fileID: 682061289}
+  - component: {fileID: 682061295}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -4377,9 +4378,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 1.2
   Gravity: -15
-  JumpTimeout: 0.3
   FallTimeout: 0.15
   Grounded: 1
   GroundedOffset: -0.14
@@ -4439,6 +4438,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &682061295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682061287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947be1c5ada7a864caf52622bf70abe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &686902260
 GameObject:
   m_ObjectHideFlags: 0
@@ -6735,7 +6746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containerGameObject: {fileID: 1276386639}
-  playerInteract: {fileID: 0}
+  playerInteract: {fileID: 682061295}
   interactTextMeshProUGUI: {fileID: 1212829803}
 --- !u!114 &996702216
 MonoBehaviour:
@@ -10448,6 +10459,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 812562742}
     m_Modifications:
+    - target: {fileID: 1630794972795428178, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0008252859
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.045195103
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.015473783
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.83797777
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167280743394806330, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.53
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4cdc735c08b40b248bb45797bc88e536, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10491,26 +10522,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cdc735c08b40b248bb45797bc88e536, type: 3}
       propertyPath: m_Name
       value: Girl_FBX2020
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630794972795428178, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_AABB.m_Center.x
-      value: -0.0008252859
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630794972795428178, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_AABB.m_Center.y
-      value: -0.045195103
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630794972795428178, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_AABB.m_Center.z
-      value: 0.015473783
-      objectReference: {fileID: 0}
-    - target: {fileID: 1630794972795428178, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_AABB.m_Extent.y
-      value: 0.83797777
-      objectReference: {fileID: 0}
-    - target: {fileID: 4167280743394806330, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.53
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

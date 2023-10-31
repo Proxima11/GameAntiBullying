@@ -3673,6 +3673,7 @@ GameObject:
   - component: {fileID: 593228240}
   - component: {fileID: 593228239}
   - component: {fileID: 593228238}
+  - component: {fileID: 593228244}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -3861,9 +3862,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 1.2
   Gravity: -15
-  JumpTimeout: 0.3
   FallTimeout: 0.15
   Grounded: 1
   GroundedOffset: -0.14
@@ -3923,6 +3922,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &593228244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593228236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947be1c5ada7a864caf52622bf70abe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &594316882
 GameObject:
   m_ObjectHideFlags: 0
@@ -8084,7 +8095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containerGameObject: {fileID: 1169872525}
-  playerInteract: {fileID: 0}
+  playerInteract: {fileID: 593228244}
   interactTextMeshProUGUI: {fileID: 1747822000}
 --- !u!114 &1077877572
 MonoBehaviour:
