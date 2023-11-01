@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    private bool pindah = true;
+
+    private string tp;
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -14,7 +18,15 @@ public class PlayerInteract : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            GameManager.PlayerPos = player.transform.position;
+            Scene scene = SceneManager.GetActiveScene();
+            Debug.Log(scene.name);
+
+
+            if(scene.name == "Lorong lt 1"){           
+                GameManager.PlayerPos = player.transform.position;
+            }
+
+
             InterfaceInteractable interactable = GetInteractableObject();
             if (interactable != null)
             {
