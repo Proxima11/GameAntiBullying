@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour
 {
-    public Dialog dialog;
+    public TextAsset inkJSON;
 
     public void TriggerDialog(){
-        FindObjectOfType<DialogManager>().StartDialog(dialog);
+        FindObjectOfType<DialogManager>().StartDialogInk(inkJSON);
     }
 
     void Update(){
-        if (Input.GetKeyUp(KeyCode.Y)){
+        if (Input.GetKeyUp(KeyCode.T)){
             TriggerDialog();
-        }
-
-        if (Input.GetKeyDown(KeyCode.T)){
-            FindObjectOfType<DialogManager>().DisplayNextSentences();
         }
     }
 
