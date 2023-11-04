@@ -8,17 +8,92 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CC_Base_BodySG10
-    second: {fileID: 2100000, guid: 3c21d9e161aa1024f84412b7d73437e7, type: 2}
+    second: {fileID: 2100000, guid: 9c97f230aa16da44c9bee187af482114, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CC_Base_BodySG11
-    second: {fileID: 2100000, guid: 3c21d9e161aa1024f84412b7d73437e7, type: 2}
+    second: {fileID: 2100000, guid: fb0cfdd2652f8cb43b2799fb588ef149, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: CC_Base_BodySG6
-    second: {fileID: 2100000, guid: 3c21d9e161aa1024f84412b7d73437e7, type: 2}
+    second: {fileID: 2100000, guid: 47da0420427c6084e8be47da46c3d740, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CC_Base_BodySG8
+    second: {fileID: 2100000, guid: c424bb2538ee94a46ade5ef06d1c32d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CC_Base_BodySG9
+    second: {fileID: 2100000, guid: 12d59bd8f01978e45a25c35eca69f1a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CC_Base_TeethSG2
+    second: {fileID: 2100000, guid: 2597082f08fcce3499f0130ff587ece0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CC_Base_TeethSG3
+    second: {fileID: 2100000, guid: fe6efa7764fe3f24bafbd04c063afbe4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CC_Base_TongueSG1
+    second: {fileID: 2100000, guid: 834367d446072ef4facbeeec7a5b7e52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FBXASC051SG
+    second: {fileID: 2100000, guid: a964e958729582641b5b517f656e41ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: H1_pilot_medium_bangalore_season_04_assimilation_legendary_01_F
+    second: {fileID: 2100000, guid: 1d30ea3b717a62d41bea0712556a20ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Legs_U_01FBXASC046mo_1SG
+    second: {fileID: 2100000, guid: c21e47c1596a8fe44a2807db1a009a99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert12SG
+    second: {fileID: 2100000, guid: 59bdaa93e9a9346408c2f24e30140444, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert17SG
+    second: {fileID: 2100000, guid: dbc3040b8198b0443a07d434b823eb40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert20SG
+    second: {fileID: 2100000, guid: 94f667ddddf062f43994585d6e21f8d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert22SG
+    second: {fileID: 2100000, guid: 8e708a9c52d871d4c861edbd160dcdae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert8SG
+    second: {fileID: 2100000, guid: 650d18a4dbb68274db3faeddd362e716, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong8SG
+    second: {fileID: 2100000, guid: 650d18a4dbb68274db3faeddd362e716, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoes_3SG
+    second: {fileID: 2100000, guid: a03d503170b3f7d458e3b81a136ca9d4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 3
@@ -50,7 +125,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.01
+    globalScale: 0.0013
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -105,7 +180,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 0.0013
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
