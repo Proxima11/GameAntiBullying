@@ -10,18 +10,15 @@ public class DialogManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogText;
-
     public Queue<string> sentences;
-
     public Story currentStory;
-
     public Animator animator;
-
+    public float TypingSpeed = 0.04f;
+    private bool canContinueToNextLine = false;
+    private string currentTextRunning;
     [SerializeField] private GameObject[] choices;
     private TMP_Text[] choicesText;
-
     private bool isChoices = false;
-
     private const string SPEAKER_TAG = "speaker";
 
     // Start is called before the first frame update
@@ -38,7 +35,11 @@ public class DialogManager : MonoBehaviour
 
     void Update(){
         if (Input.GetKeyUp(KeyCode.R)){
-            continueStory();
+            if (canContinueToNextLine){
+                continueStory();
+            }else{
+                skipText();
+            }
         }
 
     }
@@ -47,24 +48,24 @@ public class DialogManager : MonoBehaviour
         animator.SetBool("isOpen", true);
 
         currentStory = new Story(inkJSON.text);
-        
+        nameText.SetText("xxx");
+
         continueStory();
     }
 
     public void continueStory(){
         if (!isChoices){
-            string text = "";
+            currentTextRunning = "";
             if(currentStory.canContinue){
-                text = currentStory.Continue();
-                displayChoices();
+                currentTextRunning = currentStory.Continue();
                 handleTags(currentStory.currentTags);
             }else{
                 EndDialouge();
             }
 
-            dialogText.SetText(text); 
+            dialogText.SetText(currentTextRunning); 
             StopAllCoroutines();
-            StartCoroutine(TypeSentences(text));
+            StartCoroutine(TypeSentences(currentTextRunning));
         }
     }
 
@@ -91,11 +92,17 @@ public class DialogManager : MonoBehaviour
         string textValue = "";
         dialogText.SetText("");
 
+        hideChoices();
+        canContinueToNextLine = false;
+
         foreach(char letter in sentence.ToCharArray()){
             textValue += letter;
             dialogText.SetText(textValue);
-            yield return null;
+            yield return new WaitForSeconds(TypingSpeed);
         }
+
+        displayChoices();
+        canContinueToNextLine = true;
     }
 
     public void EndDialouge(){
@@ -136,12 +143,23 @@ public class DialogManager : MonoBehaviour
     }
 
     public void MakeChoices(int choiceIndex){
-        Debug.Log(choiceIndex);
-        currentStory.ChooseChoiceIndex(choiceIndex);
+        if (canContinueToNextLine){
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            hideChoices();
+            isChoices= false;
+            continueStory();
+        }
+    }
+
+    public void hideChoices(){
         foreach(GameObject choice in choices){
             choice.gameObject.SetActive(false);
         }
-        isChoices= false;
-        continueStory();
+    }
+
+    public void skipText(){
+        StopAllCoroutines();
+        dialogText.SetText(currentTextRunning);
+        canContinueToNextLine = true;
     }
 }

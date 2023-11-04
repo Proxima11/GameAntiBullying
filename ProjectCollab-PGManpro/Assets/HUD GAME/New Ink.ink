@@ -1,14 +1,14 @@
-haloo # speaker: David
-haloo, too # speaker: Alvin
+halooooooooooooooooooooooooooooooooooooooooooooooooo # speaker: David
+haloooooooooooooooooooooooooooooooooooooooooooooooooooooo, too # speaker: Alvin
 ->main
 === main ===
 
 Which pokemon do you choose? #speaker : David
     + [Charmander]
         are you sure ? 
-            * * yes
+            * * [yes]
                 -> chosen("Charmander")
-            * *  no 
+            * *  [no] 
                 -> main 
     + [Bulbasaur]
         -> chosen("Bulbasaur")
