@@ -1505,7 +1505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &131122069
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1570,7 +1570,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1415207145}
         m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
         m_MethodName: MakeChoices
         m_Mode: 3
@@ -1629,6 +1629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133581507}
+  - component: {fileID: 133581508}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1654,6 +1655,25 @@ Transform:
   - {fileID: 593228237}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &133581508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133581506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0246c42d4127234cb8bd487bda49a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stress: 0
+  score: 0
+  maxTime: 1200
+  timeNow: 0
+  second: 0
+  minute: 0
+  day: 1
 --- !u!1001 &156000568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5423,6 +5443,7 @@ GameObject:
   - component: {fileID: 593228239}
   - component: {fileID: 593228238}
   - component: {fileID: 593228244}
+  - component: {fileID: 593228245}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -5685,6 +5706,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+--- !u!114 &593228245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593228236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0246c42d4127234cb8bd487bda49a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stress: 0
+  score: 0
+  maxTime: 1200
+  timeNow: 0
+  second: 0
+  minute: 0
+  day: 1
 --- !u!1 &594316882
 GameObject:
   m_ObjectHideFlags: 0
@@ -6026,7 +6066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &649797441
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6091,7 +6131,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1415207145}
         m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
         m_MethodName: MakeChoices
         m_Mode: 3
@@ -10940,7 +10980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1077877570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14192,7 +14232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05d935a2d422ed4cb0ca0bd2501b789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 0}
+  inkJSON: {fileID: 4900000, guid: ac862ae9b31999549a6af896691d18b5, type: 3}
 --- !u!114 &1415207145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14205,10 +14245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5720665a34bdcd14bb431b96949706fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogText: {fileID: 0}
-  animator: {fileID: 0}
-  choices: []
+  nameText: {fileID: 1545446633}
+  dialogText: {fileID: 811909319}
+  animator: {fileID: 1954117007}
+  choices:
+  - {fileID: 649797440}
+  - {fileID: 1513572804}
+  - {fileID: 131122068}
 --- !u!114 &1415207146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14221,10 +14264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9db4246df5237f04cbeea41f2e1e3b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  streesBar: {fileID: 0}
-  score: {fileID: 0}
-  time: {fileID: 0}
-  day: {fileID: 0}
+  streesBar: {fileID: 437505045}
+  score: {fileID: 1100587234}
+  time: {fileID: 787658919}
+  day: {fileID: 1324685455}
 --- !u!1001 &1421419341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14844,7 +14887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1513572805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14909,7 +14952,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1415207145}
         m_TargetAssemblyTypeName: DialogManager, Assembly-CSharp
         m_MethodName: MakeChoices
         m_Mode: 3
@@ -15411,7 +15454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: David
+  m_text: xxx
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebd6e6f3afdf0f14caaf02ff9a04e189, type: 2}
   m_sharedMaterial: {fileID: -5748547113616965816, guid: ebd6e6f3afdf0f14caaf02ff9a04e189, type: 2}
