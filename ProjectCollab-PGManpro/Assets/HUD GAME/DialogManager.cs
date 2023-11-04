@@ -15,6 +15,7 @@ public class DialogManager : MonoBehaviour
     public Animator animator;
     public float TypingSpeed = 0.04f;
     private bool canContinueToNextLine = false;
+    private Coroutine displayLineCoroutine;
     private string currentTextRunning;
     [SerializeField] private GameObject[] choices;
     private TMP_Text[] choicesText;
@@ -64,8 +65,10 @@ public class DialogManager : MonoBehaviour
             }
 
             dialogText.SetText(currentTextRunning); 
-            StopAllCoroutines();
-            StartCoroutine(TypeSentences(currentTextRunning));
+            if(displayLineCoroutine!=null){
+                StopCoroutine(displayLineCoroutine);
+            }
+            displayLineCoroutine = StartCoroutine(TypeSentences(currentTextRunning));
         }
     }
 
@@ -106,6 +109,7 @@ public class DialogManager : MonoBehaviour
     }
 
     public void EndDialouge(){
+
         animator.SetBool("isOpen", false);
     }
 
@@ -158,8 +162,9 @@ public class DialogManager : MonoBehaviour
     }
 
     public void skipText(){
-        StopAllCoroutines();
+        StopCoroutine(displayLineCoroutine);
         dialogText.SetText(currentTextRunning);
         canContinueToNextLine = true;
+        displayChoices();
     }
 }

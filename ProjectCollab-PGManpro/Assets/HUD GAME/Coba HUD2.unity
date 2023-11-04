@@ -1629,7 +1629,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133581507}
-  - component: {fileID: 133581508}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1655,25 +1654,6 @@ Transform:
   - {fileID: 593228237}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &133581508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133581506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0246c42d4127234cb8bd487bda49a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stress: 0
-  score: 0
-  maxTime: 1200
-  timeNow: 0
-  second: 0
-  minute: 0
-  day: 1
 --- !u!1001 &156000568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5443,7 +5423,6 @@ GameObject:
   - component: {fileID: 593228239}
   - component: {fileID: 593228238}
   - component: {fileID: 593228244}
-  - component: {fileID: 593228245}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -5706,25 +5685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
---- !u!114 &593228245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593228236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0246c42d4127234cb8bd487bda49a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stress: 0
-  score: 0
-  maxTime: 1200
-  timeNow: 0
-  second: 0
-  minute: 0
-  day: 1
 --- !u!1 &594316882
 GameObject:
   m_ObjectHideFlags: 0
@@ -6193,7 +6153,7 @@ GameObject:
   - component: {fileID: 658629100}
   - component: {fileID: 658629099}
   - component: {fileID: 658629098}
-  - component: {fileID: 658629097}
+  - component: {fileID: 658629102}
   m_Layer: 0
   m_Name: kelas1Teleport
   m_TagString: Teleport
@@ -6201,19 +6161,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &658629097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658629096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: kelas 1
 --- !u!65 &658629098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6300,6 +6247,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &658629102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658629096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b71fff5571db145a786dec33883dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: Coba HUD3
 --- !u!1 &662086745
 GameObject:
   m_ObjectHideFlags: 0
@@ -10980,7 +10940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1077877570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14186,9 +14146,10 @@ GameObject:
   - component: {fileID: 1415207146}
   - component: {fileID: 1415207145}
   - component: {fileID: 1415207144}
+  - component: {fileID: 1415207147}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14248,6 +14209,7 @@ MonoBehaviour:
   nameText: {fileID: 1545446633}
   dialogText: {fileID: 811909319}
   animator: {fileID: 1954117007}
+  TypingSpeed: 0.04
   choices:
   - {fileID: 649797440}
   - {fileID: 1513572804}
@@ -14268,6 +14230,25 @@ MonoBehaviour:
   score: {fileID: 1100587234}
   time: {fileID: 787658919}
   day: {fileID: 1324685455}
+--- !u!114 &1415207147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415207141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0246c42d4127234cb8bd487bda49a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stress: 0
+  score: 0
+  maxTime: 1200
+  timeNow: 0
+  second: 0
+  minute: 0
+  day: 1
 --- !u!1001 &1421419341
 PrefabInstance:
   m_ObjectHideFlags: 0

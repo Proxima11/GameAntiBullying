@@ -12,17 +12,17 @@ public class UpdateUI : MonoBehaviour
     public TMP_Text day;
 
 
-    PlayerStats playerStats;
+    GameVariable gameVariable;
 
     void Start (){
-        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        gameVariable = FindObjectOfType<GameVariable>();  
     }
 
     void Update (){
-        streesBar.value = playerStats.stress;
-        score.SetText(playerStats.score.ToString());
-        time.SetText(playerStats.minute.ToString() + ":" + playerStats.second.ToString());
-        day.SetText("Day "+playerStats.day.ToString());
+        streesBar.value = gameVariable.stress;
+        score.SetText(gameVariable.score.ToString());
+        time.SetText(gameVariable.minute.ToString() + ":" + gameVariable.second.ToString());
+        day.SetText("Day "+gameVariable.day.ToString());
     }   
 
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class PlayerStats : MonoBehaviour 
+public class GameVariable : MonoBehaviour 
 {
 	public int stress = 0;
 	public int score = 0;
@@ -40,8 +40,14 @@ public class PlayerStats : MonoBehaviour
 		}
 	}
 
+	private void Start(){
+		stress = superScript.stress;
+		score = superScript.score;
+		timeNow = superScript.time;
+		day = superScript.day;
+	}
+	
 	private void Update() {
-		
 		if (Input.GetKeyUp(KeyCode.G)){
 			TakeStress(1);
 		}
