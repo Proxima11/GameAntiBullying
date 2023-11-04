@@ -73,7 +73,7 @@ namespace StarterAssets
         public float CameraAngleOverride = 0.0f;
 
         [Tooltip("For locking the camera position on all axis")]
-        public bool LockCameraPosition = false;
+        public bool LockCameraPosition = true;
 
         // cinemachine
         private float _cinemachineTargetYaw;

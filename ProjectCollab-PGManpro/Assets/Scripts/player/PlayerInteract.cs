@@ -22,7 +22,7 @@ public class PlayerInteract : MonoBehaviour
             Debug.Log(scene.name);
 
 
-            if(scene.name == "Lorong lt 1" || scene.name == "Lorong lt 1"){           
+            if(scene.name == "Lorong lt 1" || scene.name == "Lorong lt 2"){           
                 GameManager.PlayerPos = player.transform.position;
             }
 
