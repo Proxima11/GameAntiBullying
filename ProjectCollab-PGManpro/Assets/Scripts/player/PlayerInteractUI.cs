@@ -5,14 +5,23 @@ using TMPro;
 public class PlayerInteractUI : MonoBehaviour {
 
     [SerializeField] private GameObject containerGameObject;
-    [SerializeField] private PlayerInteract playerInteract;
+    [SerializeField] private PlayerInteract playerInteractBoy;
+    [SerializeField] private PlayerInteract playerInteractGirl;
     [SerializeField] private TextMeshProUGUI interactTextMeshProUGUI;
 
     private void Update() {
-        if (playerInteract.GetInteractableObject() != null) {
-            Show(playerInteract.GetInteractableObject());
+        if (superScript.boy){
+            if (playerInteractBoy.GetInteractableObject() != null) {
+                Show(playerInteractBoy.GetInteractableObject());
+            } else {
+                Hide();
+            }
         } else {
-            Hide();
+                if (playerInteractGirl.GetInteractableObject() != null) {
+                Show(playerInteractGirl.GetInteractableObject());
+            } else {
+                Hide();
+            }
         }
     }
 

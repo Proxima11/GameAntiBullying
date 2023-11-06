@@ -5,7 +5,7 @@ using UnityEngine;
 public class superScript : MonoBehaviour
 {
 
-    static public bool boy = true;
+    static public bool boy = false;
     static public string username;
     static public int passiveAggresive = 50;
     static public int shyConfidence = 50;
