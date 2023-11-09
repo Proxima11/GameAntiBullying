@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    private bool pindah = true;
 
-    private string tp;
+    private TeleportCollision teleportCollision;
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
+        GameObject gameObjectScene = new GameObject("TeleportCollision");
+        teleportCollision = gameObjectScene.AddComponent<TeleportCollision>();
+
     }
 
     private void Update()
@@ -19,12 +21,16 @@ public class PlayerInteract : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             Scene scene = SceneManager.GetActiveScene();
-            Debug.Log(scene.name);
+            Debug.Log(teleportCollision.SceneName);
 
 
             if(scene.name == "Lorong lt 1" || scene.name == "Lorong lt 2"){           
                 GameManager.PlayerPos = player.transform.position;
             }
+            //if(teleportCollision.SceneName == "Lorong lt 2") {
+            //    Debug.Log(teleportCollision.SceneName);
+            //}
+
 
 
             InterfaceInteractable interactable = GetInteractableObject();
