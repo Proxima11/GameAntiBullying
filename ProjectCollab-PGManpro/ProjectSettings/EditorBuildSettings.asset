@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/kelas 1.unity
     guid: ad311bbb8974d4d4ab726341e3004cbc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/toilet 2 lt 2.unity
     guid: 23c39cbbf602cdb45950a92da434ab34
   - enabled: 1
@@ -38,7 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Toilet Wanita lt 2.unity
     guid: 8d865f0f60412274984b4392fbc0a772
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/toilet 1.unity
     guid: 53eaee68aecb87744b5168f04abd54f9
   - enabled: 1
@@ -47,5 +47,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HUD GAME/Coba HUD3.unity
     guid: 0377e03d5d15d3747a163b49c44e6bfd
+  - enabled: 1
+    path: Assets/Scenes/Toilet Pria lt 2.unity
+    guid: 1faad8dc3d2706b478827be3d12e0761
+  - enabled: 1
+    path: Assets/Scenes/Toilet Wanita lt 1.unity
+    guid: d9f4767d044ee0e42a3e8e91065c3527
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
