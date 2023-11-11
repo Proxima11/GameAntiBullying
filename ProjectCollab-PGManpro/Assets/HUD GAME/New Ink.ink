@@ -1,5 +1,9 @@
 halooooooooooooooooooooooooooooooooooooooooooooooooo # speaker: David
 haloooooooooooooooooooooooooooooooooooooooooooooooooooooo, too # speaker: Alvin
+
+David Menanyakan sesuatu ke Alvin # speaker: narrator
+asdfgas dasfgadsg # speaker: narrator
+asdfsdfadsf asdgasgdg # speaker: narrator
 ->main
 === main ===
 

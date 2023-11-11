@@ -10,17 +10,24 @@ public class DialogManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogText;
+    public TMP_Text blackScreenText;
+
     public Queue<string> sentences;
     public Story currentStory;
     public Animator animator;
+    public Animator animatorBlackScreen;
     public float TypingSpeed = 0.04f;
-    private bool canContinueToNextLine = false;
     private Coroutine displayLineCoroutine;
     private string currentTextRunning;
     [SerializeField] private GameObject[] choices;
     private TMP_Text[] choicesText;
+
+    private bool canContinueToNextLine = false;
     private bool isChoices = false;
+    private bool isDialogBlackscreen = false;
+
     private const string SPEAKER_TAG = "speaker";
+    private const string BLACKSCREEN_TAG = "blackscreen";
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +45,10 @@ public class DialogManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.R)){
             if (canContinueToNextLine){
                 continueStory();
-            }else{
+            }else if(!isDialogBlackscreen){
                 skipText();
             }
         }
-
     }
 
     public void StartDialogInk(TextAsset inkJSON){
@@ -64,13 +70,27 @@ public class DialogManager : MonoBehaviour
                 EndDialouge();
             }
 
-            dialogText.SetText(currentTextRunning); 
-            if(displayLineCoroutine!=null){
-                StopCoroutine(displayLineCoroutine);
+            if (isDialogBlackscreen){
+                Debug.Log("blackscreen");
+                animatorBlackScreen.SetBool("isStart", true);
+
+                blackScreenText.SetText(currentTextRunning);
+                if(displayLineCoroutine!=null){
+                    StopCoroutine(displayLineCoroutine);
+                }
+                displayLineCoroutine = StartCoroutine(TypeSentences(currentTextRunning));
+                StartCoroutine(closeBlackScreen());
+            }else {
+                dialogText.SetText(currentTextRunning); 
+                if(displayLineCoroutine!=null){
+                    StopCoroutine(displayLineCoroutine);
+                }
+                displayLineCoroutine = StartCoroutine(TypeSentences(currentTextRunning));
             }
-            displayLineCoroutine = StartCoroutine(TypeSentences(currentTextRunning));
         }
     }
+
+
 
     private void handleTags(List<string> currentTags){
         foreach(string tag in currentTags){
@@ -85,7 +105,12 @@ public class DialogManager : MonoBehaviour
             switch (tagKey){
                 case SPEAKER_TAG:
                     // Debug.Log("speaker: "+ tagValue);
-                    nameText.SetText(tagValue);
+                    if (tagValue == "narrator"){
+                        isDialogBlackscreen = true;
+                        
+                    }else {
+                        nameText.SetText(tagValue);
+                    }
                     break;
             }
         }
@@ -100,7 +125,11 @@ public class DialogManager : MonoBehaviour
 
         foreach(char letter in sentence.ToCharArray()){
             textValue += letter;
-            dialogText.SetText(textValue);
+            if (isDialogBlackscreen){
+                blackScreenText.SetText(textValue);
+            }else{
+                dialogText.SetText(textValue);
+            }
             yield return new WaitForSeconds(TypingSpeed);
         }
 
@@ -166,5 +195,12 @@ public class DialogManager : MonoBehaviour
         dialogText.SetText(currentTextRunning);
         canContinueToNextLine = true;
         displayChoices();
+    }
+
+    public IEnumerator closeBlackScreen(){
+        yield return new WaitForSeconds(2);
+        animatorBlackScreen.SetBool("isStart", false);
+        isDialogBlackscreen = false;
+        continueStory();
     }
 }
