@@ -21,15 +21,12 @@ public class PlayerInteract : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             Scene scene = SceneManager.GetActiveScene();
-            Debug.Log(teleportCollision.SceneName);
+            Debug.Log(scene.name);
 
-
-            if(scene.name == "Lorong lt 1" || scene.name == "Lorong lt 2"){           
+            if (scene.name == "Lorong lt 1" || scene.name == "Lorong lt 2")
+            {
                 GameManager.PlayerPos = player.transform.position;
             }
-            //if(teleportCollision.SceneName == "Lorong lt 2") {
-            //    Debug.Log(teleportCollision.SceneName);
-            //}
 
 
 
