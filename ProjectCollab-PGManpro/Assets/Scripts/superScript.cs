@@ -7,9 +7,9 @@ public class superScript : MonoBehaviour
 
     static public bool boy = false;
     static public string username;
-    static public int passiveAggresive = 50;
-    static public int shyConfidence = 50;
-    static public int nerdCool = 50;
+    static public float passiveAggresive = 50f;
+    static public float shyConfidence = 50f;
+    static public float nerdCool = 50f;
     
     //Game Variable
     static public int score = 0;
