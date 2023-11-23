@@ -17111,7 +17111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd62d5541e6e5b4096f107beac06a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCName: 
+  NPCName: Bocah Culun
   playerGirl: {fileID: 742558696}
   playerBoy: {fileID: 1163675069}
 --- !u!1001 &1859684011
