@@ -28,8 +28,6 @@ public class PlayerInteract : MonoBehaviour
                 GameManager.PlayerPos = player.transform.position;
             }
 
-
-
             InterfaceInteractable interactable = GetInteractableObject();
             if (interactable != null)
             {

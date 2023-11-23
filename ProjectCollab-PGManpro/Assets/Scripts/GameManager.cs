@@ -33,5 +33,9 @@ public class GameManager : MonoBehaviour
         Debug.Log(playerPos);
     }
     public static Vector3 PlayerPos { get => playerPos; set => playerPos = value; }
+
+    public void starterTask(){
+        
+    }
 }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4578,7 +4578,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 1.2
   Gravity: -15
   JumpTimeout: 0.5
   FallTimeout: 0.15
@@ -5695,7 +5694,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 1.2
   Gravity: -15
   JumpTimeout: 0.5
   FallTimeout: 0.15
@@ -5903,8 +5901,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   containerGameObject: {fileID: 1073285522}
-  playerInteractBoy: {fileID: 0}
-  playerInteractGirl: {fileID: 0}
+  playerInteractBoy: {fileID: 1398919052}
+  playerInteractGirl: {fileID: 1652936821}
   interactTextMeshProUGUI: {fileID: 1051521604}
 --- !u!1001 &1730363086
 PrefabInstance:
