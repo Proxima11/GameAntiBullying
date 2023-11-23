@@ -12,7 +12,8 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     public Transform playerBoy;
     private bool isLookingAtPlayer = false;
     Quaternion m_MyQuaternion;
-    float m_Speed = 1.0f;
+    float speed = 10.0f;
+    public TextAsset inkJSON;
 
     private void Awake()
     {
@@ -46,6 +47,10 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
             playerTransform = playerBoy;
         }
         GetTransform().LookAt(playerTransform);
+        TriggerDialog();
+        //var targetRotation = Quaternion.LookRotation(playerTransform.position - transform.position);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+
     }
 
     public string GetInteractText()
@@ -56,5 +61,9 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     public Transform GetTransform()
     {
         return transform;
+    }
+    public void TriggerDialog()
+    {
+        FindObjectOfType<DialogManager>().StartDialogInk(inkJSON);
     }
 }
