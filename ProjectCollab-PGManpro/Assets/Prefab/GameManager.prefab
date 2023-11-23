@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1000926975826619678}
   - component: {fileID: 1868147092286799413}
-  - component: {fileID: 4803449922811262359}
   - component: {fileID: 4032703753897395503}
   - component: {fileID: 2851899794222974184}
   - component: {fileID: 3929016794151569719}
@@ -48,23 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b89fd78db59dfa49a09a9d914acaf84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4803449922811262359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628361382208740381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db4246df5237f04cbeea41f2e1e3b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  streesBar: {fileID: 0}
-  score: {fileID: 0}
-  time: {fileID: 0}
-  day: {fileID: 0}
-  taskCanvas: {fileID: 0}
 --- !u!114 &4032703753897395503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +61,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 0}
   dialogText: {fileID: 0}
+  blackScreenText: {fileID: 0}
   animator: {fileID: 0}
+  animatorBlackScreen: {fileID: 0}
   TypingSpeed: 0.04
   choices:
   - {fileID: 0}
