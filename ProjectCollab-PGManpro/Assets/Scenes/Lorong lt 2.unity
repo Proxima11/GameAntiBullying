@@ -5883,7 +5883,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 1.2
   Gravity: -15
   JumpTimeout: 0.5
   FallTimeout: 0.15
@@ -6774,13 +6773,10 @@ PrefabInstance:
       addedObject: {fileID: 1850418570}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1850418572}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1850418573}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1850418576}
+      addedObject: {fileID: 1850418577}
   m_SourcePrefab: {fileID: 100100000, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
 --- !u!1001 &837561999
 PrefabInstance:
@@ -9725,7 +9721,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 1.2
   Gravity: -15
   JumpTimeout: 0.5
   FallTimeout: 0.15
@@ -17078,19 +17073,6 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: -1.7550861e-16, y: 0.7, z: 0}
---- !u!114 &1850418572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850418566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceda65747c6d39d418f43b24df512079, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPCName: Bocah Culun
 --- !u!135 &1850418573
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17117,7 +17099,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
   m_PrefabInstance: {fileID: 827221390}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1850418576
+--- !u!114 &1850418577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17126,10 +17108,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1850418566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b34ef70efb30f448c9e0c3459c62d6, type: 3}
+  m_Script: {fileID: 11500000, guid: afd62d5541e6e5b4096f107beac06a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headLookAtTransform: {fileID: 1707400090}
+  NPCName: 
+  playerGirl: {fileID: 742558696}
+  playerBoy: {fileID: 1163675069}
 --- !u!1001 &1859684011
 PrefabInstance:
   m_ObjectHideFlags: 0
