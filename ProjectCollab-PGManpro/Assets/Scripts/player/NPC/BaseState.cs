@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class BaseState
 {
+    public NPCJalan npc;
     public StateMachine stateMachine;
     public abstract void Enter();
     public abstract void Exit();
