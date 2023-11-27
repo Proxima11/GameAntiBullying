@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class StoryData
+{
+    public TextAsset inkJSON;
+    public string title;
+}
+
 public class NPCInteracted : MonoBehaviour, InterfaceInteractable
 {
 
@@ -13,7 +20,7 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     private bool isLookingAtPlayer = false;
     Quaternion m_MyQuaternion;
     float speed = 10.0f;
-    public TextAsset inkJSON;
+    public StoryData[] story;
 
     private void Awake()
     {
@@ -64,6 +71,6 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     }
     public void TriggerDialog()
     {
-        FindObjectOfType<DialogManager>().StartDialogInk(inkJSON);
+        FindObjectOfType<DialogManager>().StartDialogInk(story[0].inkJSON);
     }
 }
