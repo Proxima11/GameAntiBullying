@@ -1514,7 +1514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Lorong lt 1
+  SceneName: GabungLorong
 --- !u!65 &388307130
 BoxCollider:
   m_ObjectHideFlags: 0

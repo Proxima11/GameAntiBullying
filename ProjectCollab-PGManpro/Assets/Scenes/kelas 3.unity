@@ -2138,7 +2138,7 @@ PrefabInstance:
     - target: {fileID: 1115817378887218147, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1306501021}
+      objectReference: {fileID: 0}
     - target: {fileID: 1115817378887218147, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: exitTask
@@ -2146,7 +2146,7 @@ PrefabInstance:
     - target: {fileID: 1648553097057640096, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1306501021}
+      objectReference: {fileID: 0}
     - target: {fileID: 1648553097057640096, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: showTask
@@ -2489,7 +2489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Lorong lt 2
+  SceneName: GabungLorong
 --- !u!65 &450014276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5995,17 +5995,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
---- !u!114 &1306501021 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4803449922811262359, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
-  m_PrefabInstance: {fileID: 1306501020}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db4246df5237f04cbeea41f2e1e3b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1312442025 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4963166404645526928, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Lorong lt 2
+  SceneName: GabungLorong
 --- !u!65 &259112620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3725,7 +3725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Lorong lt 2
+  SceneName: GabungLorong
 --- !u!65 &1026204606
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4955,17 +4955,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5720665a34bdcd14bb431b96949706fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1384717540 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4803449922811262359, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
-  m_PrefabInstance: {fileID: 1490706276}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db4246df5237f04cbeea41f2e1e3b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1388835011
@@ -7211,7 +7200,7 @@ PrefabInstance:
     - target: {fileID: 1648553097057640096, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1384717540}
+      objectReference: {fileID: 0}
     - target: {fileID: 1648553097057640096, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: showTask
