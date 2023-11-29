@@ -138,8 +138,8 @@ public class DialogManager : MonoBehaviour
     }
 
     public void EndDialouge(){
-
         animator.SetBool("isOpen", false);
+        superScript.indexDialog = superScript.indexDialog + 1;
     }
 
     public void displayChoices(){

@@ -16,6 +16,13 @@ public class superScript : MonoBehaviour
     static public int stress = 0;
 	static public int time = 0;
     static public int day = 1;
+    static public string[] dialogProgress = new string[] {
+        "Day 1 Begining",
+        "Day 1 Mid",
+        "Day 1 End",
+        "Day 2 Begining"
+        };
+    static public int indexDialog = 0;
 
     static public void setVariable (int inputScore, int inputStress, int inputTime, int inputDay){
         score = inputScore;

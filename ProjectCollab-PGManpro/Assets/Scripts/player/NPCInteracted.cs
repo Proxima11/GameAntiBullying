@@ -71,6 +71,19 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     }
     public void TriggerDialog()
     {
-        FindObjectOfType<DialogManager>().StartDialogInk(story[0].inkJSON);
+        string title = FindObjectOfType<NPCManager>().dialogStatus;
+        StoryData storyRunning =  SearchStory(title);
+        FindObjectOfType<DialogManager>().StartDialogInk(storyRunning.inkJSON);
+    }
+
+    private StoryData SearchStory(string title){
+        bool isStoryExist = false;
+        foreach(StoryData storyRunning in story){
+            if(storyRunning.title == title){
+                isStoryExist = true;
+                return storyRunning;
+            }
+        }
+        return story[0];
     }
 }
