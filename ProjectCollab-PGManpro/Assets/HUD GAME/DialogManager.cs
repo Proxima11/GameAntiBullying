@@ -135,6 +135,7 @@ public class DialogManager : MonoBehaviour
             }else{
                 dialogText.SetText(textValue);
             }
+            Debug.Log(textValue);
             yield return new WaitForSeconds(TypingSpeed);
         }
 
