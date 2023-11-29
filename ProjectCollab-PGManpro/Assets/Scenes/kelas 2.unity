@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.62513727, g: 0.695441, b: 0.78916824, a: 1}
+  m_IndirectSpecularColor: {r: 0.625131, g: 0.69543827, b: 0.78916645, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4879,6 +4879,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
+--- !u!1 &911116398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3726148037745033329, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
+  m_PrefabInstance: {fileID: 911116397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &966169905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8759,6 +8764,10 @@ PrefabInstance:
       propertyPath: dialogText
       value: 
       objectReference: {fileID: 489873004}
+    - target: {fileID: 4032703753897395503, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
+      propertyPath: taskbutton
+      value: 
+      objectReference: {fileID: 911116398}
     - target: {fileID: 4032703753897395503, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
       propertyPath: blackScreenText
       value: 

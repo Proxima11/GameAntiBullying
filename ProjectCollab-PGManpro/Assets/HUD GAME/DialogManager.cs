@@ -29,6 +29,9 @@ public class DialogManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string BLACKSCREEN_TAG = "blackscreen";
 
+    public GameObject taskbutton;
+    //public GameObject settingbutton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +76,8 @@ public class DialogManager : MonoBehaviour
             if (isDialogBlackscreen){
                 Debug.Log("blackscreen");
                 animatorBlackScreen.SetBool("isStart", true);
+                taskbutton.SetActive(false);
+                //settingbutton.SetActive(false);
 
                 blackScreenText.SetText(currentTextRunning);
                 if(displayLineCoroutine!=null){
@@ -201,6 +206,8 @@ public class DialogManager : MonoBehaviour
         yield return new WaitForSeconds(2);
         animatorBlackScreen.SetBool("isStart", false);
         isDialogBlackscreen = false;
+        taskbutton.SetActive(true);
+        //settingbutton.SetActive(true);
         continueStory();
     }
 }

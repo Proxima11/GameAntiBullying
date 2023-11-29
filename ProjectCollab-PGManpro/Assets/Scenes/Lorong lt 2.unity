@@ -14552,6 +14552,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 311021202}
     - target: {fileID: 4032703753897395503, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
+      propertyPath: taskbutton
+      value: 
+      objectReference: {fileID: 1729987658}
+    - target: {fileID: 4032703753897395503, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
       propertyPath: blackScreenText
       value: 
       objectReference: {fileID: 863424237}
@@ -17080,6 +17084,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2902341938358818826, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902341938358818826, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902341938358818826, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902341938358818826, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UpdateUI, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3936184597973841707, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -17185,6 +17205,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
+--- !u!1 &1729987658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3726148037745033329, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
+  m_PrefabInstance: {fileID: 1723820352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1731427760
 PrefabInstance:
   m_ObjectHideFlags: 0

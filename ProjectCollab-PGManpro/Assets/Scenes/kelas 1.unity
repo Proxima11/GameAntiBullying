@@ -5520,6 +5520,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9db4246df5237f04cbeea41f2e1e3b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1518581079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3726148037745033329, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
+  m_PrefabInstance: {fileID: 1518581077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1538962979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6968,6 +6973,10 @@ PrefabInstance:
       propertyPath: dialogText
       value: 
       objectReference: {fileID: 141380115}
+    - target: {fileID: 4032703753897395503, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
+      propertyPath: taskbutton
+      value: 
+      objectReference: {fileID: 1518581079}
     - target: {fileID: 4032703753897395503, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
       propertyPath: blackScreenText
       value: 
