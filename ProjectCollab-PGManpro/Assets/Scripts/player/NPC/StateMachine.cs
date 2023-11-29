@@ -6,6 +6,9 @@ public class StateMachine : MonoBehaviour
 {
     public BaseState activeState;
     public PatrolState patrolState;
+
+    [SerializeField]
+    private Animator mAnimator;
     
     public void Initialise()
     {
@@ -23,7 +26,7 @@ public class StateMachine : MonoBehaviour
     {
         if (activeState != null)
         {
-            activeState.Perform();
+            activeState.Perform(mAnimator);
         }
     }
     public void ChangeState(BaseState newstate)
