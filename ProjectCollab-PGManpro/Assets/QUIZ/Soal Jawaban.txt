@@ -1,0 +1,362 @@
+Bentuk pecahan sederhana dari 36/48 adalah...
+@6/9
+@8/6
+@8/8
+@3/4
+@D
+
+#Kelipatan persekutuan kecil (KPK) dari 18 dan 24 adalah...
+@72
+@27
+@6
+@36
+@A
+
+#Faktor persekutuan terbesar (FPB) dari 72 dan 96 adalah ...
+@32
+@24
+@8
+@96
+@B
+
+#52 - (-2x6) = ...
+@40
+@62
+@-62
+@-40
+@B
+
+#K = {3, 4, 5} dan L = {1, 2, 3, 4, 5, 6, 7}, himpunan pasangan berurutan yang menyatakan relasi “dua lebihnya dari” dari himpunan K ke L adalah …
+@{(3, 5), (4, 6)}
+@{(3, 5), (4, 6)}
+@{(3, 1), (4, 2), (5, 3)}
+@{(3, 2), (4, 2), (5, 2)}
+@C
+
+#Suatu pekerjaan apabila dilakukan oleh 6 orang dapat diselesaikan dalam 6 hari. Apabila pekerja ditambah 3 orang, maka pekerjaan tersebut dapat selesai dalam waktu….
+@5 hari
+@4 hari
+@3 hari
+@2 hari
+@B
+
+#Hasil dari √14 x 3√7 adalah …
+@21√2
+@28√3
+@21√7
+@28√7
+@A
+
+#Dua suku berikutnya dari pola bilangan 3, 4, 6, 9, … adalah ….
+@12, 15
+@12, 16
+@13, 17
+@13, 18
+@D
+
+#Jika segitiga ABC dan DEF kongruen, sisi yang sama panjang adalah ....
+@AC=EF
+@AB=DE
+@BC=EF
+@BC=DE
+@D
+
+#Diberikan data 65, 70, 85, 80, 60, 70, 80, 80, 60, median dan modus dari data tersebut, adalah ….
+@60 dan 70
+@65 dan 70
+@65 dan 80
+@70 dan 80
+@D
+
+#52 + (-2x6) = ...
+@40
+@62
+@-62
+@-40
+@D
+
+#Hasil dari (36 pangkat 3/2) adalah …
+@216
+@108
+@72
+@48
+@A
+
+#Di dalam kotak terdapat 7 buah bola yang bernomor 1, 2, 3, 4, 5, 6, 7. Jika diambil secara acak 2 bola sekaligus dari bola tersebut, hitunglah peluang yang terambil kedua bola tersebut bernomor genap ?
+@2/7
+@3/14
+@1/7
+@3/7
+@C
+
+#Hasil dari 5 + [6 : (–3)] adalah …
+@7
+@4
+@3
+@–3
+@C
+
+#Bu Ani menabung uang Rp. 800.000,00. Dengan suku bunga tunggal 9% setahun. Tabungan saat diambil sebesar Rp. 920.000,00. Lama Bu Ani menabung adalah …
+@24 bulan
+@22 bulan
+@20 bulan
+@18 bulan
+@C
+
+#Diketahui f(x) = (3x – 2)(x + 1), nilai dari f(–2) adalah...
+@8
+@4
+@–4
+@–8
+@A
+
+#Dari 150 siswa kelas IX SMP Merdeka, 90 siswa senang sepakbola, 87 siswa senang basket, dan 60 siswa senang keduanya. Banyak siswa yang tidak senang sepak bola maupun basket adalah ....
+@33
+@36
+@30
+@27
+@A
+
+#Perhatikan kelompok panjang sisi-sisi suatu segitiga berikut :
+(i) 6 cm, 8 cm, 10 cm
+(ii)7 cm, 24 cm, 29 cm
+(iii)20 cm, 21 cm, 29 cm
+(iv)10 cm, 24 cm, 25 cm
+Yang merupakan segitiga siku-siku adalah ….
+@(i) dan (ii)
+@(i) dan (iii)
+@(ii) dan (iv)
+@(iii) dan (iv)
+@B
+
+#Suatu fungsi f(x) = mx + n. Jika f(-2) = -9 dan f(3) = 11, nilai m dan n adalah ....
+@-4 dan 1
+@4 dan 1
+@-4 dan -1
+@4 dan -1
+@D
+
+#Segitiga ABC siku-siku di A. Panjang sisi AB = 21 cm dan sisi BC = 35 cm. Panjang jari-jari lingkaran luar segitiga ABC adalah ….
+@15,5 cm
+@17,5 cm
+@8 cm
+@16 cm
+@B
+
+#Luas lingkaran yang diameternya 20 cm adalah ….
+@314 cm2
+@114 cm2
+@320 cm2
+@212 cm2
+@A
+
+#Keliling lingkaran yang berjari-jari 10,5 cm adalah ….
+@76 cm
+@66 cm
+@86 cm
+@80 cm
+@B
+
+#Sebuah limas alasnya berbentuk persegi dengan panjang sisi 10 cm dan tinggi limas 12 cm . Luas seluruh permukaan limas adalah ….
+@280 cm2
+@360 cm2
+@180 cm2
+@320 cm2
+@B
+
+#Dua buah lingkaran dengan panjang jari-jari berturut-turut 4 cm dan 11 cm. Jika jarak antara kedua titik pusat lingkaran tersebut 25 cm, panjang garis singgung persekutuan luar kedua lingkaran tersebut adalah ….
+@36 cm
+@28 cm
+@18 cm
+@24 cm
+@D
+
+#Diketahui titik A(0, 0), B(6, 0), dan D(2, 3). Maka koordinat titik C agar ABCD menjadi trapesium sama kaki adalah....
+@(3, 4)
+@(4, 3)
+@(0, 6)
+@(3, 2)
+@B
+
+#Alas limas persegi panjang 15 cm x 10 cm, tinggi limas 18 cm, tentukan volumenya…
+@2.200 cm3
+@2.800 cm3
+@900 cm3
+@1.100 cm3
+@C
+
+#Sebuah toko menjual satu lusin buku dengan harga Rp. 90.000,00. Uang yang harus dibayarkan Abdul jika membeli 15 buah buku tersebut adalah …
+@Rp. 135.000,00
+@Rp. 125.000,00
+@Rp. 115.500,00
+@Rp. 112.500,00
+@D
+
+
+#Berapa panjang busur lingkaran di depan sudut pusat lingkaran 135°, dengan jari-jari 21 cm…
+@42 cm
+@49,5 cm
+@35 cm
+@40 cm
+@C
+
+#Banyaknya sisi pada prisma dengan alas segi-7 adalah ….
+@9
+@8
+@11
+@7
+@A
+
+#Seorang siswa naik sepeda motor dengan diameter roda 49 cm. Jika roda berputar 2000 kali, jarak yang ditempuh adalah ….
+@2 km
+@3,08 km
+@2,18 km
+@1,80 km
+@B
+
+#Lingkaran yang melalui ketiga titik sudut suatu segitiga disebut ….
+@Lingkaran dalam segitiga
+@Lingkaran luar segitiga
+@Garis singgung lingkaran dalam
+@Garis singgung lingkaran luar
+@B
+
+#Panjang kawat yang dibutuhkan untuk membuat model kerangka kubus yang panjang rusuknya 18 cm adalah.....
+@72 cm
+@108 cm
+@216 cm
+@500 cm
+@C
+
+#Hasil dari 64 : 3 adalah ….
+@21.3
+@1.4
+@8
+@4
+@A
+
+#Berapa hasil perhitungan dari √175 + 4√7 – √63 yaitu ….
+@6√7
+@5√7
+@4√7
+@3√7
+@A
+
+#Jamadin membeli sepeda motor dengan harga 15.000.000,00 Rp. Dan dijual lagi dengan harga 16.500.000,00 Rp. Berapa persentase keuntungan yang dicapai?
+@1 %
+@1,5%
+@10%
+@15%
+@C
+
+#Permen dalam waktu 8 hari menghasilkan kue 240 kotak. Kue yang dibuat toko sangat banyak dalam waktu 12 hari….
+@160 kotak
+@260 kotak
+@360 kotak
+@460 kotak
+@C
+
+#Bentuk sederhana dari 23.080.000 adalah ….
+@2.308 x 10⁸
+@2.308 x 10⁷
+@2.38 x 10⁸
+@2.38 x 10⁷
+@B
+
+#Hasil -4 + 8: (-2) x 2 + 5 -2 adalah …
+@-9
+@-7
+@7
+@9
+@A
+
+#Hasil dari 0,25 × 2,5 : 25% adalah…
+@2,75
+@2,5
+@2,25
+@1,5
+@B
+
+#Pemfaktoran dari 49a² – 64b² adalah …
+@(7a + 4b)( 7a – 16b)
+@(7a + 8b)( 7a + 8b)
+@(7a – 16b)( 7a – 4b)
+@(7a + 8b)( 7a – 8b)
+@D
+
+#Prisma dengan alas persegi mempunyai panjang sisi 10 cm. Jika tinggi prisma 12 cm, maka volume prisma adalah ….
+@820 cm³
+@1.400 cm³
+@1.200 cm³
+@900 cm³
+@C
+
+#Banyaknya diagonal ruang pada balok adalah ….
+@8 buah
+@4 buah
+@10 buah
+@6 buah
+@B
+
+#Banyaknya rusuk tegak pada limas segiempat adalah ….
+@8
+@10
+@6
+@4
+@D
+
+#Luas permukaan kubus yang memiliki panjang rusuk 2p adalah ….
+@20 p²
+@12 p²
+@24 p²
+@18 p²
+@C
+
+#Himpunan berikut yang merupakan fungsi adalah ....
+@{(1, 1),(1, 2), (1, 3), (1, 4), (1, 5)}
+@{(1, 2),(2, 3), (3, 4), (4, 5), (5, 6)}
+@{(4, 2),(4, 3), (3, 1), (3, 2), (1, 1)}
+@{(4, 2),(3, 2), (2, 2), (2, 3), (1, 2)}
+@B
+
+#Garis k melalui (-3, 5) dan (0, 5). Sedangkan garis m melalui (-3, 3) dan (-1, 3). Posisi garis k dan m adalah....
+@sejajar sumbu-X
+@sejajar sumbu Y
+@tegak lurus sumbu X
+@berpotongan dengan sumbu X
+@A
+
+#Hitunglah luas sebuah roda, jika kelilingnya 220 cm…
+@3.850 cm2
+@1.250 cm2
+@3.050 cm2
+@2.400 cm2
+@A
+
+#Jika diketahui luas lingkaran 1.256 cm2, maka diameternya…
+@35 cm
+@25 cm
+@40 cm
+@42 cm
+@C
+
+#Tentukan panjang PQ, jika segitiga PQR berbentuk siku-siku di Q. Dengan PR= 13 cm serta QR= 5 cm…
+@9 cm
+@12 cm
+@15 cm
+@13 cm
+@B
+
+#Tangga yang memiliki panjang 25 m, bagian ujung atasnya tersandar di tembok gedung. Diketahui jarak ujung bawah tangga dari tembok yaitu 7 m, tentukan tinggi ujung tangga dari lantai…
+@24 m
+@23 m
+@21 m
+@16 m
+@A
+
+#Bentuk paling sederhana dari √300 adalah ….
+@10√3
+@20√3
+@30√3
+@40√3
+@D
