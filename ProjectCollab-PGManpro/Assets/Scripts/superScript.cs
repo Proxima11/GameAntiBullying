@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class superScript : MonoBehaviour
 {
-
     static public bool boy = false;
     static public string username;
-    static public float passiveAggresive = 50f;
-    static public float shyConfidence = 50f;
-    static public float nerdCool = 50f;
+    static public float passiveAggresive = 0.5f;
+    static public float shyConfidence = 0.5f;
+    static public float nerdCool = 0.5f;
     
     //Game Variable
     static public int score = 0;

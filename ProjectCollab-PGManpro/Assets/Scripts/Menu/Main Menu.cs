@@ -23,9 +23,11 @@ public class MainMenu : MonoBehaviour
     }
 
     public void fixSlider(){
-        superScript.passiveAggresive=sliderValue_PA.GetComponent<Slider>().value;
-        superScript.shyConfidence=sliderValue_SC.GetComponent<Slider>().value;
-        superScript.nerdCool=sliderValue_NC.GetComponent<Slider>().value;
+        Debug.Log("skala: " +sliderValue_NC.GetComponent<Slider>().value);
+        superScript.passiveAggresive =sliderValue_PA.GetComponent<Slider>().value;
+        superScript.shyConfidence    =sliderValue_SC.GetComponent<Slider>().value;
+        superScript.nerdCool         =sliderValue_NC.GetComponent<Slider>().value;
+        superScript.day              = 1;
     }
 
     public void Play(){

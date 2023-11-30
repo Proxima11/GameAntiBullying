@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     // Saving player pos
     private static Vector3 playerPos = new Vector3();
     private GameObject player;
+    private float t = 0f;
+    private bool[] tasks_bool = new bool[20]; //True = Akademik, False = Cool
 
     void Start(){
         player = GameObject.FindGameObjectWithTag("Player");
@@ -32,18 +34,28 @@ public class GameManager : MonoBehaviour
 
         int nAkademik = 0, nCool = 0;
         for (int i = 0; i < 20; i++){
-            float temp = Random.Range(0f, 1f);
+            float temp = Random.Range(0f, 1f);  
 
-            if (temp < superScript.nerdCool){
+            Debug.Log("temp: " + temp);
+
+            if (temp < superScript.nerdCool/100f){
                 Debug.Log("task akademik ke " + (i+1));
                 nAkademik++;
+                tasks_bool[i] = true;
             } else {
                 Debug.Log("task kekerenan ke " + (i+1));
                 nCool++;
+                tasks_bool[i] = false;
             }
         }
-
+        Debug.Log("super script NC: " +superScript.nerdCool);
         Debug.Log("tugas akademik: " + nAkademik + "\ntugas cool: " + nCool);
+    }
+
+    void Update(){
+        t += Time.deltaTime; 
+        Debug.Log(((int) t%60));
+        if (((int) t % 60) % 1200 == 0) superScript.day+=1;
     }
     public static Vector3 PlayerPos { get => playerPos; set => playerPos = value; }
 
