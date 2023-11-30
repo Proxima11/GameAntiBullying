@@ -16,6 +16,7 @@ public class NPCJalan : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        path = FindObjectOfType<Jalan>();
         stateMachine = GetComponent<StateMachine>();
         agent = GetComponent<NavMeshAgent>();
         stateMachine.Initialise();

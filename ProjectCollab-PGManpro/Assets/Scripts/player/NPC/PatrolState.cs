@@ -34,6 +34,7 @@ public class PatrolState : BaseState
                 else
                     waypointIndex = 0;
                 npc.Agent.SetDestination(npc.path.waypoints[waypointIndex].position);
+                Debug.Log(npc.path.waypoints[waypointIndex].position);
                 waitTimer = 0;
             }
         }
