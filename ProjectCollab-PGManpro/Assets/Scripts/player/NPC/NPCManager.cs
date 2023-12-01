@@ -16,9 +16,6 @@ public class NPCManager : MonoBehaviour
         if (dialog[index] == "Day 1 Begining")
         {
             dialogStatus = "Day 1";
-            listNpc.Add("Alvin");
-            
-
         }
         else if (dialog[index] == "Day 1 Mid")
         {
@@ -34,14 +31,28 @@ public class NPCManager : MonoBehaviour
         int index =  superScript.indexDialog;
         
         if (dialog[index] == "Day 1 Begining"){
-            dialogStatus = "Day 1";
-            listNpc.Add("Alvin");
-            listNpc.Add("David");
-
+            dialogStatus = "New Ink";
+            addNPC("Alvin");
+            addNPC("David");
         }
         else if (dialog[index] == "Day 1 Mid"){
-            dialogStatus = "New Ink";
+            dialogStatus = "Day 1";
+            removeNPC("David");
         }
         Debug.Log(dialogStatus);    
+    }
+
+    public void addNPC(string name){
+        if (!listNpc.Contains(name)){
+            listNpc.Add(name);
+            FindObjectOfType<NPCSpawner>().SpawnNpc(name);
+        }
+    }
+
+    public void removeNPC(string name){
+        if (listNpc.Contains(name)){
+            listNpc.Remove(name);
+            FindObjectOfType<NPCSpawner>().removeNPC(name);
+        }
     }
 }

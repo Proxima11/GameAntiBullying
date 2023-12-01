@@ -74,7 +74,6 @@ public class DialogManager : MonoBehaviour
             }
 
             if (isDialogBlackscreen){
-                Debug.Log("blackscreen");
                 animatorBlackScreen.SetBool("isStart", true);
                 taskbutton.SetActive(false);
                 //settingbutton.SetActive(false);
@@ -135,7 +134,6 @@ public class DialogManager : MonoBehaviour
             }else{
                 dialogText.SetText(textValue);
             }
-            Debug.Log(textValue);
             yield return new WaitForSeconds(TypingSpeed);
         }
 
