@@ -11838,17 +11838,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3936184597973841707, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
   m_PrefabInstance: {fileID: 1723820352}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1309163982 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5078358006007394613, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-  m_PrefabInstance: {fileID: 1723820352}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db4246df5237f04cbeea41f2e1e3b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1323536304 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1926777631656740, guid: 935ba91ea5459eb4d8917d5e94bc3ddf, type: 3}
@@ -16401,14 +16390,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MakeChoices
       objectReference: {fileID: 0}
-    - target: {fileID: 1115817378887218147, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1309163982}
-    - target: {fileID: 1115817378887218147, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: exitTask
-      objectReference: {fileID: 0}
     - target: {fileID: 1648553097057640096, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16420,22 +16401,6 @@ PrefabInstance:
     - target: {fileID: 2334866165016596579, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2902341938358818826, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2902341938358818826, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2902341938358818826, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2902341938358818826, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UpdateUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3936184597973841707, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_Pivot.x
