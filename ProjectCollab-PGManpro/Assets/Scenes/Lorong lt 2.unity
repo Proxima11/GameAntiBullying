@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1329,6 +1329,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Toilet Wanita lt 2
+  loadingScreen: {fileID: 0}
+  interact: {fileID: 0}
 --- !u!65 &186855579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2211,6 +2213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: kelas 4
+  loadingScreen: {fileID: 0}
+  interact: {fileID: 0}
 --- !u!65 &295037653
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2427,6 +2431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: kelas 4
+  loadingScreen: {fileID: 0}
+  interact: {fileID: 0}
 --- !u!65 &341787625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4537,6 +4543,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: kelas 4
+  loadingScreen: {fileID: 0}
+  interact: {fileID: 0}
 --- !u!65 &548531792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5222,6 +5230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Lorong lt 1
+  loadingScreen: {fileID: 0}
+  interact: {fileID: 0}
 --- !u!65 &686902263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7393,6 +7403,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: Toilet Pria lt 2
+  loadingScreen: {fileID: 0}
+  interact: {fileID: 0}
 --- !u!65 &902748633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18341,6 +18353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: kelas 3
+  loadingScreen: {fileID: 0}
+  interact: {fileID: 0}
 --- !u!65 &1896642859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20383,8 +20397,20 @@ PrefabInstance:
       value: -7.452
       objectReference: {fileID: 0}
     - target: {fileID: 3686114577424166772, guid: 1d6bf4dff786c5349b8babb4b739423d, type: 3}
+      propertyPath: sceneName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686114577424166772, guid: 1d6bf4dff786c5349b8babb4b739423d, type: 3}
       propertyPath: spawns.Array.size
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686114577424166772, guid: 1d6bf4dff786c5349b8babb4b739423d, type: 3}
+      propertyPath: spawns.Array.data[0].name
+      value: Alvin
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686114577424166772, guid: 1d6bf4dff786c5349b8babb4b739423d, type: 3}
+      propertyPath: spawns.Array.data[1].name
+      value: David
       objectReference: {fileID: 0}
     - target: {fileID: 3686114577424166772, guid: 1d6bf4dff786c5349b8babb4b739423d, type: 3}
       propertyPath: spawns.Array.data[1].position.x

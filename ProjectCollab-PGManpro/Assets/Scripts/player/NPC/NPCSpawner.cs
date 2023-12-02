@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Spawn {
@@ -8,42 +9,58 @@ public class Spawn {
     public Vector3 position;
     public string name;
 
+    public Spawn(GameObject prefabToSpawn, Vector3 position, string name){
+        this.prefabToSpawn = prefabToSpawn;
+        this.position = position;
+        this.name = name;
+    }
 }
 
 public class NPCSpawner : MonoBehaviour
 {
     public GameObject SpawnPoint;
 
-    public Spawn[] spawns;
+    public List<Spawn> spawns;
     public List<string> listSpawn;
     public List<GameObject> NPCSpawned;
     public string sceneName;
+    public string currentSceneName;
+    Scene currentScene;
     
     // Start is called before the first frame update
     void Start()
     {
-        listSpawn = FindObjectOfType<NPCManager>().listNpc;
-        foreach (Spawn spawn in spawns){
-            if (Search(spawn.name)){
-                GameObject gameObject = Instantiate(spawn.prefabToSpawn, SpawnPoint.transform) as GameObject;
-                gameObject.transform.position = SpawnPoint.transform.position + spawn.position;
-                gameObject.transform.rotation = spawn.prefabToSpawn.transform.rotation;
-                NPCSpawned.Add(gameObject);
+		currentScene = SceneManager.GetActiveScene();
+		currentSceneName = currentScene.name;
+
+        if(currentSceneName == sceneName){
+            listSpawn = FindObjectOfType<NPCManager>().listNpc;
+            foreach (Spawn spawn in spawns){
+                if (Search(spawn.name)){
+                    GameObject gameObject = Instantiate(spawn.prefabToSpawn, SpawnPoint.transform) as GameObject;
+                    gameObject.transform.position = SpawnPoint.transform.position + spawn.position;
+                    gameObject.transform.rotation = spawn.prefabToSpawn.transform.rotation;
+                    NPCSpawned.Add(gameObject);
+                }
             }
         }
     }
 
-    public void SpawnNpc(string name)
+    public bool SpawnNpc(string name)
     {
-        Spawn spawn = SearchNPC(name);
-        if (spawn != null){
-            GameObject gameObject = Instantiate(spawn.prefabToSpawn, SpawnPoint.transform) as GameObject;
-            gameObject.transform.position = SpawnPoint.transform.position + spawn.position;
-            gameObject.transform.rotation = spawn.prefabToSpawn.transform.rotation;
-            NPCSpawned.Add(gameObject);
-        }else{
-            Debug.Log("Spawn is Not Found");
+        if(currentSceneName == sceneName){
+            Spawn spawn = SearchNPC(name);
+            if (spawn != null){
+                GameObject gameObject = Instantiate(spawn.prefabToSpawn, SpawnPoint.transform) as GameObject;
+                gameObject.transform.position = SpawnPoint.transform.position + spawn.position;
+                gameObject.transform.rotation = spawn.prefabToSpawn.transform.rotation;
+                NPCSpawned.Add(gameObject);
+                return true;
+            }else{
+                Debug.Log("Spawn is Not Found");
+            }   
         }
+        return false;
     }
 
     public bool Search(string name)
@@ -83,16 +100,27 @@ public class NPCSpawner : MonoBehaviour
         return -1;
     }
 
-    public void removeNPC(string name){
-        int index = SearchNPCIndex(name);
+    public bool removeNPC(string name){
+        if (currentSceneName == sceneName){
+            int index = SearchNPCIndex(name);
 
-        if (index != -1){
-            GameObject toDestroy = NPCSpawned[index];
-            Destroy(toDestroy);
-            NPCSpawned.Remove(toDestroy);
-        }else{
-            Debug.Log("Spawn is Not Found");
+            if (index != -1){
+                GameObject toDestroy = NPCSpawned[index];
+                Destroy(toDestroy);
+                NPCSpawned.Remove(toDestroy);
+                return true;
+            }else{
+                Debug.Log("Spawn is Not Found");
+            }
         }
-        
+        return false;   
+    }
+
+    public bool setSpawns(List<Spawn> listSpawn){
+        if(currentSceneName == sceneName){
+            this.spawns = listSpawn;
+            return true;
+        }
+        return false;
     }
 }
