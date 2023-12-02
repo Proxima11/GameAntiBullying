@@ -37,6 +37,8 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 1 Mid"){
             dialogStatus = "Day 1";
+            addNPC("Alvin");
+            addNPC("David");
             removeNPC("David");
         }
         Debug.Log(dialogStatus);    
