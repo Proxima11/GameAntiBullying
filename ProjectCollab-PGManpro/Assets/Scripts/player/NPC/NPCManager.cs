@@ -37,6 +37,8 @@ public class NPCManager : MonoBehaviour
             addNPC("Alvin");
             addNPC("David");
 
+
+
         }
         else if (dialog[index] == "Day 1 part 2"){
             dialogStatus = "dialogday1_2";

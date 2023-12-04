@@ -14,7 +14,14 @@ public class GameVariable : MonoBehaviour
 
 	public void TakeStress(int takeStress)
 	{
-		stress +=takeStress;
+		int temp = stress + takeStress;
+		if(temp < 0){
+            stress = 0;
+        }else if(temp > 50){
+            stress = 50;
+        }else{
+            stress = temp;
+        }
 	}
 
 	public void AddPoint(int addPoint){

@@ -32,6 +32,8 @@ public class superScript : MonoBehaviour
         "Day 5 part 1_4 ",
         };
     static public int indexDialog = 0;
+    static public List<Item> itemOnwed = new List<Item>();
+
 
     static public void setVariable (int inputScore, int inputStress, int inputTime, int inputDay){
         score = inputScore;
@@ -39,6 +41,7 @@ public class superScript : MonoBehaviour
         time = inputTime;
         day = inputDay;
     }
+
 
     // Start is called before the first frame update
     void Start()

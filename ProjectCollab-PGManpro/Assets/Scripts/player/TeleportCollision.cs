@@ -24,8 +24,13 @@ public class TeleportCollision : MonoBehaviour, InterfaceInteractable
 
     public void ToggleDoor()
     {
+        //Save Variable
         GameVariable gameVariable = FindObjectOfType<GameVariable>();  
+        InventoryManager inventory = FindObjectOfType<InventoryManager>();  
+
         superScript.setVariable(gameVariable.score,gameVariable.stress, gameVariable.timeNow, gameVariable.day);
+        superScript.itemOnwed = inventory.itemOnwed;
+
         interact.SetActive(false);
         loadingScreen.SetActive(true);
         StartCoroutine(LoadLevelAsync(SceneName));
