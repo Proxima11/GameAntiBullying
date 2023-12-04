@@ -12198,17 +12198,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d65db92ee1ad5644a8177816885460b, type: 3}
---- !u!114 &1370867519 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4032703753897395503, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
-  m_PrefabInstance: {fileID: 1521524793}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5720665a34bdcd14bb431b96949706fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1375360191
 GameObject:
   m_ObjectHideFlags: 0
@@ -16382,22 +16371,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2093021049}
     m_Modifications:
-    - target: {fileID: 597620732852601849, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1370867519}
-    - target: {fileID: 597620732852601849, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MakeChoices
-      objectReference: {fileID: 0}
-    - target: {fileID: 1648553097057640096, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1648553097057640096, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: showTask
-      objectReference: {fileID: 0}
     - target: {fileID: 2334866165016596579, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -16482,37 +16455,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6248740076083878099, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1370867519}
-    - target: {fileID: 6248740076083878099, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MakeChoices
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548728593595420097, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: ebd6e6f3afdf0f14caaf02ff9a04e189, type: 2}
-    - target: {fileID: 6548728593595420097, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -5748547113616965816, guid: ebd6e6f3afdf0f14caaf02ff9a04e189, type: 2}
-    - target: {fileID: 6548728593595420097, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7200993443487791748, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
       propertyPath: m_Name
       value: GameHUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370408548819174100, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1370867519}
-    - target: {fileID: 8370408548819174100, guid: 670f4179ec373a745874e1431c3b88dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MakeChoices
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

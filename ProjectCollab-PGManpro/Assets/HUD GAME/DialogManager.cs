@@ -30,6 +30,8 @@ public class DialogManager : MonoBehaviour
     private const string BLACKSCREEN_TAG = "blackscreen";
 
     public GameObject taskbutton;
+
+    public GameObject Inventory;
     //public GameObject settingbutton;
 
     // Start is called before the first frame update
@@ -56,6 +58,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialogInk(TextAsset inkJSON){
         animator.SetBool("isOpen", true);
+        Inventory.SetActive(false);
 
         currentStory = new Story(inkJSON.text);
         nameText.SetText("xxx");
@@ -144,6 +147,7 @@ public class DialogManager : MonoBehaviour
     public void EndDialouge(){
         animator.SetBool("isOpen", false);
         superScript.indexDialog = superScript.indexDialog + 1;
+        Inventory.SetActive(true);
     }
 
     public void displayChoices(){
