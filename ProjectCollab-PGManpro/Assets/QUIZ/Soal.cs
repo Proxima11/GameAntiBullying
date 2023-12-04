@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,7 +41,7 @@ public class Soal : MonoBehaviour
     {
         gameVariable = FindObjectOfType<GameVariable>();
         Cursor.lockState = CursorLockMode.Confined;
-        txtScore.text = "Score : " + gameVariable.score;
+        txtScore.text = "Score : " + superScript.score;
         panel.SetActive(false);
         SalahObj.SetActive(false);
         BenarObj.SetActive(false);
@@ -189,7 +189,6 @@ public class Soal : MonoBehaviour
             SalahObj.SetActive(true);
             BenarObj.SetActive(false);
             jwbSalah++;
-            gameVariable.score-=100;
             txtScore.text = "Score : " + gameVariable.score;
         }
     }
