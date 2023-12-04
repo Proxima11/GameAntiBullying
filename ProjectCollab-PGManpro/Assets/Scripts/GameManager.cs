@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     void Update(){
         t += Time.deltaTime; 
-        Debug.Log(((int) t%60));
+        // Debug.Log(((int) t%60));
         if (((int) t % 60) % 1200 == 0) superScript.day+=1;
     }
     public static Vector3 PlayerPos { get => playerPos; set => playerPos = value; }

@@ -22,9 +22,9 @@ public class NPCManager : MonoBehaviour
         string[] dialog =  superScript.dialogProgress;
         int index =  superScript.indexDialog;
         
-        if (dialog[index] == "Day 1 Begining"){
+        if (dialog[index] == "Day 1 part 1"){
             //dialog yang sekarang lagi play
-            dialogStatus = "New Ink";
+            dialogStatus = "dialogday1_1";
 
             //di spawn di scene apa
             changeScene("Lorong lt 2");
@@ -38,13 +38,60 @@ public class NPCManager : MonoBehaviour
             addNPC("David");
 
         }
-        else if (dialog[index] == "Day 1 Mid"){
-            dialogStatus = "Day 1";
+        else if (dialog[index] == "Day 1 part 2"){
+            dialogStatus = "dialogday1_2";
             addNPC("Alvin");
             addNPC("David");
             removeNPC("David");
-            changeScene("Lorong lt 1");
-        }   
+            changeScene("kelas");
+        }  
+        else if (dialog[index] == "Day 2 part 1"){
+            dialogStatus = "dialogday2_1";
+            
+        }
+        else if (dialog[index] == "Day 2 part 2"){
+            dialogStatus = "dialogday2_2";
+
+            
+        }
+        else if (dialog[index] == "Day 3 part 1"){
+            dialogStatus = "day3_1";
+
+        }
+        else if (dialog[index] == "Day 3 part 2"){
+            dialogStatus = "day3_2";
+
+        }
+        else if (dialog[index] == "Day 3 part 3"){
+            dialogStatus = "day3_3";
+
+        }
+        else if (dialog[index] == "Day 4"){
+            dialogStatus = "dialogday4";
+            
+        }
+        else if (dialog[index] == "Day 5 part 1"){
+            dialogStatus = "dialogday5_1";
+            
+        }
+        else if (dialog[index] == "Day 5 part 1_1"){
+            dialogStatus = "dialogday5_1_1";
+            
+        }
+        else if (dialog[index] == "Day 5 part 1_2"){
+            dialogStatus = "dialogday5_1_2";
+            
+
+        }
+        else if (dialog[index] == "Day 5 part 1_3"){
+            dialogStatus = "dialogday5_1_3";
+            
+        }
+        else if (dialog[index] == "Day 5 part 1_4"){
+            dialogStatus = "dialogday5_1_4";
+
+            
+        }
     }
 
     public void addNPC(string name){

@@ -16,10 +16,20 @@ public class superScript : MonoBehaviour
 	static public int time = 0;
     static public int day = 1;
     static public string[] dialogProgress = new string[] {
-        "Day 1 Begining",
-        "Day 1 Mid",
-        "Day 1 End",
-        "Day 2 Begining"
+        "Day 1 part 1",
+        "Day 1 part 2",
+        "Day 1 part 3",
+        "Day 2 part 1 ",
+        "Day 2 part 2 ",
+        "Day 3 part 1 ",
+        "Day 3 part 2 ",
+        "Day 3 part 3 ",
+        "Day 4 ",
+        "Day 5 part 1 ",
+        "Day 5 part 1_1 ",
+        "Day 5 part 1_2 ",
+        "Day 5 part 1_3 ",
+        "Day 5 part 1_4 ",
         };
     static public int indexDialog = 0;
 

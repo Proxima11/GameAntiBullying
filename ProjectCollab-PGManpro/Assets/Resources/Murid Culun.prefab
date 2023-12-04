@@ -307,5 +307,7 @@ MonoBehaviour:
   story:
   - inkJSON: {fileID: 4900000, guid: ac862ae9b31999549a6af896691d18b5, type: 3}
     title: New Ink
-  - inkJSON: {fileID: 4900000, guid: f002a662ab030254c993e11da4f730e6, type: 3}
-    title: Day 1
+  - inkJSON: {fileID: 4900000, guid: 8b79bac5e1f57104bb9d894869bbf03b, type: 3}
+    title: dialogday1_1
+  - inkJSON: {fileID: 4900000, guid: ccee454a5ed655244bebd2fdf4e90371, type: 3}
+    title: dialogday1_2
