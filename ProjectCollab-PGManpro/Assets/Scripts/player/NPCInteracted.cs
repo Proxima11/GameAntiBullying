@@ -44,19 +44,19 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
         //}
         //m_MyQuaternion.SetFromToRotation(transform.position, playerTransform.position);
         //transform.rotation = m_MyQuaternion * transform.rotation;
-        Transform playerTransform = null;
-        if (playerGirl != null)
+        Vector3 playerTransform;
+        if (superScript.boy)
         {
-            playerTransform = playerGirl;
+            playerTransform = GameObject.Find("Boy").transform.position;
         }
         else
         {
-            playerTransform = playerBoy;
+            playerTransform = GameObject.Find("Girl").transform.position;
         }
         GetTransform().LookAt(playerTransform);
-        TriggerDialog();
-        //var targetRotation = Quaternion.LookRotation(playerTransform.position - transform.position);
+        //var targetRotation = Quaternion.LookRotation(playerTransform - (transform.position - gameObject.transform.parent.gameObject.transform.position));
         //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+        TriggerDialog();
 
     }
 
