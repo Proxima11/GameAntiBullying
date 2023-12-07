@@ -21,8 +21,9 @@ public class NPCManager : MonoBehaviour
     {
         string[] dialog =  superScript.dialogProgress;
         int index =  superScript.indexDialog;
-        
-        if (dialog[index] == "Day 1 part 1"){
+
+        if (dialog[index] == "Day 1 part 1")
+        {
             //dialog yang sekarang lagi play
             dialogStatus = "dialogday1_1";
 
@@ -30,69 +31,90 @@ public class NPCManager : MonoBehaviour
             changeScene("Lorong lt 2");
 
             //add posisi spawn
-            addSpawn(boy, new Vector3(-3f,-0.432f,6f), "Alvin");       
-            addSpawn(girl, new Vector3(-0.84f,-0.432f,22f), "David");
+            addSpawn(boy, new Vector3(-3f, -0.432f, 6f), new Vector3(0f, 90f, 0f), "Alvin");
+            addSpawn(girl, new Vector3(-0.84f, -0.432f, 22f), new Vector3(0f, 180f, 0f), "David");
 
             //spawn NPC sesuai nama Spawn di atas
             addNPC("Alvin");
             addNPC("David");
-
+            //addNPC("Guru");
 
 
         }
-        else if (dialog[index] == "Day 1 part 2"){
+        else if (dialog[index] == "Day 1 part 2")
+        {
             dialogStatus = "dialogday1_2";
             addNPC("Alvin");
             addNPC("David");
             removeNPC("David");
             changeScene("kelas");
-        }  
-        else if (dialog[index] == "Day 2 part 1"){
-            dialogStatus = "dialogday2_1";
-            
         }
-        else if (dialog[index] == "Day 2 part 2"){
+
+        else if (dialog[index] == "Day 1 part 3")
+        {
+            dialogStatus = "dialogday1_3";
+        }
+        else if (dialog[index] == "Day 1 part 4")
+        {
+            dialogStatus = "dialogday1_4";
+        }
+        else if (dialog[index] == "Day 2 part 1")
+        {
+            dialogStatus = "dialogday2_1";
+
+        }
+        else if (dialog[index] == "Day 2 part 2")
+        {
             dialogStatus = "dialogday2_2";
 
-            
+
         }
-        else if (dialog[index] == "Day 3 part 1"){
+        else if (dialog[index] == "Day 3 part 1")
+        {
             dialogStatus = "day3_1";
 
         }
-        else if (dialog[index] == "Day 3 part 2"){
+        else if (dialog[index] == "Day 3 part 2")
+        {
             dialogStatus = "day3_2";
 
         }
-        else if (dialog[index] == "Day 3 part 3"){
+        else if (dialog[index] == "Day 3 part 3")
+        {
             dialogStatus = "day3_3";
 
         }
-        else if (dialog[index] == "Day 4"){
+        else if (dialog[index] == "Day 4")
+        {
             dialogStatus = "dialogday4";
-            
-        }
-        else if (dialog[index] == "Day 5 part 1"){
-            dialogStatus = "dialogday5_1";
-            
-        }
-        else if (dialog[index] == "Day 5 part 1_1"){
-            dialogStatus = "dialogday5_1_1";
-            
-        }
-        else if (dialog[index] == "Day 5 part 1_2"){
-            dialogStatus = "dialogday5_1_2";
-            
 
         }
-        else if (dialog[index] == "Day 5 part 1_3"){
-            dialogStatus = "dialogday5_1_3";
-            
+        else if (dialog[index] == "Day 5 part 1")
+        {
+            dialogStatus = "dialogday5_1";
+
         }
-        else if (dialog[index] == "Day 5 part 1_4"){
+        else if (dialog[index] == "Day 5 part 1_1")
+        {
+            dialogStatus = "dialogday5_1_1";
+
+        }
+        else if (dialog[index] == "Day 5 part 1_2")
+        {
+            dialogStatus = "dialogday5_1_2";
+
+
+        }
+        else if (dialog[index] == "Day 5 part 1_3")
+        {
+            dialogStatus = "dialogday5_1_3";
+
+        }
+        else if (dialog[index] == "Day 5 part 1_4")
+        {
             dialogStatus = "dialogday5_1_4";
 
-            
+
         }
     }
 
@@ -118,7 +140,7 @@ public class NPCManager : MonoBehaviour
         FindObjectOfType<NPCSpawner>().sceneName = name;
     }   
 
-    public void addSpawn(GameObject prefab, Vector3 position, string name){
+    public void addSpawn(GameObject prefab, Vector3 position, Vector3 rotation, string name){
         bool isExist = false;
         foreach(Spawn npcSpawn in listSpawn){
             if(npcSpawn.name == name){
@@ -128,7 +150,7 @@ public class NPCManager : MonoBehaviour
         }
 
         if(!isExist){
-            Spawn spawn = new Spawn(prefab, position, name);
+            Spawn spawn = new Spawn(prefab, position,rotation, name);
             listSpawn.Add(spawn);
         }
     }

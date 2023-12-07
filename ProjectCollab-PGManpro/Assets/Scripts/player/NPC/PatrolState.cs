@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PatrolState : BaseState
 {
-    public int waypointIndex;
+    public int waypointIndex=0;
     public float waitTimer;
 
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [System.Serializable]
 public class StoryData
@@ -21,29 +22,15 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     Quaternion m_MyQuaternion;
     float speed = 10.0f;
     public StoryData[] story;
-
+    public GameObject this_npc;
     private void Awake()
     {
         animator = GetComponent<Animator>();
         m_MyQuaternion = new Quaternion();
-        //npcHeadLookAt = GetComponent<NPCHeadLookAt>();
     }
 
     public void Interact(Transform interactorTransform)
     {
-        //float playerHeight = 1f;
-        //sLookingAtPlayer = !isLookingAtPlayer;
-
-        //if (isLookingAtPlayer)
-        //{
-        //LookAtPlayer();
-        //}
-        //else
-        //{
-        //LookBack();
-        //}
-        //m_MyQuaternion.SetFromToRotation(transform.position, playerTransform.position);
-        //transform.rotation = m_MyQuaternion * transform.rotation;
         Vector3 playerTransform;
         if (superScript.boy)
         {
@@ -53,9 +40,13 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
         {
             playerTransform = GameObject.Find("Girl").transform.position;
         }
+        if (this_npc.GetComponent<NavMeshAgent>() != null)
+        {
+            this_npc.GetComponent<NavMeshAgent>().isStopped = true;
+            animator.SetTrigger("TrBreath");
+        }
         GetTransform().LookAt(playerTransform);
-        //var targetRotation = Quaternion.LookRotation(playerTransform - (transform.position - gameObject.transform.parent.gameObject.transform.position));
-        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+
         TriggerDialog();
 
     }
@@ -74,6 +65,14 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
         string title = FindObjectOfType<NPCManager>().dialogStatus;
         StoryData storyRunning =  SearchStory(title);
         FindObjectOfType<DialogManager>().StartDialogInk(storyRunning.inkJSON);
+        //if (this_npc.GetComponent<NavMeshAgent>() != null)
+        //{
+        //    this_npc.GetComponent<NavMeshAgent>().isStopped = false;
+        //}
+        //if (this_npc.GetComponent<NavMeshAgent>() != null & FindObjectOfType<DialogManager>().stop == false)
+        //{
+        //    this_npc.GetComponent<NavMeshAgent>().isStopped = false;
+        //}
     }
 
     private StoryData SearchStory(string title){

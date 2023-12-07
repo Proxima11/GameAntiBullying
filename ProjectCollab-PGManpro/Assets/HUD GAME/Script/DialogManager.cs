@@ -25,6 +25,7 @@ public class DialogManager : MonoBehaviour
     private bool canContinueToNextLine = false;
     private bool isChoices = false;
     private bool isDialogBlackscreen = false;
+    public bool stop = false;
 
     private const string SPEAKER_TAG = "speaker";
     private const string BLACKSCREEN_TAG = "blackscreen";
@@ -70,10 +71,12 @@ public class DialogManager : MonoBehaviour
         if (!isChoices){
             currentTextRunning = "";
             if(currentStory.canContinue){
+                stop = true;
                 currentTextRunning = currentStory.Continue();
                 handleTags(currentStory.currentTags);
             }else{
                 EndDialouge();
+                stop = false;
             }
 
             if (isDialogBlackscreen){

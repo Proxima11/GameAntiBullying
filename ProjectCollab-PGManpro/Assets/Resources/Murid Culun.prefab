@@ -311,3 +311,4 @@ MonoBehaviour:
     title: dialogday1_1
   - inkJSON: {fileID: 4900000, guid: ccee454a5ed655244bebd2fdf4e90371, type: 3}
     title: dialogday1_2
+  this_npc: {fileID: 1970407457392348091}

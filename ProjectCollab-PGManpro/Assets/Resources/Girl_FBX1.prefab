@@ -206,6 +206,7 @@ MonoBehaviour:
   story:
   - inkJSON: {fileID: 4900000, guid: ac862ae9b31999549a6af896691d18b5, type: 3}
     title: New Ink
+  this_npc: {fileID: 3910749966855557277}
 --- !u!95 &4113204880412552541
 Animator:
   serializedVersion: 5
