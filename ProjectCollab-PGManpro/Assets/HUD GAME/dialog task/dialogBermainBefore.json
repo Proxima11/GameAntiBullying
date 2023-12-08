@@ -1,0 +1,1 @@
+﻿{"inkVersion":21,"root":[["ev","str","^Budi","/str","/ev",{"->":"dialog"},["done",{"#f":5,"#n":"g-0"}],null],"done",{"dialog":[{"temp=":"player"},"^Main bareng yuk","#","^speaker:","ev",{"VAR?":"player"},"out","/ev","/#","\n","^Yuk!!","#","^speaker:Teman","/#","\n","end",{"#f":1}],"#f":1}],"listDefs":{}}
