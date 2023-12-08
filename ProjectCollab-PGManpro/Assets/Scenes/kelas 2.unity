@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.625131, g: 0.69543827, b: 0.78916645, a: 1}
+  m_IndirectSpecularColor: {r: 0.62513727, g: 0.695441, b: 0.78916824, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3012,7 +3012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: GabungLorong
   loadingScreen: {fileID: 1396586434}
-  interact: {fileID: 0}
+  interact: {fileID: 696907517}
 --- !u!65 &696907519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3236,6 +3236,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  inDialogue: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -3299,6 +3300,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  ui: {fileID: 0}
 --- !u!143 &704028413
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6515,6 +6517,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  inDialogue: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -6578,6 +6581,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  ui: {fileID: 0}
 --- !u!143 &1468081953
 CharacterController:
   m_ObjectHideFlags: 0
@@ -7148,6 +7152,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas UI Ingame
       objectReference: {fileID: 0}
+    - target: {fileID: 832278916139164781, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: playerInteractBoy
+      value: 
+      objectReference: {fileID: 704028416}
+    - target: {fileID: 832278916139164781, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: playerInteractGirl
+      value: 
+      objectReference: {fileID: 1468081948}
     - target: {fileID: 2645235328583799749, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2533,6 +2533,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas UI Ingame
       objectReference: {fileID: 0}
+    - target: {fileID: 832278916139164781, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: playerInteractBoy
+      value: 
+      objectReference: {fileID: 1398919052}
+    - target: {fileID: 832278916139164781, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: playerInteractGirl
+      value: 
+      objectReference: {fileID: 1652936821}
     - target: {fileID: 2645235328583799749, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3409,7 +3417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: GabungLorong
   loadingScreen: {fileID: 2113551250}
-  interact: {fileID: 0}
+  interact: {fileID: 968547803}
 --- !u!65 &968547805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4557,6 +4565,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  inDialogue: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -4620,6 +4629,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  ui: {fileID: 0}
 --- !u!143 &1398919057
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5603,6 +5613,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  inDialogue: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -5666,6 +5677,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  ui: {fileID: 0}
 --- !u!143 &1652936826
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6105,7 +6117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: GabungLorong
   loadingScreen: {fileID: 2113551250}
-  interact: {fileID: 0}
+  interact: {fileID: 1862074370}
 --- !u!65 &1862074372
 BoxCollider:
   m_ObjectHideFlags: 0

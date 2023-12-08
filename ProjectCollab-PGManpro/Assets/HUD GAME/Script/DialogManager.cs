@@ -6,6 +6,9 @@ using UnityEngine.AI;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using StarterAssets;
+
 
 public class DialogManager : MonoBehaviour
 {
@@ -63,6 +66,7 @@ public class DialogManager : MonoBehaviour
     public void StartDialogInk(TextAsset inkJSON){
         animator.SetBool("isOpen", true);
         Inventory.SetActive(false);
+        FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
 
         currentStory = new Story(inkJSON.text);
         nameText.SetText("xxx");
@@ -155,10 +159,16 @@ public class DialogManager : MonoBehaviour
         if(currentStoryName != "Default"){
             superScript.indexDialog = superScript.indexDialog + 1;
         }
-        NPCPrefab.GetComponent<NavMeshAgent>().isStopped = false;
-        animatorNPC.SetTrigger("TrWalk");
+
+        if (NPCPrefab.GetComponent<NavMeshAgent>() != null){
+            NPCPrefab.GetComponent<NavMeshAgent>().isStopped = true;
+            animator.SetTrigger("TrBreath");
+        }
 
         Inventory.SetActive(true);
+        FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
+        Debug.Log(FindObjectOfType<StarterAssetsInputs>().inDialogue);
+
     }
 
     public void displayChoices(){

@@ -47,7 +47,11 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
             animator.SetTrigger("TrBreath");
         }
         GetTransform().LookAt(playerTransform);
-
+        //rotateTowards(playerTransform);
+        //var rot = gameObject.transform.localRotation.eulerAngles;
+        //rot.Set(0f, transform.rotation.y, transform.rotation.z);
+        //transform.localRotation = Quaternion.Euler(rot);
+        transform.Rotate(new Vector3(0f, transform.rotation.y, 0f));
         TriggerDialog();
 
     }
@@ -93,5 +97,19 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
             }
         }
         return story[0];
+    }
+    protected void rotateTowards(Vector3 to)
+    {
+
+        Quaternion _lookRotation =
+            Quaternion.LookRotation((to - transform.position).normalized);
+
+        //over time
+        transform.rotation =
+            Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * 10f);
+
+        //instant
+        transform.rotation = _lookRotation;
+        Debug.Log(_lookRotation);
     }
 }

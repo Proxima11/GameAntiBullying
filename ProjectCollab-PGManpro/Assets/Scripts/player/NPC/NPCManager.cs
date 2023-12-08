@@ -9,10 +9,23 @@ public class NPCManager : MonoBehaviour
     public List<Spawn> listSpawn;
     GameObject boy;
     GameObject girl;
+    GameObject guru;
+    GameObject david;
+    GameObject devi;
+    GameObject alvin;
+    GameObject vina;
+    GameObject tino;
 
-    void Start(){
+    void Start()
+    {
+        guru = Resources.Load<GameObject>("Guru");
         boy = Resources.Load<GameObject>("Murid Culun");
         girl = Resources.Load<GameObject>("Girl_FBX1");
+        david = Resources.Load<GameObject>("David");
+        devi = Resources.Load<GameObject>("Devi");
+        alvin = Resources.Load<GameObject>("Alvin");
+        vina = Resources.Load<GameObject>("Vina");
+        tino = Resources.Load<GameObject>("Tino");
         listSpawn = FindObjectOfType<NPCSpawner>().spawns;
     }
 
@@ -24,22 +37,25 @@ public class NPCManager : MonoBehaviour
 
         if (dialog[index] == "Day 1 part 1")
         {
+          
             //dialog yang sekarang lagi play
             dialogStatus = "dialogday1_1";
 
             //di spawn di scene apa
-            changeScene("Lorong lt 2");
+            changeScene("kelas 1");
 
-            //add posisi spawn
-            addSpawn(boy, new Vector3(-3f, -0.432f, 6f), new Vector3(0f, 90f, 0f), "Alvin");
-            addSpawn(girl, new Vector3(-0.84f, -0.432f, 22f), new Vector3(0f, 180f, 0f), "David");
-
-            //spawn NPC sesuai nama Spawn di atas
-            addNPC("Alvin");
-            addNPC("David");
-            //addNPC("Guru");
-
-
+            addSpawn(guru, new Vector3(-2.43f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
+            addNPC("Guru");
+            if (superScript.boy)
+            {
+                addSpawn(david, new Vector3(-3.89f, -0.1017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(0.9f, 0.9f, 0.9f), "David");
+                addNPC("David");
+            }
+            else
+            {
+                addSpawn(devi, new Vector3(-3.89f, -0.1017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(1f, 1f, 1f), "Devi");
+                addNPC("Devi");
+            }
         }
         else if (dialog[index] == "Day 1 part 2")
         {
@@ -140,7 +156,7 @@ public class NPCManager : MonoBehaviour
         FindObjectOfType<NPCSpawner>().sceneName = name;
     }   
 
-    public void addSpawn(GameObject prefab, Vector3 position, Vector3 rotation, string name){
+    public void addSpawn(GameObject prefab, Vector3 position, Vector3 rotation, Vector3 scale, string name){
         bool isExist = false;
         foreach(Spawn npcSpawn in listSpawn){
             if(npcSpawn.name == name){
@@ -150,7 +166,7 @@ public class NPCManager : MonoBehaviour
         }
 
         if(!isExist){
-            Spawn spawn = new Spawn(prefab, position,rotation, name);
+            Spawn spawn = new Spawn(prefab, position,rotation, scale, name);
             listSpawn.Add(spawn);
         }
     }
