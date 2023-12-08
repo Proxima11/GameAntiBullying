@@ -9,14 +9,16 @@ public class Spawn
     public GameObject prefabToSpawn;
     public Vector3 position;
     public Vector3 rotation;
+    public Vector3 scale;
     public string name;
 
-    public Spawn(GameObject prefabToSpawn, Vector3 position, Vector3 rotation, string name)
+    public Spawn(GameObject prefabToSpawn, Vector3 position, Vector3 rotation, Vector3 scale, string name)
     {
         this.prefabToSpawn = prefabToSpawn;
         this.position = position;
         this.name = name;
         this.rotation = rotation;
+        this.scale = scale;
     }
 }
 
@@ -48,6 +50,7 @@ public class NPCSpawner : MonoBehaviour
                     gameObject.transform.position = SpawnPoint.transform.position + spawn.position;
                     gameObject.transform.rotation = spawn.prefabToSpawn.transform.rotation;
                     gameObject.transform.rotation = Quaternion.Euler(spawn.rotation);
+                    gameObject.transform.localScale = spawn.scale;
                     NPCSpawned.Add(gameObject);
                 }
             }
@@ -65,6 +68,7 @@ public class NPCSpawner : MonoBehaviour
                 gameObject.transform.position = SpawnPoint.transform.position + spawn.position;
                 gameObject.transform.rotation = spawn.prefabToSpawn.transform.rotation;
                 gameObject.transform.rotation = Quaternion.Euler(spawn.rotation);
+                gameObject.transform.localScale = spawn.scale;
                 NPCSpawned.Add(gameObject);
                 return true;
             }

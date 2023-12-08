@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3209403588822778675}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.324337, y: 12.355851, z: -0.98415446}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 5145325610674513343}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6856613, y: -7.745851, z: -13.155846}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -163,8 +163,18 @@ MonoBehaviour:
   spawns:
   - prefabToSpawn: {fileID: 321121470808161141, guid: 083627ee651915448b7b7b243ee27734, type: 3}
     position: {x: -3.079998, y: -0.4830003, z: 5.66}
+    rotation: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    name: 
   - prefabToSpawn: {fileID: 1030734022144004721, guid: 04db19c2ba027294f91e418918d5266a, type: 3}
     position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
+    scale: {x: 0, y: 0, z: 0}
+    name: 
+  listSpawn: []
+  NPCSpawned: []
+  sceneName: 
+  currentSceneName: 
 --- !u!114 &4414924949776997986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogStatus: 
+  listNpc: []
+  listSpawn: []
 --- !u!1001 &357405966075761426
 PrefabInstance:
   m_ObjectHideFlags: 0
