@@ -64,16 +64,16 @@ public class NPCManager : MonoBehaviour
             dialogStatus = "dialogday1_2";
             changeScene("kelas 1");
             removeNPC("Guru");
-            if (superScript.boy)
-            {
-                addSpawn(david, new Vector3(-3.89f, -0.1017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(0.9f, 0.9f, 0.9f), "David");
-                addNPC("David");
-            }
-            else
-            {
-                addSpawn(devi, new Vector3(-3.89f, -0.1017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(1.07f, 1.07f, 1.07f), "Devi");
-                addNPC("Devi");
-            }
+            //if (superScript.boy)
+            //{
+               // addSpawn(david, new Vector3(-3.89f, -0.1017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(0.9f, 0.9f, 0.9f), "David");
+                //addNPC("David");
+            //}
+            //else
+            //{
+               // addSpawn(devi, new Vector3(-3.89f, -0.1017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(1.07f, 1.07f, 1.07f), "Devi");
+               // addNPC("Devi");
+            //}
             if (superScript.boy)
             {
                 addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Alvin");
@@ -91,15 +91,18 @@ public class NPCManager : MonoBehaviour
             dialogStatus = "dialogday1_3";
             changeScene("kelas 1");
             removeNPC("David");
+            removeNPC("Devi");
             if (superScript.boy)
             {
-                addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Alvin");
-                addNPC("Alvin");
+                
+               // addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Alvin");
+                //addNPC("Alvin");
             }
             else
             {
-                addSpawn(vina, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Vina");
-                addNPC("Vina");
+                
+                //addSpawn(vina, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Vina");
+               // addNPC("Vina");
             }
 
         }
@@ -176,11 +179,22 @@ public class NPCManager : MonoBehaviour
         }
     }
 
-    public void removeNPC(string name){
-        if (listNpc.Contains(name)){
+    public void removeNPC(string name)
+    {
+        if (listNpc.Contains(name))
+        {
             bool removed = FindObjectOfType<NPCSpawner>().removeNPC(name);
-            if (removed){
+            if (removed)
+            {
                 listNpc.Remove(name);
+            }
+        }
+        foreach (Spawn npcSpawn in listSpawn)
+        {
+            if (npcSpawn.name == name)
+            {
+                listSpawn.Remove(npcSpawn);
+                break;
             }
         }
     }

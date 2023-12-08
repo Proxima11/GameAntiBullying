@@ -36,13 +36,17 @@ public class GameManager : MonoBehaviour
             float temp = Random.Range(0f, 1f);  
 
             if (temp < superScript.nerdCool/100f){
-                int rand_util = Random.Range(0, acaTasks.Count);
+                int rand_util = Random.Range(0, acaTasks.Count-1);
+                
                 superScript.Tasks.Add(acaTasks[rand_util]);
                 acaTasks.RemoveAt(rand_util);
+                
             } else {
-                int rand_util = Random.Range(0, coolTasks.Count);
-                superScript.Tasks.Add(coolTasks[rand_util]);
-                coolTasks.RemoveAt(rand_util);
+                int rand_util = Random.Range(0, coolTasks.Count-1);
+                
+                //superScript.Tasks.Add(coolTasks[rand_util]);
+                //coolTasks.RemoveAt(rand_util);
+                
             }
         }
     }
