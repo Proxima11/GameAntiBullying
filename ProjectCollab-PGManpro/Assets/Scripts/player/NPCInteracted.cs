@@ -23,6 +23,7 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     float speed = 10.0f;
     public StoryData[] story;
     public GameObject this_npc;
+    private bool isStoryExist;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -65,6 +66,14 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
         string title = FindObjectOfType<NPCManager>().dialogStatus;
         StoryData storyRunning =  SearchStory(title);
         FindObjectOfType<DialogManager>().StartDialogInk(storyRunning.inkJSON);
+        if(isStoryExist){
+            FindObjectOfType<DialogManager>().currentStoryName = storyRunning.title;
+        }else{
+            FindObjectOfType<DialogManager>().currentStoryName = "Default";
+        }
+        FindObjectOfType<DialogManager>().NPCPrefab = this_npc;
+        FindObjectOfType<DialogManager>().animatorNPC = animator;
+
         //if (this_npc.GetComponent<NavMeshAgent>() != null)
         //{
         //    this_npc.GetComponent<NavMeshAgent>().isStopped = false;
@@ -76,7 +85,7 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     }
 
     private StoryData SearchStory(string title){
-        bool isStoryExist = false;
+        isStoryExist = false;
         foreach(StoryData storyRunning in story){
             if(storyRunning.title == title){
                 isStoryExist = true;

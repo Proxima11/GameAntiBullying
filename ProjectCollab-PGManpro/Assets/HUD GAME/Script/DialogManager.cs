@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
@@ -14,6 +15,7 @@ public class DialogManager : MonoBehaviour
 
     public Queue<string> sentences;
     public Story currentStory;
+    public string currentStoryName;
     public Animator animator;
     public Animator animatorBlackScreen;
     public float TypingSpeed = 0.04f;
@@ -31,8 +33,9 @@ public class DialogManager : MonoBehaviour
     private const string BLACKSCREEN_TAG = "blackscreen";
 
     public GameObject taskbutton;
-
     public GameObject Inventory;
+    public GameObject NPCPrefab;
+    public Animator animatorNPC;
     //public GameObject settingbutton;
 
     // Start is called before the first frame update
@@ -149,7 +152,12 @@ public class DialogManager : MonoBehaviour
 
     public void EndDialouge(){
         animator.SetBool("isOpen", false);
-        superScript.indexDialog = superScript.indexDialog + 1;
+        if(currentStoryName != "Default"){
+            superScript.indexDialog = superScript.indexDialog + 1;
+        }
+        NPCPrefab.GetComponent<NavMeshAgent>().isStopped = false;
+        animatorNPC.SetTrigger("TrWalk");
+
         Inventory.SetActive(true);
     }
 
