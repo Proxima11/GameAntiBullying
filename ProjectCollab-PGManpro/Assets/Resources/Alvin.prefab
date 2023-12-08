@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd62d5541e6e5b4096f107beac06a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPCName: 
+  NPCName: Alvin
   playerGirl: {fileID: 1215348280215815901, guid: 04db19c2ba027294f91e418918d5266a, type: 3}
   playerBoy: {fileID: 3057947923302166667, guid: 083627ee651915448b7b7b243ee27734, type: 3}
   story: []
@@ -172,7 +172,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NPCName: Alvin
-  playerGirl: {fileID: 0}
-  playerBoy: {fileID: 0}
-  story: []
+  playerGirl: {fileID: 1215348280215815901, guid: 04db19c2ba027294f91e418918d5266a, type: 3}
+  playerBoy: {fileID: 3057947923302166667, guid: 083627ee651915448b7b7b243ee27734, type: 3}
+  story:
+  - inkJSON: {fileID: 4900000, guid: ccee454a5ed655244bebd2fdf4e90371, type: 3}
+    title: dialogday1_2
+  - inkJSON: {fileID: 4900000, guid: 8cedcb6f258568147af46b80cb0a6a5a, type: 3}
+    title: dialogday1_3
+  - inkJSON: {fileID: 4900000, guid: 04e260369b22478408fc2679c323b24b, type: 3}
+    title: dialogday1_4
   this_npc: {fileID: 4813949799550114106}

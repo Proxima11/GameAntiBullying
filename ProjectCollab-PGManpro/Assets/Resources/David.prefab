@@ -133,7 +133,11 @@ MonoBehaviour:
   NPCName: David
   playerGirl: {fileID: 1215348280215815901, guid: 04db19c2ba027294f91e418918d5266a, type: 3}
   playerBoy: {fileID: 3057947923302166667, guid: 083627ee651915448b7b7b243ee27734, type: 3}
-  story: []
+  story:
+  - inkJSON: {fileID: 4900000, guid: 8b79bac5e1f57104bb9d894869bbf03b, type: 3}
+    title: dialogday1_1
+  - inkJSON: {fileID: 4900000, guid: ccee454a5ed655244bebd2fdf4e90371, type: 3}
+    title: dialogday1_2
   this_npc: {fileID: 8670321533457374154}
 --- !u!95 &7724165581605541801
 Animator:
