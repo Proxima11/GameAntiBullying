@@ -59,5 +59,14 @@ public class GameManager : MonoBehaviour
     public void starterTask(){
 
     }
+
+    public void updateSuperScript(){
+        //Save Variable
+        GameVariable gameVariable = FindObjectOfType<GameVariable>();  
+        InventoryManager inventory = FindObjectOfType<InventoryManager>();  
+
+        superScript.setVariable(gameVariable.score,gameVariable.stress, gameVariable.timeNow, gameVariable.day);
+        superScript.itemOnwed = inventory.itemOnwed;
+    }
 }
 

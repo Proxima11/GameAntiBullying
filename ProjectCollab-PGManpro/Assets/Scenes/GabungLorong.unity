@@ -12942,7 +12942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Toilet Wanita lt 2
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 851613015}
+  interact: {fileID: 699364091}
 --- !u!65 &699364094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14828,7 +14828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: kelas 1
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 0}
+  interact: {fileID: 840026504}
 --- !u!65 &840026506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15675,6 +15675,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  inDialogue: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -16532,7 +16533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: kelas 3
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 0}
+  interact: {fileID: 895940076}
 --- !u!65 &895940079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19971,6 +19972,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  inDialogue: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -20478,7 +20480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: kelas 4
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 0}
+  interact: {fileID: 1102746993}
 --- !u!65 &1102746996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27526,7 +27528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: kelas 2
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 0}
+  interact: {fileID: 1547090121}
 --- !u!65 &1547090123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -84576,7 +84578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Toilet Pria lt 2
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 0}
+  interact: {fileID: 1913153905}
 --- !u!65 &1913153908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -84877,6 +84879,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 832278916139164781, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: playerInteractBoy
+      value: 
+      objectReference: {fileID: 866712633}
+    - target: {fileID: 832278916139164781, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: playerInteractGirl
+      value: 
+      objectReference: {fileID: 1087452899}
     - target: {fileID: 1787396979270567874, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.5072
@@ -86674,7 +86684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Outside
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 0}
+  interact: {fileID: 2084962481}
 --- !u!65 &2084962483
 BoxCollider:
   m_ObjectHideFlags: 0
