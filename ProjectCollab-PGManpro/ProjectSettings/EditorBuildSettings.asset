@@ -44,10 +44,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/toilet 1.unity
     guid: 53eaee68aecb87744b5168f04abd54f9
-  - enabled: 1
+  - enabled: 0
     path: Assets/HUD GAME/Coba HUD2.unity
     guid: 8208ae3bfa1b6734b9adcc18a8753712
-  - enabled: 1
+  - enabled: 0
     path: Assets/HUD GAME/Coba HUD3.unity
     guid: 0377e03d5d15d3747a163b49c44e6bfd
   - enabled: 1

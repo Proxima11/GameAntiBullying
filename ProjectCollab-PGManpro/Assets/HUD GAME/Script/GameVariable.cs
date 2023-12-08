@@ -39,12 +39,16 @@ public class GameVariable : MonoBehaviour
 
 	public void updateTime(){
 		if (timeNow <= maxTime){
-			if (timeNow<Time.time+1){
+			if (timeNow<Time.time + 1){
 				minute = timeNow/60;
 				second = timeNow%60;
 				timeNow += 1 ;
 			}
+		} else {
+			this.day+=1;
 		}
+
+		superScript.updateTime(this.timeNow, this.day);
 	}
 
 	private void Start(){

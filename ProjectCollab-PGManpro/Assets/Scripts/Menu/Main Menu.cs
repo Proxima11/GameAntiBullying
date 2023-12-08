@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
     public void Play(){
         // GameObject.Find("Player").SetActive(false);
 
-        SceneManager.LoadScene("Lorong lt 1");
+        SceneManager.LoadScene("GabungLorong");
     }
 
     public void chooseGender(){
