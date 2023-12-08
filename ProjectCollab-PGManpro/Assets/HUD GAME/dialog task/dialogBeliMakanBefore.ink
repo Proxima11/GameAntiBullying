@@ -1,6 +1,6 @@
 ->dialog("Budi","bu")
 
 ===dialog(player,guru)===
-Ini makanannya {guru}#speaker:{player}
-Terima kasih {player}#speaker:Guru
+{player}, tolong belikan saya makanan ya#speaker:Guru
+Siap {guru}#speaker:{player}
 ->END
