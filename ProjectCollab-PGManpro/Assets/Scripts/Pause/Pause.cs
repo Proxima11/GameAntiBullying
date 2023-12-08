@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
+    [SerializeField] GameObject canvasPause;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,10 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            canvasPause.SetActive(true);
+        }
     }
 
     public void QuitGame()
