@@ -13,6 +13,8 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 
+		public bool inDialogue = false;
+
 		[Header("Movement Settings")]
 		public bool analogMovement;
 
@@ -23,13 +25,16 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
 		{
-			MoveInput(value.Get<Vector2>());
+			if(inDialogue == false){
+				MoveInput(value.Get<Vector2>());	
+			}
 		}
 
 		public void OnLook(InputValue value)
 		{
 			if(cursorInputForLook && Keyboard.current.leftAltKey.isPressed)
 			{
+				inDialogue = true;
 				LookInput(new Vector2(0, 0));
 				Cursor.lockState = CursorLockMode.Confined;
 			}

@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     // Saving player pos
     private static Vector3 playerPos = new Vector3();
     private GameObject player;
-    private float t = 0f;
     private bool[] tasks_bool = new bool[20]; //True = Akademik, False = Cool
 
     void Start(){
@@ -53,9 +52,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Update(){
-        t += Time.deltaTime; 
-        // Debug.Log(((int) t%60));
-        if (((int) t % 60) % 1200 == 0) superScript.day+=1;
+        // Debug.Log(superScript.time);
     }
     public static Vector3 PlayerPos { get => playerPos; set => playerPos = value; }
 

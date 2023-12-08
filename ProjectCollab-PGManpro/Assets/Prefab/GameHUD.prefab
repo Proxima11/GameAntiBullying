@@ -2472,6 +2472,7 @@ MonoBehaviour:
   - {fileID: 7377177081512797323}
   - {fileID: 5003543645686991991}
   - {fileID: 3364987004439235731}
+  stop: 0
   taskbutton: {fileID: 3726148037745033329}
   Inventory: {fileID: 453279262995229910}
 --- !u!114 &792156706501237570
@@ -3836,8 +3837,8 @@ CanvasGroup:
   m_GameObject: {fileID: 7016352094375319983}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!95 &821470425548484738
 Animator:
@@ -3893,12 +3894,12 @@ RectTransform:
   - {fileID: 6753555197219931630}
   - {fileID: 34183294591002987}
   - {fileID: 9200491270259857949}
-  - {fileID: 4069700719595331657}
   - {fileID: 389196372935497093}
   - {fileID: 5692630780137261883}
   - {fileID: 7636996276363602009}
-  - {fileID: 7894935336918512421}
+  - {fileID: 4069700719595331657}
   - {fileID: 1043381534549283912}
+  - {fileID: 7894935336918512421}
   - {fileID: 3434358147500901410}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

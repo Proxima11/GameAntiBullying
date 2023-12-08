@@ -54,4 +54,9 @@ public class superScript : MonoBehaviour
     {
         
     }
+
+    public static void updateTime(int t, int d){
+        time = t;
+        day = d;
+    }
 }
