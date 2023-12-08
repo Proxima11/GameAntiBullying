@@ -5137,6 +5137,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  inDialogue: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -5200,6 +5201,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  ui: {fileID: 0}
 --- !u!143 &1397382315
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6302,6 +6304,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  inDialogue: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -6365,6 +6368,7 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  ui: {fileID: 0}
 --- !u!143 &1641930914
 CharacterController:
   m_ObjectHideFlags: 0

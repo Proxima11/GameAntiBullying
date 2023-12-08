@@ -15,6 +15,7 @@ public class superScript : MonoBehaviour
     static public int stress = 0;
 	static public int time = 0;
     static public int day = 1;
+    public static List<Task_def> Tasks = new List<Task_def>();
     static public string[] dialogProgress = new string[] {
         "Day 1 part 1",
         "Day 1 part 2",

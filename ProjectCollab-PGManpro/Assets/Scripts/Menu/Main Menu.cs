@@ -28,6 +28,7 @@ public class MainMenu : MonoBehaviour
         superScript.shyConfidence    =sliderValue_SC.GetComponent<Slider>().value;
         superScript.nerdCool         =sliderValue_NC.GetComponent<Slider>().value;
         superScript.day              = 1;
+        superScript.Tasks.Clear();
     }
 
     public void Play(){

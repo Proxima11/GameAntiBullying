@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     // Saving player pos
     private static Vector3 playerPos = new Vector3();
     private GameObject player;
-    private bool[] tasks_bool = new bool[20]; //True = Akademik, False = Cool
+   [SerializeField] private List<Task_def> coolTasks;
+    [SerializeField] private List<Task_def> acaTasks;
 
     void Start(){
         player = GameObject.FindGameObjectWithTag("Player");
@@ -31,24 +32,19 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log(playerPos);
 
-        int nAkademik = 0, nCool = 0;
-        for (int i = 0; i < 20; i++){
+        for (int i = 0; i < 10; i++){
             float temp = Random.Range(0f, 1f);  
 
-            Debug.Log("temp: " + temp);
-
             if (temp < superScript.nerdCool/100f){
-                Debug.Log("task akademik ke " + (i+1));
-                nAkademik++;
-                tasks_bool[i] = true;
+                int rand_util = Random.Range(0, acaTasks.Count);
+                superScript.Tasks.Add(acaTasks[rand_util]);
+                acaTasks.RemoveAt(rand_util);
             } else {
-                Debug.Log("task kekerenan ke " + (i+1));
-                nCool++;
-                tasks_bool[i] = false;
+                int rand_util = Random.Range(0, coolTasks.Count);
+                superScript.Tasks.Add(coolTasks[rand_util]);
+                coolTasks.RemoveAt(rand_util);
             }
         }
-        Debug.Log("super script NC: " +superScript.nerdCool);
-        Debug.Log("tugas akademik: " + nAkademik + "\ntugas cool: " + nCool);
     }
 
     void Update(){
