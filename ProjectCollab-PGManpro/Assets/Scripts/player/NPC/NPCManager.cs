@@ -92,23 +92,16 @@ public class NPCManager : MonoBehaviour
             changeScene("kelas 1");
             removeNPC("David");
             removeNPC("Devi");
-            if (superScript.boy)
-            {
-                
-               // addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Alvin");
-                //addNPC("Alvin");
-            }
-            else
-            {
-                
-                //addSpawn(vina, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Vina");
-               // addNPC("Vina");
-            }
+            
 
         }
         else if (dialog[index] == "Day 1 part 4")
         {
+            removeNPC("Alvin");
+            removeNPC("Vina");
             dialogStatus = "dialogday1_4";
+            changeScene("GabungLorong");
+
         }
         else if (dialog[index] == "Day 2 part 1")
         {

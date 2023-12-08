@@ -20,6 +20,7 @@ public class superScript : MonoBehaviour
         "Day 1 part 1",
         "Day 1 part 2",
         "Day 1 part 3",
+        "Day 1 part 4",
         "Day 2 part 1 ",
         "Day 2 part 2 ",
         "Day 3 part 1 ",
