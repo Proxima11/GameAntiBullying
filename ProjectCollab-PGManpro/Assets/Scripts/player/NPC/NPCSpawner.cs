@@ -47,10 +47,10 @@ public class NPCSpawner : MonoBehaviour
                 if (Search(spawn.name))
                 {
                     GameObject gameObject = Instantiate(spawn.prefabToSpawn, SpawnPoint.transform) as GameObject;
+                    gameObject.transform.localScale = spawn.scale;
                     gameObject.transform.position = SpawnPoint.transform.position + spawn.position;
                     gameObject.transform.rotation = spawn.prefabToSpawn.transform.rotation;
                     gameObject.transform.rotation = Quaternion.Euler(spawn.rotation);
-                    gameObject.transform.localScale = spawn.scale;
                     NPCSpawned.Add(gameObject);
                 }
             }
@@ -65,10 +65,10 @@ public class NPCSpawner : MonoBehaviour
             if (spawn != null)
             {
                 GameObject gameObject = Instantiate(spawn.prefabToSpawn, SpawnPoint.transform) as GameObject;
+                gameObject.transform.localScale = spawn.scale;
                 gameObject.transform.position = SpawnPoint.transform.position + spawn.position;
                 gameObject.transform.rotation = spawn.prefabToSpawn.transform.rotation;
                 gameObject.transform.rotation = Quaternion.Euler(spawn.rotation);
-                gameObject.transform.localScale = spawn.scale;
                 NPCSpawned.Add(gameObject);
                 return true;
             }
