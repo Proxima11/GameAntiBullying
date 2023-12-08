@@ -25,23 +25,31 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
 		{
-			if(inDialogue == false){
-				MoveInput(value.Get<Vector2>());	
+			if(!inDialogue){
+				MoveInput(value.Get<Vector2>());
+			}
+			else{
+				MoveInput(new Vector2(0, 0));
 			}
 		}
 
 		public void OnLook(InputValue value)
-		{
-			if(cursorInputForLook && Keyboard.current.leftAltKey.isPressed)
-			{
-				inDialogue = true;
+		{	
+			if(!inDialogue){
+				if(cursorInputForLook && Keyboard.current.leftAltKey.isPressed)
+				{
+					LookInput(new Vector2(0, 0));
+					Cursor.lockState = CursorLockMode.Confined;
+				}
+				else{
+					LookInput(value.Get<Vector2>());
+					Cursor.lockState = CursorLockMode.Locked;
+				}
+			}else{
 				LookInput(new Vector2(0, 0));
 				Cursor.lockState = CursorLockMode.Confined;
 			}
-			else{
-				LookInput(value.Get<Vector2>());
-				Cursor.lockState = CursorLockMode.Locked;
-			}
+			
 		}
 
 		public void OnJump(InputValue value)
