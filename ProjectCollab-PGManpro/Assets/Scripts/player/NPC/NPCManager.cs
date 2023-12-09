@@ -40,9 +40,9 @@ public class NPCManager : MonoBehaviour
         int index =  superScript.indexDialog;
         Debug.Log(index);
 
-        if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
+        /*if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
         {
-          
+
             //dialog yang sekarang lagi play
             dialogStatus = "dialogday1_1";
 
@@ -61,9 +61,9 @@ public class NPCManager : MonoBehaviour
                 addSpawn(devi, new Vector3(-3.89f, -0.2017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
             }
-            
-        }
-        else if(dialog[index] == "Day 1 part 2" & superScript.day == 1)
+
+        }*/
+        if (dialog[index] == "Day 1 part 2" & superScript.day == 1)
         {
             dialogStatus = "dialogday1_2";
             changeScene("kelas 1");
@@ -80,7 +80,7 @@ public class NPCManager : MonoBehaviour
             //}
             if (superScript.boy)
             {
-                addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Alvin");
+                addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
             }
             else
@@ -107,7 +107,7 @@ public class NPCManager : MonoBehaviour
             changeScene("GabungLorong");
             if (superScript.boy)
             {
-                addSpawn(alvin, new Vector3(61.887f, 0.058f, -3.524f), new Vector3(0f, 270f, 0f), new Vector3(1f, 1f, 1f), "Alvin");
+                addSpawn(alvin, new Vector3(61.887f, 0.058f, -3.524f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
             }
             else
@@ -192,7 +192,7 @@ public class NPCManager : MonoBehaviour
         {
             dialogStatus = "day3_2";
             changeScene("GabungLorong");
-            
+
             if (superScript.boy)
             {
                 removeNPC("David");
@@ -220,19 +220,19 @@ public class NPCManager : MonoBehaviour
         {
             dialogStatus = "day3_3";
             changeScene("Outside");
-            
+
             if (superScript.boy)
             {
                 removeNPC("David");
 
-                addSpawn(alvin, new Vector3(9.67083f, -0.32f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1f, 1f, 1f), "Alvin");
+                addSpawn(alvin, new Vector3(9.67083f, -0.32f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
             }
             else
             {
                 removeNPC("Devi");
-                
-                addSpawn(vina, new Vector3(9.67083f, -0.12f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1f, 1f, 1f), "Vina");
+
+                addSpawn(vina, new Vector3(9.67083f, -0.12f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Vina");
                 addNPC("Vina");
             }
         }
@@ -240,7 +240,7 @@ public class NPCManager : MonoBehaviour
         {
             dialogStatus = "dialogday4";
             changeScene("Outside");
-            
+
             if (superScript.boy)
             {
                 removeNPC("Alvin");
@@ -255,7 +255,7 @@ public class NPCManager : MonoBehaviour
             else
             {
                 removeNPC("Vina");
-                
+
                 addSpawn(devi, new Vector3(-86.34f, -0.73f, 93.72612f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
                 addSpawn(vero, new Vector3(-87.13f, -0.73f, 93.93958f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
@@ -264,32 +264,98 @@ public class NPCManager : MonoBehaviour
             }
 
         }
-        else if (dialog[index] == "Day 5 part 1 " & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1" & superScript.day == 5)
         {
+            if (superScript.boy)
+            {
+                removeNPC("David");
+                removeNPC("Tino");
+                removeNPC("Doni");
+            }
+            else
+            {
+                removeNPC("Devi");
+                removeNPC("Vero");
+            }
             dialogStatus = "dialogday5_1";
+            changeScene("kelas 4");
 
+            addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
+            addNPC("Guru");
         }
         else if (dialog[index] == "Day 5 part 1_1 " & superScript.day == 5)
         {
             dialogStatus = "dialogday5_1_1";
-
+            changeScene("kelas 4");
+            removeNPC("Guru");
+            addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
+            addNPC("Guru");
         }
-        else if (dialog[index] == "Day 5 part 1_2 " & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1_2" & superScript.day == 5)
         {
+            removeNPC("Guru");
             dialogStatus = "dialogday5_1_2";
-
-
+            changeScene("kelas 4");
+            addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
+            addNPC("Guru");
+            if (superScript.boy)
+            {
+                addSpawn(david, new Vector3(-6.865f, 0.08039999f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addNPC("David");
+            }
+            else
+            {
+                addSpawn(devi, new Vector3(-6.865f, -0.289f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
+                addNPC("Devi");
+            }
         }
-        else if (dialog[index] == "Day 5 part 1_3 " & superScript.day == 5)
+        else if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
         {
+            removeNPC("Guru");
             dialogStatus = "dialogday5_1_3";
 
+            addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
+            addNPC("Guru");
+            if (superScript.boy)
+            {
+                removeNPC("David");
+
+                addSpawn(david, new Vector3(-7.065f, 0.08039999f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addNPC("David");
+                addSpawn(alvin, new Vector3(-6.77f, -0.289f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addNPC("Alvin");
+            }
+            else
+            {
+                removeNPC("Devi");
+
+                addSpawn(devi, new Vector3(-7.065f, -0.289f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
+                addNPC("Devi");
+                addSpawn(vina, new Vector3(-6.77f, 0.08039999f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1f, 1f, 1f), "Vina");
+                addNPC("Vina");
+            }
         }
         else if (dialog[index] == "Day 5 part 1_4" & superScript.day == 5)
         {
+            removeNPC("Guru");
             dialogStatus = "dialogday5_1_4";
 
+            if (superScript.boy)
+            {
+                removeNPC("David");
+                removeNPC("Alvin");
 
+                addSpawn(alvin, new Vector3(-6.77f, -0.289f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addNPC("Alvin");
+            }
+            else
+            {
+                removeNPC("Devi");
+                removeNPC("Vina");
+
+                addSpawn(vina, new Vector3(-6.77f, 0.08039999f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1f, 1f, 1f), "Vina");
+                addNPC("Vina");
+            }
         }
     }
 
