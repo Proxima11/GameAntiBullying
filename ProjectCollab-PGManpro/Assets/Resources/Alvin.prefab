@@ -181,4 +181,10 @@ MonoBehaviour:
     title: dialogday1_3
   - inkJSON: {fileID: 4900000, guid: 04e260369b22478408fc2679c323b24b, type: 3}
     title: dialogday1_4
+  - inkJSON: {fileID: 4900000, guid: 7804443f87e6d7f428bf9b04ec2d64d3, type: 3}
+    title: day3_3
+  - inkJSON: {fileID: 4900000, guid: 97e85d2030a35b3489fdb8654779c595, type: 3}
+    title: dialogday5_1_3
+  - inkJSON: {fileID: 4900000, guid: 55afb990dc8e78e45b8473202dc3cd4b, type: 3}
+    title: dialogday5_1_4
   this_npc: {fileID: 4813949799550114106}
