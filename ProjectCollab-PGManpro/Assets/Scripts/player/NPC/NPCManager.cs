@@ -40,7 +40,7 @@ public class NPCManager : MonoBehaviour
         int index =  superScript.indexDialog;
         Debug.Log(index);
 
-        /*if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
+        if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
         {
           
             //dialog yang sekarang lagi play
@@ -62,8 +62,8 @@ public class NPCManager : MonoBehaviour
                 addNPC("Devi");
             }
             
-        }*/
-        if (dialog[index] == "Day 1 part 2" & superScript.day == 1)
+        }
+        else if(dialog[index] == "Day 1 part 2" & superScript.day == 1)
         {
             dialogStatus = "dialogday1_2";
             changeScene("kelas 1");
@@ -192,6 +192,7 @@ public class NPCManager : MonoBehaviour
         {
             dialogStatus = "day3_2";
             changeScene("GabungLorong");
+            
             if (superScript.boy)
             {
                 removeNPC("David");
@@ -199,6 +200,10 @@ public class NPCManager : MonoBehaviour
                 removeNPC("Doni");
                 addSpawn(david, new Vector3(55.41f, 0.058f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "David");
                 addNPC("David");
+                addSpawn(tino, new Vector3(54.62f, -0.08f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Tino");
+                addNPC("Tino");
+                addSpawn(doni, new Vector3(56.214f, -0.08f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Doni");
+                addNPC("Doni");
             }
             else
             {
@@ -206,6 +211,9 @@ public class NPCManager : MonoBehaviour
                 removeNPC("Vero");
                 addSpawn(devi, new Vector3(55.41f, -0.28f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
+                addSpawn(vero, new Vector3(56.214f, -0.28f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
+                addNPC("Vero");
+
             }
         }
         else if (dialog[index] == "Day 3 part 3 " & superScript.day == 3)
