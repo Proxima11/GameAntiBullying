@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Task_def> acaTasks;
 
     void Start(){
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindWithTag("Player");
+        Debug.Log(player);
 
 
         if (playerPos != Vector3.zero) // Check if playerPos has been set

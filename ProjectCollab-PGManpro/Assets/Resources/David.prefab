@@ -138,6 +138,8 @@ MonoBehaviour:
     title: dialogday1_1
   - inkJSON: {fileID: 4900000, guid: ccee454a5ed655244bebd2fdf4e90371, type: 3}
     title: dialogday1_2
+  - inkJSON: {fileID: 4900000, guid: ccee454a5ed655244bebd2fdf4e90371, type: 3}
+    title: dialogday1_2
   this_npc: {fileID: 8670321533457374154}
 --- !u!95 &7724165581605541801
 Animator:

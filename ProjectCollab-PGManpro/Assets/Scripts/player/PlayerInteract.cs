@@ -13,6 +13,7 @@ public class PlayerInteract : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         GameObject gameObjectScene = new GameObject("TeleportCollision");
         teleportCollision = gameObjectScene.AddComponent<TeleportCollision>();
+        gameObjectScene.SetActive(true);
 
     }
 
