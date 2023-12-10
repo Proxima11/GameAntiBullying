@@ -15,6 +15,7 @@ public class NPCManager : MonoBehaviour
     GameObject alvin;
     GameObject vina;
     GameObject vero;
+    GameObject claire;
     GameObject tino;
     GameObject doni;
 
@@ -28,6 +29,7 @@ public class NPCManager : MonoBehaviour
         alvin = Resources.Load<GameObject>("Alvin");
         vina = Resources.Load<GameObject>("Vina");
         vero = Resources.Load<GameObject>("Vero");
+        claire = Resources.Load<GameObject>("Claire");
         tino = Resources.Load<GameObject>("Tino");
         doni = Resources.Load<GameObject>("Doni");
         listSpawn = FindObjectOfType<NPCSpawner>().spawns;
@@ -62,8 +64,8 @@ public class NPCManager : MonoBehaviour
                 addNPC("Devi");
             }
 
-        }else
-        if (dialog[index] == "Day 1 part 2" & superScript.day == 1)
+        }
+        else if (dialog[index] == "Day 1 part 2" & superScript.day == 1)
         {
             dialogStatus = "dialogday1_2";
             changeScene("kelas 1");
@@ -157,7 +159,8 @@ public class NPCManager : MonoBehaviour
                 addNPC("Devi");
                 addSpawn(vero, new Vector3(37.284f, -0.40009148f, 1.918f), new Vector3(0f, 110f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
                 addNPC("Vero");
-
+                addSpawn(claire, new Vector3(37.322f, -0.217f, 0.532f), new Vector3(0f, 50f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Claire");
+                addNPC("Claire");
             }
         }
         else if (dialog[index] == "Day 3 part 1 " & superScript.day == 3)
@@ -181,11 +184,13 @@ public class NPCManager : MonoBehaviour
             {
                 removeNPC("Devi");
                 removeNPC("Vero");
+                removeNPC("Claire");
                 addSpawn(devi, new Vector3(61.88f, 3.844f, -7.150001f), new Vector3(0f, 180f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
                 addSpawn(vero, new Vector3(62.35f, 3.844f, -7.8f), new Vector3(0f, 230f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
                 addNPC("Vero");
-
+                addSpawn(claire, new Vector3(61.22f, 4.045f, -7.38f), new Vector3(0f, 150f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Claire");
+                addNPC("Claire");
             }
         }
         else if (dialog[index] == "Day 3 part 2 " & superScript.day == 3)
@@ -209,11 +214,13 @@ public class NPCManager : MonoBehaviour
             {
                 removeNPC("Devi");
                 removeNPC("Vero");
+                removeNPC("Claire");
                 addSpawn(devi, new Vector3(55.41f, -0.28f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
                 addSpawn(vero, new Vector3(56.214f, -0.28f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
                 addNPC("Vero");
-
+                addSpawn(claire, new Vector3(56.214f, -0.03f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Claire");
+                addNPC("Claire");
             }
         }
         else if (dialog[index] == "Day 3 part 3 " & superScript.day == 3)
@@ -224,14 +231,16 @@ public class NPCManager : MonoBehaviour
             if (superScript.boy)
             {
                 removeNPC("David");
-
+                removeNPC("Tino");
+                removeNPC("Doni");
                 addSpawn(alvin, new Vector3(9.67083f, -0.32f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
             }
             else
             {
                 removeNPC("Devi");
-
+                removeNPC("Vero");
+                removeNPC("Claire");
                 addSpawn(vina, new Vector3(9.67083f, -0.12f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Vina");
                 addNPC("Vina");
             }
@@ -260,11 +269,12 @@ public class NPCManager : MonoBehaviour
                 addNPC("Devi");
                 addSpawn(vero, new Vector3(-87.13f, -0.73f, 93.93958f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
                 addNPC("Vero");
-
+                addSpawn(claire, new Vector3(-85.53f, -0.473f, 93.80086f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Claire");
+                addNPC("Claire");
             }
 
         }
-        else if (dialog[index] == "Day 5 part 1" & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1 " & superScript.day == 5)
         {
             if (superScript.boy)
             {
@@ -276,6 +286,7 @@ public class NPCManager : MonoBehaviour
             {
                 removeNPC("Devi");
                 removeNPC("Vero");
+                removeNPC("Claire");
             }
             dialogStatus = "dialogday5_1";
             changeScene("kelas 4");
@@ -291,7 +302,7 @@ public class NPCManager : MonoBehaviour
             addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
             addNPC("Guru");
         }
-        else if (dialog[index] == "Day 5 part 1_2" & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1_2 " & superScript.day == 5)
         {
             removeNPC("Guru");
             dialogStatus = "dialogday5_1_2";
@@ -309,7 +320,7 @@ public class NPCManager : MonoBehaviour
                 addNPC("Devi");
             }
         }
-        else if (dialog[index] == "Day 5 part 1_3" & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1_3 " & superScript.day == 5)
         {
             removeNPC("Guru");
             dialogStatus = "dialogday5_1_3";
@@ -335,7 +346,7 @@ public class NPCManager : MonoBehaviour
                 addNPC("Vina");
             }
         }
-        else if (dialog[index] == "Day 5 part 1_4" & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1_4 " & superScript.day == 5)
         {
             removeNPC("Guru");
             dialogStatus = "dialogday5_1_4";
