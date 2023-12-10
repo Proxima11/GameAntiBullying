@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using StarterAssets;
 
 public class UpdateUI : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class UpdateUI : MonoBehaviour
     public TMP_Text time;
     public TMP_Text day;
     public GameObject taskCanvas;
+    public GameObject inventory;
 
+    private bool task = false;
 
     GameVariable gameVariable;
 
@@ -32,12 +35,16 @@ public class UpdateUI : MonoBehaviour
         }
         time.SetText(displayMinute + ":" + displaySecond);
         day.SetText("Day "+gameVariable.day.ToString());
+        Task();
     }   
 
 [SerializeField] private GameObject scrollview;
 [SerializeField] private GameObject task_text;
     public void showTask(){
         taskCanvas.SetActive(true);
+        inventory.SetActive(false);
+        FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
+
         for (var i = 0; i < superScript.Tasks.Count; i++){
             var node = superScript.Tasks[i];
             GameObject newT = (GameObject) Instantiate(task_text);
@@ -55,5 +62,21 @@ public class UpdateUI : MonoBehaviour
         Object.Destroy(scrollview.transform.GetChild(i).gameObject);
         }
         taskCanvas.SetActive(false);
+        inventory.SetActive(true);
+        FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
+
+    }
+
+    private void Task(){
+        if (Input.GetKeyUp(KeyCode.T)){
+            Debug.Log("task");
+            if (!task){
+                showTask();
+                task = true;
+            } else {
+                exitTask();
+                task = false;
+            }
+        }
     }
 }

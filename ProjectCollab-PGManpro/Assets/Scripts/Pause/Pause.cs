@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using StarterAssets;
 
 public class Pause : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class Pause : MonoBehaviour
         isPaused = true;
         Time.timeScale = 0;
         canvasPause.SetActive(true);
+        FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
     }
 
     public void ResumeGame()
@@ -36,6 +38,7 @@ public class Pause : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1;
         canvasPause.SetActive(false);
+        FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
     }
 
     public void QuitGame()

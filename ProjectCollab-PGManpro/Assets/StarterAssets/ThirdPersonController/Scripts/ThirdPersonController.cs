@@ -160,23 +160,6 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
-            Task();
-
-        }
-
-[SerializeField] private UpdateUI ui;
-private bool task = false;
-        private void Task(){
-            if (Input.GetKeyUp(KeyCode.T)){
-                Debug.Log("task");
-                if (!task){
-                    ui.showTask();
-                    task = true;
-                } else {
-                    ui.exitTask();
-                    task = false;
-                }
-            }
         }
 
         private void LateUpdate()
