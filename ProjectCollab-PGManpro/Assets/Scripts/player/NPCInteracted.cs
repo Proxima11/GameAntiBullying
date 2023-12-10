@@ -24,6 +24,7 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     public StoryData[] story;
     public GameObject this_npc;
     private bool isStoryExist;
+    Transform tr;
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -46,14 +47,20 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
             this_npc.GetComponent<NavMeshAgent>().isStopped = true;
             animator.SetTrigger("TrBreath");
         }
+        float store_y = transform.localEulerAngles.y;
         GetTransform().LookAt(playerTransform);
+        
+        transform.eulerAngles = new Vector3(0f, transform.localEulerAngles.y, 0f);
         //rotateTowards(playerTransform);
         //var rot = gameObject.transform.localRotation.eulerAngles;
         //rot.Set(0f, transform.rotation.y, transform.rotation.z);
         //transform.localRotation = Quaternion.Euler(rot);
-        transform.Rotate(new Vector3(0f, transform.rotation.y, 0f));
+        //this_npc.transform.Rotate(new Vector3(0f, this_npc.transform.rotation.y, 0f));
         TriggerDialog();
-
+        if (!FindObjectOfType<DialogManager>().stop)
+        {
+            transform.eulerAngles = new Vector3(0f, store_y, 0f);
+        }
     }
 
     public string GetInteractText()

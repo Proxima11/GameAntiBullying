@@ -82,13 +82,20 @@ public class NPCManager : MonoBehaviour
             //}
             if (superScript.boy)
             {
+                removeNPC("David");
                 addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
+                addSpawn(david, new Vector3(-3.89f, -0.2017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(0.9f, 0.9f, 0.9f), "David");
+                addNPC("David");
+
             }
             else
             {
+                removeNPC("Devi");
                 addSpawn(vina, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Vina");
                 addNPC("Vina");
+                addSpawn(devi, new Vector3(-3.89f, -0.2017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
+                addNPC("Devi");
             }
         }
 
@@ -96,10 +103,21 @@ public class NPCManager : MonoBehaviour
         {
             dialogStatus = "dialogday1_3";
             changeScene("kelas 1");
-            removeNPC("David");
-            removeNPC("Devi");
 
+            if (superScript.boy)
+            {
+                removeNPC("David");
+                addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addNPC("Alvin");
 
+            }
+            else
+            {
+                removeNPC("Devi");
+                addSpawn(vina, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Vina");
+                addNPC("Vina");
+                
+            }
         }
         else if (dialog[index] == "Day 1 part 4" & superScript.day == 1)
         {
