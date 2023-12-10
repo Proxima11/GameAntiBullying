@@ -38,9 +38,9 @@ public class NPCManager : MonoBehaviour
     {
         string[] dialog =  superScript.dialogProgress;
         int index =  superScript.indexDialog;
-        Debug.Log(index);
+        // Debug.Log(index);
 
-        /*if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
+        if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
         {
 
             //dialog yang sekarang lagi play
@@ -62,7 +62,7 @@ public class NPCManager : MonoBehaviour
                 addNPC("Devi");
             }
 
-        }*/
+        }else
         if (dialog[index] == "Day 1 part 2" & superScript.day == 1)
         {
             dialogStatus = "dialogday1_2";
@@ -309,7 +309,7 @@ public class NPCManager : MonoBehaviour
                 addNPC("Devi");
             }
         }
-        else if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
+        else if (dialog[index] == "Day 5 part 1_3" & superScript.day == 5)
         {
             removeNPC("Guru");
             dialogStatus = "dialogday5_1_3";

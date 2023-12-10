@@ -32,6 +32,8 @@ public class DialogManager : MonoBehaviour
     private bool isDialogBlackscreen = false;
     public bool stop = false;
 
+    private bool isDialogRunning = false;
+
     private const string SPEAKER_TAG = "speaker";
     private const string BLACKSCREEN_TAG = "blackscreen";
 
@@ -54,7 +56,7 @@ public class DialogManager : MonoBehaviour
     }
 
     void Update(){
-        if (Input.GetKeyUp(KeyCode.R)){
+        if (Input.GetKeyUp(KeyCode.R) && isDialogRunning){
             if (canContinueToNextLine){
                 continueStory();
             }else if(!isDialogBlackscreen){
@@ -64,6 +66,7 @@ public class DialogManager : MonoBehaviour
     }
 
     public void StartDialogInk(TextAsset inkJSON){
+        isDialogRunning = true;
         animator.SetBool("isOpen", true);
         Inventory.SetActive(false);
         FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
@@ -160,7 +163,8 @@ public class DialogManager : MonoBehaviour
             superScript.indexDialog = superScript.indexDialog + 1;
         }
 
-        if (NPCPrefab.GetComponent<NavMeshAgent>() != null){
+        
+        if (NPCPrefab!=null && NPCPrefab.GetComponent<NavMeshAgent>() != null){
             NPCPrefab.GetComponent<NavMeshAgent>().isStopped = true;
             animator.SetTrigger("TrBreath");
         }
@@ -168,7 +172,7 @@ public class DialogManager : MonoBehaviour
         Inventory.SetActive(true);
         FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
         Debug.Log(FindObjectOfType<StarterAssetsInputs>().inDialogue);
-
+        isDialogRunning= false;
     }
 
     public void displayChoices(){
@@ -206,7 +210,9 @@ public class DialogManager : MonoBehaviour
 
     public void MakeChoices(int choiceIndex){
         if (canContinueToNextLine){
+            superScript.choices.Add(currentStory.currentChoices[choiceIndex].text);
             currentStory.ChooseChoiceIndex(choiceIndex);
+
             hideChoices();
             isChoices= false;
             continueStory();
@@ -220,10 +226,12 @@ public class DialogManager : MonoBehaviour
     }
 
     public void skipText(){
-        StopCoroutine(displayLineCoroutine);
-        dialogText.SetText(currentTextRunning);
-        canContinueToNextLine = true;
-        displayChoices();
+        if(displayLineCoroutine!=null){
+            StopCoroutine(displayLineCoroutine);
+            dialogText.SetText(currentTextRunning);
+            canContinueToNextLine = true;
+            displayChoices();
+        }
     }
 
     public IEnumerator closeBlackScreen(){

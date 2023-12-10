@@ -33,6 +33,8 @@ public class superScript : MonoBehaviour
         "Day 5 part 1_3 ",
         "Day 5 part 1_4 ",
         };
+    
+    static public List<string> choices = new List<string>();
     static public int indexDialog = 0;
     static public List<Item> itemOnwed = new List<Item>();
 
