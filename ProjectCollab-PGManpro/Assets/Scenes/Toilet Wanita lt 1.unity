@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: GabungLorong
+  SceneName: Lorong
   loadingScreen: {fileID: 611780282}
   interact: {fileID: 259112618}
 --- !u!65 &259112620
@@ -1220,7 +1220,6 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
-  ui: {fileID: 0}
 --- !u!143 &377417262
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3516,7 +3515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1929d1b48efb42b17630c782822de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: GabungLorong
+  SceneName: Lorong
   loadingScreen: {fileID: 611780282}
   interact: {fileID: 1026204604}
 --- !u!65 &1026204606
@@ -3897,7 +3896,6 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
-  ui: {fileID: 0}
 --- !u!143 &1055569163
 CharacterController:
   m_ObjectHideFlags: 0
