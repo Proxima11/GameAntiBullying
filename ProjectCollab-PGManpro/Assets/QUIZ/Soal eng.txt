@@ -1,0 +1,456 @@
+Read the conversation carefully!
+Andy: “I don’t think we should stay up too late tonight.”
+Peter: “________, I have to finish my homework.”
+@I agree
+@I disagree
+@I’m not sure
+@I don’t think so
+@A
+
+#Read the conversation carefully!
+Person 1: “I don’t want to go to the dentist tomorrow.”
+Person 2: “You ________ go to the dentist. Your tooth is hurting.”
+@Can
+@Should
+@Might
+@Must
+@B
+
+#I ... my teeth three times yesterday
+@brushing
+@brush
+@brushed
+@brushes
+@C
+
+#We say, "I brought all my utensils and ingredients," to talk about...
+@past activity
+@future activity
+@present activity
+@ongoing activity
+@A
+
+#My uncle ... work hard night and day because he needs to support his family economy.
+@had          
+@have to
+@have
+@has to 
+@D
+
+#To: Sasha
+Wish you all the best on your seventeenth birthday
+Love,
+Ryan
+
+What is the purpose of the text?
+@To tell the reader about her activities
+@To ask Ryan to come to her birthday party
+@To congratulate Sasha about her birthday party
+@To persuade Sasha to buy some product
+@C
+
+#To: Sasha
+Wish you all the best on your seventeenth birthday
+Love,
+Ryan
+
+Who is celebrate the birthday?
+@Ryan 
+@Sisi
+@Sasha’s friend
+@Sasha
+@C
+
+#Yesterday afternoon I .... television
+@watch
+@watchs
+@watched
+@see
+@C
+
+#Fill in the blanks
+...... (A), my family and I went to Pasir Putih beach. We went by own car. We left our house at 08.00 a.m. and …… (B) there at 09.00 a.m. I felt …… (C). We played with sand and swam in the area. After we felt tired we had lunch together and played again. At 03.00 p.m. we went back.
+What is the right answer for (A)? 
+@Last holiday
+@Today 
+@Next week 
+@In this moment
+@A
+
+#Fill in the blanks
+...... (A), my family and I went to Pasir Putih beach. We went by own car. We left our house at 08.00 a.m. and …… (B) there at 09.00 a.m. I felt …… (C). We played with sand and swam in the area. After we felt tired we had lunch together and played again. At 03.00 p.m. we went back.
+What is the right answer for (B)? 
+@Left
+@Arrived 
+@Travelled
+@Backed
+@B
+
+#Fill in the blanks
+...... (A), my family and I went to Pasir Putih beach. We went by own car. We left our house at 08.00 a.m. and …… (B) there at 09.00 a.m. I felt …… (C). We played with sand and swam in the area. After we felt tired we had lunch together and played again. At 03.00 p.m. we went back.
+What is the right answer for (C)? 
+@Sad 
+@Upset
+@Happy
+@Disappointed
+@C
+
+#Fill in the blanks
+...... (A), my family and I went to Pasir Putih beach. We went by own car. We left our house at 08.00 a.m. and …… (B) there at 09.00 a.m. I felt …… (C). We played with sand and swam in the area. After we felt tired we had lunch together and played again. At 03.00 p.m. we ...(D) back.
+What is the right answer for (D)? 
+@Go 
+@Goes
+@Went
+@Gone
+@C
+
+#From : +0829589400
+
+To : Lita
+
+Sorry Honey, I can’t keep my promise to go with you to the Mall tonight. I have to meet my friend (Mrs. Cathy) at 07.pm. Please don’t be angry.
+
+Sender,
+
+Mom
+
+Who sends the message?
+@Lita                
+@Lita’s mother
+@Mrs. Cathy  
+@Mother’s friend
+@B
+
+#From : +0829589400
+
+To : Lita
+
+Sorry Honey, I can’t keep my promise to go with you to the Mall tonight. I have to meet my friend (Mrs. Cathy) at 07.pm. Please don’t be angry.
+
+Sender,
+
+Mom
+
+How is Lita’s mother feel about her promise?
+@Impressed  
+@Confused
+@Guilty  
+@Happy
+@C
+
+#From : +0829589400
+
+To : Lita
+
+Sorry Honey, I can’t keep my promise to go with you to the Mall tonight. I have to meet my friend (Mrs. Cathy) at 07.pm. Please don’t be angry.
+
+Sender,
+
+Mom
+
+Mom writes the message in order to …..
+@Apologize for not keeping the promise
+@Remind Lita that she has promise
+@Tell Lita that she has to go to the meeting
+@Say that she cannot meet her in the mall
+@A
+
+#Much – water – how – do – we – day – ? – need – each
+@How much water we do need each day?
+@How much water do we need each day?
+@Each day how much water do we need?
+@Do we need water how much each day?
+@B
+
+#What are the generic structure of procedure text?
+@Identification – description
+@Goal – materials – steps
+@Orientation – event – reorientation
+@General classification – description
+@B
+
+#Indah: Can the government give all the students scholarship?
+Ratih : …
+
+What do Ratih say?
+@I am not sure
+@I think it’s easy
+@No doubt
+@I would like it
+@A
+
+#Fill in the blanks
+They ... my teachers
+@Is
+@Am
+@Are
+@Was
+@C
+
+#I don’t need ... job I need some food.
+@Some
+@A lot of
+@Many
+@Any
+@D
+
+#I play the guitar. What is the passive form of this sentence?
+@The guitar is playing by I.
+@The guitar is played by me.
+@The guitar is played by I
+@I played the guitar
+@B
+
+#The car is driven by Mr. Ridwan.
+What is the active form of this sentence?
+@Mr. Ridwan is driving the car
+@Mr. Ridwan drives the car
+@Mr. Ridwan has driven the car
+@Mr. Ridwan drove the car
+@B
+
+#My mother eats the fried noodle in dining room (Active)
+Complete the sentence below…
+Fried noodle is…by my mother in dining room (Passive)
+@Eating
+@Ate
+@Eaten
+@Eat
+@C
+
+#Read the conversation carefully!
+Martha: Hey, thanks for helping me with my homework yesterday.
+Bobby: No problem, anytime. …
+Which one is the best answer to complete the blank space?
+@You’re welcome.
+@I’m sorry.
+@Bye.
+@It was nice to see you.
+@A
+
+#We can see many animals in the zoo. They are…by zoo keepers three times a day
+@Feed
+@Feeding
+@Fed
+@Food
+@C
+
+#To : All the students of SMPN 2 Yogyakarta 
+You are required to pay the school fee before the final test. The test will be held on April 22nd – 25th 2017. 
+Those who can’t fulfill the requirement will not get the test card, except you meet the headmaster. 
+The final test committee
+What is the announcement about? 
+@The announcement to get the final test card 
+@The final examination 
+@The test will be held six days
+@The requirement is for the staff in the school
+@A
+
+#To : All the students of SMPN 2 Yogyakarta 
+You are required to pay the school fee before the final test. The test will be held on April 22nd – 25th 2017. 
+Those who can’t fulfill the requirement will not get the test card, except you meet the headmaster. 
+The final test committee
+“………. to pay the school fee before the final test………..” 
+The word “fee” has the same meaning with…. 
+@Requirement 
+@Payment 
+@Get something 
+@Storage
+@B
+
+#DANGER
+
+HOT SURFACE
+
+DO NOT TOUCH
+
+What is the meaning of teh caution above?
+@Asking people to touch the surface
+@People are warned to touch hot surface stuff
+@Be careful on the surface stuff because it’s harmful
+@People should see the surface
+@C
+
+#DANGER
+
+HOT SURFACE
+
+DO NOT TOUCH
+
+We can probably see this kind of caution in ....
+@A supermarket
+@A bookstore
+@A playground
+@An electronic tool
+@D
+
+#Green Miles West
+The substitution of “West” in our name replacing “California” is the result of an agreement we reached with California Gardening Association, following a protest over the original use of “California” in our name.
+We hope this does not create any confusion among our loyal customers. While this represent a change from our initial name introduction, it does not change the quality of products we offer our customers
+The company assures its customers that they will always maintain the ... of their products.
+@Quality	
+@Price
+@Quantity
+@Sale
+@A
+
+#Keiza and her friends went to Bali last week. They flew to Bali by Citilink. They visited Kuta and bought some souvenirs. After that, they ate some a traditional food on there.
+We use this text for ...
+@narrative text
+@descriptive text
+@recount text
+@procedure text
+@C
+
+#Green Miles West
+The substitution of “West” in our name replacing “California” is the result of an agreement we reached with California Gardening Association, following a protest over the original use of “California” in our name.
+We hope this does not create any confusion among our loyal customers. While this represent a change from our initial name introduction, it does not change the quality of products we offer our customers
+The announcement is written to ... .
+@Introduce a new manager of a company.
+@Avoid any confusion among its loyal customers
+@Inform publicly about its budget report
+@Inform publicly about  growth level a company has achieved
+@B
+
+#I ... happy last night
+@were
+@was
+@didn't
+@am
+@B
+
+#What can we learn from the text ?
+@We have to have breakfast every morning
+@We have to obey our lecturer’s regulation
+@We have to be able to manage our time properly
+@We have to play game on- line with friends.
+@C
+
+#The children didn't .... to school yesterday
+@goes
+@go
+@went
+@go
+@B
+
+#We ... badminton last week
+@playes 
+@played
+@plays
+@play
+@B
+
+#A: Let's go swimming. 
+B: I wish I ...., but we have a test next Tuesday.
+@will be able to
+@am able to
+@could
+@could be
+@C
+
+#He…. not work, because he doesn’t feel well
+@is
+@Does
+@Did
+@Will
+@B
+
+#Rina…. her favorite songs every night
+@Sings
+@Sang
+@Sing
+@Singing
+@A
+
+#We….. football match together.
+@watched
+@watching
+@watchs
+@watch
+@D
+
+#Jamila cooks fried chicken. It… amazing
+@was
+@has been
+@did
+@is
+@C
+
+#The polices…. for that fugitive for years before they finally caught him
+@is looking
+@had been looking
+@have been looking
+@had look
+@B
+
+#Utina : I wonder why Miss Emi… yet.
+Nurdin : I do too. So far, she always on time
+@hasn’t come
+@won’t come
+@haven’t come
+@isn’t come
+@A
+
+#Roman : Why do you look so gloomy?
+Romi: Because I…. my money
+@am just lost
+@have just lost
+@lost
+@will just lost
+@B
+
+#Which of the following is not a linking verb?
+@Appear
+@Seem
+@Walk
+@Become
+@C
+
+#Which sentence uses the past continuous tense correctly?
+@She cooked dinner every night last week.
+@They will study for the test tomorrow.
+@He was watching TV when I arrived.
+@We have played soccer after school.
+@C
+
+#Which tense is commonly used in a narrative text?
+@Simple present tense
+@Present perfect tense
+@Simple past tense
+@Past continuous tense
+@C
+
+#_____ apple fell from the tree.
+@The
+@An
+@Many
+@None of the above
+@B
+
+#The kids are happily dancing because their grandma …………
+@Is arriving
+@Arrived
+@Arrives
+@Has arrived
+@D
+
+#If Rania had obeyed her dad’s recommendation to simply accept the scholarship, …
+@She would have graduated from a famed university.
+@She is going to graduate from a famed university.
+@She graduated from a famed university.
+@She graduated from a famed university.
+@A
+
+#Last Saturday, I went to Nadya's house to ... her baby.
+@saw 
+@seen
+@sees
+@see
+@D
+
+#I am ... to make a burger
+@Go
+@Gone
+@Goes
+@Going
+@D

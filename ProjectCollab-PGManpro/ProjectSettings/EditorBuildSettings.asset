@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/toilet 2 lt 2.unity
     guid: 23c39cbbf602cdb45950a92da434ab34
   - enabled: 1
-    path: Assets/Scenes/quiz.unity
+    path: Assets/Scenes/quiz mat.unity
     guid: f38b5adce976a7a43a631ecade7f100b
   - enabled: 1
     path: Assets/Scenes/Toilet Pria lt 1.unity
