@@ -1,0 +1,352 @@
+#Yang bukan musim yang ada pada benua eropa yaitu..
+@Musim gugur
+@Musim Panas
+@Musim Dingin
+@Musim Subtropis
+@D
+
+#Yang bukan negara yang berada pada wilayah asia tenggara, yaitu..
+@Laos
+@Kamboja
+@India
+@Singapura
+@C
+
+#Negara Jepang merupakan salah satu negara kepulauan yang ada di dunia. Negara ini memiliki sumber daya perikanan yang sangat tinggi. Faktor yang menyebabkan hal tersebut terjadi adalah …
+@berada di zona pertemuan lempeng
+@memiliki banyak gunung api
+@memiliki perairan laut dangkal
+@berada di zona pertemuan dua arus yang berbeda
+@D
+
+#Salah satu ciri negara-negara berkembang di Benua Afrika adalah produktivitas masyarakatnya masih didominasi barang-barang primer. Hal ini karena…
+@kualitas penduduk masih rendah
+@keterbatasan fasilitas umum
+@miskin kekayaan alam
+@sebagian besar penduduk bercorak agraris
+@D
+
+#Benua yang memiliki ukuran terkecil adalah benua…
+@Amerika
+@Eropa
+@Australia
+@Antartika
+@C
+
+#Batas benua Eropa yang menjadi penghubung antara Laut Tengah dan Samudra Atlantik yaitu…
+@Pegunungan Ural
+@Teluk Gibraltar
+@Laut Kaspia
+@Laut Hitam
+@B
+
+#Bentuk wilayah Benua Amerika bersifat meridian yang seolah-olah menghubungkan daerah Kutub Utara dan Kutub Selatan, kondisi demikian menyebabkan…
+@Benua Amerika memiliki iklim subtropis
+@Benua Amerika memiliki semua jenis iklim matahari
+@Benua Amerika memiliki iklim dingin
+@Benua Amerika sebagian besar wilayahnya tertutup salju
+@B
+
+#Samudera yg membatasi Benua Asia di sebelah Selatan yaitu..
+@Samudera Atlantik
+@Samudera Pasifik
+@Samudera Hindia
+@Samudera Antartika 
+@C
+
+#Bunga Sakura adalah bunga khas negara … 
+@Indonesia
+@India
+@Jepang
+@Singapura
+@C
+
+#Samudera yg membatasi Benua Asia di sebelah Utara yaitu..
+@Samudera Atlantik
+@Samudera Pasifik
+@Samudera Hindia
+@Samudera Arktik
+@D
+
+#Negara kepulauan terbesar di dunia yaitu..
+@Madagaskar
+@Indonesia
+@Malaysia
+@Jepang
+@B
+
+#Di bawah ini yang bukan merupakan negara di Afrika Utara adalah….
+@Maroko
+@Aljazair
+@Tunisia
+@Mali
+@D
+
+#Batas bagian barat benua Eropa, yaitu…
+@Asia
+@Samudra Atlantik
+@Afrika
+@Samudra Hindia
+@B
+
+#Berdasarkan kondisi fisik dan variasi iklimnya, kemungkinan jenis flora yang berkembang di Benua Afrika bagian utara adalah…
+@tumbuhan tundra lainnya
+@hutan konifer
+@lumut dan sejenis
+@stepa dan kaktus
+@D
+
+#Berdasarkan kemungkinan pemulihannya, Sumber Daya Alam terdiri dari dari Sumber Daya Alam yang dapat diperbarui ( Renewable resource ) dan Sumber Daya Alam yang tidak dapat diperbarui ( Unrenewable resource ). Contoh Sumber Daya Alam Unrenewable resource adalah ....
+@udara, tembaga, tanah
+@batu bara, udara, timah
+@belerang, air, besi
+@minyak bumi, gas alam, batu bara
+@D
+
+#Salah satu indikator untuk mengelompokkan negara maju dan berkembang adalah kualitas penduduknya. Indikator yang mencerminkan negara maju dilihat dari kualitas penduduknya adalah ....
+@angka kelahiran di negara berkembang tinggi
+@inovasi teknologi kedokteran di negara maju berkembang pesat
+@angka beban tanggungan di negara berkembang tinggi
+@tingkat kematian di negara maju rendah
+@C
+
+#Pak Suwito sebagai orang terkaya dikampungnya memiliki objek pajak sebagai berikut:
+1. Tanah seluas 2.000 m² dengan harga jual Rp 1.000.000,- per m²
+2. Bangunan seluas 1.000 m² dengan harga jual Rp 700.000,- per m².
+Jika pemerintah menentukan besarnya nilai jual kena pajak 20% dan nilai jual tidak kena pajak Rp 10.000.000,- serta pajak terutang 0,5%. Berapakah besarnya pajak bumi dan bangunan yang harus dibayar oleh pak Suwito?
+@Rp 10.760.000,00
+@Rp 10.840.000,00
+@Rp 13.500.000,00
+@Rp 27.000.000,00
+@A
+
+#Seorang ibu biasanya pergi belanja ke pasar A, kemudian ada pembangunan pasar B yang jaraknya lebih dekat, sehingga ibu tadi belanja beralih ke pasar B. Contoh kasus tersebut dikenal sebagai ....
+@Intervening opportunity
+@Complementary
+@Connectivity
+@Transveriability
+@A
+
+#Bu Meti sekarang lebih sering berbelanja kebutuhan sehari-hari di mini market baru yang dekat dengan rumahnya daripada di pasar yang berada di tengah kota. Faktor utama yang mempengaruhi interaksi tersebut adalah . . . .
+@kemudahan transfer
+@kesempatan antara
+@saling melengkapi
+@memenuhi kebutuhan
+@B
+
+#Dua pertiga wilayah Indonesia adalah lautan, aktivitas ekonomi yang dapat dikembangkan oleh masyarakat untuk memenuhi kebutuhan hidupnya adalah . . . .
+@pertanian
+@pertambangan
+@perkebunan
+@perikanan
+@D
+
+#Pemberontakan APRA dan Andi Aziz memiliki latar belakang masalah yang sama. Latar belakang yang sama mendorong terjadinya kedua pemberontakan tersebut adalah...
+@Pembentukan APRIS
+@Pembentukan negara federasi
+@Pembatalan hasil kesepakatan KMB
+@Pembubaran Republik Indonesia Serikat.
+@A
+
+#Sidang BPUPKI pada tanggal 29 Mei – 1 Juni 1945 menampilkan 3 tokoh yang menyampaikan ide mengenai dasar negara, yaitu . . . .
+@M. Yamin, Soepomo, dan Soekarno
+@M. Yamin, Sutan Syahrir, dan Soekarno
+@M. Hatta, Soepomo, dan Soekarno
+@M. Yamin, Sutan Syahrir, dan Soekarno
+@A
+
+#Bapak Joko yang berkewarganegaraan Indonesia pindah ke Inggris dan mengubah kewarganegaraannya sehingga menjadi warga negara Inggris. Pernyataan tersebut merupakan contoh dari bentuk mobilisasi sosial secara....
+@Vertikal naik
+@Vertikal turun
+@Horisontal
+@Antar generasi
+@C
+
+#Setelah orang tuanya bercerai, Dilan bergabung dengan geng motor. Ia sering mengkonsumsi minuman keras dan membolos sekolah. Perilaku menyimpang yang dilakukan Dilan dipengaruhi oleh faktor....
+@lingkungan tempat tinggal
+@pengaruh media massa
+@disorganisasi keluarga
+@keinginan untuk dipuji.
+@C
+
+#Faktor yang tidak termasuk latar belakang munculnya perdagangan internasional adalah ...
+@Perbedaan sumber daya alam
+@Munculnya perbedaan budaya
+@Perbedaan iklim dan cuaca
+@perbedaan kualitas sumber daya manusia
+@B
+
+#Dampak positif dari perdagangan internasional adalah ...
+@Menambah devisa negara
+@Munculnya ketergantungan suatu negara
+@Munculnya pergeseran budaya
+@Pelaksanaan politik dumping
+@A
+
+#Perdagangan internasional muncul akibat adanya kesamaan dalam ....
+@kepentingan
+@sumber daya alam
+@letak geografi
+@ideologi
+@A
+
+#Kegiatan suatu negara untuk mendatangkan barang dari luar negeri disebut ...
+@Impor
+@Ekspor
+@Importir
+@Eksportir
+@A
+
+#Penjelajahan samudra yang dipelopori oleh bangsa Portugis dan Spanyol menandai berkembangnya imperialisme kuno yang menjadi penyebab kedatangan bangsa-bangsa Barat ke Indonesia. Faktor utama yang mendorong timbulnya penjelajahan samudra adalah . . . .
+@runtuhnya kekhalifahan Barat di Cordoba
+@runtuhnya kekuasaan Dinasti Abasiyyah
+@ditemukannya jalur pelayaran di selatan Afrika
+@jatuhnya Kota Konstantinopel ke tangan Bangsa Turki Usmani
+@D
+
+#Barang-barang seperti HP Samsung dari Korea, otomotif Yamaha, Honda, Suzuki dari Jepang, produk microsoft dari Amerika Serikat disebut ...
+@Barang dagangan
+@Komoditas ekspor
+@Komoditas impor
+@Premi ekpor
+@C
+
+#Salah satu komoditas ekspor Indonesia yang berasal dari hasil pertanian adalah ...
+@Getah karet
+@Kayu lapis
+@Rotan
+@Kayu
+@A
+
+#Di wilayah Batam, harga barang-barang cenderung lebih murah daripada di wilayah lain di Indonesia karena Batam ...
+@dekat dengan Singapura
+@berbatasan dengan Malaysia
+@adanya Black Mart
+@wilayah AFTA
+@D
+
+#Komoditas impor Indonesia yang merupakan bahan baku penolong adalah ...
+@Alat elektronik
+@Bahan kimia
+@Mesin-mesin
+@Makanan
+@B
+
+#Berdasarkan pembabakan zaman praksara, tanda-tanda kehidupan dimulai pada zaman...
+@Arkaikum
+@Neozoikum
+@Paleozoikum
+@Mesozoikum
+@C
+
+#Pada peta berskala 1 : 50.000  panjang rel kereta api sebesar 20 cm. Panjang sebenarnya rel kereta api tersebut adalah…
+@10 km
+@20 km
+@30 km
+@40 km
+@A
+
+#Kerajaan-kerajaan bercorak Islam di Indonesia adalah ....
+@Demak, Aceh, Majapahit
+@Demak, Aceh, Sriwijaya
+@Samudera Pasai, Aceh, Majapahit
+@Demak , Samudera Pasai,  Aceh
+@D
+
+#Tokoh-Tokoh Bangsa Indonesia yang merumuskan naskah proklamasi adalah …
+@Ir. Soekarno, Soepomo, M. Yamin
+@Ahmad Soebardjo, Drs. Moh. Hatta, Sayuti Melik
+@Ir. Soekarno, Ahmad Soebardjo, Drs. Moh. Hatta
+@Ir. Soekarno, Drs. Moh. Hatta, Sayuti Melik 
+@C
+
+#Masa ketika pemerintah menggunakan UUDS 1950 sebagai undang-undang negara disebut ....
+@Demokrasi Parlementer
+@Demokrasi Pancasila
+@Demokrasi Terpimpin
+@Demokrasi liberal
+@A
+
+#Kebijakan pengekspor menjual barang di luar negeri dengan harga yang lebih murah daripada di dalam negeri merupakan salah satu hambatan dalam perdagangan internasional yaitu ....
+@proteks
+@kuota
+@tarif
+@dumping
+@D
+
+#Indonesia selalu membuka peluang kerjasama dengan negara lain dan organisasi internasional, misalnya dengan UNESCO yang bergerak di bidang ilmu pengetahuan, budaya, dan komunikasi. Kerjasama ini juga didukung oleh adanya kemajuan teknologi informasi, komunikasi dan transportasi di era globalisasi. Kerjasama ini menunjukkan adanya gejala globalisasi di bidang ….
+@politik
+@hukum
+@ekonomi
+@transportasi
+@A
+
+#Perhimpunan Negara-negara ASEAN dibentuk  berdasarkan  Deklarasi  Bangkok  pada  tanggal . . . .
+@7 Agustus 1967
+@8 Agustus 1967
+@8 Agustus 1966
+@6 Agustus 1967
+@B
+
+#Negara-negara yang berada di kawasan Asia Selatan adalah …
+@Cina
+@Myanmar
+@Iran
+@Nepal
+@D
+
+#Negara-negara yang berada di kawasan Asia Barat adalah …
+@Cina
+@Myanmar
+@Oman
+@India
+@C
+
+#Nama asli penulis buku “Max Havelaar” adalah …
+@Multatuli
+@Gert Oostindie
+@Douwes Dekker
+@H.B. Jassin
+@C
+
+#Yang bukan negara yang berada pada wilayah eropa timur, yaitu.. 
+@Inggris
+@Italia
+@Ukraina
+@Swedia
+@C
+
+#Pemilu I telah terlaksana dengan baik namun ternyata anggota DPR dan Dewan Konstituante tidak mampu menjalankan tugasnya dengan baik. Hal ini disebabkan oleh adanya kencenderungan partai-partai politik yang lebih mementingkan kelompoknya. Kondisi tersebut menyebabkan Presiden RI mengeluarkan Dekrit Presiden 5 Juli 1959. Faktor penyebab dikeluarkan Dekrit tersebut adalah ….
+@keinginan presiden menjadi pemimpin besar revolusi
+@PKI ikut campur tangan dalam bidang pemerintahan
+@konstituante membubarkan diri sebelum sidang berakhir
+@kegagalan konstituante dalam menyusun konstitusi baru
+@D
+
+#Kebijakan untuk membatasi jumlah ekspor dan impor barang dari suatu negara disebut dengan...
+@politik
+@tarif
+@proteksi
+@kuota
+@D
+
+#Batik merupakan warisan lisan dan nonbendawi yang telah ditetapkan oleh UNESCO tepatnya pada tanggal ...
+@2 oktober 2009
+@4 oktober 2009
+@5 oktober 2009
+@1 oktober 2009
+@A
+
+#Piagam jakarta atau yang disebut Jakarta Charter disetujui pada tanggal ...
+@22 Juni 1945
+@1 Juni 1945
+@31 Juni 1945
+@29 Mei 1945
+@A
+
+#Presiden Soekarno mengesahkan secara resmi Badan Keamanan Rakyat (BKR) sebagai badan kepolisian yang bertugas menjaga keamanan pada tanggal ...
+@23 Agustus
+@29 Agustus
+@22 Juni
+@31 Juni
+@A
