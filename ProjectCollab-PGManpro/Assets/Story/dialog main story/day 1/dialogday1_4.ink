@@ -31,7 +31,7 @@ Iya bener, trus juga ada beberapa anak yang pernah ngelaporin mereka. Bukannya b
 
 Trus gimana biar aku gak dibully sama mereka?
 
-Ya satu-satunya cara cuma diam aja. Meskipun mereka datang ngebully, kita udah terima aja. Daripada kita ngelawan, trus tambah parah bullying nya. Oh iya, sama kamu harus hati-hati sama David. Soalnya dia itu ketua geng bully di sekolah kita. Jadi intinya jangan ngelawan mereka. Kalau ngelawan, nanti hari-hari sekolahmu jadi kayak neraka. # speaker: Alvin
+Ya satu-satunya cara cuma diam aja. Meskipun mereka datang ngebully, kita udah terima aja. Daripada kita ngelawan, trus tambah parah bullying nya. Oh iya, sama kamu harus hati-hati sama David. Soalnya dia itu ketua geng bully di sekolah kita. Jadi intinya jangan ngelawan mereka. Kalau ngelawan, nanti hari-hari sekolahmu jadi neraka. # speaker: Alvin
 
 Oh iya, kalau kamu mau pakai cara ini, hati-hati kamu harus kendalikan stress-mu. Soalnya ada anak yang stress karena dibully terus. Akhirnya malah dia jadi mukul orang tanpa alasan. Kamu bisa ngilangin stress itu pakai kayak jajan-jajan gitu. # speaker: Alvin
 

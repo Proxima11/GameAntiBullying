@@ -7,6 +7,7 @@ public class NPCManager : MonoBehaviour
     public string dialogStatus;
     public List<string> listNpc = new List<string>(); 
     public List<Spawn> listSpawn;
+    GameObject questMark;
     GameObject boy;
     GameObject girl;
     GameObject guru;
@@ -18,9 +19,11 @@ public class NPCManager : MonoBehaviour
     GameObject claire;
     GameObject tino;
     GameObject doni;
+    
 
     void Start()
     {
+        questMark = Resources.Load<GameObject>("QuestMark");
         guru = Resources.Load<GameObject>("Guru");
         boy = Resources.Load<GameObject>("Murid Culun");
         girl = Resources.Load<GameObject>("Girl_FBX1");
@@ -44,12 +47,31 @@ public class NPCManager : MonoBehaviour
 
         if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
         {
-
+            if (FindObjectOfType<DialogManager>().spawn)
+            {
+                removeNPC("QuestMark");
+                FindObjectOfType<DialogManager>().spawn = false;
+            }
             //dialog yang sekarang lagi play
             dialogStatus = "dialogday1_1";
 
             //di spawn di scene apa
             changeScene("kelas 1");
+            addSpawn(questMark, new Vector3(-3.298f, 2.446f, -2.697f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
 
             addSpawn(guru, new Vector3(-2.43f, -0.358f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
             addNPC("Guru");
@@ -67,22 +89,45 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 1 part 2" & superScript.day == 1)
         {
+            //removeNPC("QuestMark");
+            if (FindObjectOfType<DialogManager>().spawn)
+            {
+                removeNPC("Guru");
+                removeNPC("David");
+                removeNPC("Devi");
+                removeNPC("QuestMark");
+                FindObjectOfType<DialogManager>().spawn = false;
+            }
             dialogStatus = "dialogday1_2";
             changeScene("kelas 1");
-            removeNPC("Guru");
-            //if (superScript.boy)
-            //{
-            // addSpawn(david, new Vector3(-3.89f, -0.1017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(0.9f, 0.9f, 0.9f), "David");
-            //addNPC("David");
-            //}
-            //else
-            //{
-            // addSpawn(devi, new Vector3(-3.89f, -0.1017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(1.07f, 1.07f, 1.07f), "Devi");
-            // addNPC("Devi");
-            //}
+            addSpawn(questMark, new Vector3(-3.298f, 2.446f, -2.697f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
+            /*Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+            addSpawn(questMark, new Vector3(-3.298f, 2.446f, -2.697f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+
+            questmark1Renderer.material.color = customColor;
+            questmark2Renderer.material.color = customColor; */
+
             if (superScript.boy)
             {
-                removeNPC("David");
                 addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
                 addSpawn(david, new Vector3(-3.89f, -0.2017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(0.9f, 0.9f, 0.9f), "David");
@@ -91,7 +136,6 @@ public class NPCManager : MonoBehaviour
             }
             else
             {
-                removeNPC("Devi");
                 addSpawn(vina, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Vina");
                 addNPC("Vina");
                 addSpawn(devi, new Vector3(-3.89f, -0.2017f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
@@ -106,25 +150,58 @@ public class NPCManager : MonoBehaviour
 
             if (superScript.boy)
             {
-                removeNPC("David");
-                addSpawn(alvin, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("David");
+                    removeNPC("Alvin");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
+                addSpawn(alvin, new Vector3(-2.23f, -0.158f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
 
             }
             else
             {
-                removeNPC("Devi");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Devi");
+                    removeNPC("Vina");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
+
                 addSpawn(vina, new Vector3(-2.23f, 0.058f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Vina");
                 addNPC("Vina");
-                
             }
+            addSpawn(questMark, new Vector3(-2.23f, 2.446f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
+            
         }
         else if (dialog[index] == "Day 1 part 4" & superScript.day == 1)
         {
-            removeNPC("Alvin");
-            removeNPC("Vina");
+            if (FindObjectOfType<DialogManager>().spawn)
+            {
+                removeNPC("Alvin");
+                removeNPC("Vina");
+                removeNPC("QuestMark");
+                FindObjectOfType<DialogManager>().spawn = false;
+            }
             dialogStatus = "dialogday1_4";
-            changeScene("GabungLorong");
+            changeScene("Lorong");
             if (superScript.boy)
             {
                 addSpawn(alvin, new Vector3(61.887f, 0.058f, -3.524f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
@@ -135,31 +212,73 @@ public class NPCManager : MonoBehaviour
                 addSpawn(vina, new Vector3(61.887f, 0.058f, -3.524f), new Vector3(0f, 270f, 0f), new Vector3(1f, 1f, 1f), "Vina");
                 addNPC("Vina");
             }
+            addSpawn(questMark, new Vector3(61.887f, 2.446f, -3.524f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
         }
         else if (dialog[index] == "Day 2 part 1 " & superScript.day == 2)
         {
-            removeNPC("Alvin");
-            removeNPC("Vina");
+            if (FindObjectOfType<DialogManager>().spawn)
+            {
+                removeNPC("Alvin");
+                removeNPC("Vina");
+                removeNPC("QuestMark");
+                FindObjectOfType<DialogManager>().spawn = false;
+            }
             dialogStatus = "dialogday2_1";
-            changeScene("GabungLorong");
+            
+            changeScene("Lorong");
             if (superScript.boy)
             {
-                addSpawn(david, new Vector3(69.82f, 0.058f, -11.57f), new Vector3(0f, 180f, 0f), new Vector3(0.9f, 0.9f, 0.9f), "David");
+                addSpawn(david, new Vector3(69.82f, 0.058f, -11.57f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "David");
                 addNPC("David");
             }
             else
             {
-                addSpawn(devi, new Vector3(69.82f, 0.058f, -11.57f), new Vector3(0f, 180f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
+                addSpawn(devi, new Vector3(69.82f, -0.258f, -11.57f), new Vector3(0f, 180f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
             }
 
+            addSpawn(questMark, new Vector3(69.827f, 2.446f, -11.57f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
         }
         else if (dialog[index] == "Day 2 part 2 " & superScript.day == 2)
         {
-            removeNPC("David");
-            removeNPC("Devi");
+            if (FindObjectOfType<DialogManager>().spawn)
+            {
+                removeNPC("David");
+                removeNPC("Devi");
+                removeNPC("QuestMark");
+                FindObjectOfType<DialogManager>().spawn = false;
+            }
 
             dialogStatus = "dialogday2_2";
+            
             if (superScript.boy)
             {
                 changeScene("Toilet Pria lt 1");
@@ -169,6 +288,22 @@ public class NPCManager : MonoBehaviour
                 addNPC("Tino");
                 addSpawn(doni, new Vector3(46.66788f, -0.08009219f, -0.7924929f), new Vector3(0f, 60f, 0f), new Vector3(1f, 1f, 1f), "Doni");
                 addNPC("Doni");
+
+                addSpawn(questMark, new Vector3(46.106f, 2.2f, -0.072f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+                addNPC("QuestMark");
+                GameObject questmark1 = GameObject.Find("QuestMark1");
+                GameObject questmark2 = GameObject.Find("QuestMark2");
+                if (questmark1 != null & questmark2 != null)
+                {
+                    Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                    Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                    Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                    questmark1Renderer.material.color = customColor;
+                    questmark2Renderer.material.color = customColor;
+                    questmark1Renderer.material.SetColor("quest", customColor);
+                    questmark2Renderer.material.SetColor("quest", customColor);
+                }
             }
             else
             {
@@ -179,18 +314,40 @@ public class NPCManager : MonoBehaviour
                 addNPC("Vero");
                 addSpawn(claire, new Vector3(37.322f, -0.217f, 0.532f), new Vector3(0f, 50f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Claire");
                 addNPC("Claire");
+
+                addSpawn(questMark, new Vector3(37.075f, 2.29f, 1.222f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+                addNPC("QuestMark");
+                GameObject questmark1 = GameObject.Find("QuestMark1");
+                GameObject questmark2 = GameObject.Find("QuestMark2");
+                if (questmark1 != null & questmark2 != null)
+                {
+                    Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                    Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                    Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                    questmark1Renderer.material.color = customColor;
+                    questmark2Renderer.material.color = customColor;
+                    questmark1Renderer.material.SetColor("quest", customColor);
+                    questmark2Renderer.material.SetColor("quest", customColor);
+                }
             }
+
         }
         else if (dialog[index] == "Day 3 part 1 " & superScript.day == 3)
         {
             dialogStatus = "day3_1";
-            changeScene("GabungLorong");
+            changeScene("Lorong");
 
             if (superScript.boy)
             {
-                removeNPC("David");
-                removeNPC("Tino");
-                removeNPC("Doni");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("David");
+                    removeNPC("Tino");
+                    removeNPC("Doni");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
                 addSpawn(david, new Vector3(61.88f, 4.119458f, -7.150001f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "David");
                 addNPC("David");
                 addSpawn(tino, new Vector3(62.35f, 4.119458f, -7.8f), new Vector3(0f, 230f, 0f), new Vector3(1f, 1f, 1f), "Tino");
@@ -200,9 +357,14 @@ public class NPCManager : MonoBehaviour
             }
             else
             {
-                removeNPC("Devi");
-                removeNPC("Vero");
-                removeNPC("Claire");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Devi");
+                    removeNPC("Vero");
+                    removeNPC("Claire");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
                 addSpawn(devi, new Vector3(61.88f, 3.844f, -7.150001f), new Vector3(0f, 180f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
                 addSpawn(vero, new Vector3(62.35f, 3.844f, -7.8f), new Vector3(0f, 230f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
@@ -210,17 +372,38 @@ public class NPCManager : MonoBehaviour
                 addSpawn(claire, new Vector3(61.22f, 4.045f, -7.38f), new Vector3(0f, 150f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Claire");
                 addNPC("Claire");
             }
+            
+            addSpawn(questMark, new Vector3(61.88f, 6.419458f, -7.150001f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
         }
         else if (dialog[index] == "Day 3 part 2 " & superScript.day == 3)
         {
             dialogStatus = "day3_2";
-            changeScene("GabungLorong");
+            changeScene("Lorong");
 
             if (superScript.boy)
             {
-                removeNPC("David");
-                removeNPC("Tino");
-                removeNPC("Doni");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("David");
+                    removeNPC("Tino");
+                    removeNPC("Doni");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
                 addSpawn(david, new Vector3(55.41f, 0.058f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "David");
                 addNPC("David");
                 addSpawn(tino, new Vector3(54.62f, -0.08f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Tino");
@@ -230,15 +413,35 @@ public class NPCManager : MonoBehaviour
             }
             else
             {
-                removeNPC("Devi");
-                removeNPC("Vero");
-                removeNPC("Claire");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Devi");
+                    removeNPC("Vero");
+                    removeNPC("Claire");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
                 addSpawn(devi, new Vector3(55.41f, -0.28f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
-                addSpawn(vero, new Vector3(56.214f, -0.28f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
+                addSpawn(vero, new Vector3(54.62f, -0.28f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
                 addNPC("Vero");
                 addSpawn(claire, new Vector3(56.214f, -0.03f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Claire");
                 addNPC("Claire");
+            }
+            addSpawn(questMark, new Vector3(55.41f, 2.446f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
         else if (dialog[index] == "Day 3 part 3 " & superScript.day == 3)
@@ -248,19 +451,45 @@ public class NPCManager : MonoBehaviour
 
             if (superScript.boy)
             {
-                removeNPC("David");
-                removeNPC("Tino");
-                removeNPC("Doni");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("David");
+                    removeNPC("Tino");
+                    removeNPC("Doni");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
                 addSpawn(alvin, new Vector3(9.67083f, -0.32f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
             }
             else
             {
-                removeNPC("Devi");
-                removeNPC("Vero");
-                removeNPC("Claire");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Devi");
+                    removeNPC("Vero");
+                    removeNPC("Claire");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
                 addSpawn(vina, new Vector3(9.67083f, -0.12f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Vina");
                 addNPC("Vina");
+            }
+
+            addSpawn(questMark, new Vector3(9.737f, 2.346f, 8.938f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
         else if (dialog[index] == "Day 4 " & superScript.day == 4)
@@ -270,8 +499,12 @@ public class NPCManager : MonoBehaviour
 
             if (superScript.boy)
             {
-                removeNPC("Alvin");
-
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Alvin");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
                 addSpawn(david, new Vector3(-86.34f, -0.426f, 93.72612f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "David");
                 addNPC("David");
                 addSpawn(tino, new Vector3(-87.13f, -0.556f, 93.93958f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Tino");
@@ -281,8 +514,12 @@ public class NPCManager : MonoBehaviour
             }
             else
             {
-                removeNPC("Vina");
-
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Vina");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
                 addSpawn(devi, new Vector3(-86.34f, -0.73f, 93.72612f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
                 addSpawn(vero, new Vector3(-87.13f, -0.73f, 93.93958f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
@@ -290,39 +527,105 @@ public class NPCManager : MonoBehaviour
                 addSpawn(claire, new Vector3(-85.53f, -0.473f, 93.80086f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Claire");
                 addNPC("Claire");
             }
+            addSpawn(questMark, new Vector3(-86.34f, 2.046f, 93.72612f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
 
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
         }
         else if (dialog[index] == "Day 5 part 1 " & superScript.day == 5)
         {
             if (superScript.boy)
             {
-                removeNPC("David");
-                removeNPC("Tino");
-                removeNPC("Doni");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("David");
+                    removeNPC("Tino");
+                    removeNPC("Doni");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
             }
             else
             {
-                removeNPC("Devi");
-                removeNPC("Vero");
-                removeNPC("Claire");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Devi");
+                    removeNPC("Vero");
+                    removeNPC("Claire");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
             }
             dialogStatus = "dialogday5_1";
             changeScene("kelas 4");
 
             addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
             addNPC("Guru");
+
+            addSpawn(questMark, new Vector3(-7.53f, 2.446f, -12.832f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
         }
         else if (dialog[index] == "Day 5 part 1_1 " & superScript.day == 5)
         {
             dialogStatus = "dialogday5_1_1";
             changeScene("kelas 4");
-            removeNPC("Guru");
+            if (FindObjectOfType<DialogManager>().spawn)
+            {
+                removeNPC("Guru");
+                removeNPC("QuestMark");
+                FindObjectOfType<DialogManager>().spawn = false;
+            }
             addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
             addNPC("Guru");
+
+            addSpawn(questMark, new Vector3(-7.53f, 2.446f, -12.832f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
         }
         else if (dialog[index] == "Day 5 part 1_2 " & superScript.day == 5)
         {
-            removeNPC("Guru");
+            if (FindObjectOfType<DialogManager>().spawn)
+            {
+                removeNPC("Guru");
+                removeNPC("QuestMark");
+                FindObjectOfType<DialogManager>().spawn = false;
+            }
             dialogStatus = "dialogday5_1_2";
             changeScene("kelas 4");
             addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
@@ -337,17 +640,40 @@ public class NPCManager : MonoBehaviour
                 addSpawn(devi, new Vector3(-6.865f, -0.289f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
             }
+
+            addSpawn(questMark, new Vector3(-7.135f, 2.446f, -12.187f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
         }
         else if (dialog[index] == "Day 5 part 1_3 " & superScript.day == 5)
         {
-            removeNPC("Guru");
+           
             dialogStatus = "dialogday5_1_3";
+            changeScene("kelas 4");
 
             addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
             addNPC("Guru");
             if (superScript.boy)
             {
-                removeNPC("David");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("David");
+                    removeNPC("Guru");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
 
                 addSpawn(david, new Vector3(-7.065f, 0.08039999f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1f, 1f, 1f), "David");
                 addNPC("David");
@@ -356,35 +682,87 @@ public class NPCManager : MonoBehaviour
             }
             else
             {
-                removeNPC("Devi");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Devi");
+                    removeNPC("Guru");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
 
                 addSpawn(devi, new Vector3(-7.065f, -0.289f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
                 addSpawn(vina, new Vector3(-6.77f, 0.08039999f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1f, 1f, 1f), "Vina");
                 addNPC("Vina");
             }
+
+            addSpawn(questMark, new Vector3(-7.289f, 2.446f, -12.795f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
         }
         else if (dialog[index] == "Day 5 part 1_4 " & superScript.day == 5)
         {
             removeNPC("Guru");
             dialogStatus = "dialogday5_1_4";
+            changeScene("kelas 4");
 
             if (superScript.boy)
             {
-                removeNPC("David");
-                removeNPC("Alvin");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("David");
+                    removeNPC("Alvin");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
 
                 addSpawn(alvin, new Vector3(-6.77f, -0.289f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
             }
             else
             {
-                removeNPC("Devi");
-                removeNPC("Vina");
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Devi");
+                    removeNPC("Vina");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
 
                 addSpawn(vina, new Vector3(-6.77f, 0.08039999f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1f, 1f, 1f), "Vina");
                 addNPC("Vina");
             }
+            addSpawn(questMark, new Vector3(-6.77f, 2.446f, -13.766f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
+            addNPC("QuestMark");
+            GameObject questmark1 = GameObject.Find("QuestMark1");
+            GameObject questmark2 = GameObject.Find("QuestMark2");
+            if (questmark1 != null & questmark2 != null)
+            {
+                Renderer questmark1Renderer = questmark1.GetComponent<Renderer>();
+                Renderer questmark2Renderer = questmark2.GetComponent<Renderer>();
+                Color customColor = new Color(1.00f, 0.888f, 0.0400f, 1.0f);
+
+                questmark1Renderer.material.color = customColor;
+                questmark2Renderer.material.color = customColor;
+                questmark1Renderer.material.SetColor("quest", customColor);
+                questmark2Renderer.material.SetColor("quest", customColor);
+            }
+        }
+        else
+        {
+            removeNPC("QuestMark");
         }
     }
 

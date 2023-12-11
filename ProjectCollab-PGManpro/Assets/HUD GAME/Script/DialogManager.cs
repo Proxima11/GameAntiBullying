@@ -31,6 +31,7 @@ public class DialogManager : MonoBehaviour
     private bool isChoices = false;
     private bool isDialogBlackscreen = false;
     public bool stop = false;
+    public bool spawn = false;
 
     private bool isDialogRunning = false;
 
@@ -161,6 +162,7 @@ public class DialogManager : MonoBehaviour
         animator.SetBool("isOpen", false);
         if(currentStoryName != "Default"){
             superScript.indexDialog = superScript.indexDialog + 1;
+
         }
 
         
@@ -173,6 +175,7 @@ public class DialogManager : MonoBehaviour
         FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
         Debug.Log(FindObjectOfType<StarterAssetsInputs>().inDialogue);
         isDialogRunning= false;
+        spawn = true;
     }
 
     public void displayChoices(){
