@@ -842,6 +842,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+--- !u!1 &265643663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4886675636028222032, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+  m_PrefabInstance: {fileID: 265643662}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &286105698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,7 +1523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Lorong
   loadingScreen: {fileID: 1967187084}
-  interact: {fileID: 388307128}
+  interact: {fileID: 265643663}
 --- !u!65 &388307130
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -846,7 +846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Lorong
   loadingScreen: {fileID: 1358802066}
-  interact: {fileID: 300645281}
+  interact: {fileID: 1834143694}
 --- !u!65 &300645283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5349,7 +5349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Lorong
   loadingScreen: {fileID: 1358802066}
-  interact: {fileID: 1766907570}
+  interact: {fileID: 1834143694}
 --- !u!65 &1766907572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5674,6 +5674,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+--- !u!1 &1834143694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4886675636028222032, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+  m_PrefabInstance: {fileID: 1834143693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1852877061
 GameObject:
   m_ObjectHideFlags: 0

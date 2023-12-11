@@ -418,18 +418,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 718958}
     m_Modifications:
-    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_CullingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -473,6 +461,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
       propertyPath: m_Name
       value: Murid Culun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
@@ -3012,7 +3012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Lorong
   loadingScreen: {fileID: 1396586434}
-  interact: {fileID: 696907517}
+  interact: {fileID: 1601566916}
 --- !u!65 &696907519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7207,6 +7207,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+--- !u!1 &1601566916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4886675636028222032, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+  m_PrefabInstance: {fileID: 1601566915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1651884084
 PrefabInstance:
   m_ObjectHideFlags: 0

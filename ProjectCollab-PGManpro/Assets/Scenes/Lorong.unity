@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13258,7 +13258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Toilet Wanita lt 2
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 699364091}
+  interact: {fileID: 1935982578}
 --- !u!65 &699364094
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15185,7 +15185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: kelas 1
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 840026504}
+  interact: {fileID: 1935982578}
 --- !u!65 &840026506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16061,7 +16061,6 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
-  ui: {fileID: 1935232434}
 --- !u!143 &866712638
 CharacterController:
   m_ObjectHideFlags: 0
@@ -16855,7 +16854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: kelas 3
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 895940076}
+  interact: {fileID: 1935982578}
 --- !u!65 &895940079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20311,7 +20310,6 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
-  ui: {fileID: 1935232434}
 --- !u!143 &1087452904
 CharacterController:
   m_ObjectHideFlags: 0
@@ -20755,7 +20753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: kelas 4
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 1102746993}
+  interact: {fileID: 1935982578}
 --- !u!65 &1102746996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28097,7 +28095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: kelas 2
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 1547090121}
+  interact: {fileID: 1935982578}
 --- !u!65 &1547090123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -84988,7 +84986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Toilet Pria lt 2
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 1913153905}
+  interact: {fileID: 1935982578}
 --- !u!65 &1913153908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85262,17 +85260,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4433388430019206, guid: 4f9d36e206efd9c408c4487f1d8c65af, type: 3}
   m_PrefabInstance: {fileID: 1921172660}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1935232434 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1430009659197339688, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
-  m_PrefabInstance: {fileID: 1935982577}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9db4246df5237f04cbeea41f2e1e3b8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1935982577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85746,6 +85733,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+--- !u!1 &1935982578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4886675636028222032, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+  m_PrefabInstance: {fileID: 1935982577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1936277838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87458,7 +87450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Outside
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 2084962481}
+  interact: {fileID: 1935982578}
 --- !u!65 &2084962483
 BoxCollider:
   m_ObjectHideFlags: 0
