@@ -16,12 +16,7 @@ public class gender : MonoBehaviour
     
     public void Start()
     {   
-        if (superScript.boy) {
-            objectBoy.SetActive(true);
-        }
-        else {
-            objectGirl.SetActive(true);
-        }
+        // chooseGender();
         // float posx = parent.transform.position.x;
         // float posy = parent.transform.position.y;
         // float posz = parent.transform.position.z;
@@ -36,5 +31,14 @@ public class gender : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void chooseGender(){
+        if (superScript.boy) {
+            objectBoy.SetActive(true);
+        }
+        else {
+            objectGirl.SetActive(true);
+        }
     }
 }

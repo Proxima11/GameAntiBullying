@@ -25,7 +25,7 @@ public class PlayerInteract : MonoBehaviour
             Debug.Log(scene.name);
             Debug.Log("pressed");
 
-            if (scene.name == "Lorong lt 1" || scene.name == "GabungLorong")
+            if (scene.name == "Lorong lt 1" || scene.name == "Lorong")
             {
                 GameManager.PlayerPos = player.transform.position;
             }

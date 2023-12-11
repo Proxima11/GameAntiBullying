@@ -4971,7 +4971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Toilet Pria lt 1
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 0}
+  interact: {fileID: 1935982578}
 --- !u!65 &306655460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13364,7 +13364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: Toilet Wanita lt 1
   loadingScreen: {fileID: 1842367262}
-  interact: {fileID: 0}
+  interact: {fileID: 1935982578}
 --- !u!65 &706183260
 BoxCollider:
   m_ObjectHideFlags: 0

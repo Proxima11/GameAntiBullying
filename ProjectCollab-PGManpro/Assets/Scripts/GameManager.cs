@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //using StarterAssets;
 
 // #if ENABLE_INPUT_SYSTEM 
@@ -18,11 +19,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Task_def> acaTasks;
 
     void Start(){
+        FindObjectOfType<gender>().chooseGender();
         player = GameObject.FindWithTag("Player");
         Debug.Log(player);
+        
+        Scene scene = SceneManager.GetActiveScene();
 
-
-        if (playerPos != Vector3.zero) // Check if playerPos has been set
+        if (playerPos != Vector3.zero && scene.name == "Lorong") // Check if playerPos has been set
         {
             Debug.Log("Restoring player position");
             player.transform.position = playerPos;
