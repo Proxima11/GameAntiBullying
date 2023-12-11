@@ -39,7 +39,7 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(int index)
     {
-        if (itemOnwed.Count <= 5){
+        if (itemOnwed.Count < 5){
             Item item = items[index];
             itemOnwed.Add(item);
             slot[itemOnwed.Count-1].SetActive(true);
