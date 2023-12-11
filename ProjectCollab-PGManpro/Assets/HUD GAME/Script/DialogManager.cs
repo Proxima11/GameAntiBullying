@@ -42,6 +42,8 @@ public class DialogManager : MonoBehaviour
     public GameObject Inventory;
     public GameObject NPCPrefab;
     public Animator animatorNPC;
+    public GameObject buttonF = null;
+
     //public GameObject settingbutton;
 
     // Start is called before the first frame update
@@ -54,6 +56,7 @@ public class DialogManager : MonoBehaviour
             choicesText[index]= choice.GetComponentInChildren<TMP_Text>();
             index++;
         }
+        buttonF = GameObject.Find("PlayerInteractUI");
     }
 
     void Update(){
@@ -160,7 +163,8 @@ public class DialogManager : MonoBehaviour
 
     public void EndDialouge(){
         animator.SetBool("isOpen", false);
-        if(currentStoryName != "Default"){
+        
+        if (currentStoryName != "Default"){
             superScript.indexDialog = superScript.indexDialog + 1;
 
         }
@@ -176,6 +180,7 @@ public class DialogManager : MonoBehaviour
         Debug.Log(FindObjectOfType<StarterAssetsInputs>().inDialogue);
         isDialogRunning= false;
         spawn = true;
+        buttonF.SetActive(true) ;
     }
 
     public void displayChoices(){

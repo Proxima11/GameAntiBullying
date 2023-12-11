@@ -25,6 +25,8 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     public GameObject this_npc;
     private bool isStoryExist;
     Transform tr;
+
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -33,33 +35,36 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        Vector3 playerTransform;
-        if (superScript.boy)
-        {
-            playerTransform = GameObject.Find("Boy").transform.position;
-        }
-        else
-        {
-            playerTransform = GameObject.Find("Girl").transform.position;
-        }
-        if (this_npc.GetComponent<NavMeshAgent>() != null)
-        {
-            this_npc.GetComponent<NavMeshAgent>().isStopped = true;
-            animator.SetTrigger("TrBreath");
-        }
-        float store_y = transform.localEulerAngles.y;
-        GetTransform().LookAt(playerTransform);
-        
-        transform.eulerAngles = new Vector3(0f, transform.localEulerAngles.y, 0f);
-        //rotateTowards(playerTransform);
-        //var rot = gameObject.transform.localRotation.eulerAngles;
-        //rot.Set(0f, transform.rotation.y, transform.rotation.z);
-        //transform.localRotation = Quaternion.Euler(rot);
-        //this_npc.transform.Rotate(new Vector3(0f, this_npc.transform.rotation.y, 0f));
-        TriggerDialog();
         if (!FindObjectOfType<DialogManager>().stop)
         {
-            transform.eulerAngles = new Vector3(0f, store_y, 0f);
+            Vector3 playerTransform;
+            if (superScript.boy)
+            {
+                playerTransform = GameObject.Find("Boy").transform.position;
+            }
+            else
+            {
+                playerTransform = GameObject.Find("Girl").transform.position;
+            }
+            if (this_npc.GetComponent<NavMeshAgent>() != null)
+            {
+                this_npc.GetComponent<NavMeshAgent>().isStopped = true;
+                animator.SetTrigger("TrBreath");
+            }
+            float store_y = transform.localEulerAngles.y;
+            GetTransform().LookAt(playerTransform);
+
+            transform.eulerAngles = new Vector3(0f, transform.localEulerAngles.y, 0f);
+            //rotateTowards(playerTransform);
+            //var rot = gameObject.transform.localRotation.eulerAngles;
+            //rot.Set(0f, transform.rotation.y, transform.rotation.z);
+            //transform.localRotation = Quaternion.Euler(rot);
+            //this_npc.transform.Rotate(new Vector3(0f, this_npc.transform.rotation.y, 0f));
+            TriggerDialog();
+            if (!FindObjectOfType<DialogManager>().stop)
+            {
+                transform.eulerAngles = new Vector3(0f, store_y, 0f);
+            }
         }
     }
 
@@ -74,6 +79,8 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     }
     public void TriggerDialog()
     {
+
+        if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(false); }
         string title = FindObjectOfType<NPCManager>().dialogStatus;
         StoryData storyRunning =  SearchStory(title);
         FindObjectOfType<DialogManager>().StartDialogInk(storyRunning.inkJSON);
@@ -84,7 +91,7 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
         }
         FindObjectOfType<DialogManager>().NPCPrefab = this_npc;
         FindObjectOfType<DialogManager>().animatorNPC = animator;
-
+        
         //if (this_npc.GetComponent<NavMeshAgent>() != null)
         //{
         //    this_npc.GetComponent<NavMeshAgent>().isStopped = false;
