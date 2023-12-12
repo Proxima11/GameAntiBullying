@@ -60,7 +60,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Lorong.unity
     guid: c794b8655934f064f96af8e2d8af678f
   - enabled: 1
-    path: Assets/Scenes/Outside.unity
+    path: Assets/Scenes/OutsideTiro.unity
     guid: a46bc47482ab1d9498aaea36124800f2
   - enabled: 1
     path: Assets/Scenes/lapangan bola.unity
