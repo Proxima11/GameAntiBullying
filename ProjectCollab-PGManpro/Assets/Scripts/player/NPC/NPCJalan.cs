@@ -13,7 +13,7 @@ public class NPCJalan : MonoBehaviour
     [SerializeField]
     private string currentState;
     public Jalan path;
-    public float waitTime;
+    
     // Start is called before the first frame update
     void Start()
     {

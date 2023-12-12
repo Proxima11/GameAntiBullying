@@ -7,25 +7,24 @@ public class PatrolState : BaseState
     public int waypointIndex=0;
     public float waitTimer;
 
-
     public override void Enter()
     {
     }
     public override void Exit() {
 
     }
-    public override void Perform(Animator anim)
+    public override void Perform(Animator anim, float wait)
     {
-        PatrolCycle(anim);
+        PatrolCycle(anim, wait);
     }
 
-    public void PatrolCycle(Animator anim)
+    public void PatrolCycle(Animator anim, float wait)
     {
-        if(npc.Agent.remainingDistance < 0.2f)
+        if (npc.Agent.remainingDistance < 0.2f)
         {
             anim.SetTrigger("TrBreath");
             waitTimer += Time.deltaTime;
-            if (waitTimer > 5)
+            if (waitTimer > wait)
             {
                 anim.ResetTrigger("TrBreath");
                 anim.SetTrigger("TrWalk");
