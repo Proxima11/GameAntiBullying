@@ -833,7 +833,7 @@ public class NPCManager : MonoBehaviour
             changeScene("Outside");
             addSpawn(satpam, new Vector3(36.72613f, -0.456f, 117.64f), new Vector3(0f, 270f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Satpam");
             addNPC("Satpam");
-            addSpawn(instruktur, new Vector3(-79.38026f, -0.82f, 74.83f), new Vector3(0f, 180f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Instruktur");
+            addSpawn(instruktur, new Vector3(-79.38026f, -0.657f, 74.83f), new Vector3(0f, 180f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Instruktur");
             addNPC("Instruktur");
             addSpawn(jaka, new Vector3(-29.445f, -0.309f, 55.23f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Jaka");
             addNPC("Jaka");
