@@ -26,6 +26,7 @@ public class NPCManager : MonoBehaviour
     GameObject satpam;
     GameObject instruktur;
     GameObject jaka;
+    GameObject friska;
 
 
     void Start()
@@ -47,6 +48,7 @@ public class NPCManager : MonoBehaviour
         satpam = Resources.Load<GameObject>("Satpam");
         instruktur = Resources.Load<GameObject>("Instruktur Renang");
         jaka = Resources.Load<GameObject>("Jaka");
+        friska = Resources.Load<GameObject>("Bu Friska");
 
         listSpawn = FindObjectOfType<NPCSpawner>().spawns;
     }
@@ -795,6 +797,8 @@ public class NPCManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "kelas 3")
         {
             changeScene("kelas 3");
+            addSpawn(friska, new Vector3(43.3f, -0.327f, -13.257f), new Vector3(0f, 310f, 0f), new Vector3(1.4f, 1.4f, 1.4f), "Bu Friska");
+            addNPC("Bu Friska");
         }
         else if (SceneManager.GetActiveScene().name == "kelas 4")
         {

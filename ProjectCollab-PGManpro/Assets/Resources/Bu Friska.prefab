@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1058393373632807855
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 43.3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.257
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9063077
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.42261845
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 310
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      propertyPath: m_Name
+      value: Bu Friska
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8363817082014239211}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3987313671952734334}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6142990818081046536}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4304487341787606415}
+  m_SourcePrefab: {fileID: 100100000, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+--- !u!1 &175995508531134206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 292cc0c0b5d1df04f9172f567a4c4880, type: 3}
+  m_PrefabInstance: {fileID: 1058393373632807855}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &8363817082014239211
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175995508531134206}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3
+  m_Height: 1.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!135 &3987313671952734334
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175995508531134206}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!114 &6142990818081046536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175995508531134206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd62d5541e6e5b4096f107beac06a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCName: Bu Friska
+  playerGirl: {fileID: 1215348280215815901, guid: 04db19c2ba027294f91e418918d5266a, type: 3}
+  playerBoy: {fileID: 3057947923302166667, guid: 083627ee651915448b7b7b243ee27734, type: 3}
+  story: []
+  this_npc: {fileID: 175995508531134206}
+--- !u!95 &4304487341787606415
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175995508531134206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16c513d22b664484a8a5114a4e046919, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
