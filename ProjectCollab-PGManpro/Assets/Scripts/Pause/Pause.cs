@@ -43,7 +43,13 @@ public class Pause : MonoBehaviour
 
     public void QuitGame()
     {
+        isPaused = false;
+        Time.timeScale = 1;
+        canvasPause.SetActive(false);
+        FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
+
         SceneManager.LoadScene("Menu");
+
     }
 
     public void ExitGame()

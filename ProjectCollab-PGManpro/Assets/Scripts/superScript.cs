@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class superScript : MonoBehaviour
 {
@@ -38,7 +39,6 @@ public class superScript : MonoBehaviour
     static public int indexDialog = 0;
     static public List<Item> itemOnwed = new List<Item>();
 
-
     static public void setVariable (int inputScore, int inputStress, int inputTime, int inputDay){
         score = inputScore;
         stress = inputStress;
@@ -46,6 +46,15 @@ public class superScript : MonoBehaviour
         day = inputDay;
     }
 
+    static public void resetVariable(){
+        score = 0;
+        stress = 0;
+        time = 0;
+        day = 1;
+        indexDialog = 0;
+        itemOnwed = new List<Item>();
+        choices = new List<string>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +65,7 @@ public class superScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public static void updateTime(int t, int d){

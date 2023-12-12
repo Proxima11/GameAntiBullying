@@ -4,30 +4,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public class SaveSystem 
+public class SaveSystem : MonoBehaviour
 {
-    public void SaveGame(GameVariable gameVariable, Vector3 playerPosition)
+    public int score;
+    public void SaveGame()
     {
+        GameVariable gameVariable = FindObjectOfType<GameVariable>();
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        Vector3 playerPosition = GameManager.playerPos;
+
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/gameData.fun";
         FileStream stream = new FileStream(path, FileMode.Create);
         PlayerData data = new PlayerData(gameVariable, playerPosition);
 
-        // FindObjectOfType<GameManager>().updateSuperScript();
+        gameManager.updateSuperScript();
+
         data.boy = superScript.boy;
         data.username = superScript.username;
         data.passiveAggresive = superScript.passiveAggresive;
         data.shyConfidence = superScript.shyConfidence;
         data.nerdCool = superScript.nerdCool;
         data.indexDialog = superScript.indexDialog;
-        data.tasks = superScript.Tasks;
+        // data.tasks = superScript.Tasks;
         data.items = superScript.itemOnwed;
 
         formatter.Serialize(stream, data);
         stream.Close();
     }
 
-    public PlayerData LoadGame()
+    public void LoadGame()
     {
         string path = Application.persistentDataPath + "/gameData.fun";
 
@@ -45,15 +51,16 @@ public class SaveSystem
             superScript.shyConfidence = data.shyConfidence;
             superScript.nerdCool = data.nerdCool;
             superScript.indexDialog = data.indexDialog;
-            superScript.Tasks = data.tasks;
+            // superScript.Tasks = data.tasks;
             superScript.itemOnwed = data.items;
+
+            superScript.setVariable(data.score, data.stress, data.time, data.day);
             
-            return data;
         } 
         else
         {
             Debug.LogError("Save file not found in " + path);
-            return null;
+
         }
     }
 }

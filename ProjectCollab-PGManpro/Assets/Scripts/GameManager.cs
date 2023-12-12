@@ -13,7 +13,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     // Saving player pos
-    private static Vector3 playerPos = new Vector3();
+    public static Vector3 playerPos = new Vector3();
     private GameObject player;
    [SerializeField] private List<Task_def> coolTasks;
     [SerializeField] private List<Task_def> acaTasks;

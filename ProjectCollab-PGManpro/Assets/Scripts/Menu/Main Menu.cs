@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using StarterAssets; 
 
 public class MainMenu : MonoBehaviour
 {
@@ -33,9 +34,15 @@ public class MainMenu : MonoBehaviour
 
     public void Play(){
         // GameObject.Find("Player").SetActive(false);
-
-        SceneManager.LoadScene("GabungLorong");
+        superScript.resetVariable();
+        SceneManager.LoadScene("Lorong");
     }
+
+    public void Load(){
+        FindObjectOfType<SaveSystem>().LoadGame();
+        SceneManager.LoadScene("Lorong");
+    }
+
 
     public void chooseGender(){
         if (boy.isOn){
