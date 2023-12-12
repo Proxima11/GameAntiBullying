@@ -9,7 +9,7 @@ public class NPCManager : MonoBehaviour
     public List<string> listNpc = new List<string>(); 
     public List<Spawn> listSpawn;
     GameObject questMark;
-    GameObject boy;
+    GameObject kevin;
     GameObject girl;
     GameObject guru;
     GameObject david;
@@ -31,7 +31,7 @@ public class NPCManager : MonoBehaviour
     {
         questMark = Resources.Load<GameObject>("QuestMark");
         guru = Resources.Load<GameObject>("Guru");
-        boy = Resources.Load<GameObject>("Murid Culun");
+        kevin = Resources.Load<GameObject>("Murid Culun");
         girl = Resources.Load<GameObject>("Girl_FBX1");
         david = Resources.Load<GameObject>("David");
         devi = Resources.Load<GameObject>("Devi");
@@ -803,6 +803,8 @@ public class NPCManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "Lorong")
         {
             changeScene("Lorong");
+            addSpawn(kevin, new Vector3(90.98f, 0.05885804f, -14.22f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Kevin");
+            addNPC("Kevin");
         }
         else if (SceneManager.GetActiveScene().name == "Toilet Pria lt 1")
         {
@@ -827,6 +829,7 @@ public class NPCManager : MonoBehaviour
             addNPC("Satpam");
             addSpawn(instruktur, new Vector3(-79.38026f, -0.82f, 74.83f), new Vector3(0f, 180f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Instruktur");
             addNPC("Instruktur");
+
         }
     }
 
