@@ -38,6 +38,7 @@ public class superScript : MonoBehaviour
     static public List<string> choices = new List<string>();
     static public int indexDialog = 0;
     static public List<Item> itemOnwed = new List<Item>();
+    static public List<int> itemIndex = new List<int>();
 
     static public void setVariable (int inputScore, int inputStress, int inputTime, int inputDay){
         score = inputScore;

@@ -21,11 +21,15 @@ public class InventoryManager : MonoBehaviour
 {
     public List<Item> items;
     public List<Item> itemOnwed;
+
+    public List<int> itemIndex;
     public List<GameObject> slot; 
     // Start is called before the first frame update
     void Start()
     {
-        itemOnwed = superScript.itemOnwed;
+        // itemOnwed = superScript.itemOnwed;
+        itemIndex = superScript.itemIndex;
+        getItemFromIndex();
         RefreshInventory();
     }
 
@@ -37,10 +41,17 @@ public class InventoryManager : MonoBehaviour
 		}
     }
 
+    public void getItemFromIndex(){
+        foreach(int index in itemIndex){
+            itemOnwed.Add(items[index]);
+        }
+    }
+
     public void AddItem(int index)
     {
         if (itemOnwed.Count < 5){
             Item item = items[index];
+            itemIndex.Add(index);
             itemOnwed.Add(item);
             slot[itemOnwed.Count-1].SetActive(true);
             slot[itemOnwed.Count-1].GetComponent<Image>().sprite = item.image;
@@ -55,6 +66,7 @@ public class InventoryManager : MonoBehaviour
         if (itemOnwed.Count > 0 && index < itemOnwed.Count){
             Item item = itemOnwed[index];
             FindObjectOfType<GameVariable>().TakeStress(item.stressPoint);
+            itemIndex.Remove(index);
             itemOnwed.Remove(item);
             RefreshInventory();
             

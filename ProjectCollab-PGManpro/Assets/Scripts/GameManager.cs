@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
 
         superScript.setVariable(gameVariable.score,gameVariable.stress, gameVariable.timeNow, gameVariable.day);
         superScript.itemOnwed = inventory.itemOnwed;
+        superScript.itemIndex = inventory.itemIndex;
     }
 }
 

@@ -19,7 +19,8 @@ public class PlayerData
 
     public int indexDialog;
     public List<Task_def> tasks;
-    public List<Item> items;
+    public List<int> items;
+
     
     public PlayerData (GameVariable gameVariable, Vector3 playerPosition) 
     {
