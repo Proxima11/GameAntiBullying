@@ -43,6 +43,7 @@ public class DialogManager : MonoBehaviour
     public GameObject NPCPrefab;
     public Animator animatorNPC;
     public GameObject buttonF = null;
+    public GameObject buttonEsc = null;
 
     //public GameObject settingbutton;
 
@@ -57,6 +58,7 @@ public class DialogManager : MonoBehaviour
             index++;
         }
         buttonF = GameObject.Find("PlayerInteractUI");
+        buttonEsc = GameObject.Find("PlayerInteractUI");
     }
 
     void Update(){
@@ -73,6 +75,7 @@ public class DialogManager : MonoBehaviour
         isDialogRunning = true;
         animator.SetBool("isOpen", true);
         Inventory.SetActive(false);
+        taskbutton.SetActive(false);
         FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
 
         currentStory = new Story(inkJSON.text);
@@ -176,11 +179,13 @@ public class DialogManager : MonoBehaviour
         }
 
         Inventory.SetActive(true);
+        taskbutton.SetActive(true);
         FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
         Debug.Log(FindObjectOfType<StarterAssetsInputs>().inDialogue);
         isDialogRunning= false;
         spawn = true;
-        buttonF.SetActive(true) ;
+        buttonF.SetActive(true);
+        buttonEsc.SetActive(true);
     }
 
     public void displayChoices(){
