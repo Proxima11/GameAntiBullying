@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCManager : MonoBehaviour
 {
@@ -19,7 +20,12 @@ public class NPCManager : MonoBehaviour
     GameObject claire;
     GameObject tino;
     GameObject doni;
-    
+
+    GameObject jessica;
+    GameObject siska;
+    GameObject satpam;
+    GameObject instruktur;
+
 
     void Start()
     {
@@ -35,6 +41,11 @@ public class NPCManager : MonoBehaviour
         claire = Resources.Load<GameObject>("Claire");
         tino = Resources.Load<GameObject>("Tino");
         doni = Resources.Load<GameObject>("Doni");
+        siska = Resources.Load<GameObject>("Siska");
+        jessica = Resources.Load<GameObject>("Jessica");
+        satpam = Resources.Load<GameObject>("Satpam");
+        instruktur = Resources.Load<GameObject>("Instruktur Renang");
+
         listSpawn = FindObjectOfType<NPCSpawner>().spawns;
     }
 
@@ -45,6 +56,7 @@ public class NPCManager : MonoBehaviour
         int index =  superScript.indexDialog;
         // Debug.Log(index);
 
+        //main story
         if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
         {
             if (FindObjectOfType<DialogManager>().spawn)
@@ -763,6 +775,58 @@ public class NPCManager : MonoBehaviour
         else
         {
             removeNPC("QuestMark");
+        }
+
+        //npc idle
+        if(SceneManager.GetActiveScene().name == "kelas 1")
+        {
+            changeScene("kelas 1");
+            addSpawn(siska, new Vector3(4.95f, 0.05939972f, 1.21f), new Vector3(0f, 270f, 0f), new Vector3(1f, 1f, 1f), "Siska");
+            addNPC("Siska");
+            addSpawn(jessica, new Vector3(-3.8f, 0.05939984f, 5.59f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "Jessica");
+            addNPC("Jessica");
+        }
+        else if(SceneManager.GetActiveScene().name == "kelas 2")
+        {
+            changeScene("kelas 2");
+        }
+        else if (SceneManager.GetActiveScene().name == "kelas 3")
+        {
+            changeScene("kelas 3");
+        }
+        else if (SceneManager.GetActiveScene().name == "kelas 4")
+        {
+            changeScene("kelas 4");
+            addSpawn(jessica, new Vector3(-4.06f, 0.08039999f, -4.94f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "Jessica");
+            addNPC("Jessica");
+        }
+        else if (SceneManager.GetActiveScene().name == "Lorong")
+        {
+            changeScene("Lorong");
+        }
+        else if (SceneManager.GetActiveScene().name == "Toilet Pria lt 1")
+        {
+            changeScene("Toilet Pria lt 1");
+        }
+        else if (SceneManager.GetActiveScene().name == "Toilet Pria lt 2")
+        {
+            changeScene("Toilet Pria lt 2");
+        }
+        else if (SceneManager.GetActiveScene().name == "Toilet Wanita lt 1")
+        {
+            changeScene("Toilet Wanita lt 1");
+        }
+        else if (SceneManager.GetActiveScene().name == "Toilet Wanita lt 2")
+        {
+            changeScene("Toilet Wanita lt 2");
+        }
+        else if (SceneManager.GetActiveScene().name == "Outside")
+        {
+            changeScene("Outside");
+            addSpawn(satpam, new Vector3(36.72613f, -0.456f, 117.64f), new Vector3(0f, 270f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Satpam");
+            addNPC("Satpam");
+            addSpawn(instruktur, new Vector3(-79.38026f, -0.82f, 74.83f), new Vector3(0f, 180f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Instruktur");
+            addNPC("Instruktur");
         }
     }
 
