@@ -166,5 +166,7 @@ MonoBehaviour:
   NPCName: Instruktur Renang
   playerGirl: {fileID: 1215348280215815901, guid: 04db19c2ba027294f91e418918d5266a, type: 3}
   playerBoy: {fileID: 3057947923302166667, guid: 083627ee651915448b7b7b243ee27734, type: 3}
-  story: []
+  story:
+  - inkJSON: {fileID: 4900000, guid: d0f5f288a164f48499f8609f34898f33, type: 3}
+    title: idleInstruktur
   this_npc: {fileID: 5341588697667178222}
