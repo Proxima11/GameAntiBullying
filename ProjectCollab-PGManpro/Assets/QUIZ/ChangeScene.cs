@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public string SceneName;
+    string SceneName;
 
     public void changeScene(){
         GameVariable gameVariable = FindObjectOfType<GameVariable>();
         superScript.setVariable(gameVariable.score,gameVariable.stress, gameVariable.timeNow, gameVariable.day);
-        SceneManager.LoadScene(SceneName);
+        SceneName = TeleportCollisionQuiz.currentSceneName;
         SceneManager.LoadScene(SceneName);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

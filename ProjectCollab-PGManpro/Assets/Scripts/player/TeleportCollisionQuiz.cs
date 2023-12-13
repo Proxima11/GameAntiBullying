@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
 {
     public string SceneName;
+    public static string currentSceneName;
 
     public string GetInteractText()
     {
@@ -23,6 +24,8 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
     {
         GameVariable gameVariable = FindObjectOfType<GameVariable>();  
         superScript.setVariable(gameVariable.score,gameVariable.stress, gameVariable.timeNow, gameVariable.day);
+        Scene currentScene = SceneManager.GetActiveScene();
+        currentSceneName = currentScene.name;
         SceneManager.LoadScene(SceneName);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
