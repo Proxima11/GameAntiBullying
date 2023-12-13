@@ -189,6 +189,7 @@ public class Soal : MonoBehaviour
             SalahObj.SetActive(true);
             BenarObj.SetActive(false);
             jwbSalah++;
+            gameVariable-=20;
             txtScore.text = "Score : " + gameVariable.score;
         }
     }
