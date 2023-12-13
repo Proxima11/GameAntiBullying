@@ -146,7 +146,7 @@ MonoBehaviour:
   playerGirl: {fileID: 1215348280215815901, guid: 04db19c2ba027294f91e418918d5266a, type: 3}
   playerBoy: {fileID: 3057947923302166667, guid: 083627ee651915448b7b7b243ee27734, type: 3}
   story:
-  - inkJSON: {fileID: 4900000, guid: d5ef5f55f107dd141948ce9d783a2d33, type: 3}
+  - inkJSON: {fileID: 4900000, guid: fedec392c4b810d45ae1c77699976137, type: 3}
     title: idleSatpam
   this_npc: {fileID: 4938516953105078712}
 --- !u!95 &9199500473996280698
