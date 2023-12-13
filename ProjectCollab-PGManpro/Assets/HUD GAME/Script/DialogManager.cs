@@ -58,7 +58,7 @@ public class DialogManager : MonoBehaviour
             index++;
         }
         buttonF = GameObject.Find("PlayerInteractUI");
-        buttonEsc = GameObject.Find("PlayerInteractUI");
+        buttonEsc = GameObject.Find("CanvasPause");
     }
 
     void Update(){
@@ -185,7 +185,7 @@ public class DialogManager : MonoBehaviour
         isDialogRunning= false;
         spawn = true;
         buttonF.SetActive(true);
-        buttonEsc.SetActive(true);
+        //buttonEsc.SetActive(true);
     }
 
     public void displayChoices(){
@@ -248,7 +248,7 @@ public class DialogManager : MonoBehaviour
     }
 
     public IEnumerator closeBlackScreen(){
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         animatorBlackScreen.SetBool("isStart", false);
         isDialogBlackscreen = false;
         taskbutton.SetActive(true);

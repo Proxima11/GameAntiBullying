@@ -81,6 +81,7 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     {
 
         if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(false); }
+        if (FindObjectOfType<DialogManager>().buttonEsc != null) { FindObjectOfType<DialogManager>().buttonEsc.SetActive(false); }
         string title = FindObjectOfType<NPCManager>().dialogStatus;
         StoryData storyRunning =  SearchStory(title);
         FindObjectOfType<DialogManager>().StartDialogInk(storyRunning.inkJSON);
