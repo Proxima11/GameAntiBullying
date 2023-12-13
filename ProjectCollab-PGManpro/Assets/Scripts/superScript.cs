@@ -14,7 +14,7 @@ public class superScript : MonoBehaviour
     //Game Variable
     static public int score = 0;
     static public int stress = 0;
-	static public int time = 0;
+	static public float time = 0;
     static public int day = 1;
     public static List<Task_def> Tasks = new List<Task_def>();
     static public string[] dialogProgress = new string[] {
@@ -41,7 +41,7 @@ public class superScript : MonoBehaviour
     static public List<Item> itemOnwed = new List<Item>();
     static public List<int> itemIndex = new List<int>();
 
-    static public void setVariable (int inputScore, int inputStress, int inputTime, int inputDay){
+    static public void setVariable (int inputScore, int inputStress, float inputTime, int inputDay){
         score = inputScore;
         stress = inputStress;
         time = inputTime;
@@ -70,7 +70,7 @@ public class superScript : MonoBehaviour
 
     }
 
-    public static void updateTime(int t, int d){
+    public static void updateTime(float t, int d){
         time = t;
         day = d;
     }
