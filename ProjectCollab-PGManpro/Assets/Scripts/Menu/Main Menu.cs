@@ -18,6 +18,10 @@ public class MainMenu : MonoBehaviour
     public Slider sliderValue_SC;
     public Slider sliderValue_NC;
 
+    public GameObject username;
+    public GameObject nextCanvas;
+    
+
 
     private GameObject g;
     public void Start(){
@@ -78,6 +82,10 @@ public class MainMenu : MonoBehaviour
     }
 
     public void enterUsername(){
-        superScript.username = input_field.GetComponent<TMP_InputField>().text;
+        if(input_field.text != ""){
+            superScript.username = input_field.GetComponent<TMP_InputField>().text;
+            username.SetActive(false);
+            nextCanvas.SetActive(true);
+        }
     }
 }
