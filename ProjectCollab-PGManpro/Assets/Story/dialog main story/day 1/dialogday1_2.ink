@@ -1,7 +1,8 @@
+VAR player = "player"
 -> day1
 
 === day1 ===
-Haish, apa sih itu guru kok tiba-tiba nyuruh aku kenalin-kenalin gak jelas. Alvin sini kamu!!! Kamu aja yang kenalin sekolah ke player itu aku males. # speaker: David
+Haish, apa sih itu guru kok tiba-tiba nyuruh aku kenalin-kenalin gak jelas. Alvin sini kamu!!! Kamu aja yang kenalin sekolah ke {player} itu aku males. # speaker: David
 
 Loh tapi guru kan nyuruh kamu, Vid. # speaker: Alvin
 

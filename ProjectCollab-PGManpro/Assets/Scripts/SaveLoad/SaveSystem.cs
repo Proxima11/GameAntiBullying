@@ -55,6 +55,9 @@ public class SaveSystem : MonoBehaviour
             superScript.itemIndex = data.items;
 
             superScript.setVariable(data.score, data.stress, data.time, data.day);
+
+            // GameManager.playerPos = new Vector3(data.position[0], data.position[1], data.position[2]);
+            // Debug.Log(new Vector3(data.position[0], data.position[1], data.position[2]));
             
         } 
         else

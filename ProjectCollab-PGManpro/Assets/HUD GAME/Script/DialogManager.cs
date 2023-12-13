@@ -79,6 +79,8 @@ public class DialogManager : MonoBehaviour
         FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
 
         currentStory = new Story(inkJSON.text);
+        superScript.username = "kristoper";
+        currentStory.variablesState["player"] = superScript.username;
         nameText.SetText("xxx");
 
         continueStory();
