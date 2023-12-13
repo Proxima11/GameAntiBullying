@@ -1,4 +1,4 @@
--> day4("Budi")
+-> day4("Player")
 
 === day4(player) ===
 
