@@ -205,7 +205,7 @@ public class NPCManager : MonoBehaviour
                 questmark1Renderer.material.SetColor("quest", customColor);
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
-            
+
         }
         else if (dialog[index] == "Day 1 part 4" & superScript.day == 1)
         {
@@ -244,6 +244,13 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
+        else if (dialog[index] == "Day 2 part 1 " & superScript.day < 2)
+        {
+            changeScene("Lorong");
+            removeNPC("Alvin");
+            removeNPC("Vina");
+            removeNPC("QuestMark");
+        }
         else if (dialog[index] == "Day 2 part 1 " & superScript.day == 2)
         {
             if (FindObjectOfType<DialogManager>().spawn)
@@ -254,7 +261,7 @@ public class NPCManager : MonoBehaviour
                 FindObjectOfType<DialogManager>().spawn = false;
             }
             dialogStatus = "dialogday2_1";
-            
+
             changeScene("Lorong");
             if (superScript.boy)
             {
@@ -294,7 +301,7 @@ public class NPCManager : MonoBehaviour
             }
 
             dialogStatus = "dialogday2_2";
-            
+
             if (superScript.boy)
             {
                 changeScene("Toilet Pria lt 1");
@@ -349,6 +356,26 @@ public class NPCManager : MonoBehaviour
             }
 
         }
+        else if (dialog[index] == "Day 3 part 1 " & superScript.day < 3)
+        {
+            if (superScript.boy)
+            {
+                changeScene("Toilet Pria lt 1");
+                removeNPC("David");
+                removeNPC("Tino");
+                removeNPC("Doni");
+                removeNPC("QuestMark");
+            }
+            else
+            {
+                changeScene("Toilet Wanita lt 1");
+                removeNPC("Devi");
+                removeNPC("Vero");
+                removeNPC("Claire");
+                removeNPC("QuestMark");
+            }
+
+        }
         else if (dialog[index] == "Day 3 part 1 " & superScript.day == 3)
         {
             dialogStatus = "day3_1";
@@ -388,7 +415,7 @@ public class NPCManager : MonoBehaviour
                 addSpawn(claire, new Vector3(61.22f, 4.045f, -7.38f), new Vector3(0f, 150f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Claire");
                 addNPC("Claire");
             }
-            
+
             addSpawn(questMark, new Vector3(61.88f, 6.419458f, -7.150001f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
             addNPC("QuestMark");
             GameObject questmark1 = GameObject.Find("QuestMark1");
@@ -508,6 +535,21 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
+        else if (dialog[index] == "Day 4 " & superScript.day < 4)
+        {
+            changeScene("Outside");
+            if (superScript.boy)
+            {
+                removeNPC("Alvin");
+                removeNPC("QuestMark");
+
+            }
+            else
+            {
+                removeNPC("Vina");
+                removeNPC("QuestMark");
+            }
+        }
         else if (dialog[index] == "Day 4 " & superScript.day == 4)
         {
             dialogStatus = "dialogday4";
@@ -557,6 +599,24 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.color = customColor;
                 questmark1Renderer.material.SetColor("quest", customColor);
                 questmark2Renderer.material.SetColor("quest", customColor);
+            }
+        }
+        else if (dialog[index] == "Day 5 part 1 " & superScript.day < 5)
+        {
+            changeScene("Outside");
+            if (superScript.boy)
+            {
+                removeNPC("David");
+                removeNPC("Tino");
+                removeNPC("Doni");
+                removeNPC("QuestMark");
+            }
+            else
+            {
+                removeNPC("Devi");
+                removeNPC("Vero");
+                removeNPC("Claire");
+                removeNPC("QuestMark");
             }
         }
         else if (dialog[index] == "Day 5 part 1 " & superScript.day == 5)
@@ -675,7 +735,7 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 5 part 1_3 " & superScript.day == 5)
         {
-           
+
             dialogStatus = "dialogday5_1_3";
             changeScene("kelas 4");
 
@@ -774,6 +834,21 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.color = customColor;
                 questmark1Renderer.material.SetColor("quest", customColor);
                 questmark2Renderer.material.SetColor("quest", customColor);
+            }
+        }
+        else if (dialog[index] == "End" & superScript.day < 5)
+        {
+            changeScene("Outside");
+            if (superScript.boy)
+            {
+                removeNPC("Alvin");
+                removeNPC("QuestMark");
+
+            }
+            else
+            {
+                removeNPC("Vina");
+                removeNPC("QuestMark");
             }
         }
         else
