@@ -43,6 +43,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Lorong");
     }
 
+    public void Menu(){
+        SceneManager.LoadScene("Menu");
+    }
+
 
     public void chooseGender(){
         if (boy.isOn){
