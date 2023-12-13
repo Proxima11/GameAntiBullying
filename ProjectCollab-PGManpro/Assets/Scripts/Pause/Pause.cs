@@ -27,18 +27,21 @@ public class Pause : MonoBehaviour
 
     public void PauseGame()
     {
-        isPaused = true;
-        Time.timeScale = 0;
-        canvasPause.SetActive(true);
-        FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
+        if (!FindObjectOfType<DialogManager>().stop)
+        {
+            isPaused = true;
+            Time.timeScale = 0;
+            canvasPause.SetActive(true);
+            FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
+        }
     }
 
     public void ResumeGame()
     {
-        isPaused = false;
-        Time.timeScale = 1;
-        canvasPause.SetActive(false);
-        FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
+            isPaused = false;
+            Time.timeScale = 1;
+            canvasPause.SetActive(false);
+            FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
     }
 
     public void QuitGame()
