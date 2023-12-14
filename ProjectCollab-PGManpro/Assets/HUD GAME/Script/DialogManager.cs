@@ -33,7 +33,7 @@ public class DialogManager : MonoBehaviour
     public bool stop = false;
     public bool spawn = false;
 
-    private bool isDialogRunning = false;
+    public bool isDialogRunning = false;
 
     private const string SPEAKER_TAG = "speaker";
     private const string BLACKSCREEN_TAG = "blackscreen";
@@ -72,6 +72,12 @@ public class DialogManager : MonoBehaviour
                 skipText();
             }
         }
+        // if(isDialogRunning){
+        //     if (NPCPrefab!=null && NPCPrefab.GetComponent<NavMeshAgent>() != null){
+        //         NPCPrefab.GetComponent<NavMeshAgent>().isStopped = true;
+        //         animator.SetTrigger("TrBreath");
+        //     }
+        // }
     }
 
     public void StartDialogInk(TextAsset inkJSON){
@@ -201,14 +207,15 @@ public class DialogManager : MonoBehaviour
 
         
         if (NPCPrefab!=null && NPCPrefab.GetComponent<NavMeshAgent>() != null){
-            NPCPrefab.GetComponent<NavMeshAgent>().isStopped = true;
-            animator.SetTrigger("TrBreath");
+            NPCPrefab.GetComponent<NavMeshAgent>().isStopped = false;
+            animator.ResetTrigger("TrBreath");
+            animator.SetTrigger("TrWalk");
         }
 
         Inventory.SetActive(true);
         taskbutton.SetActive(true);
         FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
-        Debug.Log(FindObjectOfType<StarterAssetsInputs>().inDialogue);
+        //Debug.Log(FindObjectOfType<StarterAssetsInputs>().inDialogue);
         isDialogRunning= false;
         spawn = true;
         buttonF.SetActive(true);

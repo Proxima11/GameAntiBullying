@@ -24,7 +24,7 @@ public class PatrolState : BaseState
         {
             anim.SetTrigger("TrBreath");
             waitTimer += Time.deltaTime;
-            if (waitTimer > wait)
+            if (waitTimer > wait && MonoBehaviour.FindObjectOfType<DialogManager>().isDialogRunning == false)
             {
                 anim.ResetTrigger("TrBreath");
                 anim.SetTrigger("TrWalk");
