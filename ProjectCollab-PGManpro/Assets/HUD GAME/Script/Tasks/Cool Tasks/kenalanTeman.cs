@@ -29,7 +29,7 @@ public override string id{
             return "c_kenalanTeman";
         }
     }
-    private string name_this1="Kenalan dengan ";
+    private string name_this1="Interaksi dengan ";
     private string name_this2 =" teman";
     public override string taskName{
         get {

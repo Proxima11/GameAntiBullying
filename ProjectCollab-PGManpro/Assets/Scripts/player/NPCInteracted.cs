@@ -68,7 +68,6 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
             }
         }
     }
-
     public string GetInteractText()
     {
         return "talk with " + NPCName;
@@ -80,6 +79,20 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     }
     public void TriggerDialog()
     {
+        if (transform.tag == "Sampah") {
+            if (superScript.Tasks.Any(x => x is buangSampah)){
+            if (!done_kenalan){
+                foreach (var e in superScript.Tasks){
+                    if (string.Equals(e.id, "c_buangSampah")){
+                        e.task();
+                        done_kenalan=true;
+                        Destroy(gameObject);
+                        return;
+                    }
+                }
+            }   
+        }
+        }
 
         if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(false); }
         if (FindObjectOfType<DialogManager>().buttonEsc != null) { FindObjectOfType<DialogManager>().buttonEsc.SetActive(false); }
