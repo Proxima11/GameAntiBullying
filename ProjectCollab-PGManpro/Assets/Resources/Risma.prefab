@@ -159,8 +159,8 @@ MonoBehaviour:
   playerGirl: {fileID: 1215348280215815901, guid: 04db19c2ba027294f91e418918d5266a, type: 3}
   playerBoy: {fileID: 3057947923302166667, guid: 083627ee651915448b7b7b243ee27734, type: 3}
   story:
-  - inkJSON: {fileID: 4900000, guid: a247df8a8d735d64e88cf8ba152a5f5c, type: 3}
-    title: idleSiska
+  - inkJSON: {fileID: 4900000, guid: 680967ab0fc26f5469cfb8eaf1381e52, type: 3}
+    title: idleRisma
   this_npc: {fileID: 7938513332681006076}
 --- !u!95 &1863340705910278194
 Animator:
