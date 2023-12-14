@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,10 +22,10 @@ public class Soal : MonoBehaviour
 
     bool[] soalSelesai;
 
-    public Text txtSoal, txtOpsiA, txtOpsiB, txtOpsiC, txtOpsiD,txtScore;
+    public Text txtSoal, txtOpsiA, txtOpsiB, txtOpsiC, txtOpsiD,txtScore, txtTime;
 
     bool isHasil;
-    private float durasi;
+    private float durasi, durasiGame;
     public float durasiPenilaian;
 
     int jwbBenar, jwbSalah;
@@ -45,9 +46,9 @@ public class Soal : MonoBehaviour
         panel.SetActive(false);
         SalahObj.SetActive(false);
         BenarObj.SetActive(false);
-        
+        durasiGame=150f;
         durasi = durasiPenilaian;
-
+        txtTime.text = "Time: " + (int)durasiGame;
         soal = assetSoal.ToString().Split('#');
 
         soalSelesai = new bool[soal.Length];
@@ -104,6 +105,16 @@ public class Soal : MonoBehaviour
                     {
                         continue;
                     }
+                }
+
+                if(gameVariable.score <= 20){
+                    gameVariable.TakeStress(5);
+                }else if(gameVariable.score <= 50){
+                    gameVariable.TakeStress(2);
+                }else if(gameVariable.score >= 80){
+                    gameVariable.TakeStress(-2);
+                }else if(gameVariable.score >= 65){
+                    gameVariable.TakeStress(-5);
                 }
                 
             }
@@ -197,45 +208,60 @@ public class Soal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(panel.activeSelf)
-        {
-            durasiPenilaian -= Time.deltaTime;
+        durasiGame -= Time.deltaTime;
+        txtTime.text = "Time : " + (int)durasiGame;
+        if (durasiGame <=0)
+        {   
+            panel.SetActive(true);
+            txtHasil.text = "" + gameVariable.score;
+                    
+            imgPenilaian.SetActive(false);
+            imgHasil.SetActive(true);
 
-            if (isHasil)
+            durasiPenilaian = 0;
+            durasiGame=0;
+        }
+        else{
+            if(panel.activeSelf)
             {
-                imgPenilaian.SetActive(true);
-                imgHasil.SetActive(false);
-
-                if (durasiPenilaian <= 0)
+                durasiPenilaian -= Time.deltaTime;
+                
+            
+                if (isHasil)
                 {
-                    txtHasil.text = "" + gameVariable.score;
-                      
-                    imgPenilaian.SetActive(false);
-                    imgHasil.SetActive(true);
+                    imgPenilaian.SetActive(true);
+                    imgHasil.SetActive(false);
 
-                    durasiPenilaian = 0;
+                    if (durasiPenilaian <= 0)
+                    {
+                        txtHasil.text = "" + gameVariable.score;
+                        
+                        imgPenilaian.SetActive(false);
+                        imgHasil.SetActive(true);
 
-                }
-            } 
-            else
-            {
-                imgPenilaian.SetActive(true);
-                imgHasil.SetActive(false);
+                        durasiPenilaian = 0;
 
-                if (durasiPenilaian <= 0)
+                    }
+                } 
+                else
                 {
-                    ButtonA.SetActive(true);
-                    ButtonB.SetActive(true);
-                    ButtonC.SetActive(true);
-                    ButtonD.SetActive(true);
-                    panel.SetActive(false);
-                    durasiPenilaian = durasi;
+                    imgPenilaian.SetActive(true);
+                    imgHasil.SetActive(false);
 
-                    TampilkanSoal();
+                    if (durasiPenilaian <= 0)
+                    {
+                        ButtonA.SetActive(true);
+                        ButtonB.SetActive(true);
+                        ButtonC.SetActive(true);
+                        ButtonD.SetActive(true);
+                        panel.SetActive(false);
+                        durasiPenilaian = durasi;
+
+                        TampilkanSoal();
+                    }
                 }
             }
+
         }
-
-
     }
 }

@@ -3015,6 +3015,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: quiz mat
+  loadingScreen: {fileID: 1967187084}
+  interact: {fileID: 265643663}
 --- !u!65 &821183427
 BoxCollider:
   m_ObjectHideFlags: 0
