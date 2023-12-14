@@ -2487,15 +2487,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - name: Drinks
-    stressPoint: -5
-    image: {fileID: 21300000, guid: 0e1916a4cfc7ab64ba919ef76abf8ace, type: 3}
-  - name: Food
+  - name: Meatballs
     stressPoint: -10
-    image: {fileID: 21300000, guid: edc6a739a7748124e9a5d9efadb7fd96, type: 3}
-  - name: Chocholate
-    stressPoint: -15
-    image: {fileID: 21300000, guid: aa80d29616dc0a9449637a7da54cda19, type: 3}
+    image: {fileID: 21300000, guid: 35b61bffd21e8db49b69bc622f240ea3, type: 3}
+  - name: Sandwich
+    stressPoint: -7
+    image: {fileID: 21300000, guid: 0df4aed1d971fdb4a99d5c995fe8d83d, type: 3}
+  - name: Cake
+    stressPoint: -4
+    image: {fileID: 21300000, guid: 2ff9388831e21e14795c8635532c002c, type: 3}
+  - name: Donut
+    stressPoint: -2
+    image: {fileID: 21300000, guid: 98ade35c2fe56ae469139ae58e1d2214, type: 3}
   - name: Money
     stressPoint: -20
     image: {fileID: 21300000, guid: d8df9662da663ba44b0ff4d2b2381064, type: 3}

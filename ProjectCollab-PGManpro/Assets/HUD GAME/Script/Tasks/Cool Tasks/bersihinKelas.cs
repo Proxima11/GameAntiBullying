@@ -21,6 +21,7 @@ public class bersihinKelas : Task_def
             countKenalan--;
             if (countKenalan == 0){
                 done_this = true;
+                getSnacks();
             }
         }
     }

@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
 
         if (!ws_random_tasks){
             random_tasks();
+            FindObjectOfType<InventoryManager>().AddItem(0);
+            FindObjectOfType<InventoryManager>().AddItem(1);
+            FindObjectOfType<InventoryManager>().AddItem(1);
+            FindObjectOfType<InventoryManager>().AddItem(2);
             ws_random_tasks = true;
         }
     }
@@ -48,14 +52,6 @@ public class GameManager : MonoBehaviour
     private void random_tasks(){
         GameObject academic = Task_Object.transform.GetChild(0).gameObject;
         GameObject coolness = Task_Object.transform.GetChild(1).gameObject;
-
-        // for (int i = 0; i < academic.transform.childCount; i++){
-        //     acaTasks.Add(academic.transform.GetChild(i).GetComponents<Task_def>());
-        // }
-
-        // for (int i = 0; i < coolness.transform.childCount; i++){
-        //     coolTasks.Add(coolness.transform.GetChild(i).GetComponents<Task_def>());
-        // }
 
         Task_def[] aca = academic.GetComponents<Task_def>();
         Task_def[] cool = coolness.GetComponents<Task_def>();

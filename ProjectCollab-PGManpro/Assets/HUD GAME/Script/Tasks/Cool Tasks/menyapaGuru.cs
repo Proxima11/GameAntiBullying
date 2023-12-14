@@ -21,6 +21,7 @@ public class menyapaGuru : Task_def
             countSapa--;
             if (countSapa == 0){
                 done_this = true;
+                getSnacks();
             }
         }
     }
