@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Satpam
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42741638295b49a4e9359cc8ff0731b7, type: 3}
+      propertyPath: m_TagString
+      value: Teacher
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

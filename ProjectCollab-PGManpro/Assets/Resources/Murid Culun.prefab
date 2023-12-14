@@ -165,6 +165,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Murid Culun
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
+      propertyPath: m_TagString
+      value: Student
+      objectReference: {fileID: 0}
     - target: {fileID: 5465940246521907071, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

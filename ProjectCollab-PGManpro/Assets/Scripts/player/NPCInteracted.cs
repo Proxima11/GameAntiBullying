@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 [System.Serializable]
 public class StoryData
@@ -89,6 +90,32 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
             FindObjectOfType<DialogManager>().currentStoryName = storyRunning.title;
         }else{
             FindObjectOfType<DialogManager>().currentStoryName = "Default";
+
+            if (transform.tag == "Student"){
+            if (superScript.Tasks.Any(x => x is kenalanTeman)){
+            if (!done_kenalan){
+                foreach (var e in superScript.Tasks){
+                    if (string.Equals(e.id, "c_kenalanTeman")){
+                        e.task();
+                        done_kenalan=true;
+                        break;
+                    }
+                }
+            }   
+        }
+        } else if (transform.tag == "Teacher"){
+           if (superScript.Tasks.Any(x => x is menyapaGuru)){
+            if (!done_kenalan){
+                foreach (var e in superScript.Tasks){
+                    if (string.Equals(e.id, "c_menyapaGuru")){
+                        e.task();
+                        done_kenalan=true;
+                        break;
+                    }
+                }
+            }   
+        } 
+        }
         }
         FindObjectOfType<DialogManager>().NPCPrefab = this_npc;
         FindObjectOfType<DialogManager>().animatorNPC = animator;
@@ -102,6 +129,8 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
         //    this_npc.GetComponent<NavMeshAgent>().isStopped = false;
         //}
     }
+
+        private bool done_kenalan = false;
 
     private StoryData SearchStory(string title){
         isStoryExist = false;
