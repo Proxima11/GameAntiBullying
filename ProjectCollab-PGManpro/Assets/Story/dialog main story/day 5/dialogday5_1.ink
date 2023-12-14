@@ -1,14 +1,17 @@
+VAR player = "player"
+VAR David = "David"
+
 ->day5
 
 
 === day5 ===
-Player berpikir apakah akan melaporkan kejadian kemarin ke guru #speaker:narrator
-Apakah aku perlu melaporkan David/Devi ke guru?#speaker:player
+{player} berpikir apakah akan melaporkan kejadian kemarin ke guru #speaker:narrator
+Apakah aku perlu melaporkan {David} ke guru?#speaker:{player}
 + [Tidak melaporkan kejadian kemarin ke guru]
-Ahh gak usah dilaporkan. Kalo aku laporin David/Devi nanti aku akan ketinggalan pelajaran.#speaker:player
+Ahh gak usah dilaporkan. Kalo aku laporin {David} nanti aku akan ketinggalan pelajaran.#speaker:{player}
 //setelah selesai tasknya
-Player menjalani harinya seperti biasa. Lalu Player kaget karena tiba-tiba David diskors oleh sekolah dan geng nya. Tanpa mengetahui apa-apa player pulang ke sekolah#speaker:narrator
+{player} menjalani harinya seperti biasa. Lalu {player} kaget karena tiba-tiba {David} diskors oleh sekolah dan geng nya. Tanpa mengetahui apa-apa {player} pulang ke sekolah#speaker:narrator
 -> DONE
 + [Laporkan kejadian kemarin ke guru]
-    Ku Laporkan saja lah David/Devi. Aku sudah enggak tahan sama kelakuannya mereka.#speaker:player
+    Ku Laporkan saja lah {David}. Aku sudah enggak tahan sama kelakuannya mereka.#speaker:{player}
 -> DONE

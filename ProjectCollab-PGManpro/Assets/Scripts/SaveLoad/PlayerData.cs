@@ -14,7 +14,7 @@ public class PlayerData
     public float[] position;
     public int stress;
     public int score;
-    public int time;
+    public float time;
     public int day;
 
     public int indexDialog;

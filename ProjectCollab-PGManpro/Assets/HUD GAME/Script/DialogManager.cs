@@ -62,7 +62,7 @@ public class DialogManager : MonoBehaviour
     }
 
     void Update(){
-        if (Input.GetKeyUp(KeyCode.R) && isDialogRunning){
+        if (Input.GetKeyUp(KeyCode.F) && isDialogRunning){
             if (canContinueToNextLine){
                 continueStory();
             }else if(!isDialogBlackscreen){

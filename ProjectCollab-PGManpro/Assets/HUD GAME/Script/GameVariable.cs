@@ -6,7 +6,7 @@ public class GameVariable : MonoBehaviour
 	public int stress = 0;
 	public int score = 0;
 	public int maxTime = 1200;
-	public int timeNow = 0;
+	public float timeNow = 0;
 	public int second;
 	public int minute;
 	public int day = 1;
@@ -39,11 +39,10 @@ public class GameVariable : MonoBehaviour
 
 	public void updateTime(){
 		if (timeNow <= maxTime){
-			if (timeNow<Time.time + 1){
-				minute = timeNow/60;
-				second = timeNow%60;
-				timeNow += 1 ;
-			}
+			
+			minute = (int) timeNow/60;
+			second = (int) timeNow%60;
+			timeNow += Time.deltaTime ;
 		} else {
 			this.day+=1;
 		}
