@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mAnimator: {fileID: 5417399183124221674}
-  wait: 0
+  wait: 0.2
 --- !u!95 &5417399183124221674 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}

@@ -899,7 +899,7 @@ public class NPCManager : MonoBehaviour
                 addNPC("Siska");
                 addSpawn(vero, new Vector3(59.30309f, -0.274f, 3.964572f), new Vector3(0f, 272.132f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
                 addNPC("Vero");
-                FindObjectOfType<GameVariable>().TakeStress(10);
+                //FindObjectOfType<GameVariable>().TakeStress(10);
                 randomEvent = true;
                 // Debug.Log(randomEvent);
             }
