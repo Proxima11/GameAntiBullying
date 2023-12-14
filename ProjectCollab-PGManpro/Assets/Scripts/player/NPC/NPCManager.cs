@@ -884,7 +884,7 @@ public class NPCManager : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Lorong")
         {
-            Debug.Log(randomEvent);
+            // Debug.Log(randomEvent);
             changeScene("Lorong");
             addSpawn(kevin, new Vector3(90.98f, 0.05885804f, -14.22f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Kevin");
             addNPC("Kevin");
@@ -899,7 +899,7 @@ public class NPCManager : MonoBehaviour
                 addNPC("Vero");
                 FindObjectOfType<GameVariable>().TakeStress(10);
                 randomEvent = true;
-                Debug.Log(randomEvent);
+                // Debug.Log(randomEvent);
             }
         }
         else if (SceneManager.GetActiveScene().name == "Toilet Pria lt 1")

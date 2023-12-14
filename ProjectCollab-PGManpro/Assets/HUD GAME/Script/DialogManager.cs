@@ -37,6 +37,9 @@ public class DialogManager : MonoBehaviour
 
     private const string SPEAKER_TAG = "speaker";
     private const string BLACKSCREEN_TAG = "blackscreen";
+    private const string SCORE_TAG = "score";
+    private const string STRESS_TAG = "stress";
+
 
     public GameObject taskbutton;
     public GameObject Inventory;
@@ -80,10 +83,22 @@ public class DialogManager : MonoBehaviour
 
         currentStory = new Story(inkJSON.text);
         superScript.username = "kristoper";
+        if (!superScript.boy){
+            setInkVariable("David", "Devi");
+            setInkVariable("Alvin", "Vina");
+            setInkVariable("Vid", "Vi");
+            setInkVariable("Vin", "Na");
+        }
         currentStory.variablesState["player"] = superScript.username;
         nameText.SetText("xxx");
 
         continueStory();
+    }
+
+    public void setInkVariable(string variable, string value){
+        if (currentStory.variablesState[variable] != null){
+            currentStory.variablesState[variable] = value; 
+        }
     }
 
     public void continueStory(){
@@ -140,6 +155,16 @@ public class DialogManager : MonoBehaviour
                     }else {
                         nameText.SetText(tagValue);
                     }
+                    break;
+                case SCORE_TAG:
+                    int score = int.Parse(tagValue);
+                    Debug.Log("score = " + score);
+                    FindObjectOfType<GameVariable>().AddPoint(score);
+                    break;
+                case STRESS_TAG:
+                    int stress = int.Parse(tagValue);
+                    Debug.Log("stress = " + stress);
+                    FindObjectOfType<GameVariable>().TakeStress(stress);
                     break;
             }
         }
