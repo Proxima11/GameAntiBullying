@@ -28,12 +28,14 @@ public class PlayerInteract : MonoBehaviour
             if (scene.name == "Lorong lt 1" || scene.name == "Lorong")
             {
                 GameManager.PlayerPos = player.transform.position;
+                FindObjectOfType<NPCManager>().randomEvent = false;
             }
 
             InterfaceInteractable interactable = GetInteractableObject();
             if (interactable != null)
             {
                 interactable.Interact(transform);
+                // FindObjectOfType<GameVariable>().TakeStress(1);
             }
         }
     }

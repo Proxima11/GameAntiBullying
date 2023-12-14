@@ -106,6 +106,16 @@ public class Soal : MonoBehaviour
                         continue;
                     }
                 }
+
+                if(gameVariable.score <= 20){
+                    gameVariable.TakeStress(5);
+                }else if(gameVariable.score <= 50){
+                    gameVariable.TakeStress(2);
+                }else if(gameVariable.score >= 80){
+                    gameVariable.TakeStress(-2);
+                }else if(gameVariable.score >= 65){
+                    gameVariable.TakeStress(-5);
+                }
                 
             }
         }
