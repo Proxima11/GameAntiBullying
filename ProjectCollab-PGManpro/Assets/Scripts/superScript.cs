@@ -17,6 +17,8 @@ public class superScript : MonoBehaviour
 	static public float time = 0;
     static public int day = 1;
     public static List<Task_def> Tasks = new List<Task_def>();
+    public static List<int> idx_coolTasks = new List<int>();
+    public static List<int> idx_acaTasks = new List<int>();
     static public string[] dialogProgress = new string[] {
         "Day 1 part 1",
         "Day 1 part 2",

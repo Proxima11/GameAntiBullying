@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alvin
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa3180200c49953488e168d03e99de5a, type: 3}
+      propertyPath: m_TagString
+      value: Student
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

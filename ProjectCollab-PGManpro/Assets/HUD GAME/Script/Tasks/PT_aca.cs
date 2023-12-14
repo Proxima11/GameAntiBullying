@@ -5,7 +5,8 @@ using UnityEngine;
 public class PT_aca : Task_def
 {
     // Start is called before the first frame update
-    private bool done_this=true;
+    private bool done_this=false;
+    private string name_this="ini tugas akademik";
     void Start()
     {
     }
@@ -15,9 +16,21 @@ public class PT_aca : Task_def
     {
         
     }
+
+public override string id{
+        get{
+            return "pt_aca";
+        }
+    }
+    public override void task(){
+        Debug.Log("tes");
+    }
     public override string taskName{
         get {
-            return "ini tugas akademik";
+            return name_this;
+        }
+        set {
+            name_this=value;
         }
     }
     public override bool done{

@@ -6,6 +6,7 @@ public class PT_cool : Task_def
 {
     // Start is called before the first frame update
     private bool done_this=false;
+    private string name_this="ini tugas keren";
     void Start()
     {
     }
@@ -15,10 +16,22 @@ public class PT_cool : Task_def
     {
         
     }
+    public override void task(){
+        Debug.Log("tes");
+    }
+
+    public override string id{
+        get{
+            return "pt_cool";
+        }
+    }
 
     public override string taskName{
         get {
-            return "ini tugas keren";
+            return name_this;
+        }
+        set {
+            name_this=value;
         }
     }
     public override bool done{
