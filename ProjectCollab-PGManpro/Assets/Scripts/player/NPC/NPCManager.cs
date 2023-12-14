@@ -27,6 +27,7 @@ public class NPCManager : MonoBehaviour
     GameObject instruktur;
     GameObject jaka;
     GameObject friska;
+    GameObject risma;
     public bool randomEvent = false;
 
 
@@ -50,6 +51,7 @@ public class NPCManager : MonoBehaviour
         instruktur = Resources.Load<GameObject>("Instruktur Renang");
         jaka = Resources.Load<GameObject>("Jaka");
         friska = Resources.Load<GameObject>("Bu Friska");
+        risma = Resources.Load<GameObject>("Risma");
 
         listSpawn = FindObjectOfType<NPCSpawner>().spawns;
     }
@@ -888,7 +890,7 @@ public class NPCManager : MonoBehaviour
             changeScene("Lorong");
             addSpawn(kevin, new Vector3(90.98f, 0.05885804f, -14.22f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Kevin");
             addNPC("Kevin");
-            if(randomEvent == false && superScript.day == 1){
+            if (randomEvent == false && superScript.day == 1){
                 addSpawn(kevin, new Vector3(58.445f, 0.05885804f, 4.902f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Kevin");
                 addNPC("Kevin");
                 addSpawn(jessica, new Vector3(58.445f, 0.08039999f, 4.902f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "Jessica");
