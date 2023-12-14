@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public static Vector3 playerPos = new Vector3();
     private GameObject player;
     [SerializeField] private GameObject Task_Object;
-   private List<Task_def> coolTasks = new List<Task_def>();
+    private List<Task_def> coolTasks = new List<Task_def>();
     private List<Task_def> acaTasks = new List<Task_def>();
 
     void Start(){
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<InventoryManager>().AddItem(1);
             FindObjectOfType<InventoryManager>().AddItem(2);
             ws_random_tasks = true;
+            refreshTask();
         }
     }
 
@@ -91,6 +92,19 @@ public class GameManager : MonoBehaviour
                 superScript.Tasks.Add(coolTasks[rand_util]);
                 superScript.idx_coolTasks.Add(rand_util);
             }
+        }
+    }
+
+    public void refreshTask(){
+        List<int> coolTask = superScript.idx_coolTasks;
+        List<int> acaTask = superScript.idx_acaTasks;
+
+        foreach(int cool in coolTask){
+            superScript.Tasks.Add(coolTasks[cool]);
+        }
+
+        foreach(int aca in acaTask){
+            superScript.Tasks.Add(acaTasks[aca]);
         }
     }
 

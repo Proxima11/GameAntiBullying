@@ -27,6 +27,8 @@ public class SaveSystem : MonoBehaviour
         data.nerdCool = superScript.nerdCool;
         data.indexDialog = superScript.indexDialog;
         // data.tasks = superScript.Tasks;
+        data.acaTask = superScript.idx_acaTasks;
+        data.coolTask = superScript.idx_coolTasks;
         data.items = superScript.itemIndex;
 
         formatter.Serialize(stream, data);
@@ -51,7 +53,8 @@ public class SaveSystem : MonoBehaviour
             superScript.shyConfidence = data.shyConfidence;
             superScript.nerdCool = data.nerdCool;
             superScript.indexDialog = data.indexDialog;
-            // superScript.Tasks = data.tasks;
+            superScript.idx_acaTasks = data.acaTask;
+            superScript.idx_coolTasks = data.coolTask;
             superScript.itemIndex = data.items;
 
             superScript.setVariable(data.score, data.stress, data.time, data.day);

@@ -18,7 +18,10 @@ public class PlayerData
     public int day;
 
     public int indexDialog;
-    public List<Task_def> tasks;
+    
+    public List<int> acaTask;
+    public List<int> coolTask;
+
     public List<int> items;
 
     
