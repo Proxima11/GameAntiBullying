@@ -8,7 +8,7 @@ VAR jajan = "jajan"
 
 === default ===
 hiks. hiks. hiks. # speaker: narrator #score: 0 #stress: 0
-Kenapa kamu sedih, siska? # speaker: {player} #score: 0 #stress: 0
+Kenapa kamu sedih, Siska? # speaker: {player} #score: 0 #stress: 0
 Iya, {player}. Di sekolah ini aku tidak punya teman. # speaker: Siska #score: 0 #stress: 0
 Oh, begitu. A-apakah kamu mau jadi temanku, sis? # speaker: {player} #score: 0 #stress: 0
 A-apa boleh? # speaker: Siska #score: 0 #stress: 0
