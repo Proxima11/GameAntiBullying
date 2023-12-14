@@ -45,7 +45,9 @@ public class GameVariable : MonoBehaviour
 			timeNow += Time.deltaTime ;
 		} else {
 			this.day+=1;
-			timeNow = 0;
+			FindObjectOfType<InventoryManager>().AddItem(1);
+			FindObjectOfType<InventoryManager>().AddItem(1);
+			FindObjectOfType<InventoryManager>().AddItem(2);
 		}
 
 		superScript.updateTime(this.timeNow, this.day);

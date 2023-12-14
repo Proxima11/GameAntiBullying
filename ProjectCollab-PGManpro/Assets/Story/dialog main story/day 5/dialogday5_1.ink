@@ -1,21 +1,17 @@
 VAR player = "player"
 VAR David = "David"
-VAR Alvin = "Alvin"
-VAR Vin = "Vin"
-VAR Vid = "Vid"
-VAR jajan = "jajan"
 
 ->day5
 
 
 === day5 ===
-{player} berpikir apakah akan melaporkan kejadian kemarin ke guru #speaker:narrator #score: 0 #stress: 0
-Apakah aku perlu melaporkan {David} ke guru?#speaker:{player} #score: 0 #stress: 0
+{player} berpikir apakah akan melaporkan kejadian kemarin ke guru #speaker:narrator
+Apakah aku perlu melaporkan {David} ke guru?#speaker:{player}
 + [Tidak melaporkan kejadian kemarin ke guru]
-Ahh gak usah dilaporkan. Kalo aku laporin {David} nanti aku akan ketinggalan pelajaran.#speaker:{player} #score: 0 #stress: 0
+Ahh gak usah dilaporkan. Kalo aku laporin {David} nanti aku akan ketinggalan pelajaran.#speaker:{player}
 //setelah selesai tasknya
-{player} menjalani harinya seperti biasa. Lalu {player} kaget karena tiba-tiba {David} diskors oleh sekolah dan geng nya. Tanpa mengetahui apa-apa {player} pulang ke sekolah#speaker:narrator #score: 50 #stress: 10
+{player} menjalani harinya seperti biasa. Lalu {player} kaget karena tiba-tiba {David} diskors oleh sekolah dan geng nya. Tanpa mengetahui apa-apa {player} pulang ke sekolah#speaker:narrator
 -> DONE
 + [Laporkan kejadian kemarin ke guru]
-    Ku Laporkan saja lah {David}. Aku sudah enggak tahan sama kelakuannya mereka.#speaker:{player} #score: 100 #stress: 5
+    Ku Laporkan saja lah {David}. Aku sudah enggak tahan sama kelakuannya mereka.#speaker:{player}
 -> DONE

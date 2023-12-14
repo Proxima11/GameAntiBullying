@@ -1,23 +1,21 @@
 VAR player = "player"
 VAR David = "David"
-VAR Alvin = "Alvin"
-VAR Vin = "Vin"
 VAR Vid = "Vid"
-VAR jajan = "jajan"
+VAR Alvin = "Alvin"
 -> day1
 
 === day1 ===
-Haish, apa sih itu guru kok tiba-tiba nyuruh aku kenalin-kenalin gak jelas. {Alvin} sini kamu!!! Kamu aja yang kenalin sekolah ke {player} itu aku males. # speaker: {David} #score: 0 #stress: 0
+Haish, apa sih itu guru kok tiba-tiba nyuruh aku kenalin-kenalin gak jelas. {Alvin} sini kamu!!! Kamu aja yang kenalin sekolah ke {player} itu aku males. # speaker: {David}
 
-Loh tapi guru kan nyuruh kamu, {Vid}. # speaker: {Alvin} #score: 0 #stress: 0
+Loh tapi guru kan nyuruh kamu, {Vid}. # speaker: {Alvin}
 
-Loh ya mangkanya aku nyuruh kamu buat kenalin sekolah ke {player} itu, gak boleh tah ???  Apa kamu udah jadi orang penting gitu ya, sampai aku gak bisa nyuruh kamu ? # speaker: {David} #score: 0 #stress: 0
+Loh ya mangkanya aku nyuruh kamu buat kenalin sekolah ke {player} itu, gak boleh tah ???  Apa kamu udah jadi orang penting gitu ya, sampai aku gak bisa nyuruh kamu ? # speaker: {David}
 
-Loh enggak gitu tapi kan... # speaker: {Alvin} #score: 0 #stress: 0
+Loh enggak gitu tapi kan... # speaker: {Alvin}
 
-UDAH JANGAN BANYAK OMONG KAMU !!! Udah kamu cuma perlu dengerin perintah ku tok! # speaker: {David} #score: 0 #stress: 0
+UDAH JANGAN BANYAK OMONG KAMU !!! Udah kamu cuma perlu dengerin perintah ku tok! # speaker: {David}
 
-Sorry {Vid}, aku bakal kenalin sekolah ke {player} ini. # speaker: {Alvin} #score: 0 #stress: 0
+Sorry {Vid}, aku bakal kenalin sekolah ke {player} ini. # speaker: {Alvin}
 
-{Alvin} menghampiri {player} # speaker: narrator #score: 100 #stress: 10
+{Alvin} menghampiri {player} # speaker: narrator
 ->DONE

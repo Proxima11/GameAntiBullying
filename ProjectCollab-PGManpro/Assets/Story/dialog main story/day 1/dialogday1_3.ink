@@ -1,20 +1,17 @@
 VAR player = "player"
 VAR David = "David"
 VAR Alvin = "Alvin"
-VAR Vin = "Vin"
-VAR Vid = "Vid"
-VAR jajan = "jajan"
 -> day1
 
 === day1 ===
-Haloo {player}, aku {Alvin}. Nanti aku yang bakal kenalin sekolah ini ke kamu. # speaker: {Alvin} #score: 0 #stress: 0
+Haloo {player}, aku {Alvin}. Nanti aku yang bakal kenalin sekolah ini ke kamu. # speaker: {Alvin}
     + [Halo juga, {Alvin}. Makasih ya udah mau bantu aku.]
-        Okeii, kalo gitu langsung aja kita keliling sekolah ini. Ayo ikut aku. # speaker: {Alvin} #score: 100 #stress: 5
+        Okeii, kalo gitu langsung aja kita keliling sekolah ini. Ayo ikut aku. # speaker: {Alvin}
 
     + [Loh, bukannya guru nyuruh {David} tadi?]
-        {David} sibuk soalnya tadi, jadi aku gantiin {David} buat ngenalin sekolah ke kamu. # speaker: {Alvin} #score: 100 #stress: 10
-            Ohh gituu, okayy. # speaker: {player} #score: 0 #stress: 0
-                Okee, ayo ikut aku. # speaker: {Alvin} #score: 0 #stress: 0
+        {David} sibuk soalnya tadi, jadi aku gantiin {David} buat ngenalin sekolah ke kamu. # speaker: {Alvin}
+            Ohh gituu, okayy. # speaker: {player}
+                Okee, ayo ikut aku. # speaker: {Alvin}
 
--  Saat {Alvin} mengenalkan player lingkungan sekolah... # speaker: narrator #score: 0 #stress: 0
+-  Saat {Alvin} mengenalkan player lingkungan sekolah... # speaker: narrator
     -> END
