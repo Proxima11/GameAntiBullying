@@ -4330,11 +4330,11 @@ PrefabInstance:
     - target: {fileID: 832278916139164781, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: playerInteractBoy
       value: 
-      objectReference: {fileID: 3456312660204276771, guid: 083627ee651915448b7b7b243ee27734, type: 3}
+      objectReference: {fileID: 377417264}
     - target: {fileID: 832278916139164781, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: playerInteractGirl
       value: 
-      objectReference: {fileID: 8973296624060363950, guid: 04db19c2ba027294f91e418918d5266a, type: 3}
+      objectReference: {fileID: 1055569158}
     - target: {fileID: 2645235328583799749, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
