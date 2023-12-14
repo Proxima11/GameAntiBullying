@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     string SceneName;
-
+    [SerializeField] GameObject loadingScreen;
+ 
     public void changeScene(){
         GameVariable gameVariable = FindObjectOfType<GameVariable>();
         superScript.setVariable(gameVariable.score,gameVariable.stress, gameVariable.timeNow, gameVariable.day);
@@ -14,5 +15,6 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene(SceneName);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        
     }
 }
