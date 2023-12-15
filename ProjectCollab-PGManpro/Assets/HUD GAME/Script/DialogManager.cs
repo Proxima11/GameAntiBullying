@@ -202,9 +202,7 @@ public class DialogManager : MonoBehaviour
         
         if (NPCPrefab!=null && NPCPrefab.GetComponent<NavMeshAgent>() != null){
             NPCPrefab.GetComponent<NavMeshAgent>().isStopped = false;
-            animator.ResetTrigger("TrBreath");
-            animator.SetTrigger("TrWalk");
-            
+            animatorNPC.SetTrigger("TrWalk");
         }
 
         Inventory.SetActive(true);
