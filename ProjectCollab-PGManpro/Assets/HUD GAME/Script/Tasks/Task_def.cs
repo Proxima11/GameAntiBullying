@@ -15,5 +15,6 @@ public abstract class Task_def : MonoBehaviour
                 int jenisSnack = Random.Range(0, 4);
                 FindObjectOfType<InventoryManager>().AddItem(jenisSnack);
             }
+        FindObjectOfType<GameVariable>().score += 15;
     }
 }

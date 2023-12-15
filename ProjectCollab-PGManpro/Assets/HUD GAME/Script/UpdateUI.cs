@@ -15,7 +15,7 @@ public class UpdateUI : MonoBehaviour
 
     public GameObject taskCanvas;
     public GameObject inventory;
-
+    public GameObject gameOver;
 
     private bool task = false;
 
@@ -25,6 +25,56 @@ public class UpdateUI : MonoBehaviour
 
     void Start (){
         gameVariable = FindObjectOfType<GameVariable>();  
+    }
+
+    public Slider stressAkhir;
+
+    public void showGameOver(){
+        Time.timeScale = 0;
+        gameOver.SetActive(true);
+        GameObject isi = gameOver.transform.GetChild(0).gameObject;
+        
+        GameObject calculations = isi.transform.GetChild(2).gameObject;
+        
+        int f_score = gameVariable.score;
+        int f_task = gameVariable.getSumDone();
+        int f_stress = gameVariable.stress;
+
+        calculations.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "Score: " + f_score;
+        calculations.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "Tasks " + f_task + "/7";
+        stressAkhir.value = f_stress;
+        
+        bool status = (f_score > 0 && f_task > 4 && f_stress <50) ? true : false;
+
+        if (status) {
+            isi.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
+        } else {
+            isi.transform.GetChild(1).GetChild(1).gameObject.SetActive(true);
+        }
+
+        string notes = "";
+
+        if (f_score < 0){
+            notes+="Kamu kurang memperhatikan sekolah dan banyak bertindak buruk. Alangkah lebih baik jika dapat tetap memperhatikan sekolah dan memperbaiki sikap terhadap perundungan. ";
+        } else if (f_score <= 74) {
+            notes+="Kamu sudah berperilaku baik dalam perundungan, tapi dapat diperbaiki lagi untuk masalah sosial dan akademik agar dapat tetap fokus berkuliah dan tidak terjebak dalam perundungan. ";
+        } else {
+            notes+="Kamu telah berperilaku baik dan dapat menyelesaikan tugas-tugas dengan baik. Tetap pertahankan sifatmu dalam kehidupan agar dapat mengatasi perundungan. ";
+        }
+
+        if (f_stress >= 100) {
+            notes+="Namun, hati-hati kamu terlalu pasif dan lembek dalam perundungan. Hal ini dapat merugikan dirimu. Belajarlah berdiri untuk dirimu sendiri dan jangan takut untuk melawan perundungan. ";
+        } else if (f_stress > 65) {
+            notes+="Kamu juga telah menyeimbangkan persekolahan dan melawan kasus perundungan dengan baik. Namun, tetap hati-hati, tetap jaga diri dalam perundungan dan jangan takut untuk membela yang lemah atau dirimu sendiri agar kamu tidak tertekan. ";
+        } else {
+            notes+="Kamu telah menangani kasus perundungan dengan baik sehingga tidak tertekan. Tetap pertahankan hal tersebut, tapi tetap hati-hati agar kamu tidak terjerumus menjadi perundung juga. ";
+        }
+
+        if (f_task < 4){
+            notes+="Kamu kurang dapat fokus pada hal lain jika diberikan tugas. Berhati-hatilah dalam hal ini agar kamu tetap dapat menyeimbangkan hidup dalam persekolahan supaya tetap dapat bersekolah dengan baik. ";
+        } else {
+            notes+="Kamu telah menyelesaikan tugas-tugas dengan baik, dengan arti kamu dapat mengatur kehidupan persekolahan, serta kasus perundungan dengan seimbang. Pertahankan sifat ini dan tingkatkan agar makin sukses kedepannya. ";
+        }
     }
 
     void Update (){

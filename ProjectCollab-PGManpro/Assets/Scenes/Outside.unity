@@ -20899,6 +20899,18 @@ PrefabInstance:
       propertyPath: playerInteractGirl
       value: 
       objectReference: {fileID: 128970526}
+    - target: {fileID: 2602404235594318591, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602404235594318591, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2602404235594318591, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2645235328583799749, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20937,6 +20949,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2645235328583799749, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7406260095622932611, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8486617806490950014, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}

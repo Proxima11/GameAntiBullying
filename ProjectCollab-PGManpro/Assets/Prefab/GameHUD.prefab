@@ -513,7 +513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2306153111097574787}
   m_Layer: 0
-  m_Name: notes
+  m_Name: notes (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1008,7 +1008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5035000555018964301}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Button (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2761,7 +2761,7 @@ GameObject:
   - component: {fileID: 1565041607131395074}
   - component: {fileID: 1187672834495106569}
   m_Layer: 0
-  m_Name: Header
+  m_Name: Header (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4425,7 +4425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4581933259302495514}
   m_Layer: 0
-  m_Name: win/lose
+  m_Name: win/lose (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5760,8 +5760,11 @@ MonoBehaviour:
   score: {fileID: 3791682262963886492}
   time: {fileID: 1304182838716264654}
   day: {fileID: 1029709749876287967}
+  navigation: {fileID: 0}
   taskCanvas: {fileID: 93509548666195108}
   inventory: {fileID: 453279262995229910}
+  gameOver: {fileID: 3160439002065432754}
+  stressAkhir: {fileID: 1240886555539708539}
   scrollview: {fileID: 1760180371120062475}
   task_text: {fileID: 37872186472712800, guid: 04031bf3c956de74aab41b3beb062008, type: 3}
 --- !u!1 &7255454830473581770
@@ -6564,7 +6567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2031917799471570846}
   m_Layer: 0
-  m_Name: calculations
+  m_Name: calculations (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

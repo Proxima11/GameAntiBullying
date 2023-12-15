@@ -23,6 +23,17 @@ public class GameVariable : MonoBehaviour
         }else{
             stress = temp;
         }
+
+		if (stress <= 0) stress = 0;
+	}
+
+	public int getSumDone(){
+		int count = 0;
+		foreach (var node in superScript.Tasks){
+			if (node.done) count++;
+		}
+
+		return count;
 	}
 
 	public void AddPoint(int addPoint){
