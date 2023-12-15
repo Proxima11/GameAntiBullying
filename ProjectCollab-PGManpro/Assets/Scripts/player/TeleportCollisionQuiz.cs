@@ -34,8 +34,6 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
         currentSceneName = currentScene.name;
         StartCoroutine(LoadLevelAsync(SceneName)); 
         SceneManager.LoadScene(SceneName);
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
     }
     IEnumerator LoadLevelAsync(string leveltoload)
     {

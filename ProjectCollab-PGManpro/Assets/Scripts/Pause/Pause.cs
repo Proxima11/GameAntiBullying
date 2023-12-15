@@ -7,7 +7,7 @@ using StarterAssets;
 public class Pause : MonoBehaviour
 {
     [SerializeField] GameObject canvasPause;
-    bool isPaused = false;
+    public static bool isPaused = false;
 
     // Update is called once per frame
     void Update()
@@ -42,6 +42,7 @@ public class Pause : MonoBehaviour
             Time.timeScale = 1;
             canvasPause.SetActive(false);
             FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
+            Cursor.visible = false;
     }
 
     public void QuitGame()

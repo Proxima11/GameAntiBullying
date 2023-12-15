@@ -41,6 +41,7 @@ public class Soal : MonoBehaviour
     void Start()
     {
         gameVariable = FindObjectOfType<GameVariable>();
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
         txtScore.text = "Score : " + superScript.score;
         panel.SetActive(false);

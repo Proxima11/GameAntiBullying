@@ -13,8 +13,6 @@ public class ChangeScene : MonoBehaviour
         superScript.setVariable(gameVariable.score,gameVariable.stress, gameVariable.timeNow, gameVariable.day);
         SceneName = TeleportCollisionQuiz.currentSceneName;
         SceneManager.LoadScene(SceneName);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         
     }
 }
