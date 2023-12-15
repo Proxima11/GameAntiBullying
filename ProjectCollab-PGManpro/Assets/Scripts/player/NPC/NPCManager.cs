@@ -54,8 +54,8 @@ public class NPCManager : MonoBehaviour
         risma = Resources.Load<GameObject>("Risma");
 
         listSpawn = FindObjectOfType<NPCSpawner>().spawns;
-        // superScript.indexDialog = 10;
-        // superScript.day = 5;
+        superScript.indexDialog = 10;
+        superScript.day = 3;
 
 
     }
@@ -498,6 +498,13 @@ public class NPCManager : MonoBehaviour
         {
             dialogStatus = "day3_3";
             changeScene("Outside");
+
+            addSpawn(david, new Vector3(46.106f, -0.08009219f, -0.072f), new Vector3(0f, 90f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addNPC("David");
+                addSpawn(tino, new Vector3(46.646f, -0.08009219f, 0.748f), new Vector3(0f, 110f, 0f), new Vector3(1f, 1f, 1f), "Tino");
+                addNPC("Tino");
+                addSpawn(doni, new Vector3(46.66788f, -0.08009219f, -0.7924929f), new Vector3(0f, 60f, 0f), new Vector3(1f, 1f, 1f), "Doni");
+                addNPC("Doni");
 
             if (superScript.boy)
             {
