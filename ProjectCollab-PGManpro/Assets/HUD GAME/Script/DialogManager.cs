@@ -45,6 +45,7 @@ public class DialogManager : MonoBehaviour
     public GameObject taskbutton;
     public GameObject Inventory;
     public GameObject NPCPrefab;
+    public GameObject navigation;
     public Animator animatorNPC;
     public GameObject buttonF = null;
     public GameObject buttonEsc = null;
@@ -63,6 +64,7 @@ public class DialogManager : MonoBehaviour
         }
         buttonF = GameObject.Find("PlayerInteractUI");
         buttonEsc = GameObject.Find("CanvasPause");
+        navigation = GameObject.Find("Navigation");
     }
 
     void Update(){
@@ -122,6 +124,7 @@ public class DialogManager : MonoBehaviour
             if (isDialogBlackscreen){
                 animatorBlackScreen.SetBool("isStart", true);
                 taskbutton.SetActive(false);
+                navigation.SetActive(false);
                 //settingbutton.SetActive(false);
 
                 blackScreenText.SetText(currentTextRunning);
@@ -292,6 +295,7 @@ public class DialogManager : MonoBehaviour
         taskbutton.SetActive(true);
         //settingbutton.SetActive(true);
         blackscreenCount = 0;
+        navigation.SetActive(true);
         continueStory();
     }
 }
