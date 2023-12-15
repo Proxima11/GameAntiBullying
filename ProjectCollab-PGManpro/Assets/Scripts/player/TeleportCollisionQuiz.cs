@@ -70,7 +70,7 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
             if (superScript.Tasks.Any(x => x is ips)){
             if (!done_kenalan){
                 foreach (var e in superScript.Tasks){
-                    if (string.Equals(e.id, "a_ips")){
+                    if (string.Equals(e.id, "a_ipa")){
                         e.task();
                         done_kenalan=true;
                         break;

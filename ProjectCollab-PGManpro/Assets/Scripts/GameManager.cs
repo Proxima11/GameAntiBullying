@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 //using StarterAssets;
 
 // #if ENABLE_INPUT_SYSTEM 
@@ -190,7 +191,80 @@ public class GameManager : MonoBehaviour
             //AudioSource.Play();
             FindObjectOfType<GameVariable>().bell_time = false;
         }
+
+        Scene currentScene = SceneManager.GetActiveScene ();
+
+		string sceneName = currentScene.name;
+
+        if (!sudahkunjung_1) {
+            if (string.Equals(sceneName, "kelas 1")){
+                    if (superScript.Tasks.Any(x => x is kunjungi)){
+                  
+                        foreach (var e in superScript.Tasks){
+                            if (string.Equals(e.id, "c_kunjungi")){
+                                e.task();
+                                sudahkunjung_1=true;
+                                break;
+                            }
+                        }
+                    
+                }
+            }
+        } 
+
+        if (!sudahkunjung_2) {
+            if (string.Equals(sceneName, "kelas 2")){
+                    if (superScript.Tasks.Any(x => x is kunjungi)){
+                  
+                        foreach (var e in superScript.Tasks){
+                            if (string.Equals(e.id, "c_kunjungi")){
+                                e.task();
+                                sudahkunjung_2=true;
+                                break;
+                            }
+                        }
+                    
+                }
+            }
+        } 
+
+        if (!sudahkunjung_3) {
+            if (string.Equals(sceneName, "kelas 3")){
+                    if (superScript.Tasks.Any(x => x is kunjungi)){
+                  
+                        foreach (var e in superScript.Tasks){
+                            if (string.Equals(e.id, "c_kunjungi")){
+                                e.task();
+                                sudahkunjung_3=true;
+                                break;
+                            }
+                        }
+                    
+                }
+            }
+        } 
+
+        if (!sudahkunjung_4) {
+            if (string.Equals(sceneName, "kelas 4")){
+                    if (superScript.Tasks.Any(x => x is kunjungi)){
+                  
+                        foreach (var e in superScript.Tasks){
+                            if (string.Equals(e.id, "c_kunjungi")){
+                                e.task();
+                                sudahkunjung_4=true;
+                                break;
+                            }
+                        }
+                    
+                }
+            }
+        } 
     }
+
+    private bool sudahkunjung_1 = false;
+    private bool sudahkunjung_2 = false;
+    private bool sudahkunjung_3 = false;
+    private bool sudahkunjung_4 = false;
     public static Vector3 PlayerPos { get => playerPos; set => playerPos = value; }
 
     public void starterTask(){
