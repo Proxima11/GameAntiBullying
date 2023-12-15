@@ -88,7 +88,6 @@ public class DialogManager : MonoBehaviour
         FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
 
         currentStory = new Story(inkJSON.text);
-        superScript.username = "kristoper";
         if (!superScript.boy){
             setInkVariable("David", "Devi");
             setInkVariable("Alvin", "Vina");
