@@ -25,6 +25,7 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     public StoryData[] story;
     public GameObject this_npc;
     private bool isStoryExist;
+    public bool isDialogOnlyOnce = false;
     Transform tr;
 
 
@@ -149,7 +150,6 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     private StoryData SearchStory(string title){
         isStoryExist = false;
         foreach(StoryData storyRunning in story){
-            Debug.Log(storyRunning.title + " = " + title);
             if(storyRunning.title == title){
                 isStoryExist = true;
                 return storyRunning;

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class superScript : MonoBehaviour
 {
     static public bool boy = false;
-    static public string username;
+    static public string username = "player";
     static public float passiveAggresive = 0.5f;
     static public float shyConfidence = 0.5f;
     static public float nerdCool = 0.5f;
@@ -42,6 +42,8 @@ public class superScript : MonoBehaviour
     static public int indexDialog = 0;
     static public List<Item> itemOnwed = new List<Item>();
     static public List<int> itemIndex = new List<int>();
+
+    static public List<string> removedNPC = new List<string>();
 
     static public void setVariable (int inputScore, int inputStress, float inputTime, int inputDay){
         score = inputScore;

@@ -39,6 +39,8 @@ public class DialogManager : MonoBehaviour
     private const string BLACKSCREEN_TAG = "blackscreen";
     private const string SCORE_TAG = "score";
     private const string STRESS_TAG = "stress";
+    private const string ITEM_TAG = "item";
+
 
     private int  blackscreenCount = 0;
 
@@ -96,6 +98,7 @@ public class DialogManager : MonoBehaviour
             setInkVariable("Vid", "Vi");
             setInkVariable("Vin", "Na");
         }
+        superScript.username = "Alvin";
         currentStory.variablesState["player"] = superScript.username;
         nameText.SetText("xxx");
 
@@ -179,6 +182,18 @@ public class DialogManager : MonoBehaviour
                 case BLACKSCREEN_TAG:
                     blackscreenCount = int.Parse(tagValue);
                     break;
+                case ITEM_TAG:
+                    InventoryManager inventory = FindObjectOfType<InventoryManager>();
+
+                    if(tagValue == "1"){
+                        int index = Random.Range(0, inventory.items.Count);
+                        inventory.AddItem(index);
+                    }else if(tagValue == "-1"){
+                        inventory.RemoveItem(0);
+                    }
+
+                    break;
+
             }
         }
     }
@@ -212,6 +227,13 @@ public class DialogManager : MonoBehaviour
             animatorNPC.SetTrigger("TrWalk");
         }
 
+        if (NPCPrefab!=null && NPCPrefab.GetComponent<NPCInteracted>()!= null){
+            if(NPCPrefab.GetComponent<NPCInteracted>().isDialogOnlyOnce){
+                string name = NPCPrefab.GetComponent<NPCInteracted>().NPCName;
+                superScript.removedNPC.Add(name);
+            }
+        }
+
         Inventory.SetActive(true);
         taskbutton.SetActive(true);
         FindObjectOfType<StarterAssetsInputs>().inDialogue = false;
@@ -225,6 +247,7 @@ public class DialogManager : MonoBehaviour
         if (currentStoryName != "Default"){
             superScript.indexDialog = superScript.indexDialog + 1;
         }
+
     }
 
     public void displayChoices(){

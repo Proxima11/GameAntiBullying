@@ -29,11 +29,13 @@ public class NPCManager : MonoBehaviour
     GameObject friska;
     GameObject risma;
     public bool randomEvent = false;
+
+    private string sceneNowName;
     void Start()
     {
         questMark = Resources.Load<GameObject>("QuestMark");
         guru = Resources.Load<GameObject>("Guru");
-        kevin = Resources.Load<GameObject>("Murid Culun");
+        kevin = Resources.Load<GameObject>("Kevin");
         girl = Resources.Load<GameObject>("Girl_FBX1");
         david = Resources.Load<GameObject>("David");
         devi = Resources.Load<GameObject>("Devi");
@@ -1046,23 +1048,15 @@ public class NPCManager : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Lorong")
         {
-            // Debug.Log(randomEvent);
             changeScene("Lorong");
-            addSpawn(kevin, new Vector3(90.98f, 0.05885804f, -14.22f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Kevin");
-            addNPC("Kevin");
-            if (randomEvent == false && superScript.day == 1){
-                addSpawn(kevin, new Vector3(58.445f, 0.05885804f, 4.902f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Kevin");
+            if (!superScript.removedNPC.Contains("Kevin")){
+                addSpawn(kevin, new Vector3(90.98f, 0.05885804f, -14.22f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Kevin");
                 addNPC("Kevin");
-                addSpawn(jessica, new Vector3(58.445f, 0.08039999f, 4.902f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "Jessica");
-                addNPC("Jessica");
-                addSpawn(siska, new Vector3(58.53472f, -0.005f, 2.831273f), new Vector3(0f, 355.488f, 0f), new Vector3(1f, 1f, 1f), "Siska");
-                addNPC("Siska");
-                addSpawn(vero, new Vector3(59.30309f, -0.274f, 3.964572f), new Vector3(0f, 272.132f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Vero");
-                addNPC("Vero");
-                //FindObjectOfType<GameVariable>().TakeStress(10);
-                randomEvent = true;
-                // Debug.Log(randomEvent);
+            }else{
+                removeNPC("Kevin");
             }
+
+            
         }
         else if (SceneManager.GetActiveScene().name == "Toilet Pria lt 1")
         {
@@ -1123,6 +1117,7 @@ public class NPCManager : MonoBehaviour
 
     public void changeScene(string name){
         FindObjectOfType<NPCSpawner>().sceneName = name;
+        sceneNowName = name;
     }   
 
     public void addSpawn(GameObject prefab, Vector3 position, Vector3 rotation, Vector3 scale, string name){
@@ -1135,8 +1130,10 @@ public class NPCManager : MonoBehaviour
         }
 
         if(!isExist){
-            Spawn spawn = new Spawn(prefab, position,rotation, scale, name);
-            listSpawn.Add(spawn);
+            if(sceneNowName == SceneManager.GetActiveScene().name){
+                Spawn spawn = new Spawn(prefab, position,rotation, scale, name);
+                listSpawn.Add(spawn);
+            }
         }
     }
 }
