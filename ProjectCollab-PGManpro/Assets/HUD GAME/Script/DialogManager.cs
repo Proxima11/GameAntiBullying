@@ -124,6 +124,7 @@ public class DialogManager : MonoBehaviour
                 animatorBlackScreen.SetBool("isStart", true);
                 taskbutton.SetActive(false);
                 navigation.SetActive(false);
+                if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(false); }
                 //settingbutton.SetActive(false);
 
                 blackScreenText.SetText(currentTextRunning);
@@ -295,6 +296,7 @@ public class DialogManager : MonoBehaviour
         //settingbutton.SetActive(true);
         blackscreenCount = 0;
         navigation.SetActive(true);
+        if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(true); }
         continueStory();
     }
 }

@@ -149,6 +149,7 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     private StoryData SearchStory(string title){
         isStoryExist = false;
         foreach(StoryData storyRunning in story){
+            Debug.Log(storyRunning.title + " = " + title);
             if(storyRunning.title == title){
                 isStoryExist = true;
                 return storyRunning;
