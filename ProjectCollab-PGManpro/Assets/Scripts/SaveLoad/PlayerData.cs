@@ -23,6 +23,7 @@ public class PlayerData
     public List<int> coolTask;
 
     public List<int> items;
+    public List<string> removedNPC;
 
     
     public PlayerData (GameVariable gameVariable, Vector3 playerPosition) 

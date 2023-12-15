@@ -62,6 +62,7 @@ public class superScript : MonoBehaviour
         choices = new List<string>();
         idx_acaTasks = new List<int>();
         idx_coolTasks = new List<int>();
+        removedNPC = new List<string>();
     }
 
     // Start is called before the first frame update

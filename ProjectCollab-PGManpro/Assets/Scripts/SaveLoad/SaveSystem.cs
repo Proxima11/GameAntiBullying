@@ -30,6 +30,7 @@ public class SaveSystem : MonoBehaviour
         data.acaTask = superScript.idx_acaTasks;
         data.coolTask = superScript.idx_coolTasks;
         data.items = superScript.itemIndex;
+        data.removedNPC = superScript.removedNPC;
 
         formatter.Serialize(stream, data);
         stream.Close();
@@ -56,6 +57,7 @@ public class SaveSystem : MonoBehaviour
             superScript.idx_acaTasks = data.acaTask;
             superScript.idx_coolTasks = data.coolTask;
             superScript.itemIndex = data.items;
+            superScript.removedNPC = data.removedNPC;
 
             superScript.setVariable(data.score, data.stress, data.time, data.day);
 
@@ -65,8 +67,8 @@ public class SaveSystem : MonoBehaviour
         } 
         else
         {
-            Debug.LogError("Save file not found in " + path);
-
+            Debug.LogError("Save Is not Found");
+            superScript.resetVariable();
         }
     }
 }
