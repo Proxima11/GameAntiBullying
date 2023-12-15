@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using StarterAssets;
+using UnityEngine.SceneManagement;
 
 public class UpdateUI : MonoBehaviour
 {
@@ -75,6 +76,10 @@ public class UpdateUI : MonoBehaviour
         } else {
             notes+="Kamu telah menyelesaikan tugas-tugas dengan baik, dengan arti kamu dapat mengatur kehidupan persekolahan, serta kasus perundungan dengan seimbang. Pertahankan sifat ini dan tingkatkan agar makin sukses kedepannya. ";
         }
+    }
+
+    public void backtoMenu(){
+        SceneManager.LoadScene("Menu");
     }
 
     void Update (){
