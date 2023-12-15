@@ -72,6 +72,12 @@ public class GameVariable : MonoBehaviour
 		timeNow = superScript.time;
 		day = superScript.day;
 	}
+
+	private bool isLose(){
+		if (stress >= 50) return true;
+		if (score < 0) return true;
+		return false;
+	}
 	
 	private void Update() {
 		if (Input.GetKeyUp(KeyCode.G)){
@@ -91,6 +97,8 @@ public class GameVariable : MonoBehaviour
 		if(minute == 4 && second == 1 ||  minute == 9 && second == 1) {
 			bell_time = true;
 		}
+
+		if (isLose()) FindObjectOfType<UpdateUI>().showGameOver();
 
 		// Debug.Log("Stress = " + stress.ToString());
 		// Debug.Log("Point = " + score.ToString());
