@@ -222,6 +222,9 @@ public class NPCManager : MonoBehaviour
                 FindObjectOfType<DialogManager>().spawn = false;
             }
             dialogStatus = "dialogday1_4";
+
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO LORONG");
+
             changeScene("Lorong");
             if (superScript.boy)
             {
@@ -249,8 +252,10 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
+        
         else if (dialog[index] == "Day 2 part 1 " & superScript.day < 2)
         {
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO LORONG");
             changeScene("Lorong");
             removeNPC("Alvin");
             removeNPC("Vina");
@@ -267,6 +272,7 @@ public class NPCManager : MonoBehaviour
             }
             dialogStatus = "dialogday2_1";
 
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO LORONG");
             changeScene("Lorong");
             if (superScript.boy)
             {
@@ -309,6 +315,7 @@ public class NPCManager : MonoBehaviour
 
             if (superScript.boy)
             {
+                FindObjectOfType<UpdateUI>().navigation.SetText("GO TO TOILET PRIA LT 1");
                 changeScene("Toilet Pria lt 1");
                 addSpawn(david, new Vector3(46.106f, -0.08009219f, -0.072f), new Vector3(0f, 90f, 0f), new Vector3(1f, 1f, 1f), "David");
                 addNPC("David");
@@ -335,6 +342,7 @@ public class NPCManager : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<UpdateUI>().navigation.SetText("GO TO TOILET WANITA LT 1");
                 changeScene("Toilet Wanita lt 1");
                 addSpawn(devi, new Vector3(37.075f, -0.40009148f, 1.222f), new Vector3(0f, 90f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
@@ -365,6 +373,7 @@ public class NPCManager : MonoBehaviour
         {
             if (superScript.boy)
             {
+                FindObjectOfType<UpdateUI>().navigation.SetText("GO TO TOILET PRIA LT 1");
                 changeScene("Toilet Pria lt 1");
                 removeNPC("David");
                 removeNPC("Tino");
@@ -373,6 +382,7 @@ public class NPCManager : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<UpdateUI>().navigation.SetText("GO TO TOILET WANITA LT 1");
                 changeScene("Toilet Wanita lt 1");
                 removeNPC("Devi");
                 removeNPC("Vero");
@@ -384,6 +394,7 @@ public class NPCManager : MonoBehaviour
         else if (dialog[index] == "Day 3 part 1 " & superScript.day >= 3)
         {
             dialogStatus = "day3_1";
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO LORONG");
             changeScene("Lorong");
 
             if (superScript.boy)
@@ -440,6 +451,7 @@ public class NPCManager : MonoBehaviour
         else if (dialog[index] == "Day 3 part 2 " & superScript.day >= 3)
         {
             dialogStatus = "day3_2";
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO LORONG");
             changeScene("Lorong");
 
             if (superScript.boy)
@@ -495,6 +507,7 @@ public class NPCManager : MonoBehaviour
         else if (dialog[index] == "Day 3 part 3 " & superScript.day >= 3)
         {
             dialogStatus = "day3_3";
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO OUTSIDE");
             changeScene("Outside");
 
             if (superScript.boy)
@@ -542,6 +555,7 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 4 " & superScript.day < 4)
         {
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO OUTSIDE");
             changeScene("Outside");
             if (superScript.boy)
             {
@@ -558,6 +572,7 @@ public class NPCManager : MonoBehaviour
         else if (dialog[index] == "Day 4 " & superScript.day >= 4)
         {
             dialogStatus = "dialogday4";
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO OUTSIDE");
             changeScene("Outside");
 
             if (superScript.boy)
@@ -608,6 +623,7 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 5 part 1 " & superScript.day < 5)
         {
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO OUTSIDE");
             changeScene("Outside");
             if (superScript.boy)
             {
@@ -648,6 +664,7 @@ public class NPCManager : MonoBehaviour
                     FindObjectOfType<DialogManager>().spawn = false;
                 }
             }
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO KELAS 4");
             dialogStatus = "dialogday5_1";
             changeScene("kelas 4");
 
@@ -679,6 +696,7 @@ public class NPCManager : MonoBehaviour
                 return;
             }
 
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO KELAS 4");
             dialogStatus = "dialogday5_1_1";
             changeScene("kelas 4");
             if (FindObjectOfType<DialogManager>().spawn)
@@ -714,6 +732,7 @@ public class NPCManager : MonoBehaviour
                 removeNPC("QuestMark");
                 FindObjectOfType<DialogManager>().spawn = false;
             }
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO KELAS 4");
             dialogStatus = "dialogday5_1_2";
             changeScene("kelas 4");
             addSpawn(guru, new Vector3(-7.53f, -0.405f, -12.9f), new Vector3(0f, 90f, 0f), new Vector3(1.5f, 1.5f, 1.5f), "Guru");
@@ -747,7 +766,7 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 5 part 1_3 " & superScript.day >= 5)
         {
-
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO KELAS 4");
             dialogStatus = "dialogday5_1_3";
             changeScene("kelas 4");
 
@@ -802,6 +821,7 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 5 part 1_4 " & superScript.day >= 5)
         {
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO KELAS 4");
             removeNPC("Guru");
             dialogStatus = "dialogday5_1_4";
             changeScene("kelas 4");
@@ -850,6 +870,7 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "End" & superScript.day == 5)
         {
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO KELAS 4");
             Debug.Log("masuk");
             changeScene("kelas 4");
             dialogStatus = "end";
@@ -883,6 +904,7 @@ public class NPCManager : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<UpdateUI>().navigation.SetText("");
             removeNPC("QuestMark");
         }
 
