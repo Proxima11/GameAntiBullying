@@ -11,12 +11,17 @@ public class UpdateUI : MonoBehaviour
     public TMP_Text score;
     public TMP_Text time;
     public TMP_Text day;
+    public TMP_Text navigation;
+
     public GameObject taskCanvas;
     public GameObject inventory;
+
 
     private bool task = false;
 
     GameVariable gameVariable;
+
+
 
     void Start (){
         gameVariable = FindObjectOfType<GameVariable>();  

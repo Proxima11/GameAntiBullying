@@ -29,8 +29,6 @@ public class NPCManager : MonoBehaviour
     GameObject friska;
     GameObject risma;
     public bool randomEvent = false;
-
-
     void Start()
     {
         questMark = Resources.Load<GameObject>("QuestMark");
@@ -56,8 +54,6 @@ public class NPCManager : MonoBehaviour
         listSpawn = FindObjectOfType<NPCSpawner>().spawns;
         // superScript.indexDialog = 10;
         // superScript.day = 3;
-
-
     }
 
     // Update is called once per frame
@@ -70,6 +66,8 @@ public class NPCManager : MonoBehaviour
         //main story
         if (dialog[index] == "Day 1 part 1" & superScript.day >= 1)
         {
+            FindObjectOfType<UpdateUI>().navigation.SetText("GO TO CLASS 1");
+
             if (FindObjectOfType<DialogManager>().spawn)
             {
                 removeNPC("QuestMark");
