@@ -18,8 +18,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject Task_Object;
     private List<Task_def> coolTasks = new List<Task_def>();
     private List<Task_def> acaTasks = new List<Task_def>();
+    public AudioSource audioSource;
+    public AudioClip audio_bell;
+
 
     void Start(){
+        audioSource = GetComponent<AudioSource>();
         FindObjectOfType<gender>().chooseGender();
         player = GameObject.FindWithTag("Player");
         Debug.Log(player);
@@ -180,6 +184,12 @@ public class GameManager : MonoBehaviour
 
     void Update(){
         // Debug.Log(superScript.time);
+        if (FindObjectOfType<GameVariable>().bell_time == true && FindObjectOfType<GameVariable>().minute == 4 && FindObjectOfType<GameVariable>().second == 1 || FindObjectOfType<GameVariable>().bell_time == true && FindObjectOfType<GameVariable>().minute == 9 && FindObjectOfType<GameVariable>().second == 1)
+        {
+            audioSource.Play();
+            //AudioSource.Play();
+            FindObjectOfType<GameVariable>().bell_time = false;
+        }
     }
     public static Vector3 PlayerPos { get => playerPos; set => playerPos = value; }
 

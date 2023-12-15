@@ -10837,9 +10837,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1868147092286799413, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
+      propertyPath: audio_bell
+      value: 
+      objectReference: {fileID: 8300000, guid: b89b78fb96e56ea43a8382108318be11, type: 3}
+    - target: {fileID: 1868147092286799413, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
       propertyPath: Task_Object
       value: 
       objectReference: {fileID: 6092902923848353034}
+    - target: {fileID: 1868147092286799413, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2085147296}
     - target: {fileID: 4032703753897395503, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
       propertyPath: animator
       value: 
@@ -10900,6 +10908,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5998429960629188814, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998429960629188814, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 600e54ea839d20a46a3e627ed83d3d62, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -87989,6 +88005,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4168140838661730, guid: 62b11dd993aa50e42a0890a734908161, type: 3}
   m_PrefabInstance: {fileID: 2085102627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2085147296 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5998429960629188814, guid: 35317c84795a6964cb7db4532bd473f1, type: 3}
+  m_PrefabInstance: {fileID: 590556768}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2095921210
 PrefabInstance:
