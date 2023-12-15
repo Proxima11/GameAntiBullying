@@ -20,7 +20,7 @@ public class PatrolState : BaseState
 
     public void PatrolCycle(Animator anim, float wait)
     {
-        if (npc.Agent.remainingDistance < 0.2f)
+        if (npc.Agent.remainingDistance < 0.1f)
         {
             anim.SetTrigger("TrBreath");
             waitTimer += Time.deltaTime;
