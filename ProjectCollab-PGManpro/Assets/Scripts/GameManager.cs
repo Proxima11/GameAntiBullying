@@ -188,7 +188,7 @@ public class GameManager : MonoBehaviour
 
     void Update(){
         // Debug.Log(superScript.time);
-        if (FindObjectOfType<GameVariable>().bell_time == true && FindObjectOfType<GameVariable>().minute == 4 && FindObjectOfType<GameVariable>().second == 1 || FindObjectOfType<GameVariable>().bell_time == true && FindObjectOfType<GameVariable>().minute == 9 && FindObjectOfType<GameVariable>().second == 1)
+        if (FindObjectOfType<GameVariable>().minute == 4 && FindObjectOfType<GameVariable>().second == 0 || FindObjectOfType<GameVariable>().bell_time == true && FindObjectOfType<GameVariable>().minute == 9 && FindObjectOfType<GameVariable>().second == 1)
         {
             audioSource.Play();
             //AudioSource.Play();
@@ -200,24 +200,28 @@ public class GameManager : MonoBehaviour
 
 		string sceneName = currentScene.name;
 
-        if(FindObjectOfType<GameVariable>().minute == 1 && FindObjectOfType<GameVariable>().second == 0 || FindObjectOfType<GameVariable>().minute == 10 && FindObjectOfType<GameVariable>().second == 0)
+        if(FindObjectOfType<GameVariable>().minute == 0 && FindObjectOfType<GameVariable>().second == 10)
         {
-            classTriggered = true;
+            superScript.isNeedStudying = true;
+            FindObjectOfType<GameVariable>().timeNow += 1;
         }
 
-        if(classTriggered == true && (sceneName == "kelas 1" || sceneName == "kelas 2" || sceneName == "kelas 3" || sceneName == "kelas 4"))
+        if(superScript.isNeedStudying == true && (sceneName == "kelas 1" || sceneName == "kelas 2" || sceneName == "kelas 3" || sceneName == "kelas 4"))
         {
-            FindObjectOfType<GameVariable>().AddPoint(50);
-            FindObjectOfType<GameVariable>().TakeStress(5);
+            
+            GameVariable gameVariable = FindObjectOfType<GameVariable>();
+            gameVariable.AddPoint(50);
+            gameVariable.TakeStress(5);
+            //FindObjectOfType<GameVariable>().TakeStress(5);
             FindObjectOfType<DialogManager>().startPelajaran();
             counter = -1;
-            classTriggered = false;
+            superScript.isNeedStudying = false;
         }
-        else if(classTriggered == true && (sceneName != "kelas 1" || sceneName != "kelas 2" || sceneName != "kelas 3" || sceneName != "kelas 4"))
+        else if(superScript.isNeedStudying == true && (sceneName != "kelas 1" || sceneName != "kelas 2" || sceneName != "kelas 3" || sceneName != "kelas 4"))
         {
             if(counter != FindObjectOfType<GameVariable>().second)
             {
-                FindObjectOfType<GameVariable>().score = FindObjectOfType<GameVariable>().score - 1;
+                FindObjectOfType<GameVariable>().AddPoint(-1);
                 counter = FindObjectOfType<GameVariable>().second;
             }
         }

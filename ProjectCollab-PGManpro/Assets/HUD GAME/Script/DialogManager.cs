@@ -323,19 +323,27 @@ public class DialogManager : MonoBehaviour
         continueStory();
     }
 
+    public IEnumerator closeBlackScreenPelajaran()
+    {
+        yield return new WaitForSeconds(blackscreenCount);
+        animatorBlackScreen.SetBool("isStart", false);
+        isDialogBlackscreen = false;
+        taskbutton.SetActive(true);
+        //settingbutton.SetActive(true);
+        blackscreenCount = 0;
+        navigation.SetActive(true);
+        if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(true); }
+    }
+
     public void startPelajaran()
     {
         animatorBlackScreen.SetBool("isStart", true);
-        blackScreenText.SetText("Pelajaran Dimulai");
-        blackscreenCount = 3;
+        blackScreenText.SetText("Kamu sedang belajar di kelas");
+        blackscreenCount = 4;
         taskbutton.SetActive(false);
         navigation.SetActive(false);
         if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(false); }
-        if (displayLineCoroutine != null)
-        {
-            StopCoroutine(displayLineCoroutine);
-        }
-        StartCoroutine(TypeSentences("Pelajaran Dimulai"));
-        StartCoroutine(closeBlackScreen());
+        
+        StartCoroutine(closeBlackScreenPelajaran());
     }
 }

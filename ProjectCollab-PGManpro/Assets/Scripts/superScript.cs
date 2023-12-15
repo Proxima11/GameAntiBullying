@@ -10,8 +10,9 @@ public class superScript : MonoBehaviour
     static public float passiveAggresive = 0.5f;
     static public float shyConfidence = 0.5f;
     static public float nerdCool = 0.5f;
-    
+
     //Game Variable
+    static public bool isNeedStudying = false;
     static public int score = 0;
     static public int stress = 0;
 	static public float time = 0;
@@ -58,6 +59,7 @@ public class superScript : MonoBehaviour
         time = 0;
         day = 1;
         indexDialog = 0;
+        isNeedStudying = false;
         itemOnwed = new List<Item>();
         choices = new List<string>();
         idx_acaTasks = new List<int>();
