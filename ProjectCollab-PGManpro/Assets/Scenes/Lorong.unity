@@ -6702,7 +6702,7 @@ PrefabInstance:
     - target: {fileID: 1799839282048248075, guid: bdea3e52e847ec04cb6879a9fff5b8b1, type: 3}
       propertyPath: path
       value: 
-      objectReference: {fileID: 2792214934832928607, guid: 774b935e632a75741aef2e92ec5adc94, type: 3}
+      objectReference: {fileID: 8854220791527789531}
     - target: {fileID: 1799839282048248075, guid: bdea3e52e847ec04cb6879a9fff5b8b1, type: 3}
       propertyPath: currentState
       value: 8
@@ -89505,6 +89505,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2232660198132764111, guid: 4846f33100b083b48b1060cda18a7ec1, type: 3}
   m_PrefabInstance: {fileID: 6092902923848353033}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8854220791527789531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2792214934832928607, guid: 774b935e632a75741aef2e92ec5adc94, type: 3}
+  m_PrefabInstance: {fileID: 4306591689720641092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8437e5bb37027348a51b177fa799b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
