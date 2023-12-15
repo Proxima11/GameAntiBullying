@@ -82,7 +82,6 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialogInk(TextAsset inkJSON){
         isDialogRunning = true;
-        animator.SetBool("isOpen", true);
         Inventory.SetActive(false);
         taskbutton.SetActive(false);
         FindObjectOfType<StarterAssetsInputs>().inDialogue = true;
@@ -159,6 +158,7 @@ public class DialogManager : MonoBehaviour
                         isDialogBlackscreen = true;
                         
                     }else {
+                        animator.SetBool("isOpen", true);
                         nameText.SetText(tagValue);
                     }
                     break;
@@ -200,16 +200,11 @@ public class DialogManager : MonoBehaviour
     public void EndDialouge(){
         animator.SetBool("isOpen", false);
         
-        if (currentStoryName != "Default"){
-            superScript.indexDialog = superScript.indexDialog + 1;
-
-        }
-
-        
         if (NPCPrefab!=null && NPCPrefab.GetComponent<NavMeshAgent>() != null){
             NPCPrefab.GetComponent<NavMeshAgent>().isStopped = false;
             animator.ResetTrigger("TrBreath");
             animator.SetTrigger("TrWalk");
+            
         }
 
         Inventory.SetActive(true);
@@ -220,6 +215,11 @@ public class DialogManager : MonoBehaviour
         spawn = true;
         buttonF.SetActive(true);
         //buttonEsc.SetActive(true);
+        Debug.Log("Tutup Dialog");
+                
+        if (currentStoryName != "Default"){
+            superScript.indexDialog = superScript.indexDialog + 1;
+        }
     }
 
     public void displayChoices(){
@@ -257,7 +257,9 @@ public class DialogManager : MonoBehaviour
 
     public void MakeChoices(int choiceIndex){
         if (canContinueToNextLine){
-            superScript.choices.Add(currentStory.currentChoices[choiceIndex].text);
+            if (currentStoryName != "Default"){
+                superScript.choices.Add(currentStory.currentChoices[choiceIndex].text);
+            }
             currentStory.ChooseChoiceIndex(choiceIndex);
 
             hideChoices();

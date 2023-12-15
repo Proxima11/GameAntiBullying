@@ -54,6 +54,10 @@ public class NPCManager : MonoBehaviour
         risma = Resources.Load<GameObject>("Risma");
 
         listSpawn = FindObjectOfType<NPCSpawner>().spawns;
+        // superScript.indexDialog = 10;
+        // superScript.day = 5;
+
+
     }
 
     // Update is called once per frame
@@ -61,7 +65,7 @@ public class NPCManager : MonoBehaviour
     {
         string[] dialog =  superScript.dialogProgress;
         int index =  superScript.indexDialog;
-        // Debug.Log(index);
+        // Debug.Log(dialog[index]);
 
         //main story
         if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
@@ -670,6 +674,13 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 5 part 1_1 " & superScript.day == 5)
         {
+            //check choices story sebelum e
+            //kalo dia pilih gak lapor langsung selesai story e
+            if (superScript.choices.Contains("Tidak melaporkan kejadian kemarin ke guru")){
+                superScript.indexDialog +=4;
+                return;
+            }
+
             dialogStatus = "dialogday5_1_1";
             changeScene("kelas 4");
             if (FindObjectOfType<DialogManager>().spawn)
@@ -839,19 +850,37 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
-        else if (dialog[index] == "End" & superScript.day < 5)
+        else if (dialog[index] == "End" & superScript.day == 5)
         {
-            changeScene("Outside");
+            Debug.Log("masuk");
+            changeScene("kelas 4");
+            dialogStatus = "end";
             if (superScript.boy)
             {
-                removeNPC("Alvin");
-                removeNPC("QuestMark");
+                Debug.Log("masuk laki");
+
+
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Alvin");
+                    removeNPC("Guru");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+                }
 
             }
             else
             {
-                removeNPC("Vina");
-                removeNPC("QuestMark");
+                Debug.Log("masuk perempuan");
+                
+                if (FindObjectOfType<DialogManager>().spawn)
+                {
+                    removeNPC("Vina");
+                    removeNPC("Guru");
+                    removeNPC("QuestMark");
+                    FindObjectOfType<DialogManager>().spawn = false;
+
+                }
             }
         }
         else
