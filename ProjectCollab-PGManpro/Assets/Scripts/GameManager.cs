@@ -37,20 +37,6 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log(playerPos);
 
-        if (!ws_random_tasks){
-            random_tasks();
-            FindObjectOfType<InventoryManager>().AddItem(0);
-            FindObjectOfType<InventoryManager>().AddItem(1);
-            FindObjectOfType<InventoryManager>().AddItem(1);
-            FindObjectOfType<InventoryManager>().AddItem(2);
-            ws_random_tasks = true;
-            // refreshTask();
-        }
-    }
-
-    private static bool ws_random_tasks = false;
-
-    private void random_tasks(){
         GameObject academic = Task_Object.transform.GetChild(0).gameObject;
         GameObject coolness = Task_Object.transform.GetChild(1).gameObject;
 
@@ -65,6 +51,21 @@ public class GameManager : MonoBehaviour
             coolTasks.Add(i);
         }
 
+        Debug.Log(superScript.idx_acaTasks.Count);
+        Debug.Log(superScript.idx_coolTasks.Count);
+        if(superScript.idx_acaTasks.Count == 0 && superScript.idx_coolTasks.Count == 0){
+            random_tasks();
+            FindObjectOfType<InventoryManager>().AddItem(0);
+            FindObjectOfType<InventoryManager>().AddItem(1);
+            FindObjectOfType<InventoryManager>().AddItem(1);
+            FindObjectOfType<InventoryManager>().AddItem(2);
+        }
+        refreshTask();
+    }
+
+    private static bool ws_random_tasks = false;
+
+    private void random_tasks(){
         List<Task_def> temp_coolTasks = new List<Task_def>(coolTasks);
         List<Task_def> temp_acaTasks = new List<Task_def>(acaTasks);
 
@@ -165,11 +166,15 @@ public class GameManager : MonoBehaviour
         List<int> acaTask = new List<int>(superScript.idx_acaTasks);
 
         foreach(int cool in coolTask){
-            superScript.Tasks.Add(coolTasks[cool]);
+            if(!superScript.Tasks.Contains(coolTasks[cool])){
+                superScript.Tasks.Add(coolTasks[cool]);
+            }
         }
 
         foreach(int aca in acaTask){
-            superScript.Tasks.Add(acaTasks[aca]);
+            if(!superScript.Tasks.Contains(acaTasks[aca])){
+                superScript.Tasks.Add(acaTasks[aca]);
+            }
         }
     }
 

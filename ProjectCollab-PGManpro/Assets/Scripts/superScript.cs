@@ -58,6 +58,8 @@ public class superScript : MonoBehaviour
         indexDialog = 0;
         itemOnwed = new List<Item>();
         choices = new List<string>();
+        idx_acaTasks = new List<int>();
+        idx_coolTasks = new List<int>();
     }
 
     // Start is called before the first frame update
