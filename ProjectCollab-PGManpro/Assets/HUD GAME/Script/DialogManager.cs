@@ -40,6 +40,7 @@ public class DialogManager : MonoBehaviour
     private const string SCORE_TAG = "score";
     private const string STRESS_TAG = "stress";
 
+    private int  blackscreenCount = 0;
 
     public GameObject taskbutton;
     public GameObject Inventory;
@@ -172,6 +173,9 @@ public class DialogManager : MonoBehaviour
                     Debug.Log("stress = " + stress);
                     FindObjectOfType<GameVariable>().TakeStress(stress);
                     break;
+                case BLACKSCREEN_TAG:
+                    blackscreenCount = int.Parse(tagValue);
+                    break;
             }
         }
     }
@@ -282,11 +286,12 @@ public class DialogManager : MonoBehaviour
     }
 
     public IEnumerator closeBlackScreen(){
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(blackscreenCount);
         animatorBlackScreen.SetBool("isStart", false);
         isDialogBlackscreen = false;
         taskbutton.SetActive(true);
         //settingbutton.SetActive(true);
+        blackscreenCount = 0;
         continueStory();
     }
 }
