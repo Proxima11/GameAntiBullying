@@ -5,11 +5,12 @@ public class GameVariable : MonoBehaviour
 {
 	public int stress = 0;
 	public int score = 0;
-	public int maxTime = 1200;
+	public int maxTime = 600;
 	public float timeNow = 0;
 	public int second;
 	public int minute;
 	public int day = 1;
+	public bool bell_time = false;
 
 
 	public void TakeStress(int takeStress)
@@ -42,13 +43,14 @@ public class GameVariable : MonoBehaviour
 			
 			minute = (int) timeNow/60;
 			second = (int) timeNow%60;
-			timeNow += Time.deltaTime ;
+			timeNow += Time.deltaTime;
 		} else {
 			this.day+=1;
 			FindObjectOfType<InventoryManager>().AddItem(1);
 			FindObjectOfType<InventoryManager>().AddItem(1);
 			FindObjectOfType<InventoryManager>().AddItem(2);
-		}
+			timeNow = 0;
+        }
 
 		superScript.updateTime(this.timeNow, this.day);
 	}
@@ -74,6 +76,10 @@ public class GameVariable : MonoBehaviour
 		}
 
 		updateTime();
+
+		if(minute == 4 && second == 1 ||  minute == 9 && second == 1) {
+			bell_time = true;
+		}
 
 		// Debug.Log("Stress = " + stress.ToString());
 		// Debug.Log("Point = " + score.ToString());
