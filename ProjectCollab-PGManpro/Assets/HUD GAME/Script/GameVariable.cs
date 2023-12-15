@@ -47,9 +47,11 @@ public class GameVariable : MonoBehaviour
 	public void setDay(int inputDay){
 		day = inputDay;
 	}
-	
 
-	public void updateTime(){
+   
+
+
+    public void updateTime(){
 		if (timeNow <= maxTime){
 			
 			minute = (int) timeNow/60;

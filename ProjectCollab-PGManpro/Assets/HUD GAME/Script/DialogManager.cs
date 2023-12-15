@@ -322,4 +322,20 @@ public class DialogManager : MonoBehaviour
         if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(true); }
         continueStory();
     }
+
+    public void startPelajaran()
+    {
+        animatorBlackScreen.SetBool("isStart", true);
+        blackScreenText.SetText("Pelajaran Dimulai");
+        blackscreenCount = 3;
+        taskbutton.SetActive(false);
+        navigation.SetActive(false);
+        if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(false); }
+        if (displayLineCoroutine != null)
+        {
+            StopCoroutine(displayLineCoroutine);
+        }
+        StartCoroutine(TypeSentences("Pelajaran Dimulai"));
+        StartCoroutine(closeBlackScreen());
+    }
 }

@@ -22,13 +22,16 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip audio_bell;
 
+    private bool classTriggered = false;
+    private int counter = -1;
 
     void Start(){
         audioSource = GetComponent<AudioSource>();
         FindObjectOfType<gender>().chooseGender();
         player = GameObject.FindWithTag("Player");
         Debug.Log(player);
-        
+
+
         Scene scene = SceneManager.GetActiveScene();
 
         if (playerPos != Vector3.zero && scene.name == "Lorong") // Check if playerPos has been set
@@ -192,9 +195,32 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<GameVariable>().bell_time = false;
         }
 
-        Scene currentScene = SceneManager.GetActiveScene ();
+
+        Scene currentScene = SceneManager.GetActiveScene();
 
 		string sceneName = currentScene.name;
+
+        if(FindObjectOfType<GameVariable>().minute == 1 && FindObjectOfType<GameVariable>().second == 0 || FindObjectOfType<GameVariable>().minute == 10 && FindObjectOfType<GameVariable>().second == 0)
+        {
+            classTriggered = true;
+        }
+
+        if(classTriggered == true && (sceneName == "kelas 1" || sceneName == "kelas 2" || sceneName == "kelas 3" || sceneName == "kelas 4"))
+        {
+            FindObjectOfType<GameVariable>().AddPoint(50);
+            FindObjectOfType<GameVariable>().TakeStress(5);
+            FindObjectOfType<DialogManager>().startPelajaran();
+            counter = -1;
+            classTriggered = false;
+        }
+        else if(classTriggered == true && (sceneName != "kelas 1" || sceneName != "kelas 2" || sceneName != "kelas 3" || sceneName != "kelas 4"))
+        {
+            if(counter != FindObjectOfType<GameVariable>().second)
+            {
+                FindObjectOfType<GameVariable>().score = FindObjectOfType<GameVariable>().score - 1;
+                counter = FindObjectOfType<GameVariable>().second;
+            }
+        }
 
         if (!sudahkunjung_1) {
             if (string.Equals(sceneName, "kelas 1")){
