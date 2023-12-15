@@ -188,7 +188,7 @@ public class GameManager : MonoBehaviour
 
     void Update(){
         // Debug.Log(superScript.time);
-        if (FindObjectOfType<GameVariable>().minute == 4 && FindObjectOfType<GameVariable>().second == 0 || FindObjectOfType<GameVariable>().bell_time == true && FindObjectOfType<GameVariable>().minute == 9 && FindObjectOfType<GameVariable>().second == 1)
+        if ((int)FindObjectOfType<GameVariable>().timeNow == 240 || FindObjectOfType<GameVariable>().bell_time == true && FindObjectOfType<GameVariable>().minute == 9 && FindObjectOfType<GameVariable>().second == 1)
         {
             audioSource.Play();
             //AudioSource.Play();
@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour
 
 		string sceneName = currentScene.name;
 
-        if(FindObjectOfType<GameVariable>().minute == 0 && FindObjectOfType<GameVariable>().second == 10)
+        if((int)FindObjectOfType<GameVariable>().timeNow == 300)
         {
             superScript.isNeedStudying = true;
             FindObjectOfType<GameVariable>().timeNow += 1;
