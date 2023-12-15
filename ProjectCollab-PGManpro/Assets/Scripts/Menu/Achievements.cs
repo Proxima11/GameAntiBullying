@@ -9,6 +9,9 @@ public class Achievements : MonoBehaviour
     int stress = 0;
     int tasks = 0;
     string notes = "";
+    string uname = "";
+    bool isboy = false;
+    string date = "";
     void Start()
     {
         
