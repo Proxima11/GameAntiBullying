@@ -68,7 +68,7 @@ public class NPCManager : MonoBehaviour
         // Debug.Log(dialog[index]);
 
         //main story
-        if (dialog[index] == "Day 1 part 1" & superScript.day == 1)
+        if (dialog[index] == "Day 1 part 1" & superScript.day >= 1)
         {
             if (FindObjectOfType<DialogManager>().spawn)
             {
@@ -110,7 +110,7 @@ public class NPCManager : MonoBehaviour
             }
 
         }
-        else if (dialog[index] == "Day 1 part 2" & superScript.day == 1)
+        else if (dialog[index] == "Day 1 part 2" & superScript.day >= 1)
         {
             //removeNPC("QuestMark");
             if (FindObjectOfType<DialogManager>().spawn)
@@ -166,7 +166,7 @@ public class NPCManager : MonoBehaviour
             }
         }
 
-        else if (dialog[index] == "Day 1 part 3" & superScript.day == 1)
+        else if (dialog[index] == "Day 1 part 3" & superScript.day >= 1)
         {
             dialogStatus = "dialogday1_3";
             changeScene("kelas 1");
@@ -214,7 +214,7 @@ public class NPCManager : MonoBehaviour
             }
 
         }
-        else if (dialog[index] == "Day 1 part 4" & superScript.day == 1)
+        else if (dialog[index] == "Day 1 part 4" & superScript.day >= 1)
         {
             if (FindObjectOfType<DialogManager>().spawn)
             {
@@ -258,7 +258,7 @@ public class NPCManager : MonoBehaviour
             removeNPC("Vina");
             removeNPC("QuestMark");
         }
-        else if (dialog[index] == "Day 2 part 1 " & superScript.day == 2)
+        else if (dialog[index] == "Day 2 part 1 " & superScript.day >= 2)
         {
             if (FindObjectOfType<DialogManager>().spawn)
             {
@@ -297,7 +297,7 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
-        else if (dialog[index] == "Day 2 part 2 " & superScript.day == 2)
+        else if (dialog[index] == "Day 2 part 2 " & superScript.day >= 2)
         {
             if (FindObjectOfType<DialogManager>().spawn)
             {
@@ -383,7 +383,7 @@ public class NPCManager : MonoBehaviour
             }
 
         }
-        else if (dialog[index] == "Day 3 part 1 " & superScript.day == 3)
+        else if (dialog[index] == "Day 3 part 1 " & superScript.day >= 3)
         {
             dialogStatus = "day3_1";
             changeScene("Lorong");
@@ -439,7 +439,7 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
-        else if (dialog[index] == "Day 3 part 2 " & superScript.day == 3)
+        else if (dialog[index] == "Day 3 part 2 " & superScript.day >= 3)
         {
             dialogStatus = "day3_2";
             changeScene("Lorong");
@@ -494,7 +494,7 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
-        else if (dialog[index] == "Day 3 part 3 " & superScript.day == 3)
+        else if (dialog[index] == "Day 3 part 3 " & superScript.day >= 3)
         {
             dialogStatus = "day3_3";
             changeScene("Outside");
@@ -557,7 +557,7 @@ public class NPCManager : MonoBehaviour
                 removeNPC("QuestMark");
             }
         }
-        else if (dialog[index] == "Day 4 " & superScript.day == 4)
+        else if (dialog[index] == "Day 4 " & superScript.day >= 4)
         {
             dialogStatus = "dialogday4";
             changeScene("Outside");
@@ -626,7 +626,7 @@ public class NPCManager : MonoBehaviour
                 removeNPC("QuestMark");
             }
         }
-        else if (dialog[index] == "Day 5 part 1 " & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1 " & superScript.day >= 5)
         {
             if (superScript.boy)
             {
@@ -672,7 +672,7 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
-        else if (dialog[index] == "Day 5 part 1_1 " & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1_1 " & superScript.day >= 5)
         {
             //check choices story sebelum e
             //kalo dia pilih gak lapor langsung selesai story e
@@ -708,7 +708,7 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
-        else if (dialog[index] == "Day 5 part 1_2 " & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1_2 " & superScript.day >= 5)
         {
             if (FindObjectOfType<DialogManager>().spawn)
             {
@@ -747,7 +747,7 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
-        else if (dialog[index] == "Day 5 part 1_3 " & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1_3 " & superScript.day >= 5)
         {
 
             dialogStatus = "dialogday5_1_3";
@@ -802,7 +802,7 @@ public class NPCManager : MonoBehaviour
                 questmark2Renderer.material.SetColor("quest", customColor);
             }
         }
-        else if (dialog[index] == "Day 5 part 1_4 " & superScript.day == 5)
+        else if (dialog[index] == "Day 5 part 1_4 " & superScript.day >= 5)
         {
             removeNPC("Guru");
             dialogStatus = "dialogday5_1_4";
