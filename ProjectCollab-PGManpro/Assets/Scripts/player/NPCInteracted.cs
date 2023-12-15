@@ -70,6 +70,7 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
     }
     public string GetInteractText()
     {
+        if (transform.tag=="Sampah") return "Take " + NPCName;
         return "talk with " + NPCName;
     }
 

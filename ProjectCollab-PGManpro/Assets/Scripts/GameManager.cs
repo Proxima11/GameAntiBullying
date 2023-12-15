@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<InventoryManager>().AddItem(1);
             FindObjectOfType<InventoryManager>().AddItem(2);
             ws_random_tasks = true;
-            refreshTask();
+            // refreshTask();
         }
     }
 
@@ -65,39 +65,104 @@ public class GameManager : MonoBehaviour
             coolTasks.Add(i);
         }
 
-        for (int i = 0; i < 4; i++){
+        List<Task_def> temp_coolTasks = new List<Task_def>(coolTasks);
+        List<Task_def> temp_acaTasks = new List<Task_def>(acaTasks);
+
+        int empty_util = 0;
+
+        for (int i = 0; i < 7; i++){
             float temp = Random.Range(0f, 1f);  
 
             if (temp < superScript.nerdCool/100f){
-                int rand_util = Random.Range(0, acaTasks.Count-1);
-                // while (superScript.idx_acaTasks.Contains(rand_util)){
-                //     rand_util = Random.Range(0, acaTasks.Count-1);
-                // }
-                rand_util = i;
+                int rand_util = Random.Range(0, temp_acaTasks.Count-1);
+               
+                int true_idx = getIndex(temp_acaTasks[rand_util], 0);
                 
-                superScript.Tasks.Add(acaTasks[rand_util]);
-                superScript.idx_acaTasks.Add(rand_util);
+                superScript.Tasks.Add(acaTasks[true_idx]);
+                superScript.idx_acaTasks.Add(true_idx);
+                temp_acaTasks.RemoveAt(rand_util);
+                Debug.Log("ini nambah task " + acaTasks[true_idx].GetType().Name + " di i ke " + i + " loop pertama");
             } else {
-                int rand_util = Random.Range(0, coolTasks.Count-1);
-                // while (superScript.idx_coolTasks.Contains(rand_util)){
-                //     rand_util = Random.Range(0, coolTasks.Count-1);
-                //     Debug.Log("ini random: " + rand_util);
-                //     Debug.Log("ini isi list:");
-                //     foreach (int x in superScript.idx_coolTasks){
-                //         Debug.Log(x);       
-                //     }
-                // }
-                rand_util = i;
+                int rand_util = Random.Range(0, temp_coolTasks.Count-1);
                 
-                superScript.Tasks.Add(coolTasks[rand_util]);
-                superScript.idx_coolTasks.Add(rand_util);
+                int true_idx = getIndex(temp_coolTasks[rand_util], 1);
+                
+                superScript.Tasks.Add(coolTasks[true_idx]);
+                superScript.idx_coolTasks.Add(true_idx);
+                temp_coolTasks.RemoveAt(rand_util);
+                Debug.Log("ini nambah task " + coolTasks[true_idx].GetType().Name + " di i ke " + i + " loop pertama");
             }
+
+            if (temp_acaTasks.Count <= 0) {
+                empty_util = 1;
+                break;
+            } else if (temp_coolTasks.Count <= 0) {
+                empty_util = 2;
+                break;
+            }
+        }
+
+        int e = 7 - superScript.Tasks.Count;
+        if (empty_util == 1){
+            for (int i = 0; i < e; i++){
+                int rand_util = Random.Range(0, temp_coolTasks.Count-1);
+
+                Debug.Log("ini rand util: " +rand_util);
+                
+                int true_idx = getIndex(temp_coolTasks[rand_util], 1);
+
+                Debug.Log("ini true index: " +true_idx);
+                
+                superScript.Tasks.Add(coolTasks[true_idx]);
+                superScript.idx_coolTasks.Add(true_idx);
+                temp_coolTasks.RemoveAt(rand_util);
+                Debug.Log("ini nambah task " + coolTasks[true_idx].GetType().Name + " di i ke " + i + " loop kedua");
+            }
+            Debug.Log("banyak task: " + superScript.Tasks.Count);
+        } else if (empty_util == 2) { 
+            Debug.Log("loop kedua sebanyak 7 - " + superScript.Tasks.Count + ": " + (7 - superScript.Tasks.Count));
+            for (int i = 0; i < e; i++){
+                int rand_util = Random.Range(0, temp_acaTasks.Count-1);
+
+                Debug.Log("ini rand util: " +rand_util);
+               
+                int true_idx = getIndex(temp_acaTasks[rand_util], 0);
+
+                Debug.Log("ini true index: " +true_idx);
+                
+                superScript.Tasks.Add(acaTasks[true_idx]);
+                superScript.idx_acaTasks.Add(true_idx);
+                temp_acaTasks.RemoveAt(rand_util);
+                Debug.Log("ini nambah task " + acaTasks[true_idx].GetType().Name + " di i ke " + i + " loop kedua");
+            }
+            Debug.Log("banyak task: " + superScript.Tasks.Count);
         }
     }
 
+    private int getIndex(Task_def e, int stat){
+        switch (stat) {
+            case 0:
+            for (int i = 0; i < acaTasks.Count; i++){
+                if (string.Equals(e.GetType().Name,  acaTasks[i].GetType().Name)) return i;
+            }
+            break;
+
+            case 1:
+            for (int i = 0; i < coolTasks.Count; i++){
+                if (string.Equals(e.GetType().Name,  coolTasks[i].GetType().Name)) return i;
+            }
+            break;
+
+            default:
+            return -1;
+            break;
+        }
+        return -1;
+    }
+
     public void refreshTask(){
-        List<int> coolTask = superScript.idx_coolTasks;
-        List<int> acaTask = superScript.idx_acaTasks;
+        List<int> coolTask = new List<int>(superScript.idx_coolTasks);
+        List<int> acaTask = new List<int>(superScript.idx_acaTasks);
 
         foreach(int cool in coolTask){
             superScript.Tasks.Add(coolTasks[cool]);

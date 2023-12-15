@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
 {
@@ -14,7 +15,7 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
 
     public string GetInteractText()
     {
-        string text_output = "Answer the quiz";
+        string text_output = "Answer " + SceneName;
         return text_output;
     }
 
@@ -51,7 +52,73 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
     public void Interact(Transform interactorTransform)
     {
         ToggleDoor();
+
+        if (!done_kenalan){
+        if (string.Equals(SceneName, "quiz ips")){
+            if (superScript.Tasks.Any(x => x is ips)){
+            if (!done_kenalan){
+                foreach (var e in superScript.Tasks){
+                    if (string.Equals(e.id, "a_ips")){
+                        e.task();
+                        done_kenalan=true;
+                        break;
+                    }
+                }
+            }   
+        }
+        } else if (string.Equals(SceneName, "quiz ipa")) {
+            if (superScript.Tasks.Any(x => x is ips)){
+            if (!done_kenalan){
+                foreach (var e in superScript.Tasks){
+                    if (string.Equals(e.id, "a_ips")){
+                        e.task();
+                        done_kenalan=true;
+                        break;
+                    }
+                }
+            }   
+        }
+        } else if (string.Equals(SceneName, "quiz mat")) {
+            if (superScript.Tasks.Any(x => x is mat)){
+            if (!done_kenalan){
+                foreach (var e in superScript.Tasks){
+                    if (string.Equals(e.id, "a_mat")){
+                        e.task();
+                        done_kenalan=true;
+                        break;
+                    }
+                }
+            }   
+            }
+        } else if (string.Equals(SceneName, "quiz indo")) {
+            if (superScript.Tasks.Any(x => x is idn)){
+            if (!done_kenalan){
+                foreach (var e in superScript.Tasks){
+                    if (string.Equals(e.id, "a_idn")){
+                        e.task();
+                        done_kenalan=true;
+                        break;
+                    }
+                }
+            }   
+            }
+        } else if (string.Equals(SceneName, "quiz eng")) {
+            if (superScript.Tasks.Any(x => x is eng)){
+            if (!done_kenalan){
+                foreach (var e in superScript.Tasks){
+                    if (string.Equals(e.id, "a_eng")){
+                        e.task();
+                        done_kenalan=true;
+                        break;
+                    }
+                }
+            }   
+        }
+        }
+        }
     }
+
+    private bool done_kenalan = false;
 
     public Transform GetTransform()
     {

@@ -65,7 +65,10 @@ public class InventoryManager : MonoBehaviour
     {
         if (itemOnwed.Count > 0 && index < itemOnwed.Count){
             Item item = itemOnwed[index];
-            FindObjectOfType<GameVariable>().TakeStress(item.stressPoint);
+            float r_shy = Random.Range(0f, 1f);
+            int shy = 0;
+            if (r_shy > superScript.shyConfidence) shy += (int) Mathf.Round(item.stressPoint / 2f);
+            FindObjectOfType<GameVariable>().TakeStress(item.stressPoint + shy);
             itemIndex.Remove(index);
             itemOnwed.Remove(item);
             RefreshInventory();
