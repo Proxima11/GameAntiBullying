@@ -21,7 +21,7 @@ public class UpdateUI : MonoBehaviour
     public GameObject gameOver;
 
     private bool task = false;
-    private int growthRate = 1;
+    private int growthRate = 5;
 
     GameVariable gameVariable;
     public GameObject CanvasScorePlus;
