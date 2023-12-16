@@ -19,13 +19,16 @@ public class UpdateUI : MonoBehaviour
     public GameObject gameOver;
 
     private bool task = false;
+    private int growthRate = 1;
 
     GameVariable gameVariable;
+    public GameObject CanvasScorePlus;
+    public TMP_Text scorePlus;
 
 
 
     void Start (){
-        gameVariable = FindObjectOfType<GameVariable>();  
+        gameVariable = FindObjectOfType<GameVariable>();
     }
 
     public Slider stressAkhir;
@@ -84,7 +87,37 @@ public class UpdateUI : MonoBehaviour
 
     void Update (){
         streesBar.value = gameVariable.stress;
-        score.SetText(gameVariable.score.ToString());
+
+        if (score.text != "xxx")
+        {
+            int scores = int.Parse(score.text);
+            if (scores < gameVariable.score && gameVariable.takescore == true)
+            {
+                scores += growthRate;
+                score.text = scores.ToString();
+                scorePlus.text = "+" + gameVariable.scoreAdded.ToString();
+                CanvasScorePlus.SetActive(true);
+               
+            }
+            else if (scores > gameVariable.score && gameVariable.takescore == true)
+            {
+                scores -= growthRate;
+                score.text = scores.ToString();
+                scorePlus.text = gameVariable.scoreAdded.ToString();
+                CanvasScorePlus.SetActive(true);
+            }
+            else
+            {
+                score.SetText(gameVariable.score.ToString());
+                gameVariable.takescore = false;
+                CanvasScorePlus.SetActive(false);
+            }
+        }
+        else
+        {
+            score.text = "0";
+        }
+        //score.SetText(gameVariable.score.ToString());
         string displayMinute = gameVariable.minute.ToString();
         string displaySecond = gameVariable.second.ToString();
         if (gameVariable.minute<10){

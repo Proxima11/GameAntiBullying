@@ -69,6 +69,9 @@ MonoBehaviour:
   minute: 0
   day: 1
   bell_time: 0
+  takescore: 0
+  CanvasScorePlus: {fileID: 3308175319061391175, guid: e5fccf929d6ab384da783bad79a5c6c5, type: 3}
+  scorePlus: {fileID: 3536892531653246882, guid: e5fccf929d6ab384da783bad79a5c6c5, type: 3}
 --- !u!82 &7654240942811399111
 AudioSource:
   m_ObjectHideFlags: 0

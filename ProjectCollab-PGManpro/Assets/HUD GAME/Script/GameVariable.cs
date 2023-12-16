@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 public class GameVariable : MonoBehaviour 
 {
 	public int stress = 0;
@@ -11,9 +12,10 @@ public class GameVariable : MonoBehaviour
 	public int minute;
 	public int day = 1;
 	public bool bell_time = false;
+	public bool takescore = false;
+	public int scoreAdded = 0;
 
-
-	public void TakeStress(int takeStress)
+    public void TakeStress(int takeStress)
 	{
 		int temp = stress + takeStress;
 		if(temp < 0){
@@ -25,7 +27,7 @@ public class GameVariable : MonoBehaviour
         }
 
 		if (stress <= 0) stress = 0;
-	}
+    }
 
 	public int getSumDone(){
 		int count = 0;
@@ -38,6 +40,8 @@ public class GameVariable : MonoBehaviour
 
 	public void AddPoint(int addPoint){
 		score += addPoint;
+		takescore = true;
+		scoreAdded = addPoint;
 	}
 
 	public void setTime(int inputTime){
@@ -73,6 +77,7 @@ public class GameVariable : MonoBehaviour
 		score = superScript.score;
 		timeNow = superScript.time;
 		day = superScript.day;
+
 	}
 
 	private bool isLose(){
