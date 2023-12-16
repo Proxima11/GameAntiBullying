@@ -34,7 +34,7 @@ Sebelum kamu pulang berikan {jajan} yang kamu dapatkan tadi ke kita dulu .#speak
     {David} membully {player} sedikit lalu melepaskan {player} pulang#speaker:narrator #score: 0 #stress: 10 #blackscreen: 4
     ++Pukul {David}
     KALIAN PIKIR AKU ORANG YANG GAMPANG DI PALAK ? AYO SINI MAJU!!#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
-    {player} dan {David} bertengkar fisik. Lalu karena kalah jumlah {player} babak belur. Setelah memukuli {player}, {David} dan geng nya meninggalkan tempat secara buru-buru karena takut bertemu guru.#speaker:narrator #score: 0 #stress: -10 #blackscreen: 10
+    {player} dan {David} bertengkar fisik. Lalu karena kalah jumlah {player} babak belur. Setelah memukuli {player}, {David} dan geng nya meninggalkan tempat secara buru-buru karena takut bertemu guru.#speaker:narrator #score: -100 #stress: -10 #blackscreen: 10
 
 -Dalam perjalanan pulang {player} bertemu {Alvin} yang terlihat seperti sudah menunggunya#speaker:narrator #score: 0 #stress: 0 #blackscreen: 6
 -->DONE

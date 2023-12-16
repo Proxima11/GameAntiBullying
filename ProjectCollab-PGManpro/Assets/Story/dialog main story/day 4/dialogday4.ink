@@ -50,7 +50,7 @@ Haish banyak bacot kamu! # speaker: {David} #score: 0 #stress: 0 #blackscreen: 0
 {David} yang semakin marah mendorong {player} ke dalam kolam renang. # speaker: narrator #score: 0 #stress: 0 #blackscreen: 4
 
 + [{player} berantem dengan {David}]
-    Setelah {player} berantem dengan David, {player} tidak bisa masuk ke kelas kembali karena bajunya yang basah. # speaker: narrator #score: 200 #stress: -10 #blackscreen: 6
+    Setelah {player} berantem dengan David, {player} tidak bisa masuk ke kelas kembali karena bajunya yang basah. # speaker: narrator #score: 100 #stress: -10 #blackscreen: 6
 
 
 + [Diam saja dan menahan malu]
