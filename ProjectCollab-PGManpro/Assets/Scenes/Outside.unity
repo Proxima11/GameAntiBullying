@@ -20956,6 +20956,14 @@ PrefabInstance:
       propertyPath: playerInteractGirl
       value: 
       objectReference: {fileID: 128970526}
+    - target: {fileID: 1430009659197339688, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: scorePlus
+      value: 
+      objectReference: {fileID: 2010516225}
+    - target: {fileID: 1430009659197339688, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: CanvasScorePlus
+      value: 
+      objectReference: {fileID: 2010516226}
     - target: {fileID: 2602404235594318591, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -21025,6 +21033,22 @@ PrefabInstance:
 --- !u!1 &2010516224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4886675636028222032, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+  m_PrefabInstance: {fileID: 2010516223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2010516225 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8215962260234121968, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+  m_PrefabInstance: {fileID: 2010516223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010516226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2010516226 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7996590620681906709, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
   m_PrefabInstance: {fileID: 2010516223}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2010958620
