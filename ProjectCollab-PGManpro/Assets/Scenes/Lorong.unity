@@ -85424,6 +85424,30 @@ PrefabInstance:
       propertyPath: CanvasScorePlus
       value: 
       objectReference: {fileID: 1935982580}
+    - target: {fileID: 1528170524820885394, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: ShapeModule.type
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528170524820885394, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528170524820885394, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528170524820885394, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528170524820885394, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.02643713
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528170524820885394, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1712205652896651106, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: m_IsActive
       value: 0

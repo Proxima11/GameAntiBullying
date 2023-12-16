@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class UpdateUI : MonoBehaviour
 {
+    public ParticleSystem particleStress;
+    public int fillSpeed = 1;
     public Slider streesBar; 
     public TMP_Text score;
     public TMP_Text time;
@@ -29,6 +31,7 @@ public class UpdateUI : MonoBehaviour
 
     void Start (){
         gameVariable = FindObjectOfType<GameVariable>();
+        particleStress = GameObject.Find("StressParticles").GetComponent<ParticleSystem>();
     }
 
     public Slider stressAkhir;
@@ -86,7 +89,27 @@ public class UpdateUI : MonoBehaviour
     }
 
     void Update (){
-        streesBar.value = gameVariable.stress;
+        if(streesBar.value < gameVariable.stress)
+        {
+            streesBar.value += fillSpeed;
+            if (!particleStress.isPlaying)
+            {
+                particleStress.Play();
+            }
+        }
+        else if (streesBar.value > gameVariable.stress)
+        {
+            streesBar.value -= fillSpeed;
+            if (!particleStress.isPlaying)
+            {
+                particleStress.Play();
+            }
+        }
+        else
+        {
+            particleStress.Stop();
+        }
+        //streesBar.value = gameVariable.stress;
 
         if (score.text != "xxx")
         {
