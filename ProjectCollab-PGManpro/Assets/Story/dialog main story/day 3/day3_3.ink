@@ -18,12 +18,12 @@ terus orang yang kamu temuin itu aku. Gitu maksudmu ??#speaker:{player} #score: 
 Sorry sungguhan {player}, habis aku ngelaporin kamu ke {David}, aku memang udah gak dibully lagi sama {David}. Tapi aku gak enak sama kamu soale jadinya kamu yang dibully sama {David} ngantiin aku.#speaker:{Alvin} #score: 0 #stress: 0 #blackscreen: 0
 +Pukul {Alvin}
 G***** kamu, kok bisa kamu kepikiran buat ngorbanin temen sendiri itu. #speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
-{player} memukul {Alvin} lalu langsung meninggalkan tempat itu#speaker:narrator #score: 50 #stress: -10 #blackscreen: 4
+{player} memukul {Alvin} lalu langsung meninggalkan tempat itu#speaker:narrator #score: 200 #stress: -10 #blackscreen: 4
 ->DONE
 +Usir {Alvin}
 Pergi sana kamu aku udah gak pingin lihat mukamu lagi.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
 {player} mengusir {Alvin}#speaker:narrator #score: 0 #stress: 0 #blackscreen: 3
 -Bodo banget, kan kalau gak mau dipalak ada cara lain, kenapa harus ngorbanin temen sendiri.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
-Dari kejauhan {player} menggumamkan kata-kata tersebut#speaker:narrator #score: 100 #stress: 10 #blackscreen: 4
+Dari kejauhan {player} menggumamkan kata-kata tersebut#speaker:narrator #score: 200 #stress: 10 #blackscreen: 4
 ->DONE
 ->END

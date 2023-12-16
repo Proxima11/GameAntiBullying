@@ -57,5 +57,5 @@ Tadi kamu terlihat sedikit aneh. # speaker: {player} #score: 0 #stress: 0 #black
 
 Oh, aku gpp kok, cuma mikir enak ya disediain sama orang tua. Aku aja harus masak sendiri tiap pagi. Hahahahaa… # speaker: {Alvin} #score: 0 #stress: 0 #blackscreen: 0
 
-Aku ya kadang masak sendiri sih. Tapi, 1 tahun sekali paling. Wkwkwkwk” # speaker: {player} #score: 100 #stress: 10 #blackscreen: 0
+Aku ya kadang masak sendiri sih. Tapi, 1 tahun sekali paling. Wkwkwkwk” # speaker: {player} #score: 200 #stress: 5 #blackscreen: 0
 ->DONE

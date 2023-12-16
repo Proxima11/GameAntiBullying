@@ -19,5 +19,5 @@ UDAH JANGAN BANYAK OMONG KAMU !!! Udah kamu cuma perlu dengerin perintah ku tok!
 
 Sorry {Vid}, aku bakal kenalin sekolah ke {player} ini. # speaker: {Alvin} #score: 0 #stress: 0 #blackscreen: 0
 
-{Alvin} menghampiri {player} # speaker: narrator #score: 100 #stress: 10 #blackscreen: 2
+{Alvin} menghampiri {player} # speaker: narrator #score: 0 #stress: 5 #blackscreen: 2
 ->DONE

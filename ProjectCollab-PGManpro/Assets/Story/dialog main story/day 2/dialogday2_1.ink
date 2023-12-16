@@ -25,5 +25,5 @@ Udah kok. Aku udah bisa ngerjain banyak task di sekolah ini.#speaker:{player} #s
 Ohh bagus kalau gitu. {player} buat gantinya kemarin aku gak bisa bantu kamu, sekarang aku ajari kamu sesuatu yang baru.#speaker:{David} #score: 0 #stress: 0 #blackscreen: 0
 kamu mau ngajari aku apa ??#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
 Udahh ikut aja dulu sini. Awokwoawk#speaker:{David} #score: 0 #stress: 0 #blackscreen: 0
-{player} mengikuti {David} ke tempat yang dituju #speaker:narrator #score: 100 #stress: 5 #blackscreen: 4
+{player} mengikuti {David} ke tempat yang dituju #speaker:narrator #score: 0 #stress: 5 #blackscreen: 4
 ->END

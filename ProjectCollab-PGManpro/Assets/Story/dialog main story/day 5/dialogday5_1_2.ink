@@ -28,9 +28,9 @@ VAR jajan = "jajan"
     +[Tidak mau meminta maaf ke {David}]
     Saya endak mau pak! Kan saya endak salah apa-apa , kenapa saya harus minta maaf?#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
     Beraninya kamu {player}! Kamu mau hukumanmu ditambahin? Minta maaf ke {David} SEKARANG!!#speaker:guru #score: 0 #stress: 0 #blackscreen: 0
-    {player} pun terpaksa harus meminta maaf kepada {David}.#speaker:narrator #score: 100 #stress: 10 #blackscreen: 4
+    {player} pun terpaksa harus meminta maaf kepada {David}.#speaker:narrator #score: 0 #stress: 10 #blackscreen: 4
     Baiklah! <>
     +[Mau meminta maaf ke {David}]
-    - <>{David}, aku mau minta ma…#speaker:{player} #score: 50 #stress: 5 #blackscreen: 0
+    - <>{David}, aku mau minta ma…#speaker:{player} #score: 0 #stress: 5 #blackscreen: 0
     Ada orang yang menyela perkataan {player}#speaker:narrator #score: 0 #stress: 0 #blackscreen: 3
 -> END

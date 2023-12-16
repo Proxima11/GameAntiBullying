@@ -14,8 +14,8 @@ Apakah aku perlu melaporkan {David} ke guru?#speaker:{player} #score: 0 #stress:
 + [Tidak melaporkan kejadian kemarin ke guru]
 Ahh gak usah dilaporkan. Kalo aku laporin {David} nanti aku akan ketinggalan pelajaran.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
 //setelah selesai tasknya
-{player} menjalani harinya seperti biasa. Lalu {player} kaget karena tiba-tiba {David} diskors oleh sekolah dan geng nya. Tanpa mengetahui apa-apa {player} pulang ke sekolah#speaker:narrator #score: 50 #stress: 10 #blackscreen: 8
+{player} menjalani harinya seperti biasa. Lalu {player} kaget karena tiba-tiba {David} diskors oleh sekolah dan geng nya. Tanpa mengetahui apa-apa {player} pulang ke sekolah#speaker:narrator #score: 100 #stress: 10 #blackscreen: 8
 -> DONE
 + [Laporkan kejadian kemarin ke guru]
-    Ku Laporkan saja lah {David}. Aku sudah enggak tahan sama kelakuannya mereka.#speaker:{player} #score: 100 #stress: 5 #blackscreen: 0
+    Ku Laporkan saja lah {David}. Aku sudah enggak tahan sama kelakuannya mereka.#speaker:{player} #score: 0 #stress: 5 #blackscreen: 0
 -> DONE

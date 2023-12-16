@@ -21,5 +21,5 @@ Terima kasih ya, {Vin}. Kalau kamu ngga dateng, aku ngga tau harus apa. Ngomong-
     Kita juga beruntung {David} tidak langsung berniat untuk meminta maaf tetapi memilih berbohong. Hal ini bisa membuat hukuman {David} semakin berat juga.#speaker:{Alvin} #score: 0 #stress: 0 #blackscreen: 0
     Hahaha, dia memang perlu dikasih hukuman berat biar dia jera. Thank you ya sudah bantuin aku. Aku bener-bener ngga sudi disuru minta maaf ke {David}.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
     Iya, sama-sama#speaker:{Alvin} #score: 0 #stress: 0 #blackscreen: 0
-    {David} dan gengnya diskors oleh sekolah karena perbuatan yang selama ini dia lakukan. Dan juga karena membohongi guru dalam kasus yang besar. Dengan diberikannya hukuman yang berat sekolah mengharapkan David dapat berubah menjadi lebih baik setelah skors nya#speaker:narrator #score: 100 #stress: -5 #blackscreen: 12
+    {David} dan gengnya diskors oleh sekolah karena perbuatan yang selama ini dia lakukan. Dan juga karena membohongi guru dalam kasus yang besar. Dengan diberikannya hukuman yang berat sekolah mengharapkan David dapat berubah menjadi lebih baik setelah skors nya#speaker:narrator #score: 200 #stress: -10 #blackscreen: 12
 ->END

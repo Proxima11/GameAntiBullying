@@ -35,6 +35,6 @@ Itu cuma satu-satunya cara buat kamu gak dibully sih. Tapi kalau kamu gak ngikut
     Itu kan ya sama aja kalau kamu malak i aku. Aku gak mau kasih {jajan} ku ke kamu.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
     Yakin itu pilihan mu ?? Guys kalian ada yang stress gak ? kek biasae aja. awokwaowka.#speaker:{David} #score: 0 #stress: 0 #blackscreen: 0
     Kek biasae ??Woke boss siapp. Hahahahaha.#speaker:Geng {David} #score: 0 #stress: 0 #blackscreen: 0
-    {player} dibully oleh {David} dan geng nya#speaker:narrator #score: 100 #stress: 10 #blackscreen: 3
+    {player} dibully oleh {David} dan geng nya#speaker:narrator #score: 200 #stress: 20 #blackscreen: 3
     -> DONE
 -> END

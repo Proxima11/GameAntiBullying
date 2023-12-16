@@ -13,13 +13,13 @@ Ketika {player} sampai di kolam renang, {player} akan bertemu dengan geng {David
 
 + [Tidak mendatangi kelas pagi]
     {player}, kenapa kamu gak datang kelas pagi tadii?? Apa kamu sengaja menghindari kita? # speaker: {David} #score: 0 #stress: 0
-        {player} akan dibully secara fisik oleh {David}. # speaker: narrator #score: 0 #stress: 10 #blackscreen: 4
+        {player} akan dibully secara fisik oleh {David}. # speaker: narrator #score: 0 #stress: 20 #blackscreen: 4
 
 + [Datang kelas pagi]
     Loh {player}, kita ketemu lagi. Awokwaowka # speaker: {David} #score: 0 #stress: 0
         {player}, mumpung kita ketemu lagi, ada {jajan} atau enggak. Kalau ada bagi sama kita dikit dongg. Awokwaokwaok. # speaker: {David} #score: 0 #stress: 0 #blackscreen: 0
             ++ [menolak]
-                Aku gak punya {jajan} lagi, {Vid}. # speaker: {player} #score: 50 #stress: 5 #blackscreen: 0
+                Aku gak punya {jajan} lagi, {Vid}. # speaker: {player} #score: 0 #stress: 0 #blackscreen: 0
             ++ [menyerah]
                 Ini, {Vid}. Ini udah {jajan} terakhirku. # speaker: {player} #score: 0 #stress: 5 #blackscreen: 0
 
@@ -50,13 +50,13 @@ Haish banyak bacot kamu! # speaker: {David} #score: 0 #stress: 0 #blackscreen: 0
 {David} yang semakin marah mendorong {player} ke dalam kolam renang. # speaker: narrator #score: 0 #stress: 0 #blackscreen: 4
 
 + [{player} berantem dengan {David}]
-    Setelah {player} berantem dengan David, {player} tidak bisa masuk ke kelas kembali karena bajunya yang basah. # speaker: narrator #score: 0 #stress: -10 #blackscreen: 6
+    Setelah {player} berantem dengan David, {player} tidak bisa masuk ke kelas kembali karena bajunya yang basah. # speaker: narrator #score: 200 #stress: -10 #blackscreen: 6
 
 
 + [Diam saja dan menahan malu]
-    Setelah {player} dijatuhkan ke kolam oleh {David}, {player} tidak bisa masuk ke kelas kembali karena bajunya yang basah. # speaker: narrator #score: 0 #stress: 5 #blackscreen: 7
+    Setelah {player} dijatuhkan ke kolam oleh {David}, {player} tidak bisa masuk ke kelas kembali karena bajunya yang basah. # speaker: narrator #score: 200 #stress: 5 #blackscreen: 7
 
 + [Melaporkan ke guru]
-    Setelah {player} dijatuhkan ke kolam oleh {David}, {player} melaporkan kejadian ini ke guru. Karena sudah melapor ke guru, {player} dapat masuk ke kelas. # speaker: narrator #score: 50 #stress: 5 #blackscreen: 7
+    Setelah {player} dijatuhkan ke kolam oleh {David}, {player} melaporkan kejadian ini ke guru. Karena sudah melapor ke guru, {player} dapat masuk ke kelas. # speaker: narrator #score: 200 #stress: -5 #blackscreen: 7
     
 - -> DONE
