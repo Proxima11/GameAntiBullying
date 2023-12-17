@@ -120,7 +120,7 @@ public class UpdateUI : MonoBehaviour
         if (isStress)
         {
             isStresscounter += Time.deltaTime;
-            if (isStresscounter < 3.0f)
+            if (isStresscounter <= 2.0f)
             {
                 CanvasStressPlus.SetActive(true);
             }
