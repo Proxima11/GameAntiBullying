@@ -11,10 +11,12 @@ public class dummyControl : MonoBehaviour
     void Start()
     {
         s = transform.position;
-        timeR = Random.Range(10f, 20f);
+        timeR = Random.Range(minTime, maxTime);
     }
 
     // Update is called once per frame
+    public float minTime = 10f;
+    public float maxTime = 20f;
     void Update()
     {
         if (timeR > 0) {
@@ -22,7 +24,7 @@ public class dummyControl : MonoBehaviour
             timeR -= Time.deltaTime;
         } else {
             transform.position = s;
-            timeR = Random.Range(10f, 20f);
+            timeR = Random.Range(minTime, maxTime);
         }        
     }
 }

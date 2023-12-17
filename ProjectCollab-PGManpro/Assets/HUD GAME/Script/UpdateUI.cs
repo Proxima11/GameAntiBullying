@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using StarterAssets;
 using UnityEngine.SceneManagement;
+using System;
 
 public class UpdateUI : MonoBehaviour
 {
@@ -89,6 +90,10 @@ public class UpdateUI : MonoBehaviour
         }
 
         note.text = notes;
+
+        DateTime dt = DateTime.Now;
+
+        SaveLoadAchievements.SaveFile(superScript.username, dt.ToString("dd-MM-yyy"), superScript.boy, status, f_score, f_task, f_stress, notes);
     }
 
     public void backtoMenu(){

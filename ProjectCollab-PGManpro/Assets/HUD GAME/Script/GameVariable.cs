@@ -77,7 +77,7 @@ public class GameVariable : MonoBehaviour
 		score = superScript.score;
 		timeNow = superScript.time;
 		day = superScript.day;
-
+		isAlreadyLose=false;
 	}
 
 	private bool isLose(){
@@ -105,13 +105,19 @@ public class GameVariable : MonoBehaviour
 			bell_time = true;
 		}
 
-		if (isLose()) FindObjectOfType<UpdateUI>().showGameOver();
-
+		if (isLose()) {
+			if (!isAlreadyLose){
+			FindObjectOfType<UpdateUI>().showGameOver();
+			isAlreadyLose = true;
+			}
+		}
 		// Debug.Log("Stress = " + stress.ToString());
 		// Debug.Log("Point = " + score.ToString());
 		// Debug.Log("Time = " + Time.time.ToString());
 		// Debug.Log("Time = " + minute.ToString() + ":" + second.ToString());
 
     }
+
+	private bool isAlreadyLose=false;
 
 }

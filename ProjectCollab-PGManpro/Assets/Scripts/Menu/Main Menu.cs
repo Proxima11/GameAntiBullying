@@ -20,11 +20,21 @@ public class MainMenu : MonoBehaviour
 
     public GameObject username;
     public GameObject nextCanvas;
-    
-
-
+    public GameObject achieve;
+    public GameObject scrollview;
     private GameObject g;
     public void Start(){
+    }
+
+    public void viewAchievements(){
+        achieve.GetComponent<SaveLoadAchievements>().LoadFile();
+    }
+
+    public void unViewAchievements(){
+        foreach (Transform c in scrollview.transform)
+        {
+        Destroy(c.gameObject);
+        }
     }
 
     public void fixSlider(){
