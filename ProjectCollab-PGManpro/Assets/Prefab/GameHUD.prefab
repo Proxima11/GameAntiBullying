@@ -684,7 +684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Win
+  m_text: You Lose
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebd6e6f3afdf0f14caaf02ff9a04e189, type: 2}
   m_sharedMaterial: {fileID: -5748547113616965816, guid: ebd6e6f3afdf0f14caaf02ff9a04e189, type: 2}
@@ -10616,6 +10616,7 @@ MonoBehaviour:
   stressPlus: {fileID: 4066820429633846717}
   isStress: 0
   isStresscounter: 0
+  note: {fileID: 7776965024756758556}
   stressAkhir: {fileID: 1240886555539708539}
   scrollview: {fileID: 1760180371120062475}
   task_text: {fileID: 37872186472712800, guid: 04031bf3c956de74aab41b3beb062008, type: 3}

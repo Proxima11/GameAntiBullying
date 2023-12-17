@@ -29,7 +29,7 @@ public override string id{
             return "a_mat";
         }
     }
-    private string name_this1="Kerjakan 1 set soal matematika!";
+    private string name_this1="Kerjakan 1 set soal matematika di kelas 1!";
     public override string taskName{
         get {
             return name_this1;

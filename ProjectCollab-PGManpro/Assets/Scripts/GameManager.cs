@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < 7; i++){
             float temp = Random.Range(0f, 1f);  
 
-            if (temp < superScript.nerdCool/100f){
+            if (temp > superScript.nerdCool/100f){
                 int rand_util = Random.Range(0, temp_acaTasks.Count-1);
                
                 int true_idx = getIndex(temp_acaTasks[rand_util], 0);

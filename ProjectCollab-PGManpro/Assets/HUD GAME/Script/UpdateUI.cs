@@ -35,6 +35,8 @@ public class UpdateUI : MonoBehaviour
         particleStress = GameObject.Find("StressParticles").GetComponent<ParticleSystem>();
     }
 
+    public TMP_Text note;
+
     public Slider stressAkhir;
 
     public void showGameOver(){
@@ -56,7 +58,9 @@ public class UpdateUI : MonoBehaviour
 
         if (status) {
             isi.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
+            isi.transform.GetChild(1).GetChild(1).gameObject.SetActive(false);
         } else {
+            isi.transform.GetChild(1).GetChild(0).gameObject.SetActive(false);
             isi.transform.GetChild(1).GetChild(1).gameObject.SetActive(true);
         }
 
@@ -83,6 +87,8 @@ public class UpdateUI : MonoBehaviour
         } else {
             notes+="Kamu telah menyelesaikan tugas-tugas dengan baik, dengan arti kamu dapat mengatur kehidupan persekolahan, serta kasus perundungan dengan seimbang. Pertahankan sifat ini dan tingkatkan agar makin sukses kedepannya. ";
         }
+
+        note.text = notes;
     }
 
     public void backtoMenu(){
@@ -195,9 +201,9 @@ public class UpdateUI : MonoBehaviour
     }
 
     public void exitTask(){
-        for (var i = scrollview.transform.childCount - 1; i >= 0; i--)
+        foreach (Transform c in scrollview.transform)
         {
-        Object.Destroy(scrollview.transform.GetChild(i).gameObject);
+        Destroy(c.gameObject);
         }
         taskCanvas.SetActive(false);
         inventory.SetActive(true);
