@@ -63,10 +63,6 @@ public class GameManager : MonoBehaviour
         Debug.Log(superScript.idx_coolTasks.Count);
         if(superScript.idx_acaTasks.Count == 0 && superScript.idx_coolTasks.Count == 0){
             random_tasks();
-            FindObjectOfType<InventoryManager>().AddItem(0);
-            FindObjectOfType<InventoryManager>().AddItem(1);
-            FindObjectOfType<InventoryManager>().AddItem(1);
-            FindObjectOfType<InventoryManager>().AddItem(2);
         }
         refreshTask();
     }

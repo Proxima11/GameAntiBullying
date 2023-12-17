@@ -61,10 +61,15 @@ public class superScript : MonoBehaviour
         indexDialog = 0;
         isNeedStudying = false;
         itemOnwed = new List<Item>();
+        itemIndex = new List<int>();
         choices = new List<string>();
         idx_acaTasks = new List<int>();
         idx_coolTasks = new List<int>();
         removedNPC = new List<string>();
+        itemIndex.Add(0);
+        itemIndex.Add(1);
+        itemIndex.Add(1);
+        itemIndex.Add(2);   
     }
 
     // Start is called before the first frame update
