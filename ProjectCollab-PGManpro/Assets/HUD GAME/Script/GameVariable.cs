@@ -13,7 +13,7 @@ public class GameVariable : MonoBehaviour
 	public int day = 1;
 	public bool bell_time = false;
 	public bool takescore = false;
-	public int scoreAdded = 0;
+	public int stressAdded = 0;
 
     public void TakeStress(int takeStress)
 	{
@@ -25,7 +25,7 @@ public class GameVariable : MonoBehaviour
         }else{
             stress = temp;
         }
-
+		stressAdded = takeStress;
 		if (stress <= 0) stress = 0;
     }
 
@@ -41,7 +41,7 @@ public class GameVariable : MonoBehaviour
 	public void AddPoint(int addPoint){
 		score += addPoint;
 		takescore = true;
-		scoreAdded = addPoint;
+		//scoreAdded = addPoint;
 	}
 
 	public void setTime(int inputTime){

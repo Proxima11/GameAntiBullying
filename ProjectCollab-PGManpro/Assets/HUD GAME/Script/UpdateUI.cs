@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class UpdateUI : MonoBehaviour
 {
     public ParticleSystem particleStress;
-    public int fillSpeed = 1;
+    public float fillSpeed = 0.5f;
     public Slider streesBar; 
     public TMP_Text score;
     public TMP_Text time;
@@ -21,12 +21,13 @@ public class UpdateUI : MonoBehaviour
     public GameObject gameOver;
 
     private bool task = false;
-    private int growthRate = 5;
+    private int growthRate = 2;
 
     GameVariable gameVariable;
-    public GameObject CanvasScorePlus;
-    public TMP_Text scorePlus;
-
+    public GameObject CanvasStressPlus;
+    public TMP_Text stressPlus;
+    public bool isStress = false;
+    public float isStresscounter = 0;
 
 
     void Start (){
@@ -96,6 +97,9 @@ public class UpdateUI : MonoBehaviour
             {
                 particleStress.Play();
             }
+            stressPlus.text = "+" + gameVariable.stressAdded.ToString();
+            isStress = true;
+            //CanvasStressPlus.SetActive(true);
         }
         else if (streesBar.value > gameVariable.stress)
         {
@@ -104,10 +108,28 @@ public class UpdateUI : MonoBehaviour
             {
                 particleStress.Play();
             }
+            stressPlus.text = gameVariable.stressAdded.ToString();
+            isStress = true;
+            //CanvasStressPlus.SetActive(true);
         }
         else
         {
             particleStress.Stop();
+        }
+
+        if (isStress)
+        {
+            isStresscounter += Time.deltaTime;
+            if (isStresscounter < 3.0f)
+            {
+                CanvasStressPlus.SetActive(true);
+            }
+            else
+            {
+                CanvasStressPlus.SetActive(false);
+                isStress = false;
+                isStresscounter = 0f;
+            }
         }
         //streesBar.value = gameVariable.stress;
 
@@ -118,22 +140,22 @@ public class UpdateUI : MonoBehaviour
             {
                 scores += growthRate;
                 score.text = scores.ToString();
-                scorePlus.text = "+" + gameVariable.scoreAdded.ToString();
-                CanvasScorePlus.SetActive(true);
+                //scorePlus.text = "+" + gameVariable.scoreAdded.ToString();
+                //CanvasScorePlus.SetActive(true);
                
             }
             else if (scores > gameVariable.score && gameVariable.takescore == true)
             {
                 scores -= growthRate;
                 score.text = scores.ToString();
-                scorePlus.text = gameVariable.scoreAdded.ToString();
-                CanvasScorePlus.SetActive(true);
+                //scorePlus.text = gameVariable.scoreAdded.ToString();
+                //CanvasScorePlus.SetActive(true);
             }
             else
             {
                 score.SetText(gameVariable.score.ToString());
                 gameVariable.takescore = false;
-                CanvasScorePlus.SetActive(false);
+                //CanvasScorePlus.SetActive(false);
             }
         }
         else
