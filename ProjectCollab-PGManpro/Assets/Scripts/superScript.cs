@@ -43,8 +43,8 @@ public class superScript : MonoBehaviour
     static public int indexDialog = 0;
     static public List<Item> itemOnwed = new List<Item>();
     static public List<int> itemIndex = new List<int>();
-
     static public List<string> removedNPC = new List<string>();
+    static public List<int> indexRandomEvent = new List<int>();
 
     static public void setVariable (int inputScore, int inputStress, float inputTime, int inputDay){
         score = inputScore;
@@ -66,6 +66,7 @@ public class superScript : MonoBehaviour
         idx_acaTasks = new List<int>();
         idx_coolTasks = new List<int>();
         removedNPC = new List<string>();
+        indexRandomEvent = new List<int>();
         itemIndex.Add(0);
         itemIndex.Add(1);
         itemIndex.Add(1);

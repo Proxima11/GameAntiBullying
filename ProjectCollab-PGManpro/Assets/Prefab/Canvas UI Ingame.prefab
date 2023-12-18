@@ -101,9 +101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Masuk ke kelas 1Masuk ke kelas 1Masuk ke kelas 1Masuk ke kelas 1Masuk ke
-    kelas 1Masuk ke kelas 1Masuk ke kelas 1Masuk ke kelas 1Masuk ke kelas 1Masuk
-    ke kelas 1Masuk ke kelas 1Masuk ke kelas 1Masuk ke kelas 1
+  m_text: Masuk ke kelas 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6044,6 +6042,14 @@ PrefabInstance:
     - target: {fileID: 3336690024861759448, guid: 3a416d33f878c3440ac32f1464b242bc, type: 3}
       propertyPath: m_BlocksRaycasts
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611916003559609681, guid: 3a416d33f878c3440ac32f1464b242bc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 256.8705
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611916003559609681, guid: 3a416d33f878c3440ac32f1464b242bc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.0423
       objectReference: {fileID: 0}
     - target: {fileID: 4122845257994506461, guid: 3a416d33f878c3440ac32f1464b242bc, type: 3}
       propertyPath: m_IsActive

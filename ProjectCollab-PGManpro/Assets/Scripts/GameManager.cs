@@ -64,6 +64,21 @@ public class GameManager : MonoBehaviour
         if(superScript.idx_acaTasks.Count == 0 && superScript.idx_coolTasks.Count == 0){
             random_tasks();
         }
+
+        if(superScript.indexRandomEvent.Count == 0){
+            superScript.indexRandomEvent.Add(0);
+            superScript.indexRandomEvent.Add(1);
+            superScript.indexRandomEvent.Add(2);
+            superScript.indexRandomEvent.Add(3);
+            superScript.indexRandomEvent.Add(4);
+            Shuffle(superScript.indexRandomEvent);
+            Debug.Log("Shuffeled");
+        }
+        Debug.Log(superScript.indexRandomEvent[0]);
+        Debug.Log(superScript.indexRandomEvent[1]);
+        Debug.Log(superScript.indexRandomEvent[2]);
+        Debug.Log(superScript.indexRandomEvent[3]);
+        Debug.Log(superScript.indexRandomEvent[4]);
         refreshTask();
     }
 
@@ -305,6 +320,17 @@ public class GameManager : MonoBehaviour
         superScript.setVariable(gameVariable.score,gameVariable.stress, gameVariable.timeNow, gameVariable.day);
         superScript.itemOnwed = inventory.itemOnwed;
         superScript.itemIndex = inventory.itemIndex;
+    }
+
+    public void Shuffle(List<int> ts) {
+        var count = ts.Count;
+        var last = count - 1;
+        for (var i = 0; i < last; ++i) {
+            var r = Random.Range(i, count);
+            var tmp = ts[i];
+            ts[i] = ts[r];
+            ts[r] = tmp;
+        }
     }
 }
 

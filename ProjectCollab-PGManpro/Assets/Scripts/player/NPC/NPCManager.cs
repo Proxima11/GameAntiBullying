@@ -9,7 +9,6 @@ public class NPCManager : MonoBehaviour
     public List<string> listNpc = new List<string>(); 
     public List<Spawn> listSpawn;
     GameObject questMark;
-    GameObject kevin;
     GameObject girl;
     GameObject guru;
     GameObject david;
@@ -28,6 +27,16 @@ public class NPCManager : MonoBehaviour
     GameObject jaka;
     GameObject friska;
     GameObject risma;
+
+    GameObject kevin;
+    GameObject charles;
+    GameObject evelyn;
+    GameObject andre;
+    GameObject alexa;
+    GameObject siri;
+
+
+
     public bool randomEvent = false;
 
     private string sceneNowName;
@@ -35,7 +44,6 @@ public class NPCManager : MonoBehaviour
     {
         questMark = Resources.Load<GameObject>("QuestMark");
         guru = Resources.Load<GameObject>("Guru");
-        kevin = Resources.Load<GameObject>("Kevin");
         girl = Resources.Load<GameObject>("Girl_FBX1");
         david = Resources.Load<GameObject>("David");
         devi = Resources.Load<GameObject>("Devi");
@@ -52,6 +60,16 @@ public class NPCManager : MonoBehaviour
         jaka = Resources.Load<GameObject>("Jaka");
         friska = Resources.Load<GameObject>("Bu Friska");
         risma = Resources.Load<GameObject>("Risma");
+
+        // Random Event Prefab
+        kevin = Resources.Load<GameObject>("Random Event/Kevin");
+        charles = Resources.Load<GameObject>("Random Event/Charles");
+        evelyn = Resources.Load<GameObject>("Random Event/Evelyn");
+        andre = Resources.Load<GameObject>("Random Event/Andre");
+        alexa = Resources.Load<GameObject>("Random Event/Alexa");
+        siri = Resources.Load<GameObject>("Random Event/Siri");
+
+
 
         listSpawn = FindObjectOfType<NPCSpawner>().spawns;
         // superScript.indexDialog = 10;
@@ -1009,6 +1027,14 @@ public class NPCManager : MonoBehaviour
         else if(SceneManager.GetActiveScene().name == "kelas 2")
         {
             changeScene("kelas 2");
+            if(superScript.indexRandomEvent[superScript.day-1] == 0){
+                if (!superScript.removedNPC.Contains("Evelyn")){
+                    addSpawn(evelyn, new Vector3(-14.95f, -1f, 1.31f), new Vector3(0f, 90f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Evelyn");
+                    addNPC("Evelyn");
+                }else{
+                    removeNPC("Evelyn");
+                };
+            }
         }
         else if (SceneManager.GetActiveScene().name == "kelas 3")
         {
@@ -1019,17 +1045,41 @@ public class NPCManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "kelas 4")
         {
             changeScene("kelas 4");
-            addSpawn(jessica, new Vector3(-4.06f, 0.08039999f, -4.94f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "Jessica");
-            addNPC("Jessica");
+            if(superScript.indexRandomEvent[superScript.day-1] == 1){
+                if (!superScript.removedNPC.Contains("Siri")){
+                    addSpawn(siri, new Vector3(5.204f, 0.185f, -9.307f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Siri");
+                    addNPC("Siri");
+                }else{
+                    removeNPC("Siri");
+                };
+            }
         }
         else if (SceneManager.GetActiveScene().name == "Lorong")
         {
             changeScene("Lorong");
-            if (!superScript.removedNPC.Contains("Kevin")){
-                addSpawn(kevin, new Vector3(90.98f, 0.05885804f, -14.22f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Kevin");
-                addNPC("Kevin");
-            }else{
-                removeNPC("Kevin");
+            if(superScript.indexRandomEvent[superScript.day-1] == 2){
+                if (!superScript.removedNPC.Contains("Kevin") && !superScript.removedNPC.Contains("Charles")){
+                    addSpawn(kevin, new Vector3(90.98f, 0.05885804f, -13.22f), new Vector3(0f, -180f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Kevin");
+                    addNPC("Kevin");
+                    addSpawn(charles, new Vector3(90.98f, -0.059f, -14.22f), new Vector3(0f, -30f, 0f), new Vector3(1.0f, 1.0f, 1.0f), "Charles");
+                    addNPC("Charles");
+
+                }else{
+                    removeNPC("Kevin");
+                    removeNPC("Charles");
+                }
+            }
+
+
+            if(superScript.indexRandomEvent[superScript.day-1] == 3){
+
+                if (!superScript.removedNPC.Contains("Andre")){
+                    addSpawn(andre, new Vector3(70f, 4.173f, -16.5f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Andre");
+                    addNPC("Andre");
+
+                }else{
+                    removeNPC("Andre");
+                }
             }
 
             
@@ -1059,6 +1109,16 @@ public class NPCManager : MonoBehaviour
             addNPC("Instruktur");
             addSpawn(jaka, new Vector3(-29.445f, -0.309f, 55.23f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Jaka");
             addNPC("Jaka");
+
+            if(superScript.indexRandomEvent[superScript.day-1] == 4){
+                if (!superScript.removedNPC.Contains("Alexa")){
+                    addSpawn(alexa, new Vector3(-40.19f, -0.21f, 0f), new Vector3(0f, -60f, 0f), new Vector3(1f, 1f, 1f), "Alexa");
+                    addNPC("Alexa");
+                }else{
+                    removeNPC("Alexa");
+                }
+            }
+
         }
     }
 

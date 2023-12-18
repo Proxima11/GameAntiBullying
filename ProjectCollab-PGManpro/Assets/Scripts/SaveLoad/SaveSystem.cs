@@ -31,6 +31,7 @@ public class SaveSystem : MonoBehaviour
         data.coolTask = superScript.idx_coolTasks;
         data.items = superScript.itemIndex;
         data.removedNPC = superScript.removedNPC;
+        data.indexRandomEvent = superScript.indexRandomEvent;
 
         formatter.Serialize(stream, data);
         stream.Close();
@@ -58,6 +59,7 @@ public class SaveSystem : MonoBehaviour
             superScript.idx_coolTasks = data.coolTask;
             superScript.itemIndex = data.items;
             superScript.removedNPC = data.removedNPC;
+            superScript.indexRandomEvent = data.indexRandomEvent;
 
             superScript.setVariable(data.score, data.stress, data.time, data.day);
 
@@ -67,7 +69,6 @@ public class SaveSystem : MonoBehaviour
         } 
         else
         {
-            Debug.LogError("Save Is not Found");
             superScript.resetVariable();
         }
     }

@@ -11,9 +11,9 @@ VAR jajan = "jajan"
 
 Ketika sedang berada di lapangan tennis # speaker: narrator #score: 0 #stress: 0 #blackscreen: 3
 
-Halo kamu yang disana. Bisa tolong bantu aku ga? # speaker: ??? #score: 0 #stress: 0 #blackscreen: 0
+Halo kamu yang disana. Bisa tolong bantu aku ga? # speaker: "???" #score: 0 #stress: 0 #blackscreen: 0
 Oh iya. Kenapa ya kak? # speaker: {player} #score: 0 #stress: 0 #blackscreen: 0
-Ini kakiku terkilir habis main tennis. Sakit banget. # speaker: ??? #score: 0 #stress: 0 #blackscreen: 0
+Ini kakiku terkilir habis main tennis. Sakit banget. # speaker: "???" #score: 0 #stress: 0 #blackscreen: 0
 +[membantunya]
 Ini kak ada kompres dari es. Semoga bisa membantu. # speaker: {player} #score: 0 #stress: 0 #blackscreen: 0
 Kakak misterius tersebut mengambilnya dan mendinginkan lukanya # speaker: narrator #score: 0 #stress: 0 #blackscreen: 4

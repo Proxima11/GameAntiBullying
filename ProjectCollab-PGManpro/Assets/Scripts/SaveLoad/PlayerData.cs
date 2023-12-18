@@ -24,6 +24,7 @@ public class PlayerData
 
     public List<int> items;
     public List<string> removedNPC;
+    public List<int> indexRandomEvent;
 
     
     public PlayerData (GameVariable gameVariable, Vector3 playerPosition) 
