@@ -21,7 +21,7 @@ Ketika {player} sampai di kolam renang, {player} akan bertemu dengan geng {David
             ++ [menolak]
                 Aku gak punya {jajan} lagi, {Vid}. # speaker: {player} #score: 0 #stress: 0 #blackscreen: 0
             ++ [menyerah]
-                Ini, {Vid}. Ini udah {jajan} terakhirku. # speaker: {player} #score: 0 #stress: 5 #blackscreen: 0
+                Ini, {Vid}. Ini udah {jajan} terakhirku. # speaker: {player} #score: 0 #stress: 5 #blackscreen: 0 #item: -1
 
 - {Vid}, kenapa sih kamu melakukan ini?? # speaker: {player} #score: 0 #stress: 0 #blackscreen: 0
 

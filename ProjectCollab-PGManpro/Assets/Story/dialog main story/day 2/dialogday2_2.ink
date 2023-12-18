@@ -25,11 +25,11 @@ Loh apa cuma itu caranya, {Vid}?#speaker:{player} #score: 0 #stress: 0 #blackscr
 
 Itu cuma satu-satunya cara buat kamu gak dibully sih. Tapi kalau kamu gak ngikuti caraku pasti hidupmu di sekolah jadi gak enak.#speaker:{David} #score: 0 #stress: 0 #blackscreen: 0
 + [Turuti perintah {David} dan berikan {jajan} ke {David}]
-    Ya udah, {Vid}. Aku ngikuti kamu aja.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
+    Ya udah, {Vid}. Aku ngikuti kamu aja.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0 #item: -1
     Nahh baguss, sekarang kamu ada {jajan} kan. #speaker:{David} #score: 0 #stress: 0 #blackscreen: 0
     Kamu tinggal kasih itu ke kita sekarang aku pastiin aku gak bakal di bully di sekolah ini.#speaker:{David} #score: 0 #stress: 0 #blackscreen: 0
     Iyaa ini, {Vid}.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
-    {player} menyerah dan memberikan {jajan} yang ia miliki#speaker:narrator #score: 50 #stress: 5 #blackscreen: 4
+    {player} menyerah dan memberikan {jajan} yang ia miliki#speaker:narrator #score: 50 #stress: 5 #blackscreen: 4 
     -> DONE
 + [Lawan {David} dan tidak berikan {jajan} ke {David}]
     Itu kan ya sama aja kalau kamu malak i aku. Aku gak mau kasih {jajan} ku ke kamu.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0

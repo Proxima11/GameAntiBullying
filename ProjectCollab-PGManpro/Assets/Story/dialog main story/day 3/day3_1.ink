@@ -17,6 +17,6 @@ Kamu memberikan {jajan}mu. {David} dan gengnya pergi tanpa melakukan apapun #spe
 + Tidak memberikan {jajan} ke {David}
 Tidak, aku tidak membawa {jajan}ku hari ini.#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
 Kamu mau nipu aku ?? Ayo geledah dia !!#speaker:{David} #score: 0 #stress: 0 #blackscreen: 0
-{David} dan gengnya menemukan {jajan} {player}. Mereka mengambilnya dan membully {player}.#speaker:narrator #score: 0 #stress: 20 #blackscreen: 5
+{David} dan gengnya menemukan {jajan} {player}. Mereka mengambilnya dan membully {player}.#speaker:narrator #score: 0 #stress: 20 #blackscreen: 5 #item : -1
 ->DONE
 ->END

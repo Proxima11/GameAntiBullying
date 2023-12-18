@@ -11,7 +11,7 @@ Saat {player} ingin pulang {David} kembali mencegat {player}.#speaker:narrator #
 Sebelum kamu pulang berikan {jajan} yang kamu dapatkan tadi ke kita dulu .#speaker:{David} #score: 0 #stress: 0 #blackscreen: 0
 +melaporkan
     ++ Memberikan {jajan} ke {David}
-    Iya, {Vid}. Itu {jajan}ku. Apa aku sudah boleh pulang ?#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
+    Iya, {Vid}. Itu {jajan}ku. Apa aku sudah boleh pulang ?#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0 #item: -1
 
     Sebentar dulu, tadi kamu melapor ke guru ya ? kok berani gitu kamu melapor ke guru ? Gara-gara kamu kita harus buang-buang waktu ditanyain guru-guru#speaker:{David} #score: 0 #stress: 0 #blackscreen: 0
 
@@ -26,7 +26,7 @@ Sebelum kamu pulang berikan {jajan} yang kamu dapatkan tadi ke kita dulu .#speak
     {player} dan {David} bertengkar fisik. Lalu karena kalah jumlah {player} babak belur. Setelah memukuli {player}, {David} dan geng nya meninggalkan tempat secara buru-buru karena takut bertemu guru.#speaker:narrator #score: 0 #stress: 0 #blackscreen: 10
 + tidak melaporkan
     ++ Memberikan {jajan} ke {David}
-    Iya, {Vid}. Itu {jajan}ku. Apa aku sudah boleh pulang ?#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
+    Iya, {Vid}. Itu {jajan}ku. Apa aku sudah boleh pulang ?#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0 #item: -1
     {David} melepaskan {player} untuk pulang#speaker:narrator #score: 0 #stress: 5 #blackscreen: 3
     ++ Tidak memberikan {jajan} ke {David}
     Ayolah, {Vid}. Jangan palak aku terus. Kenapa sih kamu harus malak i orang terus ?#speaker:{player} #score: 0 #stress: 0 #blackscreen: 0
