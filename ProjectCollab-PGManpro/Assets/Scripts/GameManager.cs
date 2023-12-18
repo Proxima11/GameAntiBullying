@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
 
     private bool classTriggered = false;
     private int counter = -1;
+    public int score_cur = 0;
+    public int counter_toilet = 0;
+
 
     void Start(){
         audioSource = GetComponent<AudioSource>();
@@ -33,6 +36,42 @@ public class GameManager : MonoBehaviour
 
 
         Scene scene = SceneManager.GetActiveScene();
+
+        if (superScript.boy && scene.name == "Toilet Wanita lt 1" && counter_toilet < 1 || superScript.boy && scene.name == "Toilet Wanita lt 2")
+        {
+            counter_toilet += 1;
+            if (counter_toilet < 2)
+            {
+                int score_cur = (int)FindObjectOfType<GameVariable>().score - 10;
+                if (score_cur < 0)
+                {
+                    FindObjectOfType<GameVariable>().AddPoint(-(FindObjectOfType<GameVariable>().score));
+                }
+                else
+                {
+                    FindObjectOfType<GameVariable>().AddPoint(-10);
+                }
+            }
+        }
+        else if (!superScript.boy && scene.name == "Toilet Pria lt 1" && counter_toilet < 1 || superScript.boy && scene.name == "Toilet Pria lt 2")
+        {
+            if (counter_toilet < 2)
+            {
+                counter_toilet += 1;
+                score_cur = (int)FindObjectOfType<GameVariable>().score - 10;
+                if (score_cur <= 0)
+                {
+                    FindObjectOfType<GameVariable>().AddPoint(-(FindObjectOfType<GameVariable>().score));
+                }
+                else
+                {
+                    FindObjectOfType<GameVariable>().AddPoint(-10);
+                }
+            }
+        }
+        else{
+            counter_toilet = 0;
+        }
 
         if (playerPos != Vector3.zero && scene.name == "Lorong") // Check if playerPos has been set
         {
