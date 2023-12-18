@@ -278,12 +278,7 @@ public class NPCManager : MonoBehaviour
         
         else if (dialog[index] == "Day 2 part 1 " & superScript.day < 2)
         {
-            if(SceneManager.GetActiveScene().name != "Lorong"){
-                FindObjectOfType<UpdateUI>().navigation.SetText("MASUK KE LORONG");
-            }
-            else{
-                FindObjectOfType<UpdateUI>().navigation.SetText(" ");
-            }
+            FindObjectOfType<UpdateUI>().navigation.SetText(" ");
             changeScene("Lorong");
             removeNPC("Alvin");
             removeNPC("Vina");
@@ -314,7 +309,7 @@ public class NPCManager : MonoBehaviour
             }
             else
             {
-                addSpawn(devi, new Vector3(69.82f, -0.258f, -11.57f), new Vector3(0f, 180f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
+                addSpawn(devi, new Vector3(69.82f, -0.298f, -11.57f), new Vector3(0f, 180f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Devi");
                 addNPC("Devi");
             }
 
@@ -355,11 +350,11 @@ public class NPCManager : MonoBehaviour
                     FindObjectOfType<UpdateUI>().navigation.SetText(" ");
                 }
                 changeScene("Toilet Pria lt 1");
-                addSpawn(david, new Vector3(46.106f, -0.08009219f, -0.072f), new Vector3(0f, 90f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addSpawn(david, new Vector3(46.106f, -0.13f, -0.072f), new Vector3(0f, 90f, 0f), new Vector3(1f, 1f, 1f), "David");
                 addNPC("David");
-                addSpawn(tino, new Vector3(46.646f, -0.08009219f, 0.748f), new Vector3(0f, 110f, 0f), new Vector3(1f, 1f, 1f), "Tino");
+                addSpawn(tino, new Vector3(46.646f, -0.13f, 0.748f), new Vector3(0f, 110f, 0f), new Vector3(1f, 1f, 1f), "Tino");
                 addNPC("Tino");
-                addSpawn(doni, new Vector3(46.66788f, -0.08009219f, -0.7924929f), new Vector3(0f, 60f, 0f), new Vector3(1f, 1f, 1f), "Doni");
+                addSpawn(doni, new Vector3(46.66788f, -0.13f, -0.7924929f), new Vector3(0f, 60f, 0f), new Vector3(1f, 1f, 1f), "Doni");
                 addNPC("Doni");
 
                 addSpawn(questMark, new Vector3(46.106f, 2.2f, -0.072f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
@@ -414,14 +409,9 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 3 part 1 " & superScript.day < 3)
         {
+            FindObjectOfType<UpdateUI>().navigation.SetText(" ");
             if (superScript.boy)
             {
-                if(SceneManager.GetActiveScene().name != "Toilet Pria lt 1"){
-                FindObjectOfType<UpdateUI>().navigation.SetText("MASUK KE TOILET PRIA LT 1");
-                }
-                else{
-                    FindObjectOfType<UpdateUI>().navigation.SetText(" ");
-                }
                 changeScene("Toilet Pria lt 1");
                 removeNPC("David");
                 removeNPC("Tino");
@@ -430,12 +420,6 @@ public class NPCManager : MonoBehaviour
             }
             else
             {
-                if(SceneManager.GetActiveScene().name != "Toilet Wanita lt 1"){
-                    FindObjectOfType<UpdateUI>().navigation.SetText("GO TO TOILET WANITA LT 1");
-                }
-                else{
-                    FindObjectOfType<UpdateUI>().navigation.SetText(" ");
-                }
                 changeScene("Toilet Wanita lt 1");
                 removeNPC("Devi");
                 removeNPC("Vero");
@@ -467,9 +451,9 @@ public class NPCManager : MonoBehaviour
                 }
                 addSpawn(david, new Vector3(61.88f, 4.119458f, -7.150001f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "David");
                 addNPC("David");
-                addSpawn(tino, new Vector3(62.35f, 4.119458f, -7.8f), new Vector3(0f, 230f, 0f), new Vector3(1f, 1f, 1f), "Tino");
+                addSpawn(tino, new Vector3(62.35f, 3.987f, -7.8f), new Vector3(0f, 230f, 0f), new Vector3(1f, 1f, 1f), "Tino");
                 addNPC("Tino");
-                addSpawn(doni, new Vector3(61.22f, 4.119458f, -7.38f), new Vector3(0f, 150f, 0f), new Vector3(1f, 1f, 1f), "Doni");
+                addSpawn(doni, new Vector3(61.22f, 3.987f, -7.38f), new Vector3(0f, 150f, 0f), new Vector3(1f, 1f, 1f), "Doni");
                 addNPC("Doni");
             }
             else
@@ -588,7 +572,7 @@ public class NPCManager : MonoBehaviour
                     removeNPC("QuestMark");
                     FindObjectOfType<DialogManager>().spawn = false;
                 }
-                addSpawn(alvin, new Vector3(9.67083f, -0.32f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addSpawn(alvin, new Vector3(9.67083f, -0.431f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
                 addNPC("Alvin");
             }
             else
@@ -623,12 +607,8 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 4 " & superScript.day < 4)
         {
-            if(SceneManager.GetActiveScene().name != "Outside"){
-                FindObjectOfType<UpdateUI>().navigation.SetText("MASUK KE OUTSIDE");
-            }
-            else{
-                FindObjectOfType<UpdateUI>().navigation.SetText(" ");
-            }
+            FindObjectOfType<UpdateUI>().navigation.SetText(" ");
+           
             changeScene("Outside");
             if (superScript.boy)
             {
@@ -701,12 +681,8 @@ public class NPCManager : MonoBehaviour
         }
         else if (dialog[index] == "Day 5 part 1 " & superScript.day < 5)
         {
-            if(SceneManager.GetActiveScene().name != "Outside"){
-                FindObjectOfType<UpdateUI>().navigation.SetText("MASUK KE OUTSIDE");
-            }
-            else{
-                FindObjectOfType<UpdateUI>().navigation.SetText(" ");
-            }
+            FindObjectOfType<UpdateUI>().navigation.SetText(" ");
+            
             changeScene("Outside");
             if (superScript.boy)
             {
