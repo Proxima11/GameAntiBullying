@@ -57,7 +57,7 @@ public class SaveLoadAchievements : MonoBehaviour
 
             Achievements data = JsonUtility.FromJson<Achievements>(reader.ReadToEnd());
 
-            GameObject newA = (GameObject) Instantiate(achievements_prefab);
+            GameObject newA = (GameObject) Instantiate(achievements_prefab, content_achievements.transform);
             newA.transform.GetChild(1).GetComponent<TMP_Text>().text = data.uname;
             newA.transform.GetChild(2).GetComponent<TMP_Text>().text = data.date;
             newA.transform.GetChild(3).GetComponent<TMP_Text>().text = "Score: " + data.score.ToString();
@@ -82,7 +82,7 @@ public class SaveLoadAchievements : MonoBehaviour
 
             newA.transform.GetComponent<Achievements_util>().setNote(data.notes);
 
-            newA.transform.SetParent(content_achievements.transform);
+            // newA.transform.SetParent(content_achievements.transform);
 
             fileCount++;
             reader.Close();

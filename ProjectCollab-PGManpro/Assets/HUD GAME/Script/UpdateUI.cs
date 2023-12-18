@@ -196,8 +196,8 @@ public class UpdateUI : MonoBehaviour
 
         for (var i = 0; i < superScript.Tasks.Count; i++){
             var node = superScript.Tasks[i];
-            GameObject newT = (GameObject) Instantiate(task_text);
-            newT.transform.SetParent(scrollview.transform);
+            GameObject newT = (GameObject) Instantiate(task_text, scrollview.transform);
+            // newT.transform.SetParent(scrollview.transform);
             newT.GetComponent<TMPro.TextMeshProUGUI>().text = (i+1) + ". ";
             if (node.done) newT.GetComponent<TMPro.TextMeshProUGUI>().text += "<s>";
             newT.GetComponent<TMPro.TextMeshProUGUI>().text += node.taskName;
