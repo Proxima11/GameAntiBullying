@@ -96,6 +96,21 @@ public class NPCInteracted : MonoBehaviour, InterfaceInteractable
         }
         }
 
+        if (transform.tag == "Debris") {
+            if (superScript.Tasks.Any(x => x is bersihinKelas)){
+            if (!done_kenalan){
+                foreach (var e in superScript.Tasks){
+                    if (string.Equals(e.id, "c_bersihinKelas")){
+                        e.task();
+                        done_kenalan=true;
+                        Destroy(gameObject);
+                        return;
+                    }
+                }
+            }   
+        }
+        }
+
         if (FindObjectOfType<DialogManager>().buttonF != null) { FindObjectOfType<DialogManager>().buttonF.SetActive(false); }
         if (FindObjectOfType<DialogManager>().buttonEsc != null) { FindObjectOfType<DialogManager>().buttonEsc.SetActive(false); }
         string title = FindObjectOfType<NPCManager>().dialogStatus;

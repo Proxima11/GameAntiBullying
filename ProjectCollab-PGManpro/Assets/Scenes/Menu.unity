@@ -10995,6 +10995,8 @@ MonoBehaviour:
   nextCanvas: {fileID: 1618090920}
   achieve: {fileID: 1514302284}
   scrollview: {fileID: 898301881}
+  buttonLoad: {fileID: 1123487294}
+  continueButtonText: {fileID: 0}
 --- !u!114 &1029573699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12469,7 +12471,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.24313726}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.40392157}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.41960785}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

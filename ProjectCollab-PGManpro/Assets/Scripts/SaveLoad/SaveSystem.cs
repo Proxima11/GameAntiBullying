@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.SceneManagement;
 
 public class SaveSystem : MonoBehaviour
 {
@@ -33,6 +34,9 @@ public class SaveSystem : MonoBehaviour
         data.removedNPC = superScript.removedNPC;
         data.indexRandomEvent = superScript.indexRandomEvent;
 
+        Scene temp = SceneManager.GetActiveScene();
+        data.sceneName = temp.name;
+
         formatter.Serialize(stream, data);
         stream.Close();
     }
@@ -62,6 +66,8 @@ public class SaveSystem : MonoBehaviour
             superScript.indexRandomEvent = data.indexRandomEvent;
 
             superScript.setVariable(data.score, data.stress, data.time, data.day);
+
+            SceneManager.LoadScene(data.sceneName);
 
             // GameManager.playerPos = new Vector3(data.position[0], data.position[1], data.position[2]);
             // Debug.Log(new Vector3(data.position[0], data.position[1], data.position[2]));

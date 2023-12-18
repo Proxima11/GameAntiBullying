@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using StarterAssets; 
+using System.IO;
 
 public class MainMenu : MonoBehaviour
 {
@@ -22,8 +23,17 @@ public class MainMenu : MonoBehaviour
     public GameObject nextCanvas;
     public GameObject achieve;
     public GameObject scrollview;
+    public GameObject buttonLoad;
+    public TMP_Text continueButtonText;
     private GameObject g;
     public void Start(){
+        if (checkFileSave()){
+            buttonLoad.GetComponent<Button>().interactable = true;
+            continueButtonText.faceColor = new Color32(255, 255, 255, 255);
+        } else {
+            buttonLoad.GetComponent<Button>().interactable = false;
+            continueButtonText.faceColor = new Color32(255, 255, 255, 0);
+        }
     }
 
     public void viewAchievements(){
@@ -52,9 +62,16 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Lorong");
     }
 
+    private bool checkFileSave(){
+        string path = Application.persistentDataPath + "/gameData.fun";
+
+        if (File.Exists(path)) return true;
+        return false;
+    }
+
     public void Load(){
         FindObjectOfType<SaveSystem>().LoadGame();
-        SceneManager.LoadScene("Lorong");
+        // SceneManager.LoadScene("Lorong");
     }
 
     public void Menu(){

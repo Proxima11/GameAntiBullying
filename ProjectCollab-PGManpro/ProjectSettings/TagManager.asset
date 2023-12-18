@@ -9,6 +9,8 @@ TagManager:
   - Teleport
   - Student
   - Teacher
+  - Sampah
+  - Debris
   layers:
   - Default
   - TransparentFX
