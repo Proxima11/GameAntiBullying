@@ -122,7 +122,7 @@ public class NPCManager : MonoBehaviour
             addNPC("Guru");
             if (superScript.boy)
             {
-                addSpawn(david, new Vector3(-3.89f, 0.012f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(0.9f, 0.9f, 0.9f), "David");
+                addSpawn(david, new Vector3(-3.89f, 0.012f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "David");
                 addNPC("David");
             }
             else
@@ -179,9 +179,9 @@ public class NPCManager : MonoBehaviour
 
             if (superScript.boy)
             {
-                addSpawn(alvin, new Vector3(-2.23f, -0.268f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addSpawn(alvin, new Vector3(-2.23f, -0.268f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Alvin");
                 addNPC("Alvin");
-                addSpawn(david, new Vector3(-3.89f, 0.012f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(0.9f, 0.9f, 0.9f), "David");
+                addSpawn(david, new Vector3(-3.89f, 0.012f, -2.24f), new Vector3(0f, 60f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "David");
                 addNPC("David");
 
             }
@@ -214,7 +214,7 @@ public class NPCManager : MonoBehaviour
                     removeNPC("QuestMark");
                     FindObjectOfType<DialogManager>().spawn = false;
                 }
-                addSpawn(alvin, new Vector3(-2.23f, -0.268f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addSpawn(alvin, new Vector3(-2.23f, -0.268f, -3.14f), new Vector3(0f, 0f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Alvin");
                 addNPC("Alvin");
 
             }
@@ -269,7 +269,7 @@ public class NPCManager : MonoBehaviour
             changeScene("Lorong");
             if (superScript.boy)
             {
-                addSpawn(alvin, new Vector3(61.887f, -0.238f, -3.524f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addSpawn(alvin, new Vector3(61.887f, -0.238f, -3.524f), new Vector3(0f, 270f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Alvin");
                 addNPC("Alvin");
             }
             else
@@ -322,7 +322,7 @@ public class NPCManager : MonoBehaviour
             changeScene("Lorong");
             if (superScript.boy)
             {
-                addSpawn(david, new Vector3(69.82f, 0.058f, -11.57f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addSpawn(david, new Vector3(69.82f, 0.058f, -11.57f), new Vector3(0f, 180f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "David");
                 addNPC("David");
             }
             else
@@ -368,11 +368,11 @@ public class NPCManager : MonoBehaviour
                     FindObjectOfType<UpdateUI>().navigation.SetText(" ");
                 }
                 changeScene("Toilet Pria lt 1");
-                addSpawn(david, new Vector3(46.106f, -0.13f, -0.072f), new Vector3(0f, 90f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addSpawn(david, new Vector3(46.106f, -0.13f, -0.072f), new Vector3(0f, 90f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "David");
                 addNPC("David");
-                addSpawn(tino, new Vector3(46.646f, -0.13f, 0.748f), new Vector3(0f, 110f, 0f), new Vector3(1f, 1f, 1f), "Tino");
+                addSpawn(tino, new Vector3(46.646f, -0.13f, 0.748f), new Vector3(0f, 110f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Tino");
                 addNPC("Tino");
-                addSpawn(doni, new Vector3(46.66788f, -0.13f, -0.7924929f), new Vector3(0f, 60f, 0f), new Vector3(1f, 1f, 1f), "Doni");
+                addSpawn(doni, new Vector3(46.66788f, -0.13f, -0.7924929f), new Vector3(0f, 60f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Doni");
                 addNPC("Doni");
 
                 addSpawn(questMark, new Vector3(46.106f, 2.2f, -0.072f), new Vector3(0f, 0f, 0f), new Vector3(0.2f, 0.2f, 0.2f), "QuestMark");
@@ -467,11 +467,11 @@ public class NPCManager : MonoBehaviour
                     removeNPC("QuestMark");
                     FindObjectOfType<DialogManager>().spawn = false;
                 }
-                addSpawn(david, new Vector3(61.88f, 4.119458f, -7.150001f), new Vector3(0f, 180f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addSpawn(david, new Vector3(61.88f, 4.119458f, -7.150001f), new Vector3(0f, 180f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "David");
                 addNPC("David");
-                addSpawn(tino, new Vector3(62.35f, 3.987f, -7.8f), new Vector3(0f, 230f, 0f), new Vector3(1f, 1f, 1f), "Tino");
+                addSpawn(tino, new Vector3(62.35f, 3.987f, -7.8f), new Vector3(0f, 230f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Tino");
                 addNPC("Tino");
-                addSpawn(doni, new Vector3(61.22f, 3.987f, -7.38f), new Vector3(0f, 150f, 0f), new Vector3(1f, 1f, 1f), "Doni");
+                addSpawn(doni, new Vector3(61.22f, 3.987f, -7.38f), new Vector3(0f, 150f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Doni");
                 addNPC("Doni");
             }
             else
@@ -529,11 +529,11 @@ public class NPCManager : MonoBehaviour
                     removeNPC("QuestMark");
                     FindObjectOfType<DialogManager>().spawn = false;
                 }
-                addSpawn(david, new Vector3(55.41f, 0.058f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addSpawn(david, new Vector3(55.41f, 0.058f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "David");
                 addNPC("David");
-                addSpawn(tino, new Vector3(54.62f, -0.08f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Tino");
+                addSpawn(tino, new Vector3(54.62f, -0.08f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Tino");
                 addNPC("Tino");
-                addSpawn(doni, new Vector3(56.214f, -0.08f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Doni");
+                addSpawn(doni, new Vector3(56.214f, -0.08f, -5.18f), new Vector3(0f, 0f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Doni");
                 addNPC("Doni");
             }
             else
@@ -590,7 +590,7 @@ public class NPCManager : MonoBehaviour
                     removeNPC("QuestMark");
                     FindObjectOfType<DialogManager>().spawn = false;
                 }
-                addSpawn(alvin, new Vector3(9.67083f, -0.431f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addSpawn(alvin, new Vector3(9.67083f, -0.431f, 8.98f), new Vector3(0f, 270f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Alvin");
                 addNPC("Alvin");
             }
             else
@@ -659,11 +659,11 @@ public class NPCManager : MonoBehaviour
                     removeNPC("QuestMark");
                     FindObjectOfType<DialogManager>().spawn = false;
                 }
-                addSpawn(david, new Vector3(-86.34f, -0.426f, 93.72612f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addSpawn(david, new Vector3(-86.34f, -0.426f, 93.72612f), new Vector3(0f, 0f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "David");
                 addNPC("David");
-                addSpawn(tino, new Vector3(-87.13f, -0.556f, 93.93958f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Tino");
+                addSpawn(tino, new Vector3(-87.13f, -0.556f, 93.93958f), new Vector3(0f, 0f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Tino");
                 addNPC("Tino");
-                addSpawn(doni, new Vector3(-85.53f, -0.556f, 93.80086f), new Vector3(0f, 0f, 0f), new Vector3(1f, 1f, 1f), "Doni");
+                addSpawn(doni, new Vector3(-85.53f, -0.556f, 93.80086f), new Vector3(0f, 0f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "Doni");
                 addNPC("Doni");
             }
             else
@@ -831,7 +831,7 @@ public class NPCManager : MonoBehaviour
             addNPC("Guru");
             if (superScript.boy)
             {
-                addSpawn(david, new Vector3(-6.865f, 0.08039999f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addSpawn(david, new Vector3(-6.865f, 0.08039999f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "David");
                 addNPC("David");
             }
             else
@@ -879,9 +879,9 @@ public class NPCManager : MonoBehaviour
                     FindObjectOfType<DialogManager>().spawn = false;
                 }
 
-                addSpawn(david, new Vector3(-7.065f, 0.08039999f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1f, 1f, 1f), "David");
+                addSpawn(david, new Vector3(-7.065f, 0.08039999f, -11.788f), new Vector3(0f, 130f, 0f), new Vector3(1.2f, 1.2f, 1.2f), "David");
                 addNPC("David");
-                addSpawn(alvin, new Vector3(-6.77f, -0.289f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addSpawn(alvin, new Vector3(-6.77f, -0.289f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Alvin");
                 addNPC("Alvin");
             }
             else
@@ -938,7 +938,7 @@ public class NPCManager : MonoBehaviour
                     FindObjectOfType<DialogManager>().spawn = false;
                 }
 
-                addSpawn(alvin, new Vector3(-6.77f, -0.289f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Alvin");
+                addSpawn(alvin, new Vector3(-6.77f, -0.289f, -13.766f), new Vector3(0f, 50f, 0f), new Vector3(1.3f, 1.3f, 1.3f), "Alvin");
                 addNPC("Alvin");
             }
             else

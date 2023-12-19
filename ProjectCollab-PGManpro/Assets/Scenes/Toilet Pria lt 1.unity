@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1340,18 +1340,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1410762562}
     m_Modifications:
-    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_CullingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f31991120104d7a4fb85c6519ce47d77, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1395,6 +1383,18 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: f31991120104d7a4fb85c6519ce47d77, type: 3}
       propertyPath: m_Name
       value: Girl_FBX1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -6057140222963153312, guid: f31991120104d7a4fb85c6519ce47d77, type: 3}
@@ -2573,11 +2573,11 @@ PrefabInstance:
     - target: {fileID: 1430009659197339688, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: scorePlus
       value: 
-      objectReference: {fileID: 768540568}
+      objectReference: {fileID: 0}
     - target: {fileID: 1430009659197339688, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: CanvasScorePlus
       value: 
-      objectReference: {fileID: 768540569}
+      objectReference: {fileID: 0}
     - target: {fileID: 2645235328583799749, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2660,22 +2660,6 @@ Animator:
 --- !u!1 &768540567 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4886675636028222032, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
-  m_PrefabInstance: {fileID: 768540564}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &768540568 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8215962260234121968, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
-  m_PrefabInstance: {fileID: 768540564}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 768540569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &768540569 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7996590620681906709, guid: 9567369a06817224bbc88c3d63429d0e, type: 3}
   m_PrefabInstance: {fileID: 768540564}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &783969974
@@ -2834,18 +2818,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2069456251}
     m_Modifications:
-    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_CullingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2889,6 +2861,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
       propertyPath: m_Name
       value: Murid Culun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: e06d7a3fc8045794096e7bbf3a84aee7, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: 61b1053f3a73a83498aae9d79855a826, type: 3}
@@ -4575,7 +4559,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 815217782}
