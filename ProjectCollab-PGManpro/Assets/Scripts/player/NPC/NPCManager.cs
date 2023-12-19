@@ -1047,7 +1047,7 @@ public class NPCManager : MonoBehaviour
             changeScene("kelas 4");
             if(superScript.indexRandomEvent[superScript.day-1] == 1){
                 if (!superScript.removedNPC.Contains("Siri")){
-                    addSpawn(siri, new Vector3(5.204f, 0.185f, -9.307f), new Vector3(0f, 270f, 0f), new Vector3(1.1f, 1.1f, 1.1f), "Siri");
+                    addSpawn(siri, new Vector3(5.204f, 0.185f, -9.307f), new Vector3(0f, 270f, 0f), new Vector3(1f, 1f, 1f), "Siri");
                     addNPC("Siri");
                 }else{
                     removeNPC("Siri");

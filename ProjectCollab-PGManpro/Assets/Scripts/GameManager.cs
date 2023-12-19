@@ -100,9 +100,14 @@ public class GameManager : MonoBehaviour
 
         Debug.Log(superScript.idx_acaTasks.Count);
         Debug.Log(superScript.idx_coolTasks.Count);
-        if(superScript.idx_acaTasks.Count == 0 && superScript.idx_coolTasks.Count == 0){
-            random_tasks();
+        if (superScript.Tasks.Count == 0){
+            if(superScript.idx_acaTasks.Count == 0 && superScript.idx_coolTasks.Count == 0){
+                random_tasks();
+            }
+            refreshTask();
         }
+
+
 
         if(superScript.indexRandomEvent.Count == 0){
             superScript.indexRandomEvent.Add(0);
@@ -118,7 +123,6 @@ public class GameManager : MonoBehaviour
         Debug.Log(superScript.indexRandomEvent[2]);
         Debug.Log(superScript.indexRandomEvent[3]);
         Debug.Log(superScript.indexRandomEvent[4]);
-        refreshTask();
     }
 
     private static bool ws_random_tasks = false;

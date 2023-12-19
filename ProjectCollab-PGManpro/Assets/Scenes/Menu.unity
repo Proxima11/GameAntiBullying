@@ -10996,7 +10996,7 @@ MonoBehaviour:
   achieve: {fileID: 1514302284}
   scrollview: {fileID: 898301881}
   buttonLoad: {fileID: 1123487294}
-  continueButtonText: {fileID: 0}
+  continueButtonText: {fileID: 1613519399}
 --- !u!114 &1029573699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11009,7 +11009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f8eedec4f7eee48ad60c503c657ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasPause: {fileID: 0}
+  canvasPause: {fileID: 1613519397}
 --- !u!1 &1032247810
 GameObject:
   m_ObjectHideFlags: 0

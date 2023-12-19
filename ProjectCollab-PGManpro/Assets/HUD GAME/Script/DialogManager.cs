@@ -98,7 +98,6 @@ public class DialogManager : MonoBehaviour
             setInkVariable("Vid", "Vi");
             setInkVariable("Vin", "Na");
         }
-        superScript.username = "Alvin";
         currentStory.variablesState["player"] = superScript.username;
         nameText.SetText("xxx");
 
