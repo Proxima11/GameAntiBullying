@@ -12,6 +12,11 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
     public static string currentSceneName;
     [SerializeField] GameObject loadingScreen;
     [SerializeField] GameObject interact;
+    private bool done_kenalan_ipa = false;
+    private bool done_kenalan_ips = false;
+    private bool done_kenalan_mat = false;
+    private bool done_kenalan_indo = false;
+    private bool done_kenalan_eng = false;
 
     public string GetInteractText()
     {
@@ -49,74 +54,117 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        ToggleDoor();
-
-        if (!done_kenalan){
-        if (string.Equals(SceneName, "quiz ips")){
-            if (superScript.Tasks.Any(x => x is ips)){
-            if (!done_kenalan){
-                foreach (var e in superScript.Tasks){
-                    if (string.Equals(e.id, "a_ips")){
-                        e.task();
-                        done_kenalan=true;
-                        break;
+        if (!done_kenalan_ips)
+        {
+            ToggleDoor();
+            if (string.Equals(SceneName, "quiz ips"))
+            {
+                if (superScript.Tasks.Any(x => x is ips))
+                {
+                    if (!done_kenalan_ips)
+                    {
+                        foreach (var e in superScript.Tasks)
+                        {
+                            if (string.Equals(e.id, "a_ips"))
+                            {
+                                e.task();
+                                break;
+                            }
+                        }
                     }
                 }
-            }   
-        }
-        } else if (string.Equals(SceneName, "quiz ipa")) {
-            if (superScript.Tasks.Any(x => x is ips)){
-            if (!done_kenalan){
-                foreach (var e in superScript.Tasks){
-                    if (string.Equals(e.id, "a_ipa")){
-                        e.task();
-                        done_kenalan=true;
-                        break;
-                    }
-                }
-            }   
-        }
-        } else if (string.Equals(SceneName, "quiz mat")) {
-            if (superScript.Tasks.Any(x => x is mat)){
-            if (!done_kenalan){
-                foreach (var e in superScript.Tasks){
-                    if (string.Equals(e.id, "a_mat")){
-                        e.task();
-                        done_kenalan=true;
-                        break;
-                    }
-                }
-            }   
             }
-        } else if (string.Equals(SceneName, "quiz indo")) {
-            if (superScript.Tasks.Any(x => x is idn)){
-            if (!done_kenalan){
-                foreach (var e in superScript.Tasks){
-                    if (string.Equals(e.id, "a_idn")){
-                        e.task();
-                        done_kenalan=true;
-                        break;
+            done_kenalan_ips = true;
+        }
+        else if (!done_kenalan_ipa)
+        {
+            ToggleDoor();
+            if (string.Equals(SceneName, "quiz ipa"))
+            {
+                if (superScript.Tasks.Any(x => x is ipa))
+                {
+                    if (!done_kenalan_ipa)
+                    {
+                        foreach (var e in superScript.Tasks)
+                        {
+                            if (string.Equals(e.id, "a_ipa"))
+                            {
+                                e.task();
+                                break;
+                            }
+                        }
                     }
                 }
-            }   
             }
-        } else if (string.Equals(SceneName, "quiz eng")) {
-            if (superScript.Tasks.Any(x => x is eng)){
-            if (!done_kenalan){
-                foreach (var e in superScript.Tasks){
-                    if (string.Equals(e.id, "a_eng")){
-                        e.task();
-                        done_kenalan=true;
-                        break;
+            done_kenalan_ipa = true;
+        }
+        else if (!done_kenalan_mat)
+        {
+            ToggleDoor();
+            if (string.Equals(SceneName, "quiz mat"))
+            {
+                if (superScript.Tasks.Any(x => x is mat))
+                {
+                    if (!done_kenalan_mat)
+                    {
+                        foreach (var e in superScript.Tasks)
+                        {
+                            if (string.Equals(e.id, "a_mat"))
+                            {
+                                e.task();
+                                break;
+                            }
+                        }
                     }
                 }
-            }   
+            }
+            done_kenalan_mat = true;
         }
+        else if (!done_kenalan_indo)
+        {
+            ToggleDoor();
+            if (string.Equals(SceneName, "quiz indo"))
+            {
+                if (superScript.Tasks.Any(x => x is idn))
+                {
+                    if (!done_kenalan_indo)
+                    {
+                        foreach (var e in superScript.Tasks)
+                        {
+                            if (string.Equals(e.id, "a_idn"))
+                            {
+                                e.task();
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            done_kenalan_indo = true;
         }
+        else if (!done_kenalan_eng)
+        {
+            ToggleDoor();
+            if (string.Equals(SceneName, "quiz eng"))
+            {
+                if (superScript.Tasks.Any(x => x is eng))
+                {
+                    if (!done_kenalan_eng)
+                    {
+                        foreach (var e in superScript.Tasks)
+                        {
+                            if (string.Equals(e.id, "a_eng"))
+                            {
+                                e.task();
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            done_kenalan_eng = true;
         }
     }
-
-    private bool done_kenalan = false;
 
     public Transform GetTransform()
     {

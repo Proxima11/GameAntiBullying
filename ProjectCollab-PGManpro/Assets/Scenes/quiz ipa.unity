@@ -2630,6 +2630,9 @@ MonoBehaviour:
   second: 0
   minute: 0
   day: 1
+  bell_time: 0
+  takescore: 0
+  stressAdded: 0
 --- !u!1 &1718612733
 GameObject:
   m_ObjectHideFlags: 0

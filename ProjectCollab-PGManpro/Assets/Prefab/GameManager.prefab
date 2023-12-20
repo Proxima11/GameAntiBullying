@@ -65,7 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stress: 0
   score: 0
-  maxTime: 10
+  maxTime: 600
   timeNow: 0
   second: 0
   minute: 0
