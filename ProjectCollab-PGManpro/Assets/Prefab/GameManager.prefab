@@ -49,6 +49,8 @@ MonoBehaviour:
   Task_Object: {fileID: 0}
   audioSource: {fileID: 7654240942811399111}
   audio_bell: {fileID: 8300000, guid: b89b78fb96e56ea43a8382108318be11, type: 3}
+  score_cur: 0
+  counter_toilet: 0
 --- !u!114 &3929016794151569719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,15 +65,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stress: 0
   score: 0
-  maxTime: 1200
+  maxTime: 10
   timeNow: 0
   second: 0
   minute: 0
   day: 1
   bell_time: 0
   takescore: 0
-  CanvasScorePlus: {fileID: 3308175319061391175, guid: e5fccf929d6ab384da783bad79a5c6c5, type: 3}
-  scorePlus: {fileID: 3536892531653246882, guid: e5fccf929d6ab384da783bad79a5c6c5, type: 3}
+  stressAdded: 0
 --- !u!82 &7654240942811399111
 AudioSource:
   m_ObjectHideFlags: 0

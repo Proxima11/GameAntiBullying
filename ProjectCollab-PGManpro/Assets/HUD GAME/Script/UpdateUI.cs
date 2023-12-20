@@ -50,12 +50,13 @@ public class UpdateUI : MonoBehaviour
         int f_score = gameVariable.score;
         int f_task = gameVariable.getSumDone();
         int f_stress = gameVariable.stress;
+        int f_day = gameVariable.day;
 
         calculations.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "Score: " + f_score;
         calculations.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "Tasks " + f_task + "/7";
         stressAkhir.value = f_stress;
         
-        bool status = (f_score > 0 && f_task > 4 && f_stress <50) ? true : false;
+        bool status = (f_score >= 0 && f_task >= 4 && f_stress < 100 && f_day <= 5) ? true : false;
 
         if (status) {
             isi.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
@@ -88,8 +89,11 @@ public class UpdateUI : MonoBehaviour
         } else {
             notes+="Kamu telah menyelesaikan tugas-tugas dengan baik, dengan arti kamu dapat mengatur kehidupan persekolahan, serta kasus perundungan dengan seimbang. Pertahankan sifat ini dan tingkatkan agar makin sukses kedepannya. ";
         }
-
-        note.text = notes;
+        if (f_day > 5)
+        {
+            notes += "Kamu kurang dapat fokus pada hal lain jika diberikan tugas. Pertimbangkan waktu untuk bersekolah dengan baik dan tidak terlalu terlena dalam kemalasan. ";
+        }
+            note.text = notes;
 
         DateTime dt = DateTime.Now;
 

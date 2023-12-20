@@ -81,8 +81,9 @@ public class GameVariable : MonoBehaviour
 	}
 
 	private bool isLose(){
-		if (stress >= 50) return true;
+		if (stress >= 100) return true;
 		if (score < 0) return true;
+		if (day > 5) return true;
 		return false;
 	}
 	
