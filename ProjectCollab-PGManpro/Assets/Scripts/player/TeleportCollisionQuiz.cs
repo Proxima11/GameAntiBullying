@@ -12,11 +12,11 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
     public static string currentSceneName;
     [SerializeField] GameObject loadingScreen;
     [SerializeField] GameObject interact;
-    private bool done_kenalan_ipa = false;
-    private bool done_kenalan_ips = false;
+    //private bool done_kenalan = false;
+    /*private bool done_kenalan_ips = false;
     private bool done_kenalan_mat = false;
     private bool done_kenalan_indo = false;
-    private bool done_kenalan_eng = false;
+    private bool done_kenalan_eng = false;*/
 
     public string GetInteractText()
     {
@@ -32,13 +32,13 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
 
     public void ToggleDoor()
     {
-        FindObjectOfType<GameManager>().updateSuperScript();
-        interact.SetActive(false);
-        loadingScreen.SetActive(true);
-        Scene currentScene = SceneManager.GetActiveScene();
-        currentSceneName = currentScene.name;
-        StartCoroutine(LoadLevelAsync(SceneName)); 
-        SceneManager.LoadScene(SceneName);
+            FindObjectOfType<GameManager>().updateSuperScript();
+            interact.SetActive(false);
+            loadingScreen.SetActive(true);
+            Scene currentScene = SceneManager.GetActiveScene();
+            currentSceneName = currentScene.name;
+            StartCoroutine(LoadLevelAsync(SceneName));
+            SceneManager.LoadScene(SceneName);
     }
     IEnumerator LoadLevelAsync(string leveltoload)
     {
@@ -54,14 +54,14 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        if (!done_kenalan_ips)
+        if (superScript.done_quiz[0] != 1)
         {
             ToggleDoor();
             if (string.Equals(SceneName, "quiz ips"))
             {
                 if (superScript.Tasks.Any(x => x is ips))
                 {
-                    if (!done_kenalan_ips)
+                    if (superScript.done_quiz[0] != 1)
                     {
                         foreach (var e in superScript.Tasks)
                         {
@@ -74,16 +74,16 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
                     }
                 }
             }
-            done_kenalan_ips = true;
+            superScript.done_quiz[0] = 1;
         }
-        else if (!done_kenalan_ipa)
+        else if (superScript.done_quiz[1] != 1)
         {
             ToggleDoor();
             if (string.Equals(SceneName, "quiz ipa"))
             {
                 if (superScript.Tasks.Any(x => x is ipa))
                 {
-                    if (!done_kenalan_ipa)
+                    if (superScript.done_quiz[1] != 1)
                     {
                         foreach (var e in superScript.Tasks)
                         {
@@ -96,16 +96,16 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
                     }
                 }
             }
-            done_kenalan_ipa = true;
+            superScript.done_quiz[1] = 1;
         }
-        else if (!done_kenalan_mat)
+        else if (superScript.done_quiz[2] != 1)
         {
             ToggleDoor();
             if (string.Equals(SceneName, "quiz mat"))
             {
                 if (superScript.Tasks.Any(x => x is mat))
                 {
-                    if (!done_kenalan_mat)
+                    if (superScript.done_quiz[2] != 1)
                     {
                         foreach (var e in superScript.Tasks)
                         {
@@ -118,16 +118,16 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
                     }
                 }
             }
-            done_kenalan_mat = true;
+            superScript.done_quiz[2] = 1;
         }
-        else if (!done_kenalan_indo)
+        else if (superScript.done_quiz[3] != 1)
         {
             ToggleDoor();
             if (string.Equals(SceneName, "quiz indo"))
             {
                 if (superScript.Tasks.Any(x => x is idn))
                 {
-                    if (!done_kenalan_indo)
+                    if (superScript.done_quiz[3] != 1)
                     {
                         foreach (var e in superScript.Tasks)
                         {
@@ -140,16 +140,16 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
                     }
                 }
             }
-            done_kenalan_indo = true;
+            superScript.done_quiz[3] = 1;
         }
-        else if (!done_kenalan_eng)
+        else if (superScript.done_quiz[4] != 1)
         {
             ToggleDoor();
             if (string.Equals(SceneName, "quiz eng"))
             {
                 if (superScript.Tasks.Any(x => x is eng))
                 {
-                    if (!done_kenalan_eng)
+                    if (superScript.done_quiz[4] != 1)
                     {
                         foreach (var e in superScript.Tasks)
                         {
@@ -162,7 +162,7 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
                     }
                 }
             }
-            done_kenalan_eng = true;
+            superScript.done_quiz[4] = 1;
         }
     }
 

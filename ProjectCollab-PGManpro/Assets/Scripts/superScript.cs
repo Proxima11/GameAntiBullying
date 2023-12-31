@@ -17,6 +17,7 @@ public class superScript : MonoBehaviour
     static public int stress = 0;
 	static public float time = 0;
     static public int day = 1;
+    public static int[] done_quiz = {0,0,0,0,0};
     public static List<Task_def> Tasks = new List<Task_def>();
     public static List<int> idx_coolTasks = new List<int>();
     public static List<int> idx_acaTasks = new List<int>();
