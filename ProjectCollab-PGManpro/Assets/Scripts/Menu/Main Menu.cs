@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
     public GameObject scrollview;
     public GameObject buttonLoad;
     public TMP_Text continueButtonText;
+    public AudioSource audioSource;
     private GameObject g;
     public void Start(){
         if (checkFileSave()){
@@ -34,6 +35,7 @@ public class MainMenu : MonoBehaviour
             buttonLoad.GetComponent<Button>().interactable = false;
             continueButtonText.faceColor = new Color32(255, 255, 255, 0);
         }
+        audioSource.Play();
     }
 
     public void viewAchievements(){

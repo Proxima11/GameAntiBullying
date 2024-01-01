@@ -3834,7 +3834,7 @@ MonoBehaviour:
   m_MinValue: -50
   m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: -10
+  m_Value: -5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10997,6 +10997,7 @@ MonoBehaviour:
   scrollview: {fileID: 898301881}
   buttonLoad: {fileID: 1123487294}
   continueButtonText: {fileID: 1613519399}
+  audioSource: {fileID: 1707555492}
 --- !u!114 &1029573699
 MonoBehaviour:
   m_ObjectHideFlags: 0
