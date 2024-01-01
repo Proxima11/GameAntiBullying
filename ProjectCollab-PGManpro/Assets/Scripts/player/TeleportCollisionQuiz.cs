@@ -54,116 +54,91 @@ public class TeleportCollisionQuiz : MonoBehaviour, InterfaceInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        if (superScript.done_quiz[0] != 1)
-        {
-            ToggleDoor();
             if (string.Equals(SceneName, "quiz ips"))
             {
                 if (superScript.Tasks.Any(x => x is ips))
                 {
-                    if (superScript.done_quiz[0] != 1)
-                    {
                         foreach (var e in superScript.Tasks)
                         {
-                            if (string.Equals(e.id, "a_ips"))
+                            if (string.Equals(e.id, "a_ips") && !e.done)
                             {
                                 e.task();
-                                break;
+                                superScript.done_quiz[0] = 1;
+                                ToggleDoor();
+                                return;
                             }
                         }
-                    }
                 }
             }
-            superScript.done_quiz[0] = 1;
-        }
-        else if (superScript.done_quiz[1] != 1)
-        {
-            ToggleDoor();
+        
             if (string.Equals(SceneName, "quiz ipa"))
             {
                 if (superScript.Tasks.Any(x => x is ipa))
                 {
-                    if (superScript.done_quiz[1] != 1)
-                    {
                         foreach (var e in superScript.Tasks)
                         {
-                            if (string.Equals(e.id, "a_ipa"))
+                            if (string.Equals(e.id, "a_ipa") && !e.done)
                             {
                                 e.task();
-                                break;
+                                superScript.done_quiz[1] = 1;
+                                ToggleDoor();
+                                return;
                             }
                         }
-                    }
                 }
             }
-            superScript.done_quiz[1] = 1;
-        }
-        else if (superScript.done_quiz[2] != 1)
-        {
-            ToggleDoor();
+
+         
             if (string.Equals(SceneName, "quiz mat"))
             {
                 if (superScript.Tasks.Any(x => x is mat))
                 {
-                    if (superScript.done_quiz[2] != 1)
-                    {
                         foreach (var e in superScript.Tasks)
                         {
-                            if (string.Equals(e.id, "a_mat"))
+                            if (string.Equals(e.id, "a_mat") && !e.done)
                             {
                                 e.task();
-                                break;
+                                superScript.done_quiz[2] = 1;
+                                ToggleDoor();
+                                return;
                             }
                         }
-                    }
                 }
             }
-            superScript.done_quiz[2] = 1;
-        }
-        else if (superScript.done_quiz[3] != 1)
-        {
-            ToggleDoor();
+        
             if (string.Equals(SceneName, "quiz indo"))
             {
                 if (superScript.Tasks.Any(x => x is idn))
                 {
-                    if (superScript.done_quiz[3] != 1)
-                    {
                         foreach (var e in superScript.Tasks)
                         {
-                            if (string.Equals(e.id, "a_idn"))
+                            if (string.Equals(e.id, "a_idn") && !e.done)
                             {
                                 e.task();
-                                break;
+                                superScript.done_quiz[3] = 1;
+                                ToggleDoor();
+                                return;
                             }
                         }
-                    }
                 }
             }
-            superScript.done_quiz[3] = 1;
-        }
-        else if (superScript.done_quiz[4] != 1)
-        {
-            ToggleDoor();
+        
             if (string.Equals(SceneName, "quiz eng"))
             {
                 if (superScript.Tasks.Any(x => x is eng))
                 {
-                    if (superScript.done_quiz[4] != 1)
-                    {
                         foreach (var e in superScript.Tasks)
                         {
-                            if (string.Equals(e.id, "a_eng"))
+                            if (string.Equals(e.id, "a_eng") && !e.done)
                             {
                                 e.task();
-                                break;
+                                superScript.done_quiz[4] = 1;
+                                ToggleDoor();
+                                return;
                             }
                         }
-                    }
                 }
             }
-            superScript.done_quiz[4] = 1;
-        }
     }
 
     public Transform GetTransform()

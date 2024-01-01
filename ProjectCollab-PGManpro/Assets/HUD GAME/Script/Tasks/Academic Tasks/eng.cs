@@ -29,7 +29,7 @@ public override string id{
             return "a_eng";
         }
     }
-    private string name_this1="Kerjakan 1 set soal Bahasa Inggris di kelas 3!";
+    private string name_this1="Kerjakan 1 set soal B. Inggris di kelas 3!";
     public override string taskName{
         get {
             return name_this1;

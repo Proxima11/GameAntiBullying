@@ -5,6 +5,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 
 public class SaveLoadAchievements : MonoBehaviour
@@ -14,8 +15,12 @@ public class SaveLoadAchievements : MonoBehaviour
     {
     }
 
+    void Awake(){
+        Directory.CreateDirectory(Application.streamingAssetsPath + "/Achievement_History");
+    }
+
     public static void SaveFile(string uname, string date, bool isBoy, bool isWin, int score, int tasks, int stress, string notes){
-        string destination = Application.dataPath + "/Achievement_History/";
+        string destination = Application.streamingAssetsPath  + "/Achievement_History/";
         var info = new DirectoryInfo(destination);
         var fileInfo = info.GetFiles();
         int fileCount = 0;
@@ -23,7 +28,7 @@ public class SaveLoadAchievements : MonoBehaviour
         fileCount/=2;
         fileCount+=1;
 
-        destination = Application.dataPath + "/Achievement_History/save" + fileCount + ".txt";
+        destination = Application.streamingAssetsPath  + "/Achievement_History/save" + fileCount + ".txt";
 		StreamWriter writer = new StreamWriter(destination,true);
 
 		Achievements data = new Achievements( uname,  date,  isBoy,  isWin,  score,  tasks,  stress,  notes);
@@ -39,7 +44,7 @@ public class SaveLoadAchievements : MonoBehaviour
 
     public void LoadFile(){
 
-        string destination = Application.dataPath + "/Achievement_History/";
+        string destination = Application.streamingAssetsPath  + "/Achievement_History/";
         var info = new DirectoryInfo(destination);
         var fileInfo = info.GetFiles();
         int fileCount = 0;

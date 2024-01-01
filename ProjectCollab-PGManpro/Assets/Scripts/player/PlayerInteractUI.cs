@@ -26,6 +26,33 @@ public class PlayerInteractUI : MonoBehaviour {
     }
 
     private void Show(InterfaceInteractable interactable) {
+        if (interactable is TeleportCollisionQuiz){
+            int i_temp = interactable.GetInteractText().IndexOf("quiz");
+            string quiz_temp = interactable.GetInteractText().Substring(i_temp);
+
+            switch (quiz_temp){
+                case "quiz ips":
+                if (superScript.done_quiz[0] == 1) return;
+                break;
+
+                case "quiz ipa":
+                if (superScript.done_quiz[1] == 1) return;
+                break;
+
+                case "quiz mat":
+                if (superScript.done_quiz[2] == 1) return;
+                break;
+
+                case "quiz indo":
+                if (superScript.done_quiz[3] == 1) return;
+                break;
+
+                case "quiz eng":
+                if (superScript.done_quiz[4] == 1) return;
+                break;
+            }
+        }
+
         containerGameObject.SetActive(true);
         interactTextMeshProUGUI.text = interactable.GetInteractText();
     }
