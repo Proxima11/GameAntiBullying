@@ -1,0 +1,10 @@
+{
+    "score": 35,
+    "stress": 100,
+    "tasks": 2,
+    "notes": "Kamu sudah berperilaku baik dalam perundungan, tapi dapat diperbaiki lagi untuk masalah sosial dan akademik agar dapat tetap fokus berkuliah dan tidak terjebak dalam perundungan. Namun, hati-hati kamu terlalu pasif dan lembek dalam perundungan. Hal ini dapat merugikan dirimu. Belajarlah berdiri untuk dirimu sendiri dan jangan takut untuk melawan perundungan. Kamu kurang dapat fokus pada hal lain jika diberikan tugas. Berhati-hatilah dalam hal ini agar kamu tetap dapat menyeimbangkan hidup dalam persekolahan supaya tetap dapat bersekolah dengan baik. ",
+    "uname": "A",
+    "isboy": true,
+    "iswin": false,
+    "date": "01-01-2024"
+}

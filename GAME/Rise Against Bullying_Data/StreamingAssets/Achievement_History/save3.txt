@@ -1,0 +1,10 @@
+{
+    "score": 0,
+    "stress": 0,
+    "tasks": 0,
+    "notes": "Kamu sudah berperilaku baik dalam perundungan, tapi dapat diperbaiki lagi untuk masalah sosial dan akademik agar dapat tetap fokus berkuliah dan tidak terjebak dalam perundungan. Kamu telah menangani kasus perundungan dengan baik sehingga tidak tertekan. Tetap pertahankan hal tersebut, tapi tetap hati-hati agar kamu tidak terjerumus menjadi perundung juga. Kamu kurang dapat fokus pada hal lain jika diberikan tugas. Berhati-hatilah dalam hal ini agar kamu tetap dapat menyeimbangkan hidup dalam persekolahan supaya tetap dapat bersekolah dengan baik. Kamu kurang dapat fokus pada hal lain jika diberikan tugas. Pertimbangkan waktu untuk bersekolah dengan baik dan tidak terlalu terlena dalam kemalasan. ",
+    "uname": "player",
+    "isboy": false,
+    "iswin": false,
+    "date": "20-12-2023"
+}

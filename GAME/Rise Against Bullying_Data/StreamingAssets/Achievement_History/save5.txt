@@ -1,0 +1,10 @@
+{
+    "score": -5,
+    "stress": 0,
+    "tasks": 1,
+    "notes": "Kamu kurang memperhatikan sekolah dan banyak bertindak buruk. Alangkah lebih baik jika dapat tetap memperhatikan sekolah dan memperbaiki sikap terhadap perundungan. Kamu telah menangani kasus perundungan dengan baik sehingga tidak tertekan. Tetap pertahankan hal tersebut, tapi tetap hati-hati agar kamu tidak terjerumus menjadi perundung juga. Kamu kurang dapat fokus pada hal lain jika diberikan tugas. Berhati-hatilah dalam hal ini agar kamu tetap dapat menyeimbangkan hidup dalam persekolahan supaya tetap dapat bersekolah dengan baik. ",
+    "uname": "Asas",
+    "isboy": true,
+    "iswin": false,
+    "date": "01-01-2024"
+}
